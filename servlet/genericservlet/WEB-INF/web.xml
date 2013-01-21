@@ -1,0 +1,24 @@
+<web-app>
+<context-param>
+<param-name>welcomeMessage</param-name>
+<param-value>Hello from servlet</param-value>
+</context-param>
+
+<servlet>
+<servlet-name>gse1</servlet-name>
+<servlet-class>com.st.servlet.GenericServletEx1</servlet-class>
+
+
+<init-param>
+<param-name>initParamMessage</param-name>
+<param-value>Hello from gse1</param-value>
+</init-param>
+
+<load-on-startup>0</load-on-startup>
+</servlet>
+
+<servlet-mapping>
+<servlet-name>gse1</servlet-name>
+<url-pattern>/genericEx1</url-pattern>
+</servlet-mapping>
+</web-app>
