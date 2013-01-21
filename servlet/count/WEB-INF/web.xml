@@ -1,11 +1,11 @@
 <web-app>
 <servlet>
-<servlet-name>fs</servlet-name>
+<servlet-name>fs1</servlet-name>
 <servlet-class>com.st.servlet.FirstServlet</servlet-class>
 </servlet>
 
 <servlet-mapping>
-<servlet-name>fs</servlet-name>
+<servlet-name>fs1</servlet-name>
 <url-pattern>/FirstSer</url-pattern>
 </servlet-mapping>
 </web-app>
