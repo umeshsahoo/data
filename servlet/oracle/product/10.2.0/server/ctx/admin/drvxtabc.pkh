@@ -1,0 +1,88 @@
+rem Copyright (c) 2000, 2002, Oracle Corporation.  All rights reserved.  
+rem
+rem    NAME
+rem      drvxtabc.pkh - 
+rem
+rem    DESCRIPTION
+rem
+rem   
+rem    NOTES
+rem  
+rem    MODIFIED    (MM/DD/YY)
+rem    gkaminag     12/03/02 - security
+rem    gkaminag     10/29/02 - 
+rem    gkaminag     10/14/02 - gkaminag_security_020924
+rem    gkaminag     09/27/02 - security phase 3
+rem    gkaminag     03/02/01 - transportable tablespace support
+rem    ehuang       08/08/00 - move ctxcat from drvxtab
+rem    ehuang       08/18/00 - creation
+
+create or replace package drvxtabc authid current_user as
+
+/* ====================================================================== */
+/* ====================================================================== */
+/*                              CTXCAT                                    */
+/* ====================================================================== */
+/* ====================================================================== */
+
+/*----------------------- create_tables -----------------------------*/
+
+PROCEDURE create_tables( 
+  idx_owner in varchar2, 
+  idx_name  in varchar2,
+  idxid     in number
+);
+
+/*----------------------- create_indexes  ---------------------------*/
+
+PROCEDURE create_indexes( 
+  idx_owner in varchar2, 
+  idx_name  in varchar2,
+  idxid     in number
+);
+
+/*----------------------- drop_tables  ---------------------------*/
+
+PROCEDURE drop_tables( 
+  idx_owner in varchar2, 
+  idx_name  in varchar2,
+  idxid     in number,
+  has_p     in boolean default null
+);
+
+/*----------------------- trunc_tables  ---------------------------*/
+
+PROCEDURE trunc_tables( 
+  idx_owner in varchar2, 
+  idx_name  in varchar2,
+  idxid     in number
+);
+
+/*----------------------- rename_tables  ---------------------------*/
+
+PROCEDURE rename_tables( 
+  idx_owner in varchar2, 
+  idx_name  in varchar2,
+  idxid     in number,
+  new_name  in varchar2,
+  has_idx   in boolean
+);
+
+/*----------------------- post_transport  ---------------------------*/
+
+PROCEDURE post_transport( 
+  idx_owner in varchar2, 
+  idx_name  in varchar2,
+  idxid     in number
+);
+
+/*----------------------- recreate_trigger  ---------------------------*/
+
+PROCEDURE recreate_trigger(
+  idx_owner in varchar2,
+  idx_name  in varchar2,
+  idxid     in number
+);
+
+end drvxtabc;
+/

@@ -1,0 +1,271 @@
+rem Copyright (c) 1991, 2004, Oracle. All rights reserved.  
+rem  NAME
+rem    dr0out.pkh - DR system OUTput services
+rem
+rem  DESCRIPTION
+rem	output services for ConText Option    
+rem
+rem  PUBLIC FUNCTION(S)
+rem    start_log
+rem    end_log
+rem
+rem  NOTES
+rem 
+rem  MODIFIED    (MM/DD/YY)
+rem    mfaisal    08/04/04 - keyview html export release 8.0.0 
+rem    gkaminag   11/21/03 - event: index print token 
+rem    ehuang     10/31/03 - tracing enh 
+rem    smuralid   10/31/03 - add TRACE_QRY_K_TIME 
+rem    ehuang     10/21/03 - performance tracing 
+rem    qxiao      02/07/03 - add query log analysis
+rem    smuralid   12/23/02 - new parameter (append/overwrite) to start_log
+rem    gkaminag   12/11/01 - EVENT_OPT_PRINT_TOKEN.
+rem    ehuang     01/22/01 - add LOGGING
+rem    gkaminag   08/28/00 - add_event, remove_event
+rem    ymatsuda   06/01/99 - logfilename function
+rem    gkaminag   08/10/98 - creation
+
+create or replace package CTX_OUTPUT as
+
+  /* print each ROWID as it is indexed */
+  EVENT_INDEX_PRINT_ROWID constant number := 1;
+
+  /* print tokens as they are indexed by sync or create index */
+  EVENT_INDEX_PRINT_TOKEN constant number := 4;
+
+  /* print tokens as they are optimized */
+  EVENT_OPT_PRINT_TOKEN constant number := 2;
+
+  /* for logging of post-population creation of b-tree indexes */
+  LOGGING                 boolean  := FALSE;
+
+  TRACE_IDX_USER_DATASTORE constant number :=  1;
+  TRACE_IDX_INSO_FILTER    constant number :=  2;
+  TRACE_IDX_AUTO_FILTER    constant number :=  2;
+  TRACE_QRY_XX_TIME        constant number :=  3;
+  TRACE_QRY_XF_TIME        constant number :=  4;
+  TRACE_QRY_X_ROWS         constant number :=  5;
+  TRACE_QRY_IF_TIME        constant number :=  6;
+  TRACE_QRY_IR_TIME        constant number :=  7;
+  TRACE_QRY_I_ROWS         constant number :=  8;
+  TRACE_QRY_I_SIZE         constant number :=  9;
+  TRACE_QRY_R_TIME         constant number := 10;
+  TRACE_QRY_CON_TIME       constant number := 11;
+  TRACE_QRY_K_TIME         constant number := 12;
+  
+  -- 0, 13-16 reserved for internal use
+
+/*------------------------------- start_log ---------------------------------*/
+/*
+  NAME
+   start_log - begin logging index and document service requests
+
+  DESCRIPTION
+
+  ARGUMENTS
+    logfile   (IN)   logfile name
+    overwrite (IN)   overwrite existing log file if any (default is TRUE)
+
+  RETURNS
+   none
+
+  NOTES
+*/
+
+procedure start_log(
+  logfile in varchar2,
+  overwrite in boolean DEFAULT true
+);
+/*------------------------------- start_query_log --------------------------*/
+/*
+  NAME
+   start_query_log - begin logging query against context index
+
+  DESCRIPTION
+
+  ARGUMENTS
+    logfile  (IN)   logfile name
+    overwrite (IN)   overwrite existing log file if any (default is TRUE)
+
+  RETURNS
+   none
+
+  NOTES
+*/
+
+procedure start_query_log(
+  logfile in varchar2,
+  overwrite in boolean DEFAULT true
+);
+
+/*------------------------------- add_event -------------------------------*/
+/*
+  NAME
+   add_event - add an event to the logging event list
+
+  DESCRIPTION
+
+  ARGUMENTS
+    event  (IN)   event number
+
+  RETURNS
+   none
+
+  NOTES
+*/
+
+procedure add_event(
+  event in number
+);
+
+/*------------------------------- remove_event ----------------------------*/
+/*
+  NAME
+   remove_event - remove an event from the logging event list
+
+  DESCRIPTION
+
+  ARGUMENTS
+    event  (IN)   event number
+
+  RETURNS
+   none
+
+  NOTES
+*/
+
+procedure remove_event(
+  event in number
+);
+
+/*------------------------------- end_log ---------------------------------*/
+/*
+  NAME
+   end_log - halt logging index and document service requests
+
+  DESCRIPTION
+
+  ARGUMENTS
+
+  RETURNS
+   none
+
+  NOTES
+*/
+
+procedure end_log;
+
+/*------------------------------- end_query_log -----------------------------*/
+/*
+  NAME
+   end_query_log - halt query logging 
+
+  DESCRIPTION
+
+  ARGUMENTS
+
+  RETURNS
+   none
+
+  NOTES
+*/
+
+procedure end_query_log;
+
+
+/*---------------------------- logfilename ---------------------------------*/
+/*
+  NAME
+   logfilename - returns the current log file name
+
+  DESCRIPTION
+
+  ARGUMENTS
+
+  RETURNS
+   log file name
+
+  NOTES
+*/
+function logfilename return varchar2;
+
+/*---------------------------- add_trace ---------------------------------*/
+/*
+  NAME
+    add_trace - enable trace specfied in the trace_id argument
+
+  DESCRIPTION
+
+  ARGUMENTS
+
+  RETURNS
+
+  NOTES
+*/
+procedure add_trace(trace_id binary_integer);
+
+/*-------------------------- remove_trace ---------------------------------*/
+/*
+  NAME
+    remove_trace - disable trace specfied in the trace_id argument
+
+  DESCRIPTION
+
+  ARGUMENTS
+
+  RETURNS
+
+  NOTES
+*/
+procedure remove_trace(trace_id binary_integer);
+
+/*-------------------------- reset_trace --------------------------------*/
+/*
+  NAME
+    reset_trace - reset trace specfied in the trace_id argument
+
+  DESCRIPTION
+    resets the specified trace to 0.
+
+  ARGUMENTS
+
+  RETURNS
+
+  NOTES
+*/
+procedure reset_trace(trace_id binary_integer);
+
+/*--------------------------- log_traces ---------------------------------*/
+/*
+  NAME
+    log_traces - dumps all active traces to the logfile
+
+  DESCRIPTION
+
+  ARGUMENTS
+
+  RETURNS
+
+  NOTES
+    the traces are NOT reset to 0.
+*/
+procedure log_traces;
+
+/*---------------------- get_trace_value ---------------------------------*/
+/*
+  NAME
+    get_trace_value - returns the current value of the specified trace
+
+  DESCRIPTION
+
+  ARGUMENTS
+
+  RETURNS
+
+  NOTES
+    the traces are NOT reset to 0.
+*/
+function get_trace_value(trace_id binary_integer) return number;
+
+end ctx_output;
+/

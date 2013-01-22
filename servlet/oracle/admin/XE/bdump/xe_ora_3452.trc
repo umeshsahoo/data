@@ -1,0 +1,189 @@
+Dump file c:\oraclexe\app\oracle\admin\xe\bdump\xe_ora_3452.trc
+Fri Dec 07 16:07:45 2012
+ORACLE V10.2.0.1.0 - Production vsnsta=0
+vsnsql=14 vsnxtr=3
+Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+Windows NT Version V6.1 Service Pack 1
+CPU                 : 2 - type 586, 2 Physical Cores
+Process Affinity    : 0x00000000
+Memory (Avail/Total): Ph:979M/3965M, Ph+PgF:903M/9677M, VA:3059M/4095M
+Instance name: xe
+
+Redo thread mounted by this instance: 1
+
+Oracle process number: 0
+
+Windows thread id: 3452, image: ORACLE.EXE
+
+
+Died during process startup with error 20 (seq=3535)
+OPIRIP: Uncaught error 20. Error stack:
+ORA-00020: maximum number of processes (40) exceeded
+Dump file c:\oraclexe\app\oracle\admin\xe\bdump\xe_ora_3452.trc
+Fri Dec 07 18:32:46 2012
+ORACLE V10.2.0.1.0 - Production vsnsta=0
+vsnsql=14 vsnxtr=3
+Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+Windows NT Version V6.1 Service Pack 1
+CPU                 : 2 - type 586, 2 Physical Cores
+Process Affinity    : 0x00000000
+Memory (Avail/Total): Ph:606M/3965M, Ph+PgF:1296M/10014M, VA:3059M/4095M
+Instance name: xe
+
+Redo thread mounted by this instance: 1
+
+Oracle process number: 0
+
+Windows thread id: 3452, image: ORACLE.EXE
+
+
+Died during process startup with error 20 (seq=3682)
+OPIRIP: Uncaught error 20. Error stack:
+ORA-00020: maximum number of processes (40) exceeded
+Dump file c:\oraclexe\app\oracle\admin\xe\bdump\xe_ora_3452.trc
+Sun Dec 09 01:21:44 2012
+ORACLE V10.2.0.1.0 - Production vsnsta=0
+vsnsql=14 vsnxtr=3
+Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+Windows NT Version V6.1 Service Pack 1
+CPU                 : 2 - type 586, 2 Physical Cores
+Process Affinity    : 0x00000000
+Memory (Avail/Total): Ph:1076M/3965M, Ph+PgF:2124M/10013M, VA:3059M/4095M
+Instance name: xe
+
+Redo thread mounted by this instance: 1
+
+Oracle process number: 0
+
+Windows thread id: 3452, image: ORACLE.EXE
+
+
+Died during process startup with error 20 (seq=5588)
+OPIRIP: Uncaught error 20. Error stack:
+ORA-00020: maximum number of processes (40) exceeded
+Dump file c:\oraclexe\app\oracle\admin\xe\bdump\xe_ora_3452.trc
+Sun Dec 09 06:09:25 2012
+ORACLE V10.2.0.1.0 - Production vsnsta=0
+vsnsql=14 vsnxtr=3
+Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+Windows NT Version V6.1 Service Pack 1
+CPU                 : 2 - type 586, 2 Physical Cores
+Process Affinity    : 0x00000000
+Memory (Avail/Total): Ph:1146M/3965M, Ph+PgF:2158M/10013M, VA:3059M/4095M
+Instance name: xe
+
+Redo thread mounted by this instance: 1
+
+Oracle process number: 0
+
+Windows thread id: 3452, image: ORACLE.EXE
+
+
+Died during process startup with error 20 (seq=5889)
+OPIRIP: Uncaught error 20. Error stack:
+ORA-00020: maximum number of processes (40) exceeded
+Dump file c:\oraclexe\app\oracle\admin\xe\bdump\xe_ora_3452.trc
+Sun Dec 09 14:13:03 2012
+ORACLE V10.2.0.1.0 - Production vsnsta=0
+vsnsql=14 vsnxtr=3
+Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+Windows NT Version V6.1 Service Pack 1
+CPU                 : 2 - type 586, 2 Physical Cores
+Process Affinity    : 0x00000000
+Memory (Avail/Total): Ph:1134M/3965M, Ph+PgF:2257M/10013M, VA:3059M/4095M
+Instance name: xe
+
+Redo thread mounted by this instance: 1
+
+Oracle process number: 0
+
+Windows thread id: 3452, image: ORACLE.EXE
+
+
+Died during process startup with error 20 (seq=6395)
+OPIRIP: Uncaught error 20. Error stack:
+ORA-00020: maximum number of processes (40) exceeded
+Dump file c:\oraclexe\app\oracle\admin\xe\bdump\xe_ora_3452.trc
+Sun Dec 09 17:24:52 2012
+ORACLE V10.2.0.1.0 - Production vsnsta=0
+vsnsql=14 vsnxtr=3
+Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+Windows NT Version V6.1 Service Pack 1
+CPU                 : 2 - type 586, 2 Physical Cores
+Process Affinity    : 0x00000000
+Memory (Avail/Total): Ph:1065M/3965M, Ph+PgF:2167M/10013M, VA:3059M/4095M
+Instance name: xe
+
+Redo thread mounted by this instance: 1
+
+Oracle process number: 0
+
+Windows thread id: 3452, image: ORACLE.EXE
+
+
+Died during process startup with error 20 (seq=6596)
+OPIRIP: Uncaught error 20. Error stack:
+ORA-00020: maximum number of processes (40) exceeded
+Dump file c:\oraclexe\app\oracle\admin\xe\bdump\xe_ora_3452.trc
+Mon Dec 10 00:24:19 2012
+ORACLE V10.2.0.1.0 - Production vsnsta=0
+vsnsql=14 vsnxtr=3
+Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+Windows NT Version V6.1 Service Pack 1
+CPU                 : 2 - type 586, 2 Physical Cores
+Process Affinity    : 0x00000000
+Memory (Avail/Total): Ph:988M/3965M, Ph+PgF:2016M/10013M, VA:3059M/4095M
+Instance name: xe
+
+Redo thread mounted by this instance: 1
+
+Oracle process number: 0
+
+Windows thread id: 3452, image: ORACLE.EXE
+
+
+Died during process startup with error 20 (seq=7035)
+OPIRIP: Uncaught error 20. Error stack:
+ORA-00020: maximum number of processes (40) exceeded
+Dump file c:\oraclexe\app\oracle\admin\xe\bdump\xe_ora_3452.trc
+Mon Dec 10 09:01:19 2012
+ORACLE V10.2.0.1.0 - Production vsnsta=0
+vsnsql=14 vsnxtr=3
+Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+Windows NT Version V6.1 Service Pack 1
+CPU                 : 2 - type 586, 2 Physical Cores
+Process Affinity    : 0x00000000
+Memory (Avail/Total): Ph:1108M/3965M, Ph+PgF:2152M/10013M, VA:3059M/4095M
+Instance name: xe
+
+Redo thread mounted by this instance: 1
+
+Oracle process number: 0
+
+Windows thread id: 3452, image: ORACLE.EXE
+
+
+Died during process startup with error 20 (seq=7577)
+OPIRIP: Uncaught error 20. Error stack:
+ORA-00020: maximum number of processes (40) exceeded
+Dump file c:\oraclexe\app\oracle\admin\xe\bdump\xe_ora_3452.trc
+Mon Dec 10 09:29:53 2012
+ORACLE V10.2.0.1.0 - Production vsnsta=0
+vsnsql=14 vsnxtr=3
+Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+Windows NT Version V6.1 Service Pack 1
+CPU                 : 2 - type 586, 2 Physical Cores
+Process Affinity    : 0x00000000
+Memory (Avail/Total): Ph:1088M/3965M, Ph+PgF:2128M/10013M, VA:3059M/4095M
+Instance name: xe
+
+Redo thread mounted by this instance: 1
+
+Oracle process number: 0
+
+Windows thread id: 3452, image: ORACLE.EXE
+
+
+Died during process startup with error 20 (seq=7606)
+OPIRIP: Uncaught error 20. Error stack:
+ORA-00020: maximum number of processes (40) exceeded

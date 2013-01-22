@@ -1,0 +1,73 @@
+Dump file c:\oraclexe\app\oracle\admin\xe\bdump\xe_m000_4760.trc
+Tue Sep 11 15:30:16 2012
+ORACLE V10.2.0.1.0 - Production vsnsta=0
+vsnsql=14 vsnxtr=3
+Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+Windows NT Version V6.1 Service Pack 1
+CPU                 : 2 - type 586, 2 Physical Cores
+Process Affinity    : 0x00000000
+Memory (Avail/Total): Ph:827M/3965M, Ph+PgF:808M/8117M, VA:3093M/4095M
+Instance name: xe
+
+Redo thread mounted by this instance: 1
+
+Oracle process number: 31
+
+Windows thread id: 4760, image: ORACLE.EXE (m000)
+
+
+*** ACTION NAME:(Auto-Flush Slave Action) 2012-09-11 15:30:16.450
+*** MODULE NAME:(MMON_SLAVE) 2012-09-11 15:30:16.450
+*** SERVICE NAME:(SYS$BACKGROUND) 2012-09-11 15:30:16.450
+*** SESSION ID:(16.333) 2012-09-11 15:30:16.450
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+Dump file c:\oraclexe\app\oracle\admin\xe\bdump\xe_m000_4760.trc
+Thu Oct 25 11:30:44 2012
+ORACLE V10.2.0.1.0 - Production vsnsta=0
+vsnsql=14 vsnxtr=3
+Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+Windows NT Version V6.1 Service Pack 1
+CPU                 : 2 - type 586, 2 Physical Cores
+Process Affinity    : 0x00000000
+Memory (Avail/Total): Ph:762M/3965M, Ph+PgF:1086M/7928M, VA:3104M/4095M
+Instance name: xe
+
+Redo thread mounted by this instance: 1
+
+Oracle process number: 28
+
+Windows thread id: 4760, image: ORACLE.EXE (m000)
+
+
+*** 2012-10-25 11:30:44.832
+*** ACTION NAME:(Auto-Flush Slave Action) 2012-10-25 11:30:44.783
+*** MODULE NAME:(MMON_SLAVE) 2012-10-25 11:30:44.783
+*** SERVICE NAME:(SYS$BACKGROUND) 2012-10-25 11:30:44.783
+*** SESSION ID:(37.49) 2012-10-25 11:30:44.783
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+Dump file c:\oraclexe\app\oracle\admin\xe\bdump\xe_m000_4760.trc
+Sun Jan 13 20:30:36 2013
+ORACLE V10.2.0.1.0 - Production vsnsta=0
+vsnsql=14 vsnxtr=3
+Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+Windows NT Version V6.1 Service Pack 1
+CPU                 : 2 - type 586, 2 Physical Cores
+Process Affinity    : 0x00000000
+Memory (Avail/Total): Ph:2257M/3965M, Ph+PgF:5785M/7928M, VA:3134M/4095M
+Instance name: xe
+
+Redo thread mounted by this instance: 1
+
+Oracle process number: 22
+
+Windows thread id: 4760, image: ORACLE.EXE (m000)
+
+
+*** ACTION NAME:(Auto-Flush Slave Action) 2013-01-13 20:30:36.736
+*** MODULE NAME:(MMON_SLAVE) 2013-01-13 20:30:36.736
+*** SERVICE NAME:(SYS$BACKGROUND) 2013-01-13 20:30:36.736
+*** SESSION ID:(24.821) 2013-01-13 20:30:36.736
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()

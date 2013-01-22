@@ -1,0 +1,71 @@
+rem 
+rem $Header: drirec.pkh 15-sep-2003.11:34:19 surman Exp $ 
+rem 
+rem Copyright (c) 1991, 2003, Oracle Corporation.  All rights reserved.  
+rem  NAME
+rem    dr_rec.pkb - DR RECovery
+rem  DESCRIPTION
+rem    This package contains procedures to recover the following components
+rem    in the server:
+rem    - DML queue
+rem    - orphans datapipe
+rem    - 
+rem    - Engine
+rem
+rem  PUBLIC FUNCTION(S)
+rem    recover   - recover the specified component of the system
+rem
+rem  NOTES
+rem  MODIFIED    (MM/DD/YY)
+Rem     surman     09/15/03  - 3101316: Add recover_dict 
+Rem     gkaminag   02/24/98 -  new dml queue
+Rem     qtran      04/29/95 -  Creation 
+Rem     qtran      10/19/94 -  Creation 
+
+create or replace package drirec as
+
+/*--------------------------------- recover --------------------------------*/
+/*
+  NAME
+  DESCRIPTION
+
+  ARGUMENTS
+      
+    
+  NOTES
+    
+       
+  EXCEPTIONS
+
+  RETURNS
+    none
+*/
+PROCEDURE recover(component IN varchar2 default 'ALL');
+
+/*------------------------------ recover_dict ------------------------------*/
+/*
+  NAME
+    recover_dict - RECOVER textile DICTionary
+  DESCRIPTION
+    Remove policies and indexes that belong to an invalid user (i.e. one
+    that has been dropped)
+
+    Also removes indexes, or any other database objects created that are
+    connected specifically to the policy
+
+    Remove obsolete entries in dr$contains
+
+    Remove thesaurus and sections groups that belongs to an invalid user
+
+    If user_name is null, entries for all dropped users are removed.
+  ARGUMENTS
+
+  RETURNS
+
+  NOTES
+*/
+PROCEDURE recover_dict(user_name in varchar2 := null);
+
+end drirec;
+/
+

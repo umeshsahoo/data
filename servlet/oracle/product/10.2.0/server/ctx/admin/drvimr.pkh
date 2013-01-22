@@ -1,0 +1,319 @@
+rem 
+rem Copyright (c) 2002, 2004, Oracle. All rights reserved.  
+rem
+rem    NAME
+rem      drvimr.pkh - DR Internal, inVoker's rights In-Memory Result services
+rem
+rem    DESCRIPTION
+rem      functions called by ConText C code to store and manage in-memory
+rem      results for various query and document services
+rem   
+rem    NOTES
+rem      This package is intended to have PUBLIC execute, so don't put 
+rem      anything here that cannot be safely called by anyone.
+rem
+rem    MODIFIED    (MM/DD/YY)
+rem    daliao       06/18/04 - kwic document service
+rem    surman       05/25/04 - 3639796: Extra line feeds in XML output 
+rem    ehuang       03/25/03 - add s1
+rem    qxiao        02/07/03 - ctx_report function query_log_summary
+rem    daliao       01/21/03 - kmean clustering
+rem    gkaminag     12/02/02 - ifilter to trusted callout
+rem    daliao       12/04/02 - add document feature functions
+rem    gkaminag     08/19/02 - gkaminag_security_phase2_020620
+rem    gkaminag     07/23/02 - ctx_report functions
+rem    gkaminag     07/18/02 - document services
+rem    gkaminag     07/15/02 - security phase 2
+
+create or replace package drvimr authid current_user as
+
+/*=========================================================================*/
+/*======================  CTX_QUERY FUNCTIONS =============================*/
+/*=========================================================================*/
+
+/*---------------------------- explain ------------------------------------*/
+
+type exprec is record (
+  id          binary_integer,
+  parent_id   binary_integer,
+  operation   varchar2(30),
+  options     varchar2(30),
+  object_name varchar2(80),
+  position    binary_integer
+);
+
+type exptab is table of exprec index by binary_integer;
+
+r_exp exptab;
+
+procedure add_explain(
+  p_id          in binary_integer,
+  p_parent_id   in binary_integer,
+  p_operation   in varchar2,
+  p_options     in varchar2,
+  p_object_name in varchar2,
+  p_position    in binary_integer
+);
+
+/*---------------------------- hqfeedback ---------------------------------*/
+
+type hqfrec is record (
+  id          binary_integer,
+  parent_id   binary_integer,
+  operation   varchar2(30),
+  options     varchar2(30),
+  object_name varchar2(80),
+  position    binary_integer,
+  bt          ctx_feedback_type,
+  rt          ctx_feedback_type,
+  nt          ctx_feedback_type
+);
+
+type hqftab is table of hqfrec index by binary_integer;
+
+r_hqf hqftab;
+
+procedure add_hqf(
+  p_id          in binary_integer,
+  p_parent_id   in binary_integer,
+  p_operation   in varchar2,
+  p_options     in varchar2,
+  p_object_name in varchar2,
+  p_position    in binary_integer,
+  p_bt          in ctx_feedback_type,
+  p_rt          in ctx_feedback_type,
+  p_nt          in ctx_feedback_type
+);
+
+/*---------------------------- browse_words --------------------------------*/
+
+type brwrec is record (
+  word      varchar2(256),
+  doc_count binary_integer
+);
+
+type brwtab is table of brwrec index by binary_integer;
+
+r_brw brwtab;
+
+procedure add_brw(
+  p_word    in varchar2,
+  p_count   in binary_integer
+);
+
+/*=========================================================================*/
+/*========================  CTX_DOC FUNCTIONS =============================*/
+/*=========================================================================*/
+
+MODE_CLOB        constant number := 1;
+MODE_BLOB        constant number := 2;
+MODE_BFILE       constant number := 3;
+MODE_VCHR2       constant number := 4;
+direct_mode      number;
+direct_clob      clob;
+direct_blob      blob;
+direct_if_blob   blob;
+direct_bfile     bfile;
+direct_vchr2     varchar2(32767);
+direct_lang      varchar2(256);      
+direct_format    varchar2(256);
+direct_cset      varchar2(256);
+
+PROCEDURE direct_set (
+  p_mode   in binary_integer default NULL,
+  p_lang   in varchar2 default NULL,
+  p_format in varchar2 default NULL,
+  p_cset   in varchar2 default NULL,
+  p_vchr2  in varchar2 default NULL,
+  p_bfile  in bfile    default NULL,
+  p_clob   in clob     default NULL,
+  p_blob   in blob     default NULL
+);
+
+/*---------------------------- themes --------------------------------------*/
+
+type thmrec is record (
+  theme  varchar2(2000),
+  weight number
+);
+type thmtab is table of thmrec index by binary_integer;
+
+r_thm thmtab;
+
+PROCEDURE add_theme(
+  p_theme  in varchar2,
+  p_weight in number
+);
+
+/*------------------------------ gist --------------------------------------*/
+
+type gsttab is table of varchar2(31000) index by binary_integer;
+
+r_gst    thmtab;
+r_gsttxt gsttab;
+
+PROCEDURE add_gist(
+  p_pov    in varchar2
+);
+
+PROCEDURE add_gist_txt(
+  p_text   in varchar2
+);
+
+/*------------------------------ tokens ------------------------------------*/
+
+type tokrec is record (
+  token varchar2(64),
+  offset number,
+  length number
+);
+type toktab is table of tokrec index by binary_integer;
+
+r_tok toktab;
+
+PROCEDURE add_token(
+  p_token  in varchar2,
+  p_offset in number,
+  p_length in number
+);
+
+/*------------------------------ highlight ---------------------------------*/
+
+type hilrec is record (
+  offset number,
+  length number
+);
+type hiltab is table of hilrec index by binary_integer;
+
+r_hil hiltab;
+
+PROCEDURE add_highlight(
+  p_offset in number,
+  p_length in number
+);
+
+/*========================================================================*/
+/*=================== DOCUMENT FEATURE FUNCTIONS =========================*/
+/*========================================================================*/
+/* reset the document feature buffer */
+PROCEDURE reset_feature;
+
+/* add one feature */
+PROCEDURE add_feature(id number, weight number);
+
+/* get feature number */
+FUNCTION feature_count RETURN NUMBER;
+
+/* get feature by index */
+PROCEDURE get_feature(
+	 idx BINARY_INTEGER,
+ 	 id  OUT NUMBER,
+	 weight OUT NUMBER
+	);
+
+/*========================================================================*/
+/*=================== DOCUMENT CLUSTERING FUNCTIONS ======================*/
+/*========================================================================*/
+/* in-memory table for document assignment */
+TYPE doc_rec IS RECORD (
+	docid     number,   -- document ID to identify the document
+	clusterid number,   -- the ID of the cluster the document is assigned to
+	score     number    -- the similarity score between document and cluster
+);
+TYPE doc_tab is TABLE OF doc_rec INDEX BY BINARY_INTEGER;
+
+/* in-memory table for cluster information */
+TYPE cluster_rec IS RECORD (
+	clusterid number,         -- cluster ID to identify a cluster
+	descript  varchar2(4000), -- a string to describe the cluster
+        label     varchar2(200),  -- a suggested label for the cluster
+        sze       number,         -- number of documents assigned to the cluster
+	quality_score number,     -- the quality score of the cluster
+	parent    number          -- parent cluster id. negative means no parent
+); 
+TYPE cls_tab IS TABLE OF cluster_rec INDEX BY BINARY_INTEGER;
+
+/* document items record */
+TYPE did_rec IS RECORD (
+	did        number,         -- document id 
+	row        rowid           -- rowid of the document
+);
+TYPE did_tab IS TABLE OF did_rec INDEX BY BINARY_INTEGER;
+
+pv_doctab doc_tab;                 
+pv_clstab cls_tab;
+pv_didtab did_tab;
+pv_didcur integer := 1;
+
+/* add one item to the document cluster assignment table */
+PROCEDURE add_doccls(
+	docid     number,
+	clusterid number,
+	score     number);
+
+/* add one item to the cluster table */
+PROCEDURE add_cluster (
+	clusterid     number, 
+	descript      varchar2,
+	label         varchar2,
+	sze           number,
+	quality_score number,
+	parent        number);
+
+/* start item id scan */
+PROCEDURE start_didscan;
+
+/* next item id */
+FUNCTION next_did (
+	did         out  number,
+	row         out  rowid) 
+return  number;
+
+
+/*=========================================================================*/
+/*======================  CTX_REPORT FUNCTIONS ============================*/
+/*=========================================================================*/
+
+  s1   constant varchar2(10) := ' ';
+  s75  constant varchar2(75) := 
+ '                                                                           ';
+  e75  constant varchar2(75) := 
+ '===========================================================================';
+  h75  constant varchar2(75) := 
+ '---------------------------------------------------------------------------';
+
+procedure initreport;
+
+procedure title(
+  title  in varchar2 default null,
+  title2 in varchar2 default null,
+  sep    in varchar2 default null
+);
+procedure wl(lline in varchar2);
+procedure w(lline in varchar2);
+procedure blankln;
+procedure endreport(report in out nocopy clob);
+
+/*--------------------------query_log_summary -------------------------------*/
+type queryrec is record (
+  query  varchar2(4000),
+  times  number
+);
+
+type querytab is table of queryrec index by binary_integer;
+
+r_query querytab;
+
+PROCEDURE add_query(
+  p_query  in varchar2,
+  p_times  in number
+);
+
+pv_kwic varchar2(4000);
+
+function get_kwic return varchar2;
+
+procedure set_kwic(kwic in varchar2);
+
+end drvimr;
+/

@@ -1,0 +1,61 @@
+CREATE OR REPLACE PACKAGE BODY dbms_tde_toolkit_ffi wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+b
+431 1b6
+iB3jauHFmAfuyrqIB9QJe4zoo0Ewg1XDLUhqyi/NI8+V+l5mAYqnvWqV6WH7+ysG+oTrJgw9
+LQ8PfuMeGuIlYwyI2OvtxhLGVfqnbezqRmP3AJfCgYTIITYL7KMC7rhphQALdIZYIjyINcLH
+RvFbSJg8yxoCHnm0Fs3WXkXmY4Abez9of6k+YOsCX9TnDfPUM/Q3CrDoh/r9ud+NDnolPsjr
+NDXXuhUGgYbkM+T5CVmHdFa/f6SIP+9fy/d2HlPDW6ZgTbOIH6FjY9N6BAeP2cakVg5A9ZRB
+L2sM3eTxlmMKilYyzOz/8bObXo4Cu6z6JzmblSaUuEOnXiSTAc7USRcfGwU6l7RXEcMpUx5S
+aKl2SV1N4B3A1f7duYrWGiQFB031qij/6eWKv7qmtSCZK1sAYZF53R62G2LqtTn4B65yRs3T
+
+
+/
+show errors;
+CREATE OR REPLACE PACKAGE BODY dbms_tde_toolkit wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+b
+4f7 270
+j2Ng1RervtWMbAXFVam7OKm+i0swgzvxTK4VfI5A7c0/lb5892xaG7/yUxYF++w1BfWQUwpA
+pn8b49vQmbXtecZwWV+rzTwaAA8FQnLv3m4l8xVnFEQU1t7J9axgmX+hWDnsRKbKjeN/+pTm
+5iqNOsOrXS3FGkh/Qd6VzucEW8RIJhjGwzIF+6gZpmaxmC8S4dHgqG2jBG5xPm9WrY0vrHJw
+iDZGUukXcL8K/enMtJnjLhHsz2NAs1wEj+NS01Nb5/3m7AxCuavNR9TD/XsqdJIqHnl+aJVT
+bbMCooJjWGBE5jHhuZyqTHAbwxjRutD3uu3s/BPuyDIiPkEe9C3t9eD4Qv0p//g+RnkWbBGE
+PcTrqXbJuOu/5hF/1JgriPwd8u0e/yMi3GWgNRjCdLKNwBXg5ViPOY3T5TIx8OJRHt9xpbDX
+Q8D5e5q8AEg4+OSgVO003eC8hyR+uWvAdT3JCOS8EO3nEp9AhbZwasAUj9HXPxIUFpBJylml
+sC8/gO4i4o4VPN6mwfROB3uR6ltB8g7h4flz72mqBikXV1yDMZP2CESEEk/qbGgyg90m+gts
+cbJktUMXvuXOrdTB40FMEqccIEhas9r4prhUWj0=
+
+/

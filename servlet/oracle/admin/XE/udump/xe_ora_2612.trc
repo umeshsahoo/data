@@ -1,0 +1,19 @@
+Dump file c:\oraclexe\app\oracle\admin\xe\udump\xe_ora_2612.trc
+Fri Aug 17 09:53:27 2012
+ORACLE V10.2.0.1.0 - Production vsnsta=0
+vsnsql=14 vsnxtr=3
+Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+Windows NT Version V6.1 Service Pack 1
+CPU                 : 2 - type 586, 2 Physical Cores
+Process Affinity    : 0x00000000
+Memory (Avail/Total): Ph:3149M/3965M, Ph+PgF:6340M/7928M, VA:3148M/4095M
+Instance name: xe
+
+Redo thread mounted by this instance: 0 <none>
+
+Oracle process number: 0
+
+Windows thread id: 2612, image: ORACLE.EXE (SHAD)
+
+
+opiino: Attach failed! error=-1 ifvp=00000000

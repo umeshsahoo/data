@@ -1,0 +1,52 @@
+rem
+rem  Copyright (c) 1999 by Oracle Corporation
+rem
+rem    NAME
+rem      drithsd.pkh - Spec for ConText Option thesaurus package
+rem
+rem    DESCRIPTION
+rem      thesaurus export (Dump) functions
+rem
+rem    NOTES
+rem
+rem    MODIFIED   (MM/DD/YY)
+rem    gkaminag    03/09/99 -  creation
+
+CREATE OR REPLACE PACKAGE drithsd AS
+
+/*------------------------------- dump_thesaurus -------------------------*/
+/*
+  NAME
+    dump_thesaurus
+
+  DESCRIPTION
+    initializes package for thesaurus dumping
+
+  ARGUMENTS
+    name    (IN) thesaurus name (if not specified, DEFAULT is used)
+*/
+
+PROCEDURE dump_thesaurus (
+  tname in varchar2
+);
+
+/*------------------------------- next_dump_line -------------------------*/
+/*
+  NAME
+    next_dump_line
+
+  DESCRIPTION
+    get next dump line
+
+  ARGUMENTS
+
+  RETURN
+    line, or NULL at EOD
+
+  NOTES
+    MUST call dump_thesaurus first
+*/
+FUNCTION next_dump_line RETURN VARCHAR2;
+
+end drithsd;
+/

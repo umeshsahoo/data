@@ -1,0 +1,42 @@
+CREATE OR REPLACE PACKAGE dbms_rmin wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+9
+1a22 457
+QTYIfC/CjJMCaNiDXljHCC2++Scwg82T+kgFfC/NMQ9rhPuYZxIRReGt8IUtLka6vlf69LW1
+H2wBuqcLoW/pH2Ke1WemNW540IJqQhQ7N3qvOdWjmf1fcMLhu2FfK9v91iVEILPDcB9txXPe
+jOcJIEtlBhDKh1vXNeIlncWDud3IYnUH0G0nj6jy4+faUkszNVN5v7jpUrJBmCf05iCvZZh2
+YVsGtMvW6fbWKxgPqbKjYYfRyg5hGBIH70gqBI92Qg5Tf+M3gq9oj6I5OKdzV7bn5Jt99/rX
+uKU8fjusC+GNv+9n21MOoAvl+kikwdDKBweZyI5uZWSQsywcH+0NhC6fzaCl+s7wbfMoN1Qj
+7gHdG1zS1BZk6qKhHkTscx4hrEI9AIcZswoaT1/lWHFKOF0BEXzpHQjV45VUYSPhLMGzFG1l
+1tfs2RZf6+svdJc2Hh6tM0K9etka+W7YGh8yfnXGIfJyOpGpBwmplmOmDwz7vI3hz5ZEzsye
+pQOmj+ZiGBhReYbpFnPFwDmt+2yxChDJSn6W/dRxDhpcRDVXDg7wV49L60qjTSq4bV5LNjQU
+DqmWWvJClRxk7PI+3VrPBENUl2OVJr5mri0FmhuLMmg4Obg328V0Ft5JM7ZnwgO31eOQKSjF
+C7Xi/tFcvyaSD2Mn4d1M1/kBKtnekr9/E3abBeMxXen5xg3YAO+1TGKYwMIkwX5/1LWKoqs2
+EaS62Z5ugtgz+Gz3hI/OWi8DeQeu+nMF4xk+Nnm0ng8hF0a+Xu2LpWk5WlbkiwZIb2chaH+s
+7gRfzzYVk0Xaw2GplfvvOXkLZ44458q6Gxf/6Rb8QqF8e6aoJrk/KnKu2Ry7bwTp9cstAdKR
+IvUmyXGJeUaUtzyV1EJDGfS4t4LPxt6CNLX2J1rvDwvVOPGtOeS4PTLYsV85uDJVDzAQ3AkG
+O1gex+jGoLFtKSIwALwytlc+tYBqhXvUYusw4YEMkte6g7CrYfZRjbHoWLIzPRuGkYy+8K2/
+U77UdTG0MDNb2OIuTnl/vGXdgynSq5ahejeeG9qsJFje7KN3thgg2CPl7kvoGZ7xnLAo3rrr
++XbSzrl4U8ouUA==
+
+/
+CREATE OR REPLACE PUBLIC SYNONYM dbms_rmin FOR sys.dbms_rmin
+/
+GRANT EXECUTE ON dbms_rmin TO public
+/

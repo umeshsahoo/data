@@ -1,0 +1,492 @@
+create or replace type body XmlType wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+e
+4478 9c6
+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
+9FAp41VDIJr7UXgFuQ==
+
+/
+show errors;
+create or replace type body XMLGenFormatType wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+e
+7bf 28c
+9/fhfNugrrirDKw24sLklTxMg2owg0NcmMCGfHRZzWRnH0Jgt2YBej4Rq8BXhPerL/IG/Pm1
+lkovjePTiB4JT5myLJnRLXHdz/0v//nA1nIZh7MyQSOVVgrFdsumN5T9slV9If27Z7bF1Db2
+Bj/ka+unPZRf1r/pki6zgjQ0Fe860KnktBvDUCAEC11dYlA6JN6/8DLllktIoJ85LVHVwqkV
+DtIAXUN68aTn2k6T6TWssl0qQHBoPVNpHRw3yIDAYyspqaJAX3f9F6x9yayKkH8crTiLHRVi
+enko3smkBekmn/NRVRoFi4kMP817bd9V+DbAmfWc6zU5ADMXGkY0X0Yvu/d1Dr0d/Hr+C/fm
+ZwUAAWSIlfcO6x+E8MqScKFjJiQgr4nzLlSokkHNs3ldJ7lT6eOZGWIi8SCnM0jI7fJe7GTy
+7AKivCG0jJPtv4J1TPFcqVB1AJ5/6JymoLSMExQRxVwPYxNS9xEcQ36DmN0hJzOgoHVRRfkF
+Iu/h1CJ2sDigNMy/O5bYRPlr3J0XbOiH4J3VBxjQRFgux3ejB/qlMeZKX984m2EDPq6zERnc
+5gGnRf6qgXr9KSyQNhV4AC8m0IbtPEwhcw/+5I2tSQN+IutMSl6zGllD+KUf6OZ91g==
+
+/
+show errors;
+create or replace public synonym XMLFormat for XMLGenFormatType;
+grant execute on XMLFormat to public with grant option;
+create or replace public synonym XMLSequenceType for sys.XMLSequenceType;
+drop public synonym XMLSequence;
+drop operator XMLSequence;
+drop function XMLSequenceFromXMLType;
+drop function XMLSequenceFromRefCursor;
+drop function XMLSequenceFromRefCursor2;
+drop type XMLSeq_Imp_t;
+drop type XMLSeqCur_Imp_t;
+drop type XMLSeqCur2_Imp_t;
+create or replace type XMLSeq_Imp_t wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+d
+4af 213
+glUaLaHpMoB5YL6q8uUYmja1oHowg+3xLgxqZy9AAP7qdABjj6F650Hft6GY7IrUMZMlQazy
+r9bKJ+S1SN8u9DsNUeC99SKfyU68rpFc81bZFbMujNnl82mHb3sd0keRGghKBIkdE4fzlxRY
+pnHrnlQ9+pWKIZHciRFGaP2OebK0dA1NoA5QcKF2l9PYnCic9ceAP3GY6NM5eUWYvH/Ik4rL
+B/YUEewQZd0UQbLDAvag8+y2xoSDlZ3mWL7qx+GKXpDCBj1LZL1C2P1c01nafx4XsRm8oOIQ
+mBPUKzsB+xFq/GPb5mNXbm/gW/qLEN/NNa7B/1fLnmXw8lZbDzGGM49wB+kAwu8RHAKG7tLP
+2jEKyxgLqGWZrqEBq4W5C9mhuPdXxZv//wDAcLQ84vaImnlXAgsRkgizG645PuZ7RhTPICTd
+92QF+Aea7uflxgg1drNGqIg2UWC6jto9f7cDkIeLk4GLjBwGarS8rEACMqAC3zkzxhyGhuse
+kqp6GTJwZZh6Qlt4MpT3
+
+/
+show errors
+create or replace type XQSeq_Imp_t wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+d
+4a8 217
+U+nRoGLwJyFjxa/GxOuaG1NGgKEwg+3xLgxqZy9AAP7qdABjULcwL3p5G+ufKjEuFxfeEp7F
+RCisTYG12jHfbMP2lJUvhUf/gJu8rpFctlbBN4vwO/xg3aJYMeF8Zbe3GzngfPvPPy4W1n6m
+uITVcAOF0YAL16wELee3fWnYv4+ZoOCb8aDd8USJbM4Wc7+gC0nRh0bobzkeg+oQCw6ltN+W
+CgnDs323+xv0ig7RhAuQUIlXKjHIHGNS6xHoNlMuef9A6lW8YE71uVnpfMNiHsFLvhAxRtcF
+VXxcbyvJqYd4lmykd0ANk+MdkZhyMY3arTt4c1REjm/wMCvqrQa8LcdqjM2+a/ESOKpXnbSu
+SOkKj/XI4ylMzI3VsdBQGxRX2eGNtzzXhEiPtJbmulItTHxAXnB3JKSa0fI4FAeJL6QdUSQF
+cjhZPBP4B5qvaddzzhZfXTWc9ZJQUZbZ1usi907Wo/MxfjuABZXGaxACdAwsEdDYBx4gpNTG
+sLGBtVfPTap8RXsSW2q8tlg=
+
+/
+create or replace function XMLSequenceFromXMLType wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+8
+88 ae
+aP6NIZ6VokMKWrNSWuq88nGW750wgwDw2svWZy+EXscYPoRqRAnpmBtf2//RTvfmDf6dRKKo
+UhckukGE8ceUI5w9S0QUODyj3B4SagCxolaRmC7qIcvSjRWEtX14+cN9iLy46I7lL7s4UGtS
+apesWThWZB5Lx95VLMQdRIFsuA==
+
+/
+create or replace function XQSequenceFromXMLType wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+8
+86 ae
+gDBqL5KzFU70hO61CFjs7mR8ayUwgwDwrctqfC8dXviUuhsuIsiXyH2R+/Zsu/u0jfm1me+l
+r/Fq+7DIXXECPJVLNhQ4JaM8Zfg8pUcq85kxybsDI7L1ou5reEVdtUbUpSwX8mueCBw5pKt4
+R1aFjtSbAPl7nDxzTrT7RcAUjw==
+
+/
+show errors;
+create or replace type XMLSeqCur_Imp_t wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+d
+4ea 223
+NKxi3JqyT+Sljsd1iEw6Vvlbmu4wg+3xLgxqZy9AAP7qdABjj6F650Hft6GY7Io8MZODbqzy
+r9bKPDO1mBMhbNQ8GBioyDoZR07iw8esAZNXRYRyDdHBDambZeuIRqa394Pa4GnLfiOEFoyR
+NrgMlEujFOq3To+tzFHzwCBpoCpwgndRJazmrGxSFgxLh0DB2zy2ruiiNwpx14kHIhc6/S6+
+Qwm9EbYofpD6N9EbCH5wh1Oj/Ws+Ul4aTE4+iVgjKmzdPD0+1eIGor2F/I94UozyrFJxfoEY
+BQ0FaGR4SAMQBHgxAqeIDrLrnCU2ixiE1i/aWp+doAy/EulUENrY997D4K1wydD4FePoIP6Z
+69nR6+K1s9p7wIAUUBHh8GHuYiZZarLOViDcrAPbzPeAtAeOOWqf7uA8zldddtzZsf998E6R
+yGaB+n/XFUPkWIc6J07O0trtFTMQ+BZoQKLB9dpRYLqO1hEPhW010U7Yo/NpvzNSOrzTKJke
+EZYZZ1OdSfByliAKtagAXXyss12SiqRKqWww
+
+/
+show errors
+create or replace type XMLSeqCur2_Imp_t wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+d
+489 20f
+GKdYsseFCa/8eBlmViTgolJ/U7Mwg+3xLgxqZy9AAP7qdABsjyYwL3p5G7efKjHwAwOgAESN
+rFs12M21v3h58lq6jWZA5osLF0W7+KKnKq9RxaQAUcGhjApF82mHyXsHaThlJTCAdJc317m9
+AYlfphwRvdiL+nkjpGVJ8iHm7rIYYTl+SqPDKwkRSxTLAfs82bMslTEsQXH04cT1sl7zOZBD
+0tsvtzDfaZzis2AR8mgcJeIQjZdZ7ezTj9E9iNWH1AVayJpGNDv9XPNfhqTqLFNMmNfrI4bf
+BcH6U3lyDUemeVSdyGFp1cu25orKMZremrn16e5zBKD6KsUtdlYL0AfWzAEkuSxHSEX/hwFp
+tG+jHmpkUcWZqUpVllq4p1fFbXzHq6YEYccfBdTGYp3KwgWzusH6yulJ68d2FcTHiNbgDUJC
+8HTRgC93/oYD56PvRRrr46t5k8vlEN+3NZb+2J8vab8IQs+ar2ole3vd/az4EgoIzXPHgSQr
+KPAEY7/qD5g901c=
+
+/
+show errors;
+create or replace function XMLSequenceFromRefCursor wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+8
+c6 ca
+2youw6Vg7sZNPXIDF9KAyigxG+QwgxDcoZ7hfy/SemR9jKzOppWEWnuDyPXglo9um7UPRxaM
+MMJIXHenkIzMCzA8Uc64XeOTo5RHs+kTil5LpnsezvLGvfnKeCavqRmN/a0PN+2JakkWEdHk
+JwBzioNo86wFkNPYDKx+apQB/HctLwvh6gYFMzINdOUQtAHEpnbkZcU=
+
+/
+show errors;
+create or replace function XMLSequenceFromRefCursor2 wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+8
+91 b6
+Qlr8BVQ7BF3TtVL4dP2WsyFHOJowgy7w7csVfC/WWPiOeBUVUI0+8nZXJu1G+Pd9if6qmRgY
+LxzNcp+y+v8ufQ3RQBdnZeVhXMzHTSqQcsPxScLX1HIa2aIHjhzFT9KSxI+6W2OlWx+D/Z4I
+8zmQe79WVhaO1MC1vLmFejDNaiCweFSwSUc=
+
+/
+show errors;
+grant execute on XMLSequenceFromRefCursor to public with grant option;
+grant execute on XMLSequenceFromRefCursor2 to public with grant option;
+grant execute on XMLSequenceFromXMLType to public with grant option;
+create or replace operator XMLSequence
+  binding
+  (sys.xmltype) return sys.XMLSequenceType
+    using sys.XMLSequenceFromXMLType,
+  (standard.SYS_REFCURSOR, XMLGenFormatType) return sys.XMLSequenceType
+    using sys.XMLSequenceFromRefCursor,
+  (standard.SYS_REFCURSOR) return sys.XMLSequenceType
+    using sys.XMLSequenceFromRefCursor2;
+grant execute on XQSequenceFromXMLType to public with grant option;
+create or replace operator XQSequence
+  binding
+  (sys.xmltype) return sys.XMLSequenceType
+    using sys.XQSequenceFromXMLType;
+grant execute on XMLSequence to public with grant option;
+grant execute on XQSequence to public with grant option;
+create or replace public synonym XMLSequence for XMLSequence;
+create or replace public synonym XQSequence for XQSequence;
+create or replace type AggXMLImp OID '00000000000000000000000000020101' wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+d
+81c 291
+K4oIDQs0ftvj9p1jiw8VI5q46QEwg9deACAFfC/N2A9ShRT7ogfc+3vMITtx1fHhQl870UBb
+anxQOTfuPp0igGBhjDl/4GpiUTUlpDKuu9YavOvKE8lIoyFM+6ZlJaTcZ+m7DWPpdIPWdI/8
+LKPMzJtJJDIoh/+XBfK4ASNBRD1Fo45xOfFGnuizxeYXry6OZbyx8BTwb70BbZ31iI7Xr+l7
++XEaJTJvUBsw+/TXW5agVVLTxaXsUcRQDTg3p/WMEDlqpjugLonwOY3aK6uyeMDt1AfXSAPk
+7UKjVV0Cb/aWEChH8LSMRLG+JIRFHUME9dy+s6FyBBoQqcBwelZta1kJ6byCr73Fof8DriLF
+q4O3fUNtup7+u/gpr46HoeiO7+2Gi8rsRMFgjU58g3duj9pCfHk/iTXE65GHl2p7Q0X5XFYs
+8O6HYcxJiVAHZNZ5H2wtunmcmKovHW2OfFoQtoQnTxioCrZb9wc6kgVDM4K61jMn+4o+NLhZ
+aWTxVx0Bg5cbFN/fG5tcCBnQ/6GNKwUkEwe1kPYI1B9/Zd52XREpd8mFy/TWzOoxdGD4i8X9
+qOtktoU4m/ELESsFgbB6Rg1X8nqU/q2LcjSKOehJ71P/k3V5nNBPRzGdYtXluw9B+9kUXao=
+
+
+/
+show errors;
+create or replace type AggXQImp OID '0000000000000000000000000002015F' wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+d
+810 288
+ZpnRH7dhTYIPLQdZlMbgqSxnKsQwg9e3NdCDfC8CEv9kBM0+WisoAFz8+n+En4Pb/4OGbClE
+UmfnJkxc416qEHkLDimeoMrDecs20IbBeLsDQn0vkUz+rnefRKZactAhREM76deZu1Cs9XDl
+ZE1TFmpJmrim1cFDwfQWFVAtkQl8TqN/iLLJ5Rbno9hs797g8bIQxiU+ua8wIrkbBoX1q1qA
+APtS+HgiGpjr8nWp6TMrhLFTRN7Uq3nT71vwdw2cKqzylGK6Rgf5oeKx0sIxeack353qKN7l
+a5fy2mea33YJk0ZS5XL0LDVYygXHxfUlOZRgHpd+rXIYel87GNL9dtyhod/fXZHtBnFBI9X+
+3j575CTY/yZGWHXyfycwcUdMB0peOHKMlWGeR/+l5+JqCvW0R+Aj9wffl/Vqvdm6f3rZ1AuO
+Utb4dYSY99tIDUy5SMamwVdG0URdhw9S40MMdgmqBrSLUhCBKTPk1gWn0u3ndnaKYmBjnWlx
+a2X2kc1RiM2M/qFSSIweS5sn+MdOm52vb2Tx84x11BSAXpzchJdadoxF2d4Rszz+V736EJQq
+y5kgmAfNJ5g/nMRL07Aclu68G+S+jUyfI72v7dFqz5jkgf9Rc3gD4JtDaixBgwYX
+
+/
+show errors;
+create or replace function SYS_IXMLAGG wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+8
+56 85
+FCIzhYpZhiKGtnCH9k8SF/cOC6Awg8eZgcfLCNL+XudKdEr+X6WBUvW/saXSmeey+/R9+0Tm
+Zh1xKpSscYTm1uTIlVOpxdZxVaSEcZTm1gBzaJSpzw6JsCCpKh2mlrkEWw==
+
+/
+create or replace function 
+  SYS_XMLAGG wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+8
+7b a2
+MO3EC11Emu/0CsqxdpNnd77BQ2Ewgy7Z2p6pfC9GOB5u4PJECKY5bU0TL+MKFP18jf6dApYv
+BbtPLVhJCNXvjfWKDHz/PUHEVnj1H1oxTQJMhuAix9uWaPNzpv+oIWlnFPr3tQ91GnzxTs9D
+F02U4xdMkFroypM=
+
+/
+create or replace function SYS_IXQAGG wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+8
+54 85
+ZMUPVcMUKqDD/MUUoo9uEBPyjaAwg8eZgcfLCNL+XudKdEr+X+f19b+xpdKZ57L7vX3pzpJG
+ojlTJ8U2vkBGOTqobVL7XDm+RdpAU8VGORKSvtWmOvM3Qbz7PHSmtaMfvw==
+
+/
+grant execute on SYS_XMLAGG to public with grant option;
+grant execute on SYS_IXMLAGG to public with grant option;
+grant execute on SYS_IXQAGG to public with grant option;
+create or replace public synonym SYS_XMLAGG for SYS_XMLAGG;
+create or replace public synonym XMLAGG     for SYS_IXMLAGG;
+create or replace public synonym SYS_IXQAGG for SYS_IXQAGG;

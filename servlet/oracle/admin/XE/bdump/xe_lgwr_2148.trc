@@ -1,0 +1,440 @@
+Dump file c:\oraclexe\app\oracle\admin\xe\bdump\xe_lgwr_2148.trc
+Tue Oct 16 09:27:38 2012
+ORACLE V10.2.0.1.0 - Production vsnsta=0
+vsnsql=14 vsnxtr=3
+Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+Windows NT Version V6.1 Service Pack 1
+CPU                 : 2 - type 586, 2 Physical Cores
+Process Affinity    : 0x00000000
+Memory (Avail/Total): Ph:3095M/3965M, Ph+PgF:6266M/7928M, VA:3129M/4095M
+Instance name: xe
+
+Redo thread mounted by this instance: 1
+
+Oracle process number: 6
+
+Windows thread id: 2148, image: ORACLE.EXE (LGWR)
+
+
+*** SERVICE NAME:() 2012-10-16 09:27:38.440
+*** SESSION ID:(45.1) 2012-10-16 09:27:38.440
+Media recovery not enabled or manual archival only 0x10000
+Maximum redo generation record size = 156160 bytes
+Maximum redo generation change vector size = 150672 bytes
+*** 2012-10-16 15:09:19.731
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-16 15:13:07.883
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-16 15:13:36.404
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-16 15:13:57.274
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-16 15:14:14.611
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-16 15:19:19.143
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-16 16:12:05.221
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-16 16:23:15.113
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-16 16:23:26.816
+Media recovery not enabled or manual archival only 0x10000
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-16 16:23:45.305
+Media recovery not enabled or manual archival only 0x10000
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-16 16:24:03.162
+Media recovery not enabled or manual archival only 0x10000
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-16 16:24:21.868
+Media recovery not enabled or manual archival only 0x10000
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-16 16:24:40.041
+Media recovery not enabled or manual archival only 0x10000
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-16 16:24:58.214
+Media recovery not enabled or manual archival only 0x10000
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-16 16:25:16.374
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-16 16:25:28.558
+Media recovery not enabled or manual archival only 0x10000
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-16 16:25:46.731
+Media recovery not enabled or manual archival only 0x10000
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-16 16:27:03.806
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-16 16:27:30.303
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-16 16:27:49.197
+Media recovery not enabled or manual archival only 0x10000
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-16 16:28:11.299
+Media recovery not enabled or manual archival only 0x10000
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-16 16:28:24.261
+Media recovery not enabled or manual archival only 0x10000
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-16 16:28:36.560
+Media recovery not enabled or manual archival only 0x10000
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-16 16:28:48.820
+Media recovery not enabled or manual archival only 0x10000
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-16 16:29:01.065
+Media recovery not enabled or manual archival only 0x10000
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-16 16:29:13.402
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-16 16:30:41.873
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-16 16:31:17.053
+Media recovery not enabled or manual archival only 0x10000
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-16 16:31:27.052
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-16 16:31:43.581
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-16 16:32:06.375
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-16 16:32:19.352
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-16 16:32:31.259
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-16 16:32:43.356
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-16 16:32:58.639
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-16 16:33:10.625
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-16 16:33:22.779
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-16 16:33:37.655
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-16 16:33:50.118
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-16 16:34:04.211
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-16 16:34:16.674
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-16 16:34:29.052
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-16 16:34:40.636
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-16 16:34:55.567
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-16 16:35:05.851
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 13:52:53.545
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 15:09:39.810
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 15:22:37.857
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 15:23:29.975
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 15:23:53.682
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 15:24:09.295
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 15:24:24.059
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 15:24:44.633
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 15:25:06.432
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 15:25:21.937
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 15:25:36.005
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 15:25:48.201
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 15:26:00.943
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 15:26:12.610
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 15:26:24.614
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 15:26:43.253
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 15:26:58.342
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 15:27:10.604
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 15:27:22.530
+Media recovery not enabled or manual archival only 0x10000
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 15:28:37.061
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 15:29:14.905
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 15:29:32.034
+Media recovery not enabled or manual archival only 0x10000
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 15:29:42.557
+Media recovery not enabled or manual archival only 0x10000
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 15:29:54.885
+Media recovery not enabled or manual archival only 0x10000
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 15:30:07.057
+Media recovery not enabled or manual archival only 0x10000
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 15:30:19.372
+Media recovery not enabled or manual archival only 0x10000
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 15:30:30.765
+Media recovery not enabled or manual archival only 0x10000
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 15:31:56.319
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 15:32:18.912
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 15:32:29.934
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 15:32:42.076
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 15:33:07.899
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 15:33:25.006
+Media recovery not enabled or manual archival only 0x10000
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 15:33:36.528
+Media recovery not enabled or manual archival only 0x10000
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 15:33:48.625
+Media recovery not enabled or manual archival only 0x10000
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 15:34:01.560
+Media recovery not enabled or manual archival only 0x10000
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 15:34:13.739
+Media recovery not enabled or manual archival only 0x10000
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 15:34:25.070
+Media recovery not enabled or manual archival only 0x10000
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 15:34:37.173
+Media recovery not enabled or manual archival only 0x10000
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 15:34:50.069
+Media recovery not enabled or manual archival only 0x10000
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 15:35:01.449
+Media recovery not enabled or manual archival only 0x10000
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 15:35:14.420
+Media recovery not enabled or manual archival only 0x10000
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 15:35:25.740
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 15:35:42.116
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 15:36:06.934
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 15:36:19.441
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 15:36:31.207
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 15:36:43.703
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 15:36:54.857
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 15:37:07.424
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 15:37:19.232
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 15:37:31.549
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 15:37:43.848
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 15:37:55.092
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 15:38:10.130
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 15:38:22.938
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 15:38:34.812
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 15:38:46.714
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 15:38:58.688
+Media recovery not enabled or manual archival only 0x10000
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 16:23:40.935
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 16:24:55.612
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 16:25:23.875
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 16:25:50.036
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 16:26:10.901
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 16:26:32.110
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 16:26:47.055
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 16:27:00.372
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 16:27:20.247
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 16:27:37.891
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 16:27:55.759
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 16:28:09.584
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 16:28:22.724
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 16:28:35.375
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 16:28:47.798
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 16:29:03.773
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 16:29:19.760
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 16:29:32.849
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 16:29:58.050
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 16:33:03.315
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 16:41:13.040
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 16:41:25.131
+Media recovery not enabled or manual archival only 0x10000
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 16:41:43.855
+Media recovery not enabled or manual archival only 0x10000
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 16:42:01.957
+Media recovery not enabled or manual archival only 0x10000
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 16:42:19.718
+Media recovery not enabled or manual archival only 0x10000
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 16:42:38.224
+Media recovery not enabled or manual archival only 0x10000
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 16:42:56.431
+Media recovery not enabled or manual archival only 0x10000
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 16:43:13.638
+Media recovery not enabled or manual archival only 0x10000
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 16:43:32.685
+Media recovery not enabled or manual archival only 0x10000
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 16:43:50.895
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 16:44:45.821
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 16:45:52.150
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 16:46:18.534
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 16:46:34.997
+Media recovery not enabled or manual archival only 0x10000
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 16:46:48.750
+Media recovery not enabled or manual archival only 0x10000
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 16:47:00.975
+Media recovery not enabled or manual archival only 0x10000
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 16:47:13.017
+Media recovery not enabled or manual archival only 0x10000
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 16:47:25.321
+Media recovery not enabled or manual archival only 0x10000
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 16:47:37.550
+Media recovery not enabled or manual archival only 0x10000
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 16:48:54.432
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 16:49:11.173
+Media recovery not enabled or manual archival only 0x10000
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 16:49:23.894
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 16:50:21.127
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 16:50:48.049
+Media recovery not enabled or manual archival only 0x10000
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 16:51:00.237
+Media recovery not enabled or manual archival only 0x10000
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 16:51:12.632
+Media recovery not enabled or manual archival only 0x10000
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 16:51:24.753
+Media recovery not enabled or manual archival only 0x10000
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 16:51:36.000
+Media recovery not enabled or manual archival only 0x10000
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 16:51:48.962
+Media recovery not enabled or manual archival only 0x10000
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 16:52:00.425
+Media recovery not enabled or manual archival only 0x10000
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 16:52:13.303
+Media recovery not enabled or manual archival only 0x10000
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 16:52:24.591
+Media recovery not enabled or manual archival only 0x10000
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 16:52:36.937
+Media recovery not enabled or manual archival only 0x10000
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 16:52:49.018
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 16:54:16.548
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 16:54:28.931
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 16:54:40.715
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 16:54:53.522
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 16:55:05.473
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 16:55:17.538
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 16:55:29.565
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 16:55:41.722
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 16:55:53.731
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 16:56:05.356
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 16:56:17.948
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 16:56:29.298
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 16:56:41.382
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 16:56:53.357
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 16:57:05.482
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 16:57:17.648
+Media recovery not enabled or manual archival only 0x10000
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-17 17:30:36.685
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-18 18:30:54.766
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-19 22:01:52.309
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-21 01:50:41.851
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-22 22:03:20.183
+Media recovery not enabled or manual archival only 0x10000

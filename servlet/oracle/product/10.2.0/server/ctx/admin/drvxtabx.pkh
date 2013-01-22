@@ -1,0 +1,61 @@
+rem Copyright (c) 2002, Oracle Corporation.  All rights reserved.  
+rem
+rem    NAME
+rem      drvxtabx.pkh - DR inVoker's rights indeX TABle access routines
+rem
+rem    DESCRIPTION
+rem      DDL operations on index tables -- mainly called by drvddlx
+rem   
+rem    NOTES
+rem  
+rem    MODIFIED    (MM/DD/YY)
+rem    gkaminag     10/14/02 - gkaminag_security_020924
+rem    gkaminag     06/19/02 - gkaminag_security_ph1_020603
+rem    gkaminag     06/03/02 - creation
+
+create or replace package drvxtabx authid current_user as
+
+/*----------------------- create_tables --------------------------*/
+
+PROCEDURE create_tables( 
+  idx_owner in varchar2, 
+  idx_name  in varchar2,
+  idxid     in number
+);
+
+/*----------------------- create_indexes  ------------------------*/
+
+PROCEDURE create_indexes( 
+  idx_owner in varchar2, 
+  idx_name  in varchar2,
+  idxid     in number
+);
+
+/*----------------------- drop_tables  ---------------------------*/
+
+PROCEDURE drop_tables( 
+  idx_owner in varchar2, 
+  idx_name  in varchar2,
+  idxid     in number
+);
+
+/*----------------------- trunc_tables  ---------------------------*/
+
+PROCEDURE trunc_tables( 
+  idx_owner in varchar2, 
+  idx_name  in varchar2,
+  idxid     in number
+);
+
+/*----------------------- rename_tables  ---------------------------*/
+
+PROCEDURE rename_tables( 
+  idx_owner in varchar2, 
+  idx_name  in varchar2,
+  idxid     in number,
+  new_name  in varchar2,
+  has_idx   in boolean
+);
+
+end drvxtabx;
+/

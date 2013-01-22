@@ -1,0 +1,80 @@
+delete from sys.exppkgact$ 
+where package = 'DBMSZEXP_SYSPKGGRNT'
+/
+insert into sys.exppkgact$(package, schema, class, level#)
+values('DBMSZEXP_SYSPKGGRNT','SYS', 1, 2000)
+/
+CREATE OR REPLACE PACKAGE dbmszexp_syspkggrnt wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+9
+126 f3
+QKCyq05or4BhPLBgdOxRuFWiIjwwg3nI7cvWfHRGmPGwpbTyWUxY5nzeNlf3eREp8f6qbeaq
+zJX6BRC/Sa2TsZPQUHfWaAinwkfxe7tYjtgEHUvtnxSwqNNWiQbIHQ1/liYL4FnMjhmeNsgj
+k8/p0HHs0MzdrtHTa17My137Bk18k58f2cEljpUY3IXC/3kntfMV9uL4fUUfwmF+p65yAWCk
+WLyzl93idAkD/uP8paZAPzWN
+
+/
+CREATE OR REPLACE PACKAGE BODY dbmszexp_syspkggrnt wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+b
+1371 58b
+73XaN683LYYsof/AXfnQ9q3oKx8wg81UVcAFxS8ixLNeuEkS5fpX3CXrw6EXS0aRJ4gW5i1V
+/e1aHPlW5lRw+mUpVVg+t6Gsvzq0tUxWuGFqbDX9QU9pvDGxnfrMoIEmb5jCiVmocYDz5qXv
+dBcTrwdVg2lAQyZjWffxWtJzsjsJjwqUKzat9mpC6XzrdPLfFOmrSxFU6BYX5+KGCSn9uhKE
+Pn9egRVIiBm2oojmu1TJulaxoUbmK1tqYzGlYJByls06uWQU5feKWYqUYBHqK/KRmCVqR1cd
+c93hUeVM1w8JEjks+vdZTzjXPwu0LDxAnbb3zooXoW/QCmNqPMCziEfRgKx/6rrVoZMpqTvq
+DBCC9uWXS5mhmoDfgmbog+H9CQlvkNfSkqPTPWXAwyQ/9Sx9cN6qIKFsuSoCID/xWYG8HrI0
+4687UqxxrhsXaht7q9OOOrny2MzTrmsat3h/sw1Z8G0Rs4ATg9PJRA3z55dvU+WoGSPhN9dj
+vJxJWanLRiJXOQrzp2oNc3Mr4/+JINb+DVcApmkAuze7TJsasWdKBKRNg6tmZdtXzXJU83G9
+2gyav9HejjtNe1XWypMTwVwFPsRJWWIGtKYnCR2e1np/ks5TWkmWuyIiqekISrt24jOabXD9
+qJVSNFmGIuMNOhIj+vuzQOuF4l1198vE73ag9q11WTzi7s/Qk7pwo7/98J8NS91s916pqftH
+HSbDpW//VkYUrLGX/A6Z0LcnhM2+Tl5uNdIFGsdtLtNVVd48v2ndoQ+dQYhvYMvN6AYx/0sR
+jsHJXg3oCj0cLLoWtDuzWF3cs4hcKYFeGGYhxPkJtQm1v8NaBTwawnO45eqqqh7Jjrr9ks/p
+h08hTLEKrCIMmpztOuCs7/wSFubcxATAcdD7jCLg8nITCvBe0uRlhjJODisq5Ht+3uk097ky
+caLF/wKUGYXBpWqgFwW5hYBBzfV4Hqu2+QJOEG7LX1DzYA4fVQirJVB0SXw8OASJ11F6QA6F
+5UFEQp77+qE1Gp/+VnfHV3dkQIXrVrSxuHyQrfHuxaaBmiRn7WMzxMp4L/c4Km1O06zHp8Wm
+pTiU0YgWkFxOEShPZ/YEWQBpdptChQ56TYhvqx+Ze9Azzoj7PbJ5TyL7G+nfKDN2OTmGhzWo
+0sCjjk6pD4Sy6iA68Mq9ob0we41b9ALKwByKBRfYKxnIimxXk8FteU85v+ovMMzDifennE58
+NQggr6x+ncuKHST+h0RmeMuObBwAlYo8pNWPZ7S//fSQFKcm6/Zz8wI8TAtPK1oKmcS+BZYj
+YUvP79lfe+1b2uGHY8t5nzmz9iEHU0DsS5vnS8TUuFOqBiNvk9xFZyDSd+DEGQyb/LrA3Di7
+oUIIw1mzPb4hJYq2D7BjteRb5mFsQQ==
+
+/
+CREATE OR REPLACE PUBLIC SYNONYM dbmszexp_syspkggrnt FOR sys.dbmszexp_syspkggrnt
+/
+GRANT EXECUTE ON sys.dbmszexp_syspkggrnt TO exp_full_database
+/ 
+GRANT EXECUTE ON sys.dbmszexp_syspkggrnt TO execute_catalog_role
+/

@@ -1,0 +1,106 @@
+Dump file c:\oraclexe\app\oracle\admin\xe\udump\xe_ora_2380.trc
+Fri Sep 07 09:33:20 2012
+ORACLE V10.2.0.1.0 - Production vsnsta=0
+vsnsql=14 vsnxtr=3
+Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+Windows NT Version V6.1 Service Pack 1
+CPU                 : 2 - type 586, 2 Physical Cores
+Process Affinity    : 0x00000000
+Memory (Avail/Total): Ph:3200M/3965M, Ph+PgF:6385M/7928M, VA:3148M/4095M
+Instance name: xe
+
+Redo thread mounted by this instance: 0 <none>
+
+Oracle process number: 18
+
+Windows thread id: 2380, image: ORACLE.EXE (SHAD)
+
+
+*** SERVICE NAME:() 2012-09-07 09:33:20.423
+*** SESSION ID:(38.1) 2012-09-07 09:33:20.423
+kccsga_update_ckpt: num_1 = 8, num_2 = 0, num_3 = 0, lbn_2 = 0, lbn_3 = 0
+Thread 1 checkpoint: logseq 26, block 2, scn 892167
+  cache-low rba: logseq 26, block 12400
+    on-disk rba: logseq 26, block 13734, scn 903595
+  start recovery at logseq 26, block 12400, scn 0
+----- Redo read statistics for thread 1 -----
+Read rate (ASYNC): 669Kb in 0.31s => 2.11 Mb/sec
+Total physical reads: 4096Kb
+Longest record: 22Kb, moves: 0/904 (0%)
+Change moves: 1/30 (3%), moved: 0Mb
+Longest LWN: 281Kb, moves: 0/52 (0%), moved: 0Mb
+Last redo scn: 0x0000.000dca04 (903684)
+----------------------------------------------
+----- Recovery Hash Table Statistics ---------
+Hash table buckets = 32768
+Longest hash chain = 2
+Average hash chain = 308/307 = 1.0
+Max compares per lookup = 1
+Avg compares per lookup = 1582/1943 = 0.8
+----------------------------------------------
+*** 2012-09-07 09:33:24.947
+KCRA: start recovery claims for 308 data blocks
+*** 2012-09-07 09:33:24.963
+KCRA: blocks processed = 308/308, claimed = 308, eliminated = 0
+*** 2012-09-07 09:33:24.963
+Recovery of Online Redo Log: Thread 1 Group 1 Seq 26 Reading mem 0
+----- Recovery Hash Table Statistics ---------
+Hash table buckets = 32768
+Longest hash chain = 2
+Average hash chain = 308/307 = 1.0
+Max compares per lookup = 2
+Avg compares per lookup = 1774/1889 = 0.9
+----------------------------------------------
+Dump file c:\oraclexe\app\oracle\admin\xe\udump\xe_ora_2380.trc
+Wed Sep 26 10:16:06 2012
+ORACLE V10.2.0.1.0 - Production vsnsta=0
+vsnsql=14 vsnxtr=3
+Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+Windows NT Version V6.1 Service Pack 1
+CPU                 : 2 - type 586, 2 Physical Cores
+Process Affinity    : 0x00000000
+Memory (Avail/Total): Ph:3184M/3965M, Ph+PgF:6355M/7928M, VA:3148M/4095M
+Instance name: xe
+
+Redo thread mounted by this instance: 0 <none>
+
+Oracle process number: 18
+
+Windows thread id: 2380, image: ORACLE.EXE (SHAD)
+
+
+*** SERVICE NAME:() 2012-09-26 10:16:06.720
+*** SESSION ID:(38.1) 2012-09-26 10:16:06.720
+kccsga_update_ckpt: num_1 = 8, num_2 = 0, num_3 = 0, lbn_2 = 0, lbn_3 = 0
+Thread 1 checkpoint: logseq 43, block 2, scn 1350022
+  cache-low rba: logseq 43, block 10901
+    on-disk rba: logseq 43, block 11018, scn 1362201
+  start recovery at logseq 43, block 10901, scn 0
+----- Redo read statistics for thread 1 -----
+Read rate (ASYNC): 58Kb in 0.36s => 0.16 Mb/sec
+Total physical reads: 4096Kb
+Longest record: 2Kb, moves: 0/176 (0%)
+Change moves: 11/100 (11%), moved: 0Mb
+Longest LWN: 14Kb, moves: 0/27 (0%), moved: 0Mb
+Last redo scn: 0x0000.0014c918 (1362200)
+----------------------------------------------
+----- Recovery Hash Table Statistics ---------
+Hash table buckets = 32768
+Longest hash chain = 1
+Average hash chain = 30/30 = 1.0
+Max compares per lookup = 1
+Avg compares per lookup = 149/463 = 0.3
+----------------------------------------------
+*** 2012-09-26 10:16:11.259
+KCRA: start recovery claims for 30 data blocks
+*** 2012-09-26 10:16:11.259
+KCRA: blocks processed = 30/30, claimed = 30, eliminated = 0
+*** 2012-09-26 10:16:11.259
+Recovery of Online Redo Log: Thread 1 Group 2 Seq 43 Reading mem 0
+----- Recovery Hash Table Statistics ---------
+Hash table buckets = 32768
+Longest hash chain = 1
+Average hash chain = 30/30 = 1.0
+Max compares per lookup = 1
+Avg compares per lookup = 156/175 = 0.9
+----------------------------------------------

@@ -1,0 +1,46 @@
+Rem
+Rem Copyright (c) 1998, 2003, Oracle Corporation.  All rights reserved.  
+Rem  NAME
+Rem    drvparx.pkh - DR cartridge PARallel indeX services
+Rem  DESCRIPTION
+rem
+Rem  RETURNS
+Rem
+Rem    NOTES
+Rem
+Rem    MODIFIED   (MM/DD/YY)
+REm     ehuang     10/24/03  - tracing 
+REm     gkaminag   03/06/03  - switch user on opt if needed
+REm     smuralid   12/20/02  - PX support
+REm     smuralid   12/03/02  - add drvparx package
+REm     gkaminag   07/02/02  - gkaminag_misc_020702
+REm     gkaminag   06/01/02 -  migrate from driddlp
+Rem     yucheng    10/12/01 -  parallel sync
+Rem     yucheng    09/26/01 -  parallel support
+Rem     yucheng    08/23/01 -  creation
+
+create or replace package drvparx authid current_user is
+   FUNCTION ParallelPopuIndex(
+     cur        SYS_REFCURSOR, 
+     idxid      number,
+     idxo       varchar2, 
+     idxn       varchar2,
+     idxp       varchar2,
+     idxpopstate dr$popindex_state_t) 
+       return sys.odcivarchar2list
+      parallel_enable(partition cur by any) pipelined;
+
+   FUNCTION IndexOptimizeParFn(
+     crsr        in drvddl.popcurtyp,
+     idxownid    in number,
+     idxowner    in varchar2,
+     idxname     in varchar2,
+     ixpname     in varchar2,
+     optstate    in dr$optim_state_t
+   ) return sys.odcivarchar2list
+     pipelined parallel_enable (partition crsr BY HASH(num));
+
+   FUNCTION TraceGetTrace return dr$trc_tab;
+
+end drvparx;
+/

@@ -1,0 +1,36 @@
+﻿<?xml version="1.0"?>
+<!DOCTYPE HelpCollection>
+<HelpCollection
+  DTDVersion="1.0"
+  Id=""
+  FileVersion="10.2.0.000"
+  LangId="1033"
+  Font=""
+  FontSize=""
+  Charset=""
+  Title="Oracle Data Provider for .NET Help"
+  Copyright="Oracle">
+
+  <AttributeDef File="DataProviderHelp.HxA"/>
+
+  <TOCDef File="DataProviderHelp.HxT"/>
+
+  <KeywordIndexDef File="DataProviderHelpKIndex.HxK"/>
+  <KeywordIndexDef File="DataProviderHelpAIndex.HxK"/>
+  <KeywordIndexDef File="DataProviderHelpFIndex.HxK"/>
+
+  <ItemMoniker Name="!DefaultFullTextSearch" ProgId="HxDs.HxFullTextSearch" InitData=""/>
+  <ItemMoniker Name="!DefaultTOC" ProgId="HxDs.HxHierarchy" InitData=""/>
+  <ItemMoniker Name="!DefaultKeywordIndex" ProgId="HxDs.HxIndex" InitData="K"/>
+  <ItemMoniker Name="!DefaultAssociativeIndex" ProgId="HxDs.HxIndex" InitData="A"/>
+  <ItemMoniker Name="!DefaultContextWindowIndex" ProgId="HxDs.HxIndex" InitData="F"/>
+  <ItemMoniker Name="!DefaultNamedUrlIndex" ProgId="HxDs.HxIndex" InitData=""/>
+
+  <ToolData Name="FAR.IncBuildNumber" Value="0"/>
+  <ToolData Name="MSVHWLogFile" Value="DataProviderHelp.log"/>
+  <ToolData Name="MSVHWLogLevel" Value="3"/>
+  <ToolData Name="MSVHWNamespace" Value="Oracle.DataProviderHelp.1033"/>
+  <ToolData Name="MSVHWUniqueID" Value="DataProviderHelp"/>
+  <ToolData Name="FAR.CommandLine" Value="f:\Program Files\Helpware\FAR\FAR.exe"/>
+  <ToolData Name="FAR.CommandLineArgs" Value="ms-help://$NAMESPACE"/>
+</HelpCollection>

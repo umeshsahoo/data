@@ -1,0 +1,38 @@
+CREATE OR REPLACE PACKAGE dbms_ijob wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+9
+d84 35b
+uXwlAYjexm0fZ4jFeUHDRmyKnZMwg83qr0iMfC9V1ToYrdMmo2MAXOkSfMnmaAT9MRt53Pm1
+nVQTdWcYkFZamCXyDVfbfCCL10eCiKPm0BpgTZdgujPRDHAjHY/i5aDD32J/2F3ORR3ETY6D
+Lzhn9S70nhk/rx5yTPN/qtzsJBLHF527NipZGD7IUsn/DlD18jZpUqiG4iuhGFywL3XH9in7
+KX8XEDYYj0g52+sb2crY7cP5k7WgifHv8wUZC5+GLyS6Jl95/xlMuW24N85cZTV3MWU4SzP/
+qL7RuNC3kDe2zNJnd9lhfTqugtFY+jhyoQCozYo6U1XL6ecabb6Zc93pnRBYGxyWincK9zLX
+CK6+LuRZkGcF3rGKcCGJOIoLFOLWS8U9/rM/fnW5l0CID9J25pjmxrygmfFzBgDZ+99Qz56u
+t0ufpF/i1r3kIWFmORJ1tfdvDq6TOtxVQFqDnPIczHEen/Ohg+SGZ3RHglpewauV3lLU+7Zw
+GM+p2mexDTpvFapJNuViSUNwmrjNn4UsHxgFHdYqfNGcavnso4a7lgLwemvEWIWf4qO0b4J9
+VPlbGA+03flgFBlNNA0Ii4Mulau117HURVhbyU1W2eK2r8OKUtFqPqNybJ/LCy3UtlPfPBWC
+dt6hAhIlUh2S2PgQRuiGliegh9L2QugZYd5nmI5nnOEGFyTxnfyiqWiutaPZVaT6st9gMlNz
+e81o/5iN8TuBk5MfXMFIUIpekQbiTTOkwTNlMUrP6nQNibgiLCe13lMqXv7JIslRyrkFGvJH
+PLdr4fCkfk7VJ24aOINk1829UixsYVyKGoTzesUz3ChwjlwIhnjcjsSz
+
+/
+grant execute on dbms_ijob to imp_full_database
+/
+grant execute on dbms_ijob to exp_full_database
+/

@@ -1,0 +1,24 @@
+Dump file c:\oraclexe\app\oracle\admin\xe\bdump\xe_mmnl_4264.trc
+Fri Aug 10 11:53:55 2012
+ORACLE V10.2.0.1.0 - Production vsnsta=0
+vsnsql=14 vsnxtr=3
+Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+Windows NT Version V6.1 Service Pack 1
+CPU                 : 2 - type 586, 2 Physical Cores
+Process Affinity    : 0x00000000
+Memory (Avail/Total): Ph:1406M/3965M, Ph+PgF:4048M/7928M, VA:3132M/4095M
+Instance name: xe
+
+Redo thread mounted by this instance: 1
+
+Oracle process number: 11
+
+Windows thread id: 4264, image: ORACLE.EXE (MMNL)
+
+
+*** 2012-08-10 11:53:55.401
+*** SERVICE NAME:(SYS$BACKGROUND) 2012-08-10 11:53:55.398
+*** SESSION ID:(40.3) 2012-08-10 11:53:55.398
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 11:54:07.442
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()

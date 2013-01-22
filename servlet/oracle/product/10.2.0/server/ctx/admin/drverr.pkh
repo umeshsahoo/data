@@ -1,0 +1,295 @@
+rem 
+rem $Header: drverr.pkh 08-dec-2003.17:05:56 yucheng Exp $ 
+rem 
+rem Copyright (c) 1991, 2003, Oracle Corporation.  All rights reserved.  
+rem  NAME
+rem    drue.pkh - DR Utility Errors 
+rem  DESCRIPTION
+rem    Stored procedure interface to support an error stack
+rem
+rem  PUBLIC FUNCTION(S)
+rem    push            - push an error onto the stack
+rem    push_internal   - push an internal error onto the stack
+rem    raise           - raise an exception to dump the stack, and clear it
+rem    error           - is there an error on the stack?
+rem    text_on_stack   - push given text directly onto stack
+rem    get_stack       - return what's on the stack, and clear it
+rem
+rem  NOTES
+rem  MODIFIED    (MM/DD/YY)
+rem     yucheng   12/08/03 - add get_stack_noclear 
+rem     gkaminag  06/19/02 - gkaminag_security_ph1_020603
+rem     gkaminag  06/06/02 - security overhaul phase 1.
+rem     yucheng   12/14/00 - add get_stack1
+rem     gkaminag  03/09/99 - add get_last_errcode
+rem     gkaminag  02/19/99 - add comment to text_on_stack
+rem     gkaminag  02/17/99 - add clear_stack
+rem     ehuang    05/18/98 - separate getmsg into header and body
+rem     cbhavsar  05/07/98 - Fix messaging
+rem     ymatsuda  05/07/98 - rename message callout
+rem     wclin     05/07/98 - define rights model for c ilms callout
+rem     cbhavsar  04/28/98 - Trusted callout messaging
+rem     gkaminag  08/26/96 - add get_error_mesg
+rem
+
+
+create or replace package drue authid current_user as
+
+  -- Public data structure
+  
+  --
+  -- Public procedure prototypes
+  --
+  
+/*-------------------------------- push -------------------------------------*/
+/*
+  NAME
+    push - PUSH an error onto the stack
+  DESCRIPTION
+
+    This function uses trusted callout drexrmessage to get the requested
+    error and push it on the stack.  The function takes the facility and
+    nmenonic error symbol, and using the current language ID, retrieves
+    the error, and pushes it onto the stack.
+
+  ARGUMENTS
+
+    msgid		- error code number
+
+  NOTES
+    The messages must have substition variables of the form
+    '%(number)s'. You cannot have a substitution variable without a
+    number (ex %s) or a substitution variable with a type other than s
+    (ex %(1)d)
+
+  EXCEPTIONS
+
+  RETURNS
+    none
+*/
+procedure push(
+    msgid       number,
+    arg1	varchar2	default NULL,
+    arg2	varchar2	default NULL,
+    arg3	varchar2	default NULL,
+    arg4	varchar2	default NULL,
+    arg5	varchar2	default NULL
+ );
+--pragma restrict_references(push, wnds);
+
+/*-----------------------------get_error_mesg --------------------------*/
+function get_error_mesg(
+    msgid       number,
+    arg1      varchar2        default NULL,
+    arg2      varchar2        default NULL,
+    arg3      varchar2        default NULL,
+    arg4      varchar2        default NULL,
+    arg5      varchar2        default NULL
+ ) return varchar2;
+
+/*-------------------------- push_internal ---------------------------------*/
+/*
+  NAME
+    push_internal - PUSH an internal error onto the stack
+  DESCRIPTION
+
+    This function pushes an internal error onto the stack.
+
+  ARGUMENTS
+    arg1..arg5      the arguments for the internal error, printed in
+		    the brackets:  DRG-123: internal error [arg1] [arg2] ...
+  NOTES
+
+  EXCEPTIONS
+
+  RETURNS
+    none
+*/
+procedure push_internal(
+    arg1	varchar2	default NULL,
+    arg2	varchar2	default NULL,
+    arg3	varchar2	default NULL,
+    arg4	varchar2	default NULL,
+    arg5	varchar2	default NULL
+ );
+--pragma restrict_references(push_internal, wnds);
+
+/*--------------------------- get_stack -------------------------------------*/
+/*
+  NAME
+    get_stack - return contents of stack, and clear the stack
+
+  DESCRIPTION
+
+  ARGUMENTS
+
+  notes
+    
+       
+  exceptions
+
+  returns
+    none
+*/
+function get_stack return varchar2;
+
+/*--------------------------- get_stack1 ------------------------------------*/
+/*
+  NAME
+    get_stack1 - return contents of stack, and clear the stack
+
+  DESCRIPTION
+
+  ARGUMENTS
+
+  notes
+    
+       
+  exceptions
+
+  returns
+    none
+*/
+function get_stack1 return varchar2;
+
+/*-------------------------------- raise -------------------------------------*/
+/*
+  NAME
+    raise - raise an exception, dumping the current stack
+  DESCRIPTION
+
+  ARGUMENTS
+
+  notes
+    
+       
+  exceptions
+
+  returns
+    none
+*/
+procedure raise;
+
+/*-------------------------------- error------------------------------------*/
+/*
+  NAME
+    error - is there an error on the stack?
+  DESCRIPTION
+
+  ARGUMENTS
+
+  NOTES
+    
+       
+  EXCEPTIONS
+
+  RETURNS
+    TRUE/FALSE
+*/
+function error return boolean;
+pragma restrict_references(error, wnds);
+
+
+/*-------------------------- text_on_stack ---------------------------------*/
+/*
+  NAME
+    text_on_stack - push text directly on stack
+  DESCRIPTION
+
+    This function is used to push the stack returned from C onto the PL/SQL
+    stack.
+
+  ARGUMENTS
+
+    text        - text to push
+
+  NOTES
+
+  EXCEPTIONS
+
+  RETURNS
+    none
+*/
+procedure text_on_stack(
+    text        varchar2,
+    comment     varchar2 default null
+);
+-- pragma restrict_references(text_on_stack, wnds);
+
+  -- exceptions
+
+/*-------------------------- getmsg ---------------------------------*/
+/*
+  NAME
+    getmsg
+  DESCRIPTION
+
+  ARGUMENTS
+
+  NOTES
+
+  EXCEPTIONS
+
+  RETURNS
+    none
+*/
+procedure getmsg(msgid in binary_integer, msgtext out varchar2);
+
+/*-------------------------- clear_stack ---------------------------------*/
+/*
+  NAME
+    clear_stack
+  DESCRIPTION
+
+  ARGUMENTS
+
+  NOTES
+
+  EXCEPTIONS
+
+  RETURNS
+    none
+*/
+procedure clear_stack;
+
+/*-------------------------- pop -----------------------------------------*/
+/*
+  NAME
+    pop
+
+  DESCRIPTION
+    gets last errcode, errmsg, then clears stack
+
+  ARGUMENTS
+
+  NOTES
+
+  EXCEPTIONS
+
+  RETURNS
+    last errcode
+*/
+procedure pop(errcode out number, errmsg out varchar2);
+
+/*--------------------------- get_stack_noclear -----------------------------*/
+/*
+  NAME
+    get_stack_noclear - return contents of stack without clearing the stack
+
+  DESCRIPTION
+
+  ARGUMENTS
+
+  notes
+    
+       
+  exceptions
+
+  returns
+    none
+*/
+function get_stack_noclear return varchar2;
+
+
+end drue;
+/

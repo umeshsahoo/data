@@ -1,0 +1,28 @@
+Rem 
+rem Copyright (c) 2001, 2003, Oracle Corporation.  All rights reserved.  
+rem    NAME
+rem      drirepz.pkh
+rem    DESCRIPTION
+rem      This package contains sizing functions called by the
+rem      ctx_report package
+rem
+rem    NOTES
+rem    MODIFIED    (MM/DD/YY)
+rem      ehuang    05/21/03  - 
+rem      ehuang    03/31/03  - xml support
+rem      gkaminag  12/21/01  - Merged gkaminag_report_011217
+rem      gkaminag  12/17/01  - creation
+
+create or replace package drirepz as
+
+/*--------------------------- index_size --------------------------------*/
+
+procedure index_size(
+  index_name    in varchar2,
+  report        in out nocopy clob,
+  part_name     in varchar2 default null,
+  report_format in varchar2 DEFAULT 'TEXT'
+);
+
+end drirepz;
+/

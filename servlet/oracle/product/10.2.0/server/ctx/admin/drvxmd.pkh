@@ -1,0 +1,255 @@
+rem 
+rem Copyright (c) 2002, 2003, Oracle Corporation.  All rights reserved.  
+rem    NAME
+rem      drvxmd.pkh - DR inVoker's indeX MetaData access
+rem
+rem    DESCRIPTION
+rem      functions for querying and setting index meta-data
+rem
+rem    NOTES   
+rem      SECURITY SECURITY SECURITY
+rem        this package is public execute because several of its procedures
+rem        are called from C code.  ensure that every public call is 
+rem        protected by security checking or some other method
+rem      SECURITY SECURITY SECURITY
+rem
+rem    MODIFIED    (MM/DD/YY)
+rem    wclin        11/14/03 - add set_reverse_docid_switch() 
+rem    gkaminag     10/23/03 - optimize type 
+rem    yucheng      08/13/03 - create local index online support 
+rem    yucheng      06/10/03 - 
+rem    yucheng      05/15/03 - GetIndexMD return sync_Type
+rem    yucheng      03/07/03 - remove tabpart_obj#
+rem    wclin        02/26/03 - modify GetIndexStats()
+rem    gkaminag     12/06/02 - security for classification
+rem    wclin        10/04/02 - get smplsz in GetIndexStats
+rem    yucheng      07/12/02 - merge split policy
+rem    gkaminag     07/02/02 - security overhaul phase 2
+rem    gkaminag     06/19/02 - gkaminag_security_ph1_020603
+rem    gkaminag     06/03/02 - creation
+
+create or replace package drvxmd authid current_user is
+
+
+/*---------------------------- GetIndexMD  -------------------------------*/
+/* fetch selected dr$index column values into out variables */
+
+procedure GetIndexMD(
+  p_idxid           in  binary_integer,
+  o_owner           out varchar2,
+  o_owner#          out binary_integer,
+  o_name            out varchar2,
+  o_table_obj#      out binary_integer,
+  o_table_dataobj#  out binary_integer,
+  o_key_name        out varchar2,
+  o_key_type        out binary_integer,
+  o_text_name       out varchar2,
+  o_text_type       out binary_integer,
+  o_text_length     out binary_integer,
+  o_lang_col        out varchar2,
+  o_fmt_col         out varchar2,
+  o_cset_col        out varchar2,
+  o_idx_type        out binary_integer,
+  o_idx_option      out varchar2,
+  o_idx_sync_type   out varchar2,
+  o_idx_sync_memory out binary_integer 
+);
+
+/*---------------------------- GetIndexPartition  -----------------------*/
+/* get dr$index_partition information */
+
+procedure GetIndexPartition(
+  o_id               out binary_integer,
+  o_tabpart_dataobj# out binary_integer,
+  o_sync_type        out varchar2,
+  o_sync_memory      out number,
+  o_option           out varchar2,
+  i_cid               in binary_integer,
+  i_pname             in varchar2
+); 
+
+/*---------------------------- OpenIndexMDScan ----------------------*/
+/* open dr$index_object and value cursors */
+
+procedure OpenIndexMDScan(
+  p_idxid           in  binary_integer
+);
+
+/*---------------------------- NextIndexObject ---------------------------*/
+/* get next dr$index_object cursor */
+
+function NextIndexObject(
+  o_cla_id          out binary_integer,
+  o_obj_id          out binary_integer,
+  o_acnt            out binary_integer
+) return binary_integer;
+
+/*---------------------------- NextIndexValue ----------------------------*/
+/* get next dr$index_value cursor */
+
+function NextIndexValue(
+  o_cla_id          out binary_integer,
+  o_att_id          out binary_integer,
+  o_datatype        out binary_integer,
+  o_sub_group       out binary_integer,
+  o_sub_att_id      out binary_integer,
+  o_sub_datatype    out binary_integer,
+  o_value           out varchar2
+) return binary_integer;
+
+/*---------------------------- GetDocidCount -----------------------------*/
+/* get docid count */
+
+function GetDocidCount(
+  p_idxid           in binary_integer,
+  p_ixpid           in binary_integer default null
+) return binary_integer;
+
+/*---------------------------- GetIndexStats -----------------------------*/
+/* get index stats from dr$stats */
+
+procedure GetIndexStats(
+  p_idxid           in binary_integer,
+  p_smplsz          in out nocopy binary_integer
+);
+
+/*---------------------------- GetBaseTableName --------------------------*/
+/* get base table name */
+
+function GetBaseTableName(
+  p_idxid           in binary_integer,
+  p_ixpid           in binary_integer default null
+) return varchar2;
+
+/*---------------------------- IncrementDocCnt --------------------------*/
+/* increment docid count */
+
+procedure IncrementDocCnt(
+  p_idxid           in binary_integer,
+  p_ixpid           in binary_integer,
+  p_delta           in binary_integer
+);
+
+/*---------------------------- AllocateDocids ---------------------------*/
+/* allocate docids */
+
+procedure AllocateDocids(
+  p_idxid           in  binary_integer,
+  p_ixpid           in  binary_integer,
+  p_allocsz         in  binary_integer,
+  p_startid         out binary_integer
+);
+
+/*---------------------------- RecordIndexError -------------------------*/
+/* records an error to the dr$index_error table */
+
+procedure RecordIndexError(
+  p_idxid           in binary_integer,
+  p_textkey         in varchar2,
+  p_stack           in varchar2
+);
+
+/*---------------------------- OptStartTimer -----------------------------*/
+/* starts optimization timer */
+
+procedure OptStartTimer;
+
+/*---------------------------- OptGetTimer -------------------------------*/
+/* gets optimization timer */
+
+function OptGetTimer return binary_integer;
+
+/*---------------------------- OptGetState -------------------------------*/
+/* get full optimize state */
+
+procedure OptGetState(
+  p_idxid       in  binary_integer,
+  p_ixpid       in  binary_integer,
+  p_ntable_name in  varchar2,
+  p_itable_name in  varchar2,
+  o_opt_token   out varchar2,
+  o_opt_type    out number,
+  o_opt_count   out number
+);
+
+/*---------------------------- OptGetType -------------------------------*/
+/* get type optimize start token */
+
+procedure OptGetType(
+  p_idxid       in  binary_integer,
+  p_ixpid       in  binary_integer,
+  p_ntable_name in  varchar2,
+  p_itable_name in  varchar2,
+  o_opt_token   out varchar2,
+  o_opt_type    in  number,
+  o_opt_count   out number
+);
+
+/*---------------------------- OptSetState -------------------------------*/
+/* set full optimize state */
+
+procedure OptSetState(
+  p_idxid       in  number,
+  p_ixpid       in  number,
+  p_ntable_name in  varchar2,
+  p_opt_token   in  varchar2,
+  p_opt_type    in  number
+);
+
+/*---------------------------- GetFieldSecName -----------------------------*/
+/* get field section name */
+
+function GetFieldSecName (
+  p_idxid  in number,
+  p_secid  in number
+) return varchar2;
+
+/*---------------------------- GetPrefClaObj -----------------------------*/
+
+procedure GetPrefClaObj(
+  p_preid  in  number,
+  o_claid  out number,
+  o_objid  out number
+);
+
+/*---------------------------- GetObjDefault -----------------------------*/
+
+procedure GetObjDefault(
+  p_oatid   in  number,
+  o_default out varchar2
+);
+
+/*---------------------------- OpenPrefValue ------------------------------*/
+
+procedure OpenPrefValue(
+  p_preid   in number
+);
+
+/*---------------------------- NextPrefValue ------------------------------*/
+
+function NextPrefValue(
+  o_value   out varchar2,
+  o_oatid   out number
+) return binary_integer;
+
+/*---------------- set_reverse_docid_switch  -------------------*/
+/*
+  NAME
+    Set_reverse_docid_switch
+
+  DESCRIPTION
+    Turns ON/OFF reverse docid processing for a specified index.
+
+  ARGUMENTS
+    owner_name     index owner
+    index_name     index name
+    value          switch value (ON or OFF)
+*/
+PROCEDURE set_reverse_docid_switch(
+  owner_name     in  varchar2,
+  index_name     in  varchar2,
+  value          in  varchar2
+);
+
+end drvxmd;
+/

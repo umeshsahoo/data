@@ -1,0 +1,222 @@
+rem 
+rem $Header: dridml.pkh 19-nov-2003.11:16:13 gkaminag Exp $ 
+rem 
+Rem Copyright (c) 1991, 2003, Oracle Corporation.  All rights reserved.  
+Rem    NAME
+Rem      dridml.pkh - spec for DML queue server side functions
+Rem    DESCRIPTION
+Rem      
+Rem    RETURNS
+Rem 
+Rem    NOTES
+Rem 
+Rem    MODIFIED   (MM/DD/YY)
+Rem     gkaminag   11/19/03  - bug 3237317 
+Rem     smuralid   10/09/03  - process_dml: direct_path defaults to false 
+Rem     yucheng    08/12/03  - local create index online support 
+Rem     smuralid   04/21/03  - process_dml: new parameter 'direct_path'
+Rem     gkaminag   10/03/02  - security phase 3
+Rem     gkaminag   09/24/02  - security phase 3
+Rem     gkaminag   06/07/02  - security overhaul phase 1.
+Rem     yucheng    12/24/01  - online_support
+Rem     yucheng    10/12/01 -  parallel sync
+Rem     gkaminag   03/16/01 -  bug 1691657
+Rem     gkaminag   09/06/00 -  partition support
+Rem     gkaminag   08/15/00 -  partition support in sync
+Rem     gkaminag   08/14/00 -  partitioning support
+Rem     gkaminag   08/10/00 -  partitioning support
+Rem     salpha     06/26/00 -  ctxrule implementation
+Rem     gkaminag   03/30/00 -  ctxcat DML
+Rem     gkaminag   02/18/99 -  optional DML unlocking in dridml.deregister
+Rem     gkaminag   08/27/98 -  add dml method for ctxsrv dml
+Rem     gkaminag   05/11/98 -  clean_dml interface change
+Rem     gkaminag   05/04/98 -  batch_done problems
+Rem     dyu        02/27/98 -  remove build_dml
+Rem     gkaminag   02/26/98 -  no need for global lock
+Rem     gkaminag   02/24/98 -  new dml queue
+Rem     gkaminag   07/15/97 -  new DML queue
+Rem     gkaminag   05/16/97 -  add test flag
+Rem     wkeese     01/10/95 -  Creation 
+
+create or replace package dridml
+is
+
+  LOCK_WAIT       constant number  := null;
+  LOCK_NOWAIT     constant number  := 0;
+  IGNORE_ERRORS   constant boolean := TRUE;
+
+/*--------------------------- deregister --------------------------------*/
+/*
+  NAME
+    DEREGISTER(cid) - deregister the given column with DML queue,
+  
+  DESCRIPTION
+    This procedure discontinues queueing of updates to the DML
+    queue.   It also flushes any pending requests, and waits for any
+    in-progress requests to complete
+  ARGUMENTS
+    CID		- the column id to register
+    unlock      - unlock DML afterwards?
+*/
+procedure DEREGISTER(cid number, unlock in boolean default TRUE,
+                     part_id number default 0,
+                     part_name in varchar2 default null);
+
+/*------------------------------ lock_dml --------------------------------*/
+/*
+  NAME
+    lock_dml
+  
+  DESCRIPTION
+     lock dml for a column  
+  
+  ARGUMENTS
+     cid        -- cid to lock
+     timeout    -- if non-null, timeout
+     pid        -- partition id
+
+  RETURNS
+     0 on success, 1 on timeout
+
+  NOTES
+     This does not block out incoming DML reindex requests.
+*/
+function lock_dml_ret(
+  cid        in number,
+  pid        in number,
+  timeout    in number
+) return number;
+
+procedure lock_dml(
+  cid        in number,
+  pid        in number,
+  timeout    in number
+);
+
+/*------------------------- lock_dml_all_part ----------------------------*/
+/* NOTE: gets multiple locks.  If fails, it's up to calling procedure to  */
+/* release any locks it may have gotten                                   */
+procedure lock_dml_all_part(
+  cid        in number
+);
+
+/*----------------------------- unlock_dml ------------------------------*/
+/*
+  NAME
+     UNLOCK_DML
+  
+  DESCRIPTION
+     Unlock the DML queue
+  
+  ARGUMENTS
+     ignore_errors	- don't flag any errors  
+*/
+procedure unlock_dml(
+  ignore_errors in boolean default false
+);
+
+/*------------------------ unlock_dml_all_part ---------------------------*/
+
+procedure unlock_dml_all_part(
+  ignore_errors in boolean default false
+);
+
+/*--------------------------- get_dml ----------------------------*/
+/*
+  NAME
+    GET_DML
+
+  DESCRIPTION
+    Checks DML queue and sees if there is work to do.  If so,
+    finds the CID for the dml work
+
+  ARGUMENTS
+    CID             out     - column to work on 
+
+*/
+procedure get_dml (
+  cid             out     number,
+  pid             out     number
+);
+
+/*--------------------------- ClearOnlinePending ------------------------*/
+
+procedure ClearOnlinePending(
+  p_idxid in number,
+  index_partition in varchar2 default NULL 
+);
+
+/*--------------------------- ExchangePending ---------------------------*/
+/* exchange all rows in dr$pending, dr$waiting, etc. for exchange partition */
+
+procedure ExchangePending(
+  p_idxid1 in binary_integer,
+  p_ixpid1 in binary_integer,
+  p_idxid2 in binary_integer
+);
+
+/*------------------------- delete_dup_waiting ----------------------------*/
+/* eliminate duplicate dr$waiting rows */
+
+procedure delete_dup_waiting(cid in number, pid in number);
+
+/*------------------------- open_waiting_cur ----------------------------*/
+/* open cursor on dr$waiting */
+
+procedure open_waiting_cur(cid in number, pid in number);
+
+/*------------------------- fetch_waiting_cur ----------------------------*/
+/* fetch row from waiting cursor */
+
+function fetch_waiting_cur(rid out rowid, wrid out rowid) return number;
+
+/*------------------------- insert_pending -------------------------------*/
+/* insert a row into dr$pending */
+
+procedure insert_pending(
+  cid  in number, 
+  pid  in number, 
+  rid  in rowid,
+  wrid in rowid default null
+);
+
+/*-------------------------- DeletePending -------------------------*/
+
+procedure DeletePending (
+  p_idxid  in binary_integer,
+  p_ixpid  in binary_integer,
+  p_rid    in rowid
+);
+
+/*-------------------------- DeletePendingArr ----------------------*/
+
+procedure DeletePendingArr (
+  p_idxid  in binary_integer,
+  p_ixpid  in binary_integer,
+  p_rid    in dr_def.rowid_tab
+);
+
+/*-------------------------- SetLockFailed -------------------------*/
+
+procedure SetLockFailed (
+  p_idxid  in binary_integer,
+  p_ixpid  in binary_integer,
+  p_rid    in rowid
+);
+
+/*-------------------------- HasPending ----------------------------*/
+
+function HasPending (
+  p_idxid  in binary_integer,
+  p_ixpid  in binary_integer
+) return boolean;
+
+/*-------------------------- CleanDelete ---------------------------*/
+
+procedure CleanDelete (
+  p_idxid  in binary_integer,
+  p_ixpid  in binary_integer
+);
+
+end dridml;
+/

@@ -1,0 +1,52 @@
+rem
+rem $Header: drival.pkh 11-jun-2002.12:23:07 gkaminag Exp $
+rem
+rem Copyright (c) 1995, 2002, Oracle Corporation.  All rights reserved.  
+rem    NAME
+rem      drvp.pkh - Spec For ConText Option Validation procedures
+rem    DESCRIPTION
+rem      This contains the interface to the stop list validation procedure.
+rem      This eventually has to be extended to have validation procedures
+rem      for all the objects supported by ConText option
+rem
+rem    RETURNS
+rem
+rem    NOTES
+rem
+rem    MODIFIED   (MM/DD/YY)
+rem     gkaminag   06/11/02  - API Changes.
+rem     gkaminag   06/08/99 -  multi lexer
+rem     ehuang     11/06/98 -  add validate_attr
+rem     gkaminag   04/03/98 -  copy section groups
+rem     ehuang     03/30/98 -  dr_utl->driutl
+rem     gkaminag   03/17/98 -  preference system change
+rem     ehuang     03/10/98 -  new pref system object validation
+rem     gkaminag   06/11/97 -  add validate_fil_html
+rem     gkaminag   06/06/97 -  add new master-detail datastore
+rem     mfaisal    11/21/96 -  Add validation for Multiple UDF
+rem     gkaminag   10/01/96 -  add validation of user translator
+rem     ehuang     09/03/96 -  rewrite drvp to perform
+rem     gkaminag   08/01/96 -  add validate of user-defined filter
+rem     gkaminag   08/01/96 -  streamline code
+rem     droberts   07/17/96 -  Fixing compilation errors
+rem     droberts   07/08/96 -  Added validate_datastoreurl
+rem     gkaminag   04/26/96 -  Make att_value IN OUT (bug 358170)
+Rem     rnori      03/07/96 -  Creation 
+rem
+
+CREATE OR REPLACE PACKAGE drival AS
+
+function validate_pref(
+  p_pref_name varchar2,
+  p_class_id  number
+) return dr_def.pref_rec;
+
+procedure validate_attr(p_cla_id      in      number,
+                        p_obj_id      in      number,
+                        p_attr_name   in      varchar2,
+                        p_attr_value  in out  varchar2);
+
+end drival;
+/
+
+

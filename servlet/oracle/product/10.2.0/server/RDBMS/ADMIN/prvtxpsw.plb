@@ -1,0 +1,70 @@
+CREATE OR REPLACE PACKAGE dbms_pswmg_import wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+9
+24e 16d
+8ECvF+VaPHrGClB9ifNy7m+2b2QwgxD3ckhqynTUv7Ku7gvFgcLNtLe9G+nVqpFa2tw0tbp0
+id+UunsMygzfnXL551cQ7lkOGvBs2xOQbS2vx+FfZkNnuN9/Qv9ZtxdEGxXs9POnWopQ03H3
+sIKbxs46P1eeqal/GaP+SDWUAibFPB640wpahO0JVFZ37/T9OOrHasqCyWSY9wvvG4kf4WT4
+eUZSGLw1ycjUqMHgcVFYzh/i3jOJwVO1yjznikkJmbbYvKf4NnwZtwk1jbkzByDanRj8lzMw
+Mk2ICIBL+Se+0/2QbZ98PEXfH/xZeqwEQO6vPW0T8Qji0gA7AbQnJQo0PeXRrTIj+PsHBo2U
+
+
+/
+CREATE OR REPLACE PACKAGE BODY dbms_pswmg_import wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+b
+862 3e9
+9R8YvqkjVkDT9Up0bB9R1eJcaGowg5BcTCDrfI5DDTqUp3V3w8OUQ0QmAShIwOtFFFJLkEgQ
+GC98JtN+Ef3KGvkw4s20UkWJvVGhTsYI7cF2+BkrIUKusWcrelW39VyF6PHqlUU46ZUCZllg
+RlOdrziOdNLqvUFno5nK36IDOAlSLdAFtfCpotMr08U2VU7YTNRc0QmtlVoXvMLR5JN2ZGdZ
+dAB6r4UYjY4LAwmvq9vTsWEd9r1kDDIAS8wMLwQD8ArqZUbor8/XlF6vcU/I3NZYVoyU2JPe
+fVbR+mjxuIzfDZDszuFSFgEiE0IBrcGNcs1rRlPd1BFOk3vnQu3SSkx5VMt1m5AMYH8YRGb/
+RL8s2dhAMNpYiDqgptsCxI4DcAx5DnSWxpNAdpJS/OCI8OYYTgG4y8i22XQVdQNsZOGpGT16
+c+HCaGYKK1A+vb2tFJddqvSHxbmTAawfycA3YampsHLybUV6sN+Rfj2TOYdRt813y6mg3m1O
+QEA+RcazStwAs0pYCDLhjeBoWKmDSwQwtwnp/fh+I29YY5UB+Fp88W0YvKNXh66159X3Dvxo
+9YES8/0TsBpRCYc4O5/vkBwba5Xa7LHKoWijIRAGrChlw7vWj99t6iUjJe0EAzz2rdkWq0ih
+tAbspOenzRPYFH+5F1R7i9SfwxT9xRlZoSGr8DTQMlgRBRMiYIRgP3KgacTBEl4VCdP1q/vF
+bvxqLmamY0RL4hlqc+KDMlluWJ9iJF2ChzUxFA3IaDbN38XFFNvnT/Et8OZLu+dNwOyp6iob
+xoYm1K8iX0t/f31Bfd6cuP6fJRfIXXHm2S62LQUQkzM7tZwW7NUvGu1nCu8014Z/d3/5I86f
+MBSaJCJ65EWYtWjk5MCqUzpVaORTc9IwU5jNmevBtZO0oRDsm11Uh85e828xgrlT4bKa1Ld7
+EDxkt8Nr9iaPPZpIqmf+3kkVrmkba+q/7UUV/OuywZUsPyT4iA==
+
+/
+CREATE OR REPLACE PUBLIC SYNONYM dbms_pswmg_import FOR dbms_pswmg_import
+/
+GRANT EXECUTE ON dbms_pswmg_import TO imp_full_database
+/
+GRANT EXECUTE ON dbms_pswmg_import TO exp_full_database
+/

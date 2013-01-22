@@ -1,0 +1,50 @@
+Dump file c:\oraclexe\app\oracle\admin\xe\bdump\xe_m000_5732.trc
+Mon Aug 27 10:42:42 2012
+ORACLE V10.2.0.1.0 - Production vsnsta=0
+vsnsql=14 vsnxtr=3
+Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+Windows NT Version V6.1 Service Pack 1
+CPU                 : 2 - type 586, 2 Physical Cores
+Process Affinity    : 0x00000000
+Memory (Avail/Total): Ph:890M/3965M, Ph+PgF:3253M/7928M, VA:3128M/4095M
+Instance name: xe
+
+Redo thread mounted by this instance: 1
+
+Oracle process number: 21
+
+Windows thread id: 5732, image: ORACLE.EXE (m000)
+
+
+*** ACTION NAME:(Auto-Flush Slave Action) 2012-08-27 10:42:42.916
+*** MODULE NAME:(MMON_SLAVE) 2012-08-27 10:42:42.916
+*** SERVICE NAME:(SYS$BACKGROUND) 2012-08-27 10:42:42.916
+*** SESSION ID:(31.6) 2012-08-27 10:42:42.916
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+Dump file c:\oraclexe\app\oracle\admin\xe\bdump\xe_m000_5732.trc
+Wed Oct 10 14:30:30 2012
+ORACLE V10.2.0.1.0 - Production vsnsta=0
+vsnsql=14 vsnxtr=3
+Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+Windows NT Version V6.1 Service Pack 1
+CPU                 : 2 - type 586, 2 Physical Cores
+Process Affinity    : 0x00000000
+Memory (Avail/Total): Ph:497M/3965M, Ph+PgF:736M/8250M, VA:3107M/4095M
+Instance name: xe
+
+Redo thread mounted by this instance: 1
+
+Oracle process number: 28
+
+Windows thread id: 5732, image: ORACLE.EXE (m000)
+
+
+*** ACTION NAME:(Auto-Flush Slave Action) 2012-10-10 14:30:30.710
+*** MODULE NAME:(MMON_SLAVE) 2012-10-10 14:30:30.710
+*** SERVICE NAME:(SYS$BACKGROUND) 2012-10-10 14:30:30.710
+*** SESSION ID:(20.183) 2012-10-10 14:30:30.710
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()

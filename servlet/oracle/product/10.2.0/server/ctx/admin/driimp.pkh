@@ -1,0 +1,180 @@
+Rem Copyright (c) 1998, 2003, Oracle Corporation.  All rights reserved.  
+Rem    NAME
+Rem      driimp.pkh
+Rem    DESCRIPTION
+Rem      import utility functions. 
+Rem    RETURNS
+Rem 
+Rem    NOTES
+Rem 
+Rem    MODIFIED   (MM/DD/YY)
+Rem     yucheng    07/22/03  - fix lrg 1546655
+Rem     yucheng    05/23/03  - handle sync attributes
+Rem     gkaminag   03/05/01 -  handle pending for transportable tablespace
+Rem     yucheng    12/20/00 -  transport partition support
+Rem     yucheng    12/12/00 -  partition support
+Rem     gkaminag   03/07/00 -  handle index type column
+Rem     gkaminag   06/21/99 -  format and charset columns
+Rem     gkaminag   06/09/99 -  handle language column
+Rem     gkaminag   06/07/99 -  multi lexer
+Rem     ehuang     05/11/98 -  creation
+
+create or replace package driimp as
+
+/*--------------------------  create_index  ---------------------------*/
+/*
+  NAME
+    create_index
+  DESCRIPTION
+    insert into dr$index during import. 
+  ARGUMENTS
+    columns to dr$index, except id, owner and status.  
+  NOTES
+ 
+  EXCEPTIONS
+ 
+  RETURNS
+*/
+PROCEDURE create_index(
+   p_idx_name        IN  varchar2,
+   p_idx_table       IN  varchar2,
+   p_idx_table_owner IN  varchar2,
+   p_idx_key_name    IN  varchar2,
+   p_idx_key_type    IN  varchar2,
+   p_idx_text_name   IN  varchar2,
+   p_idx_text_type   IN  varchar2,
+   p_idx_text_length IN  varchar2,
+   p_idx_docid_count IN  varchar2,
+   p_idx_version     IN  varchar2,
+   p_idx_nextid      IN  varchar2,
+   p_idx_langcol     in  varchar2 default null,
+   p_idx_fmtcol      in  varchar2 default null,
+   p_idx_csetcol     in  varchar2 default null,
+   p_idx_type        in  number   default 0,
+   P_idx_option      in  varchar2 default null,
+   p_idx_sync_type   in  varchar2 default null,
+   p_idx_sync_memory      in varchar2 default null,
+   p_idx_sync_para_degree in number   default null, 
+   p_idx_sync_interval    in varchar2 default null
+);
+
+/*--------------------------  create_partition  ----------------------*/
+/*
+  NAME
+    create_partition
+  DESCRIPTION
+    insert into dr$index_partition during import. 
+  ARGUMENTS
+    p_ixp_id  :  partition ID 
+    p_ixp_name:  partition name
+  NOTES
+ 
+  EXCEPTIONS
+ 
+  RETURNS
+*/
+PROCEDURE create_partition(
+   p_ixp_id          IN  number,
+   p_ixp_name        IN  varchar2,
+   p_ixp_docid_count IN  number,
+   p_ixp_nextid      IN  number,
+   p_ixp_opt_token   IN  VARCHAR2,
+   p_ixp_opt_type    IN  number,
+   p_ixp_opt_count   IN  number,
+   p_ixp_sync_type   IN  VARCHAR2 default null,
+   p_ixp_sync_memory       IN  VARCHAR2 default null,
+   p_ixp_sync_para_degree  IN  NUMBER default null,
+   p_ixp_sync_interval     IN  VARCHAR2 default null
+);
+
+/*-------------------------- set_object ---------------------------*/
+/*
+  NAME
+    set_object
+  DESCRIPTION
+    insert into dr$index_object for this class_name and object_name
+  ARGUMENTS
+    p_cla_name  (IN)  - class name
+    p_obj_name  (IN)  - object name
+    p_acnt      (IN)  - number of attributes
+  NOTES
+ 
+  EXCEPTIONS
+ 
+  RETURNS
+*/
+PROCEDURE set_object(
+  p_cla_name  IN  varchar2,
+  p_obj_name  IN  varchar2,
+  p_acnt      IN  varchar2
+);
+
+/*-------------------------- set_value ----------------------------*/
+/*
+  NAME
+    set_value
+  DESCRIPTION
+    insert into dr$index_value
+  ARGUMENTS
+    p_att_name  (IN) - attribute name
+    p_att_value (IN) - attribute value   
+  NOTES
+ 
+  EXCEPTIONS
+ 
+  RETURNS
+*/
+PROCEDURE set_value(
+  p_att_name   IN   varchar2,
+  p_att_value  IN   varchar2
+);
+
+/*-------------------------- set_sub_value ----------------------------*/
+/*
+  NAME
+    set_sub_value
+  DESCRIPTION
+    insert into dr$index_value
+  ARGUMENTS
+    p_att_name  (IN) - attribute name
+    p_att_value (IN) - attribute value   
+  NOTES
+ 
+  EXCEPTIONS
+ 
+  RETURNS
+*/
+PROCEDURE set_sub_value(
+  p_att_name   IN   varchar2,
+  p_sub_group  IN   number,
+  p_sub_obj    IN   varchar2,
+  p_sub_att    IN   varchar2,
+  p_sub_value  IN   varchar2
+);
+
+/*-------------------------- add_pending ----------------------------*/
+/*
+  NAME
+    add_pending
+  DESCRIPTION
+    insert into dr$pending
+  ARGUMENTS
+    p_pid    (IN) - partition id
+    p_rowid  (IN) - rowid
+  NOTES
+ 
+  EXCEPTIONS
+ 
+  RETURNS
+*/
+PROCEDURE add_pending(
+  p_pid    IN   number,
+  p_rowid  IN   rowid
+);
+
+end driimp;
+/
+
+
+
+

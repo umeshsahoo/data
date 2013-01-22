@@ -1,0 +1,89 @@
+Rem Copyright (c) 1998, 2003, Oracle Corporation.  All rights reserved.  
+Rem
+Rem    NAME
+Rem      drvtmt.pkh - Text mining table maintainence
+Rem
+Rem    DESCRIPTION
+Rem
+Rem    RETURNS
+Rem 
+Rem    NOTES
+Rem
+Rem    MODIFIED   (MM/DD/YY) 
+Rem       ehuang   11/19/03 - odm integration 
+Rem       daliao   01/21/03 - move clustering in-memory output to drvimr 
+Rem       daliao   01/13/03 - kmean clustering
+Rem       daliao   11/12/02 - feature vector
+Rem       daliao   10/31/02 - daliao_classification10i
+Rem	  daliao   10/22/2002 - Creation 
+Rem
+
+CREATE OR REPLACE PACKAGE drvtmt AUTHID current_user AS
+
+type col_phrases IS TABLE OF varchar2(200) INDEX BY BINARY_INTEGER;
+
+FUNCTION noex_tabname(
+	l_owner  IN varchar2, 
+	prx      IN varchar2) return VARCHAR2;
+
+/* validate the result table, if not exists, create one
+   The table should have three columns 
+          cat_id  number, 
+	  type    number, 
+	  rule    blob
+*/
+PROCEDURE model_tab(
+	tabname     IN OUT varchar2);
+
+/* validate the table, if not exists, create one
+   The table should have three columns 
+	 docid     number -- document ID to identify a document
+	 clusterid number -- the ID of the cluster the document is assigned to
+	 score     number -- the similarity score between document and cluster
+*/
+PROCEDURE doccls_tab(
+	tabname     IN OUT varchar2);
+
+/* validate the table, if not exists, create one
+   The table should have three columns 
+	 clusterid number         -- cluster ID to identify a cluster
+	 descript  varchar2(4000) -- a string to describe the cluster
+         label     varchar2(200)  -- a suggested label for the cluster
+         sze       number         -- number of documents assigned to the cluster
+	 quality_score number     -- the quality score of the cluster
+	 parent    number         -- parent cluster id. negative means no parent
+*/
+PROCEDURE cluster_tab(
+	tabname     IN OUT varchar2);
+
+/* verify the train document tables  */
+PROCEDURE verify_traindoc(
+	lv_doctab IN OUT varchar2,
+	docid     IN     varchar2);
+
+PROCEDURE verify_traincat(
+	lv_cattab IN OUT varchar2, 
+        catdocid  IN     varchar2,
+	catid     IN     varchar2);
+
+/* verify result model table */
+PROCEDURE verify_modeltab ( 
+	lv_restab IN OUT varchar2 );	
+
+/* create temporary table*/
+/* The temporary table name is return in <temp_table>
+*/
+PROCEDURE temptable(
+	temp_table    OUT varchar2,
+	cols          IN  col_phrases
+	);
+
+/* execute a DDL statement on invoking users' object */
+PROCEDURE exec_ddl(stmt varchar2);
+
+END drvtmt;
+/
+
+
+
+

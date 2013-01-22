@@ -1,0 +1,18 @@
+rem 
+rem Copyright (c) Oracle Corporation 1998.  All Rights Reserved.
+rem
+rem  NAME
+rem    drmig.pkh - MIGration logic
+rem
+rem  DESCRIPTION
+rem    This package contains the migration logic
+rem
+rem  MODIFIED    (MM/DD/YY)
+rem    gkaminag 06/02/98 -  Creation 
+
+create or replace package dr_migrate as
+
+PROCEDURE migrate;
+
+end dr_migrate;
+/

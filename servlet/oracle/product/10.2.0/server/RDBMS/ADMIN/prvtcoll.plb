@@ -1,0 +1,26 @@
+CREATE OR REPLACE PACKAGE BODY utl_coll wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+b
+121 11f
+lo4UqeUjZ+466mkcQcpvRNcMDKYwg1xpAJkVfC8y/2RXe5O4JvbpU89Nr9JmKZTNia+hVlfj
+tZr2JlEMhfhTEpata60GGTdKYQdKhN9/NqU7CaaYSnT4WuHH4zmt6GOFrL0YsozL0eoFUUZd
+UwwU2uC4V4MBtEy0bBXK6hXUNVKqdGQFx1NvFW58vUlAs73KuvQBcCqodWVRCAuNDxh5iX1Y
+WIIAkyQq1itktWPc6rbRQ3SHSVkAqT0uEyS7R+ZtMDPPqb7mO4nv+HP0Iwg5Gqtg0A==
+
+/

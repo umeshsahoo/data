@@ -1,0 +1,56 @@
+CREATE OR REPLACE PACKAGE dbms_streams_datapump wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+9
+53b 1d2
+aP84kGaUFz8hFfF21HN38rGoog4wg2PDNUhqyi+KrWSPBAwAgezrq99/nlY8wqLN9LW1Uduv
+LRNFeYriyFbWQKRyilNbEEC2xeuSdYx85kKrL323u5QUKdjMe3/vodzzkzVozYnFCsEOsxRg
+6eMbgC4S63sMF1yX8eUy+zykpQUe3GKNbDXUFvICFDJksq+oUCjnpBUx4HkJNQu3i2n6jTJZ
+GpU5CUmJX7sQcPrUmDcRd6QjdffObYvtNqMHNhzq70kZ9veAWy32bV7quR3x8SBtHznQyG6J
+6sHswL2MFByuFwl659NJNW/bU0L+dMShQI1nOn3E+ywhzxxX5/60COjrIEvdM5G94oSCEdL1
+ndpLJ9JEtF9gPTVPrSoC/CcJ2wRtOGx1ylNkLCT9bsnzrdR/Ho8QDnOS4xBeEsclm0RxFapd
+O8tHi3dVJ8esyEebnQilm73Fyi/y
+
+/
+CREATE OR REPLACE PACKAGE dbms_streams_datapump_util wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+9
+214 130
+ipqUsjJxGMVvS5dqMgjd52patbowgwL3NUgdqHTpmP8+VGEFfgNlj2shcO8LUZ9D+JpRIT0h
+92UpWlpWMLse/XjnF1p9UWRVRZ4VNO8WoMwTsteVNSR2bhMXiI4hgr5oeYhjVNJAT/DpkA7L
+qMFYmeGQ30Yq2nxirbI3Hmphv2Q/S3hzJ1NRH8ily8DP1CtKrjEkaUvCUY1ZwUzfa4eZBPCS
+q6l1P/hdE05hQFnbjH5c+KH3npFYRaMooGSRRWLg3GH+xjKbEKDJAl6XiXS9z6/OfaiVqjMQ
+Izo5JO30vQ==
+
+/

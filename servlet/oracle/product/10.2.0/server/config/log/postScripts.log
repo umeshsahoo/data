@@ -1,0 +1,326 @@
+SQL> @C:\oraclexe\app\oracle\product\10.2.0\server\rdbms\admin\dbmssml.sql;
+SP2-0310: unable to open file "C:\oraclexe\app\oracle\product\10.2.0\server\rdbms\admin\dbmssml.sql"
+SQL> @C:\oraclexe\app\oracle\product\10.2.0\server\rdbms\admin\dbmsclr.plb;
+SQL> DROP PUBLIC DATABASE LINK DBMS_CLRDBLINK;
+
+Database link dropped.
+
+SQL> CREATE PUBLIC DATABASE LINK DBMS_CLRDBLINK USING 'ORACLR_CONNECTION_DATA';
+
+Database link created.
+
+SQL> CREATE OR REPLACE LIBRARY ORACLECLR_LIB wrapped
+  2  a000000
+  3  1
+  4  abcd
+  5  abcd
+  6  abcd
+  7  abcd
+  8  abcd
+  9  abcd
+ 10  abcd
+ 11  abcd
+ 12  abcd
+ 13  abcd
+ 14  abcd
+ 15  abcd
+ 16  abcd
+ 17  abcd
+ 18  abcd
+ 19  16
+ 20  51 8d
+ 21  LSqVp2u3D6yxyD42bHCkpHL03/8wg04I9Z7AdBjDpSjA9TNSMjO9GP4I9Qm4dCtp6jfnlRLO
+ 22  +EXUFAGLlV0fbBvBjoirfWNdXU3VV0WYkgIWTZhXOjnGHQ2+VzowkkIKuoKmprxsHwQ=
+ 23  
+ 24  /
+
+Library created.
+
+SQL> DROP TYPE DBMS_CLRParamTable;
+
+Type dropped.
+
+SQL> DROP TYPE DBMS_CLRType;
+
+Type dropped.
+
+SQL> CREATE OR REPLACE TYPE DBMS_CLRType wrapped
+  2  a000000
+  3  1
+  4  abcd
+  5  abcd
+  6  abcd
+  7  abcd
+  8  abcd
+  9  abcd
+ 10  abcd
+ 11  abcd
+ 12  abcd
+ 13  abcd
+ 14  abcd
+ 15  abcd
+ 16  abcd
+ 17  abcd
+ 18  abcd
+ 19  d
+ 20  4be 207
+ 21  3WAupYEFJyUtDT58GzFPeWkUS6wwgwKJr0hqynRAv7leuFljpGFIgxvNNkagWXCAOYNjnLy1
+ 22  ulbIGu/7Jr4I+E4ghHw/fZT2AjJ43oXGRL90ldDxQSra1CPcaBsAtcpUa02tik8fNqx/KMgr
+ 23  633l8+Va2DhCmvZXp9G7vbOPt7Pl3MM9zMw2e9Y0okY53GpiRO894C9geS1Y7KzzE/IgLaEu
+ 24  32gKwpBN6M0RCm7BYQ+ovzICzvY5VVyfs/mJp4oYS98qQpcbag5dyZAf0OP/aKDRu8nMxkFb
+ 25  i/etbPODbix+jSyOsHVw8+Q+m5vbJnoYgrAEVyEgB3LQctJbF95qK2fWuM+PzvFnTTxAGGzD
+ 26  bbFaBpyXAP09LtZsxHxeICUOFvBRezKHmWrTb5DRlika6Lg9ukf6Rh9Vb+74Kw+dCaqdPNsm
+ 27  BbgD7N+pj3pEKfdUH3CrGeQtEflPW7LZ5wEdk1k/oTs5nee7t70+LOfUmSdFznr3wK/OVfn4
+ 28  KShfwfMR
+ 29  
+ 30  /
+
+Type created.
+
+SQL> CREATE OR REPLACE TYPE BODY DBMS_CLRType wrapped
+  2  a000000
+  3  1
+  4  abcd
+  5  abcd
+  6  abcd
+  7  abcd
+  8  abcd
+  9  abcd
+ 10  abcd
+ 11  abcd
+ 12  abcd
+ 13  abcd
+ 14  abcd
+ 15  abcd
+ 16  abcd
+ 17  abcd
+ 18  abcd
+ 19  e
+ 20  41f 191
+ 21  WGxKHaEucYlWwCTtmi+GiJKjekYwgwK3ctxqfHQHrbs+zza9qFIBBo/k3vRdV42GdJcBu7Vv
+ 22  ITu0l2CDDI1d+D9K6+h7yxxZwO9Xtk4x8RFMvTqmcLYXjeAqvfUCO0DbqqDG+0SG03B8N8zU
+ 23  x3CB7ZzBJqbdVlPKP72aumnr8weouKrQT4tmBg3nhDN3+4ve7JkpJVEIEI+T5dJDg3IF2nEb
+ 24  xv03mcyUhyCvDbOazgEBY+LaQTQ99WwuW3WZw4y5xOakbH7mnBiomlFxUQglR1Hft6tRchhS
+ 25  tJTSEuprYV4kbm7IcRmC1LRlilvfcjDmMRWJUyC8NDvKu45v5GiDxx268uhVJTkhTBGaNgPz
+ 26  idKIcZk/6eV4Myw05MkyijGkKIEIpR3Fl0SO
+ 27  
+ 28  /
+
+Type body created.
+
+SQL> CREATE OR REPLACE TYPE DBMS_CLRParamTable AS TABLE OF DBMS_CLRType;
+  2  /
+
+Type created.
+
+SQL> CREATE OR REPLACE PACKAGE DBMS_CLR wrapped
+  2  a000000
+  3  1
+  4  abcd
+  5  abcd
+  6  abcd
+  7  abcd
+  8  abcd
+  9  abcd
+ 10  abcd
+ 11  abcd
+ 12  abcd
+ 13  abcd
+ 14  abcd
+ 15  abcd
+ 16  abcd
+ 17  abcd
+ 18  abcd
+ 19  9
+ 20  3162 65e
+ 21  igQsRO8he8CDCdDl4nWpC6D62Xcwgz0T2UgFey9AmP9euDHhTNtIIypFDhpSVolmshjyUX7k
+ 22  +SDMhxRY91oYjSjLiIwWaV61R3iM8yqEjBdx+a/QqeVR3pZs7ue/BsPqTYpXW8XRTJmbmDO5
+ 23  y6g6sM26+9djcF+m6Fqq8mC6NyZn6S5/u5YqlKUW6Z0/jFVzc+7lxa51jAi2w83JxUetuepc
+ 24  Egxc0uEGzxAtwztimeUcybwG552DvNxfbRYPmlZcF9ms5bun8tEOU37kSxAxwg78sGNmXyJg
+ 25  Jp+fefVhVk3C9oZaBEqX7v/i8BgyRDcEjUz9lIky1qFGl+LwK6UjnlZNwvaMFeGiVd1F/AUF
+ 26  mHTk3md05YqDaT+DTqV8W1zC30fR3VfRvaLGYXiY3Q7FSir0QtQzyR8EXCMAYA3EXEaUFpex
+ 27  HwxcYAocVlx+EIrX0XzluGgiDXiY3Q4l/lmPizTlkrkJ9LGUPSicGFqTaYHrCe0hotIXVND2
+ 28  F7HUVK9cmOiDrcMQA+iDHp686BzH3ZSlKjFqVM6JTMPDsiJPMkNbw/6M6OgXOuH2yHO9AMlb
+ 29  OziQdfrmRltzw9EUNffiMMtRhoLdqYs1e2XMMqCVgGctzFg7P2tU+kbANpabiyUIvhhaAu7a
+ 30  xyvmPVJnmysL4u823iZM2GqZiZCpKW3Qv4NbJpkxn9LDl13NZ651CmCRtTHYpzbEOxcukq0t
+ 31  lwO08hc0bwA3SconEG/mRIBo82vHgSlwIZu7C4AMzIIYYHFCc85MYN2EANfivUZrD486W1F/
+ 32  gR3t490htjoHcFdVf1DiPqkXdtb79WooM4LoLHkw8U+qpiF2NYvSl6lJgb7BVdDiI3dux9EI
+ 33  z61yE26Ss4Fd8U7cZM56fUJJ7aWLcdeAiNbVenhTe3KFBHHuOq+tP/9upKGieCQXcjKNfxCw
+ 34  +1WK69iQf7XbU9OsMBAoNQ7Bo27SJLPVjEvTtkKuNfMrly1CbKAe9AzUNy5bE5S593CX54xc
+ 35  Vw68Qij7gam+GE04w25o+7JJ3oiAgi8jYYbYD2zZxIWMz4MmrVq3eE390NbSHyo7jwHegxKK
+ 36  f3h+yaUTftrGMN6jT2lokTEy1KiyE7MSEwHBtNF5y79IE8xyVuVpIMIMc0DE/TJ0uJ7SOfLE
+ 37  6SqgfhRxYRnsuAM1/GFNB7fwRPx19omV1+MCt2mBmwWKreim3q4NJgWKrexOr0FoZGET9buf
+ 38  RaRVyXcxl/K3Xu/C19hkaqBibbH9eQf9JAWUOtDPAvh/ThmIIy15+VGDFNmummh9SXftWiSE
+ 39  D0vX9JgmaYFFgfMECrWS664SELEFQKBDY2tyhUXo5a0E6EMyi2X4B+aqeJszH5WuDGcKF+d/
+ 40  7NklyocS0C9rvMWyDj1qV73XI6vfmBdSFS55SOx3O5uzoKk4Vw3sFlLVkwyA3w2fuV/6PcOI
+ 41  mayz9ZGxGT3tryZDopGviZT6Zd+BJdzRDexA9vz6kHEnKqSxtLQws8Nbtzm7e+9X7kd2yDnN
+ 42  zdju2xPRoVlXR/M41DFx8QRY5B1OfryhhCITa25oua0+Yrt8bQJCmke63jDNWP+92nHIEU+e
+ 43  eWu1mrm9oOz5JJXuag+ENbhu
+ 44  
+ 45  /
+
+Package created.
+
+SQL> show errors
+No errors.
+SQL> CREATE OR REPLACE PACKAGE BODY DBMS_CLR wrapped
+  2  a000000
+  3  1
+  4  abcd
+  5  abcd
+  6  abcd
+  7  abcd
+  8  abcd
+  9  abcd
+ 10  abcd
+ 11  abcd
+ 12  abcd
+ 13  abcd
+ 14  abcd
+ 15  abcd
+ 16  abcd
+ 17  abcd
+ 18  abcd
+ 19  b
+ 20  933d 1c32
+ 21  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
+120  
+121  /
+
+Package body created.
+
+SQL> show errors
+No errors.
+SQL> CREATE OR REPLACE PUBLIC SYNONYM DBMS_CLR FOR DBMS_CLR;
+
+Synonym created.
+
+SQL> DECLARE
+  2    ORCL_HOME_DIR VARCHAR2(1024);
+  3  BEGIN
+  4    DBMS_SYSTEM.GET_ENV('ORACLE_HOME', ORCL_HOME_DIR);
+  5    EXECUTE IMMEDIATE 'CREATE OR REPLACE DIRECTORY ORACLECLRDIR AS ''' || ORCL_HOME_DIR || '\bin\clr''';
+  6  END;
+  7  /
+
+PL/SQL procedure successfully completed.
+
+SQL> show errors
+No errors.
+SQL> create or replace directory DATA_PUMP_DIR as 'C:\oraclexe\app\oracle\admin\XE\dpdump\';
+
+Directory created.
+
+SQL> commit;
+
+Commit complete.
+
+SQL> connect "SYS"/"&&sysPassword" as SYSDBA
+Connected.
+SQL> execute dbms_swrf_internal.cleanup_database(cleanup_local => FALSE);
+
+PL/SQL procedure successfully completed.
+
+SQL> commit;
+
+Commit complete.
+
+SQL> spool off

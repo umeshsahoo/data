@@ -1,0 +1,165 @@
+SQL> Create controlfile reuse set database "XE"
+  2  MAXINSTANCES 8
+  3  MAXLOGHISTORY 1
+  4  MAXLOGFILES 16
+  5  MAXLOGMEMBERS 3
+  6  MAXDATAFILES 100
+  7  Datafile
+  8  'C:\oraclexe\oradata\XE\system.dbf',
+  9  'C:\oraclexe\oradata\XE\undo.dbf',
+ 10  'C:\oraclexe\oradata\XE\sysaux.dbf',
+ 11  'C:\oraclexe\oradata\XE\users.dbf'
+ 12  LOGFILE
+ 13  GROUP 1 SIZE 51200K,
+ 14  GROUP 2 SIZE 51200K,
+ 15  RESETLOGS;
+
+Control file created.
+
+SQL> exec dbms_backup_restore.zerodbid(0);
+
+PL/SQL procedure successfully completed.
+
+SQL> shutdown immediate;
+ORA-01109: database not open 
+
+
+Database dismounted.
+ORACLE instance shut down.
+SQL> startup nomount pfile="C:\oraclexe\app\oracle\product\10.2.0\server\config\scripts\initXETemp.ora";
+ORACLE instance started.
+
+Total System Global Area  805306368 bytes                                       
+Fixed Size                  1289996 bytes                                       
+Variable Size             209715444 bytes                                       
+Database Buffers          591396864 bytes                                       
+Redo Buffers                2904064 bytes                                       
+SQL> Create controlfile reuse set database "XE"
+  2  MAXINSTANCES 8
+  3  MAXLOGHISTORY 1
+  4  MAXLOGFILES 16
+  5  MAXLOGMEMBERS 3
+  6  MAXDATAFILES 100
+  7  Datafile
+  8  'C:\oraclexe\oradata\XE\system.dbf',
+  9  'C:\oraclexe\oradata\XE\undo.dbf',
+ 10  'C:\oraclexe\oradata\XE\sysaux.dbf',
+ 11  'C:\oraclexe\oradata\XE\users.dbf'
+ 12  LOGFILE
+ 13  GROUP 1 SIZE 51200K,
+ 14  GROUP 2 SIZE 51200K,
+ 15  RESETLOGS;
+
+Control file created.
+
+SQL> alter system enable restricted session;
+
+System altered.
+
+SQL> alter database "XE" open resetlogs;
+
+Database altered.
+
+SQL> alter database rename global_name to "XE";
+
+Database altered.
+
+SQL> alter system switch logfile;
+
+System altered.
+
+SQL> alter system checkpoint;
+
+System altered.
+
+SQL> alter database drop logfile group 3;
+
+Database altered.
+
+SQL> ALTER TABLESPACE TEMP ADD TEMPFILE 'C:\oraclexe\oradata\XE\temp.dbf' SIZE 20480K REUSE AUTOEXTEND ON NEXT 640K MAXSIZE UNLIMITED;
+
+Tablespace altered.
+
+SQL> select tablespace_name from dba_tablespaces where tablespace_name='USERS';
+
+TABLESPACE_NAME                                                                 
+------------------------------                                                  
+USERS                                                                           
+
+SQL> select sid, program, serial#, username from v$session;
+
+       SID PROGRAM                                                              
+---------- ----------------------------------------------------------------     
+   SERIAL# USERNAME                                                             
+---------- ------------------------------                                       
+        36 ORACLE.EXE (QMNC)                                                    
+         7                                                                      
+                                                                                
+        39 sqlplus.exe                                                          
+         1 SYS                                                                  
+                                                                                
+        40 ORACLE.EXE (MMNL)                                                    
+         3                                                                      
+                                                                                
+
+       SID PROGRAM                                                              
+---------- ----------------------------------------------------------------     
+   SERIAL# USERNAME                                                             
+---------- ------------------------------                                       
+        41 ORACLE.EXE (MMON)                                                    
+         3                                                                      
+                                                                                
+        42 ORACLE.EXE (RECO)                                                    
+         1                                                                      
+                                                                                
+        43 ORACLE.EXE (SMON)                                                    
+         1                                                                      
+                                                                                
+
+       SID PROGRAM                                                              
+---------- ----------------------------------------------------------------     
+   SERIAL# USERNAME                                                             
+---------- ------------------------------                                       
+        44 ORACLE.EXE (CKPT)                                                    
+         1                                                                      
+                                                                                
+        45 ORACLE.EXE (LGWR)                                                    
+         1                                                                      
+                                                                                
+        46 ORACLE.EXE (DBW0)                                                    
+         1                                                                      
+                                                                                
+
+       SID PROGRAM                                                              
+---------- ----------------------------------------------------------------     
+   SERIAL# USERNAME                                                             
+---------- ------------------------------                                       
+        47 ORACLE.EXE (MMAN)                                                    
+         1                                                                      
+                                                                                
+        48 ORACLE.EXE (PSP0)                                                    
+         1                                                                      
+                                                                                
+        49 ORACLE.EXE (PMON)                                                    
+         1                                                                      
+                                                                                
+
+12 rows selected.
+
+SQL> alter user sys identified by "&&sysPassword";
+
+User altered.
+
+SQL> alter user system identified by "&&systemPassword";
+
+User altered.
+
+SQL> alter system disable restricted session;
+
+System altered.
+
+SQL> @C:\oraclexe\app\oracle\product\10.2.0\server\config\scripts\postScripts.sql
+SQL> connect "SYS"/"&&sysPassword" as SYSDBA
+Connected.
+SQL> set echo on
+SQL> spool C:\oraclexe\app\oracle\product\10.2.0\server\config\log\postScripts.log

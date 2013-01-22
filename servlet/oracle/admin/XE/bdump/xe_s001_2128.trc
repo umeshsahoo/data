@@ -1,0 +1,121 @@
+Dump file c:\oraclexe\app\oracle\admin\xe\bdump\xe_s001_2128.trc
+Thu Sep 13 13:48:36 2012
+ORACLE V10.2.0.1.0 - Production vsnsta=0
+vsnsql=14 vsnxtr=3
+Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+Windows NT Version V6.1 Service Pack 1
+CPU                 : 2 - type 586, 2 Physical Cores
+Process Affinity    : 0x00000000
+Memory (Avail/Total): Ph:521M/3965M, Ph+PgF:1201M/7928M, VA:3079M/4095M
+Instance name: xe
+
+Redo thread mounted by this instance: 1
+
+Oracle process number: 15
+
+Windows thread id: 2128, image: ORACLE.EXE (S001)
+
+
+*** 2012-09-13 13:48:36.651
+*** ACTION NAME:(PAGE 1202) 2012-09-13 13:48:36.649
+*** MODULE NAME:(APEX:APPLICATION 4500) 2012-09-13 13:48:36.649
+*** SERVICE NAME:(SYS$USERS) 2012-09-13 13:48:36.649
+*** CLIENT ID:(APPROVAL:3736031896059972) 2012-09-13 13:48:36.649
+*** SESSION ID:(22.46) 2012-09-13 13:48:36.649
+Memory Notification: Library Cache Object loaded into SGA
+Heap size 3839K exceeds notification threshold (2048K)
+LIBRARY OBJECT HANDLE: handle=a951e848 mutex=A951E8FC(0)
+name=
+with sqlplan as (
+    select c006 object_owner, c007 object_type,c008 object_name
+      from htmldb_collections
+     where COLLECTION_NAME='HTMLDB_QUERY_PLAN'
+       and c007 in ('TABLE','INDEX','MATERIALIZED VIEW','INDEX (UNIQUE)')),
+ws_schemas as(
+    select schema 
+      from wwv_flow_company_schemas
+     where security_group_id = :flow_security_group_id),
+t as(
+        select s.object_owner table_owner,s.object_name table_name,
+               d.OBJECT_ID
+          from sqlplan s,sys.dba_objects d
+      
+hash=599835c19f2c4b96fa99f0f7439e4e84 timestamp=09-13-2012 13:48:35
+namespace=CRSR flags=RON/KGHP/TIM/KEP/PN0/DBN/[10010044]
+kkkk-dddd-llll=0001-0001-0001 lock=N pin=0 latch#=3 hpc=0002 hlc=0002
+lwt=A951E8A4[A951E8A4,A951E8A4] ltm=A951E8AC[A951E8AC,A951E8AC]
+pwt=A951E888[A951E888,A951E888] ptm=A951E890[A951E890,A951E890]
+ref=A951E8C4[A951E8C4,A951E8C4] lnd=A951E8D0[A6E229E4,A6E80D24]
+  LIBRARY OBJECT: object=aa871ec8
+  type=CRSR flags=EXS[0001] pflags=[0000] status=VALD load=0
+  CHILDREN: size=16
+  child#    table reference   handle
+  ------ -------- --------- --------
+       0 a4301244  a4300ef8 ab8a4050
+  DATA BLOCKS:
+  data#     heap  pointer    status pins change whr alloc(K)  size(K)
+  ----- -------- -------- --------- ---- ------ --- -------- --------
+      0 a970f5a4 aa871f60 I/P/A/-/-    0 NONE   00      0.67     1.05
+LIBRARY OBJECT HANDLE: handle=ab8a4050 mutex=AB8A4104(0)
+namespace=CRSR flags=RON/KGHP/PN0/[10010000]
+kkkk-dddd-llll=0000-0001-0041 lock=N pin=X latch#=3 hpc=0002 hlc=0002
+lwt=AB8A40AC[AB8A40AC,AB8A40AC] ltm=AB8A40B4[AB8A40B4,AB8A40B4]
+pwt=AB8A4090[AB8A4090,AB8A4090] ptm=AB8A4098[AB8A4098,AB8A4098]
+ref=AB8A40CC[A4300EF8,A4300EF8] lnd=AB8A40D8[AB8A40D8,AB8A40D8]
+  LIBRARY OBJECT: object=a4300a58
+  type=CRSR flags=EXS[0001] pflags=NST[0001] status=VALD load=0
+  DEPENDENCIES: count=27 size=32
+  dependency#    table reference   handle position flags
+  ----------- -------- --------- -------- -------- -------------------
+            0 a5b65dac  a5b659e4 a6f95264       93 DEP[01]
+            1 a5b65dac  a5b65a18 a49e759c       93 DEP[01]
+            2 a5b65dac  a5b65a64 a6cf0140      553 DEP[01]
+            3 a5b65dac  a5b65a98 a6e88448      528 DEP[01]
+            4 a5b65dac  a5b65acc af5cacb8      636 DEP[01]
+            5 a5b65dac  a5b65bec af5ca5e8      636 DEP[01]
+            6 a5b65dac  a5b65c20 af6ab670      636 DEP[01]
+            7 a5b65dac  a5b65c54 a6e5df7c      618 DEP[01]
+            8 a5b65dac  a5b65c88 a955bbd8      683 DEP[01]
+            9 a5b65dac  a5b65cdc a6f7b090      280 DEP[01]
+           10 a5b65dac  a5b652c4 a6d697b0      492 DEP[01]
+           11 a5b65dac  a5b652f8 af703bb4      607 DEP[01]
+           12 a5b65dac  a5b6532c af706734      559 DEP[01]
+           13 a5b65dac  a5b65360 a6e41678      897 DEP[01]
+           14 a5b65dac  a5b65394 af705c34      635 DEP[01]
+           15 a5b65dac  a5b653c8 ab985268     2677 DEP[01]
+           16 a5b65690  a5b6540c a6ce270c      782 DEP[01]
+           17 a5b65690  a5b65440 af709244     3627 DEP[01]
+           18 a5b65690  a5b65474 af707c54     3615 DEP[01]
+           19 a5b65690  a5b654b8 abbb2e80     1896 DEP[01]
+           20 a5b65690  a5b654ec a6ea5860      198 DEP[01]
+           21 a5b65690  a5b65520 af705184      588 DEP[01]
+           22 a5b65690  a5b65554 af704674      189 DEP[01]
+           23 a5b65690  a5b92614 af6e7200        0 DEP[01]
+           24 a5b65690  a5b9269c a6d72998        0 DEP[41]
+           25 a5b65690  a5b926d0 ab8e1d34        0 DEP[41]
+           26 a5b65690  a5b92704 ab894ad4        0 DEP[41]
+  READ ONLY DEPENDENCIES: count=1 size=16
+  dependency#    table reference   handle flags
+  ----------- -------- --------- -------- -------------------
+            0 a4300e14  a4300b94 a951e848 /ROD/KPP[60]
+  ACCESSES: count=5 size=16
+  dependency# types
+  ----------- -----
+            1 0009
+            9 0009
+           10 0009
+           16 0009
+           19 0009
+  TRANSLATIONS: count=5 size=16
+  original    final
+  -------- --------
+  a6f95264 a49e759c
+  a6f7b090 a6f7b090
+  a6d72998 a6d72998
+  ab8e1d34 ab8e1d34
+  ab894ad4 ab894ad4
+  DATA BLOCKS:
+  data#     heap  pointer    status pins change whr alloc(K)  size(K)
+  ----- -------- -------- --------- ---- ------ --- -------- --------
+      0 ab86f458 a4300ba8 I/P/A/-/-    0 NONE   00      5.05     6.15
+      6 a5b65918 a3cd0720 I/P/A/-/-    1 NONE   00   3839.42  3839.63

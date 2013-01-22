@@ -1,0 +1,60 @@
+Dump file c:\oraclexe\app\oracle\admin\xe\bdump\xe_lgwr_2364.trc
+Fri Oct 12 09:50:50 2012
+ORACLE V10.2.0.1.0 - Production vsnsta=0
+vsnsql=14 vsnxtr=3
+Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+Windows NT Version V6.1 Service Pack 1
+CPU                 : 2 - type 586, 2 Physical Cores
+Process Affinity    : 0x00000000
+Memory (Avail/Total): Ph:3140M/3965M, Ph+PgF:6310M/7928M, VA:3129M/4095M
+Instance name: xe
+
+Redo thread mounted by this instance: 1
+
+Oracle process number: 6
+
+Windows thread id: 2364, image: ORACLE.EXE (LGWR)
+
+
+*** SERVICE NAME:() 2012-10-12 09:50:50.876
+*** SESSION ID:(45.1) 2012-10-12 09:50:50.876
+Media recovery not enabled or manual archival only 0x10000
+Maximum redo generation record size = 156160 bytes
+Maximum redo generation change vector size = 150672 bytes
+Dump file c:\oraclexe\app\oracle\admin\xe\bdump\xe_lgwr_2364.trc
+Tue Oct 23 11:20:22 2012
+ORACLE V10.2.0.1.0 - Production vsnsta=0
+vsnsql=14 vsnxtr=3
+Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+Windows NT Version V6.1 Service Pack 1
+CPU                 : 2 - type 586, 2 Physical Cores
+Process Affinity    : 0x00000000
+Memory (Avail/Total): Ph:3045M/3965M, Ph+PgF:6217M/7928M, VA:3125M/4095M
+Instance name: xe
+
+Redo thread mounted by this instance: 1
+
+Oracle process number: 6
+
+Windows thread id: 2364, image: ORACLE.EXE (LGWR)
+
+
+*** SERVICE NAME:() 2012-10-23 11:20:22.386
+*** SESSION ID:(45.1) 2012-10-23 11:20:22.386
+Media recovery not enabled or manual archival only 0x10000
+Maximum redo generation record size = 156160 bytes
+Maximum redo generation change vector size = 150672 bytes
+*** 2012-10-24 22:00:21.091
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-25 22:00:34.911
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-26 22:00:49.704
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-27 18:30:14.982
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-29 05:41:04.289
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-30 10:31:08.994
+Media recovery not enabled or manual archival only 0x10000
+*** 2012-10-31 20:29:48.948
+Media recovery not enabled or manual archival only 0x10000

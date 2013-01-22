@@ -1,0 +1,29 @@
+create or replace package body drirec wrapped 
+a000000
+1f
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+b
+315 1e2
+hI7LxOvs2e48QgyBTedYfKwQlSIwg/DxNUhqyi/pmIuOA23tKVHZe/CicCeM4ModGv8Y+JpR
+C9PZ3BNa6cJGWP6dySI2JryR0LjSkuHsdGvhiJVznl2U/FnncTMXGmCpmwuly0zhho9WobLx
+GWeGsEffr9yjmLZQrDhk7zPUvaZUvBMMs2Bj3EdJit+rGYYafBSGF+QSZ8ZilDPPLldsCy3K
+90lacVhcPXQjT3p9ekDTtq7rYglyBJWUPIktq5S74hG2rqekxmG2+HP8uFfYz4VSEVec+VxK
+Qzz+Y83FZyWiz7SoKAbSZclJQTskvjyi7HZCwV3jv7O8qqnZPDxaZPQYq6Z4H+P9UF2EJiU6
+H72QFVMjDVWXsKjlsnK96Vj6ekALS/3fGyzY9Cn0x4pqb2AqmgEp+sGlojjoU8wEsFLgVYK1
+3neNQW2vuox0+dZfsA93i5+ngFcsTJqq/psdc0+vjg==
+
+/

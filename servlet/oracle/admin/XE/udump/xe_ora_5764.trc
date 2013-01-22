@@ -1,0 +1,55 @@
+Dump file c:\oraclexe\app\oracle\admin\xe\udump\xe_ora_5764.trc
+Fri Aug 10 11:53:41 2012
+ORACLE V10.2.0.1.0 - Production vsnsta=0
+vsnsql=14 vsnxtr=3
+Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+Windows NT Version V6.1 Service Pack 1
+CPU                 : 2 - type 586, 2 Physical Cores
+Process Affinity    : 0x00000000
+Memory (Avail/Total): Ph:1460M/3965M, Ph+PgF:4065M/7928M, VA:3146M/4095M
+Instance name: xe
+
+Redo thread mounted by this instance: 0 <none>
+
+Oracle process number: 17
+
+Windows thread id: 5764, image: ORACLE.EXE (SHAD)
+
+
+*** SERVICE NAME:() 2012-08-10 11:53:41.305
+*** SESSION ID:(39.1) 2012-08-10 11:53:41.305
+kccsga_update_ckpt: num_1 = 8, num_2 = 0, num_3 = 0, lbn_2 = 0, lbn_3 = 0
+Control file created with size 430 blocks
+Prior to RESETLOGS processing...
+ALTER SYSTEM ARCHIVE LOG ALL USING BACKUP CONTROLFILE start
+Database is not in archivelog mode
+ALTER SYSTEM ARCHIVE LOG ALL USING BACKUP CONTROLFILE complete
+*** 2012-08-10 11:53:43.428
+ORA-00313: open failed for members of log group 1 of thread 1
+ORA-00313: open failed for members of log group 2 of thread 1
+ORA-00313: open failed for members of log group 3 of thread 1
+krvscm(+): Validating controlfile with logical metadata
+krvscm(+): Initial controlfile state
+krvscm(+):   kccdiflg [400000] kccdifl2 [1000]
+krvscm(+):   kccdi2ldscn [0x0000.00000000]
+krvscm(+):   kccdi2lrscn [0x0000.00000000]
+krvscm(+): Inspecting logical metadata
+krvscm(+): Metadata state
+krvscm(+):   hasPrepSwitchSta [0]
+krvscm(+):   hasPrepSwitchPri [0]
+krvscm(+):   hasReceivedDict [0]
+krvscm(+):   hasDumpedDict [0]
+krvscm(+):   hasCommittedBor [0]
+krvscm(+):   hasSwitchedFromPri [0]
+krvscm(+):   hasStartedTa [0]
+krvscm(+):   hasValidSess [0]
+krvscm(+):   hasTxnConsistency [0]
+krvscm(+):   hasCleanlyShutdown [0]
+krvscm(+): Generating new controlfile state from metadata
+krvscm(+): Updating controlfile with new state
+krvscm(+): New controlfile state
+krvscm(+):   kccdiflg [400000] kccdifl2 [1000]
+krvscm(+):   kccdi2ldscn [0x0000.00000000]
+krvscm(+):   kccdi2lrscn [0x0000.00000000]
+krvscm(+): Updating SGA associated with controlfile state
+krvscm(+): Validation complete

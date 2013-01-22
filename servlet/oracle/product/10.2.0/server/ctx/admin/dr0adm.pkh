@@ -1,0 +1,129 @@
+rem 
+rem $Header: dr0adm.pkh 04-sep-2003.13:05:54 surman Exp $ 
+rem 
+rem Copyright (c) 1991, 2003, Oracle Corporation.  All rights reserved.  
+rem  NAME
+rem    CTX_ADM.pkh - DR system ADMinistration services
+rem
+rem  DESCRIPTION
+rem	Administration services for ConText Option    
+rem
+rem  PUBLIC FUNCTION(S)
+rem    spawn_server
+rem    shutdown
+rem    pause
+rem    continue
+rem    refresh
+rem
+rem  PRIVATE FUNCTIONS (these should not be called by customers, and should
+rem			really be defined in a separate file!)
+rem    create_object - create framework object
+rem
+rem  NOTES
+rem 
+rem  MODIFIED    (MM/DD/YY)
+rem    surman     09/04/03 - 3101316: Add drop_user_objects 
+rem    gkaminag   04/09/02 - remove ctxsrv.
+rem    yucheng    10/31/01 - mark_failed
+rem    yucheng    10/02/01 - add mark_failture
+rem    gkaminag   12/16/99 - add test_extproc
+rem    gkaminag   09/09/98 - cleanup
+rem    gkaminag   05/19/98 - set system param
+rem    gkaminag   03/20/98 - cleanup
+rem    gkaminag   03/12/98 - remove queue primitives
+rem    ehuang     03/11/98 - new preference schema
+rem    gkaminag   04/04/97 - add define_object
+rem    gkaminag   08/05/96 - add recover
+rem    sbedarka   02/28/96 - fix bug 331922
+rem    sbedarka   11/22/95 - check server with a specific mask is available
+rem    qtran      03/11/95 - create_tile and define tile's attributes
+rem    qtran    07/29/94 -  Creation 
+
+create or replace package CTX_ADM as
+
+/*------------------------------- shutdown ----------------------------------*/
+/*
+  NAME
+   shutdown
+
+  DESCRIPTION
+   this call is obsolete.  It exists simply to avoid invalidating 
+   obsolete customer code which may call it.
+*/
+
+procedure shutdown(
+name in varchar2 default 'ALL', 
+sdmode in number default NULL
+);
+
+/*------------------------- recover ----------------------------*/
+/*
+  NAME
+   recover
+  DESCRIPTION
+   Recover data dictionary
+  ARGUMENTS
+*/
+procedure recover;
+
+/*------------------------- set_parameter ----------------------------*/
+/*
+  NAME
+   set_parameter
+
+  DESCRIPTION
+   Set a system parameter
+
+  ARGUMENTS
+   param name
+   param value
+    
+*/
+procedure set_parameter(param_name in varchar2, param_value in varchar2);
+
+/*------------------------- test_extproc ----------------------------*/
+/*
+  NAME
+   test_extproc
+
+  DESCRIPTION
+   test extproc invocation
+
+  NOTES
+   If this procedure succeeds, extproc can be invoked
+    
+*/
+procedure test_extproc;
+
+/*------------------------- mark_failed ----------------------------*/
+/* 
+  NAME
+   mark_failed
+
+  DESCRIPTION
+   mark the index status from INPROGRESS to FAILURE so that 
+   alter index can run. 
+
+  NOTES
+   this procedure is not published
+*/
+
+procedure mark_failed(owner_name in varchar2, index_name in varchar2);
+
+/*------------------------ drop_user_objects ---------------------------*/
+/*
+  NAME
+   drop_user_objects
+
+  DESCRIPTION
+   Drops all of the text objects (preferences, etc.) for the given user.  If
+   the user does not exist or there are no objects, no errors are raised.
+
+  NOTES
+   This is called during a database DROP USER operation.
+*/
+procedure drop_user_objects(user_name in varchar2);
+
+end CTX_ADM;
+/
+

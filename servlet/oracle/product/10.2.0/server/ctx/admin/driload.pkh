@@ -1,0 +1,65 @@
+Rem Copyright (c) 1998, 2004, Oracle Corporation.  All rights reserved.  
+Rem    NAME
+Rem      driload
+Rem    DESCRIPTION
+Rem	 ctxload utility functions
+Rem    RETURNS
+Rem 
+Rem    NOTES
+Rem 
+Rem    MODIFIED   (MM/DD/YY)
+Rem     surman     01/07/04  - 3353657: Remove validate_stmt and validate_pol
+Rem     gkaminag   06/11/02  - API Changes.
+Rem     gkaminag   07/02/98 -  resolve_sqe
+Rem     ehuang     03/30/98 -  mv validate_stmt from driutl
+Rem     gkaminag   03/05/98 -  creation
+
+create or replace package driload as
+
+/*---------------------------- build_dml --------------------------------*/
+/*
+  NAME
+    build_dml
+
+  DESCRIPTION
+    Build a dml statement giving an index name and a list of text key
+    values. Used by CTXLOAD for long binary update and export.
+
+  ARGUMENTS
+    idx_name   -- index name
+    op         -- operation user wants to perform, UPDATE or SELECT
+                  (supports INSERT also but it's not being used for now)
+    tvalues    -- text key values, multiple ones are separated by commas
+                  i.e.  value1,value2,...value<n>
+                  comma preceded by a backslash will be treated as part
+                  of the value
+    coltype    -- datatype of column
+    selstmt    -- select statement
+                  if op is SELECT return a SELECT for all LONG and LONG RAW
+                  if op is UPDATE return SELECT FOR UPDATE for LOBs and
+                  null for LONG and LONG RAW
+ 
+  RETURNS
+    Return column type (so that we can support LONG also in the future)
+*/
+PROCEDURE BUILD_DML(
+   IDX_NAME    IN     VARCHAR2,
+   OP          IN     VARCHAR2,
+   TVALUES     IN     VARCHAR2,
+   COLTYPE     IN OUT NUMBER,
+   SELSTMT     IN OUT VARCHAR2
+);
+
+/*---------------------------- resolve_sqe --------------------------------*/
+/*
+  NAME
+    resolve_sqe
+
+  NOTES
+    TODO: move this to a more appropriate place
+*/
+FUNCTION resolve_sqe( p_idx_id in number, p_sqe_name in varchar2)
+return varchar2;
+
+end driload;
+/

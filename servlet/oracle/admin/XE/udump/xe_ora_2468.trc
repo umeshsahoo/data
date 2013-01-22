@@ -1,0 +1,54 @@
+Dump file c:\oraclexe\app\oracle\admin\xe\udump\xe_ora_2468.trc
+Thu Sep 27 10:19:40 2012
+ORACLE V10.2.0.1.0 - Production vsnsta=0
+vsnsql=14 vsnxtr=3
+Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+Windows NT Version V6.1 Service Pack 1
+CPU                 : 2 - type 586, 2 Physical Cores
+Process Affinity    : 0x00000000
+Memory (Avail/Total): Ph:3188M/3965M, Ph+PgF:6371M/7928M, VA:3152M/4095M
+Instance name: xe
+
+Redo thread mounted by this instance: 0 <none>
+
+Oracle process number: 39
+
+Windows thread id: 2468, image: ORACLE.EXE (SHAD)
+
+
+*** SERVICE NAME:() 2012-09-27 10:19:40.037
+*** SESSION ID:(38.1) 2012-09-27 10:19:40.037
+kccsga_update_ckpt: num_1 = 8, num_2 = 0, num_3 = 0, lbn_2 = 0, lbn_3 = 0
+Thread 1 checkpoint: logseq 44, block 2, scn 1382203
+  cache-low rba: logseq 44, block 22353
+    on-disk rba: logseq 44, block 22453, scn 1396755
+  start recovery at logseq 44, block 22353, scn 0
+*** 2012-09-27 10:19:47.839
+----- Redo read statistics for thread 1 -----
+Read rate (ASYNC): 50Kb in 3.64s => 0.01 Mb/sec
+Total physical reads: 4096Kb
+Longest record: 2Kb, moves: 0/167 (0%)
+Change moves: 9/92 (9%), moved: 0Mb
+Longest LWN: 8Kb, moves: 0/25 (0%), moved: 0Mb
+Last redo scn: 0x0000.00155012 (1396754)
+----------------------------------------------
+----- Recovery Hash Table Statistics ---------
+Hash table buckets = 32768
+Longest hash chain = 1
+Average hash chain = 23/23 = 1.0
+Max compares per lookup = 1
+Avg compares per lookup = 135/373 = 0.4
+----------------------------------------------
+*** 2012-09-27 10:19:47.847
+KCRA: start recovery claims for 23 data blocks
+*** 2012-09-27 10:19:47.848
+KCRA: blocks processed = 23/23, claimed = 23, eliminated = 0
+*** 2012-09-27 10:19:47.900
+Recovery of Online Redo Log: Thread 1 Group 1 Seq 44 Reading mem 0
+----- Recovery Hash Table Statistics ---------
+Hash table buckets = 32768
+Longest hash chain = 1
+Average hash chain = 23/23 = 1.0
+Max compares per lookup = 1
+Avg compares per lookup = 103/158 = 0.7
+----------------------------------------------

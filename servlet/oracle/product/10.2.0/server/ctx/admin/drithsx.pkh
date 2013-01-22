@@ -1,0 +1,118 @@
+rem
+rem  Copyright (c) 1999 by Oracle Corporation
+rem
+rem    NAME
+rem      drithsx.pkh - Spec for ConText Option thesaurus package
+rem
+rem    DESCRIPTION
+rem      thesaurus eXpansion functions
+rem
+rem    NOTES
+rem
+rem    MODIFIED   (MM/DD/YY)
+rem    gkaminag    04/14/99 -  pl/sql table thesaurus expansion
+rem    gkaminag    03/09/99 -  creation
+
+CREATE OR REPLACE PACKAGE drithsx AS
+
+type exp_rec is record (
+  xrel    varchar2(12),
+  xlevel  number,
+  xphrase varchar2(256)
+);
+type exp_tab is table of exp_rec index by binary_integer;
+
+pv_exp_tab exp_tab;
+
+/*---------------------------------- expand ----------------------------*/
+/*
+   NAME
+     expand
+ 
+   DESCRIPTION
+     generic thesaurus query expansion function
+ 
+   ARGUMENTS
+     err     - error return code
+     op      - operation. Must be one of:
+                SYN, PT, TT, RT, BT, BTP, BTI, BTG, NT, NTP,
+                NTI, NTG, TR, TRSYN
+     phrase  - phrase
+     level   - level limit for BT* / NT*, language for TR*
+     tname   - thesaurus name
+     restab  - restab mode?
+
+   NOTES
+*/
+
+function expand(
+  err    out number, 
+  op     in  varchar2, 
+  phrase in  varchar2, 
+  lvl    in  varchar2  default null,
+  tname  in  varchar2  default 'DEFAULT',
+  restab in  boolean   default FALSE
+) return varchar2;
+
+function expand0(
+  err    out number, 
+  op     in  varchar2, 
+  phrase in  varchar2, 
+  tname  in  varchar2  default 'DEFAULT'
+) return varchar2;
+
+/*------------------------------- output_style -------------------------*/
+/*
+   NAME
+     output_style
+ 
+   DESCRIPTION
+     set the output style for the expansion functions
+ 
+   ARGUMENTS
+     showlevel   -- show level in bt/nt expansions
+     showqualify -- show phrase qualifiers
+     showpt      -- show preferred terms with *
+     showid      -- show phrase ids
+ 
+   NOTES
+     level is a number then a colon at the start of the phrase
+     pt is an asterisk then a colon at the start of the phrase
+     id is a colon, then the id at the end of the phrase
+     qualify is in parens after a space at the end of the phrase
+        but before id
+   
+   example:
+ 
+     preferred term
+     |
+     |   phrase
+     |   | 
+     |   |      qualifier
+     |   |      |
+     |   |      |      phraseid
+     |   |      |      |
+     V   V      V      V
+    {*:TURKEY (BIRD):1234}
+ 
+   RETURN
+*/
+PROCEDURE output_style (
+  showlevel   in boolean default false
+, showqualify in boolean default false
+, showpt      in boolean default false
+, showid      in boolean default false
+);
+
+/*------------------------------- sn -----------------------------------*/
+
+function sn(phrase in varchar2,
+            tname  in varchar2 default 'DEFAULT') 
+return varchar2;
+
+/*------------------------------- ttt -----------------------------------*/
+
+procedure ttt(tname  in varchar2 default 'DEFAULT');
+
+end drithsx;
+/

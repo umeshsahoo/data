@@ -1,0 +1,92 @@
+rem
+rem  Copyright (c) 1999 by Oracle Corporation
+rem
+rem    NAME
+rem      drithsl.pkh - Spec for ConText Option thesaurus package
+rem
+rem    DESCRIPTION
+rem      thesaurus Loader interface.  This package contains everything
+rem      ctxload needs to load thesauri, customized for its use.
+rem
+rem      THIS PACKAGE IS FOR USE BY CTXLOAD ONLY AND SHOULD NOT BE
+rem      CALLED BY ANYTHING ELSE.
+rem
+rem    NOTES
+rem
+rem    MODIFIED   (MM/DD/YY)
+rem    ehuang      08/20/99 -  add allocate_ids
+rem    gkaminag    03/09/99 -  creation
+
+CREATE OR REPLACE PACKAGE drithsl AS
+
+/*---------------------------- create_thesaurus ---------------------------*/
+/*
+  NAME
+    create_thesaurus
+
+  DESCRIPTION
+    specialized version of drithsc.create_thesaurus for thesaurus loader
+*/
+
+FUNCTION create_thesaurus (tname in varchar2, casesens in boolean)
+return NUMBER;
+
+/*---------------------------- create_phrase ---------------------------*/
+/*
+   NAME
+     create_phrase
+  
+   DESCRIPTION
+     Specialized version of drithsc.create_phrase for thesaurus loader
+*/
+
+function create_phrase (
+  tid    in number,
+  tcs    in boolean,
+  phrase in varchar2,
+  rel    in varchar2 default null,
+  relid  in number   default null
+) return number;
+
+/*------------------------------- dump_thesaurus -------------------------*/
+/*
+  NAME
+    dump_thesaurus
+
+  DESCRIPTION
+    Specialized version of drithsd.dump_thesaurus for thesaurus loader
+*/
+
+PROCEDURE dump_thesaurus (
+  tname in varchar2
+);
+
+/*------------------------------- next_dump_line -------------------------*/
+/*
+  NAME
+    next_dump_line
+
+  DESCRIPTION
+    Specialized version of drithsd.next_dump_line for thesaurus loader
+*/
+FUNCTION next_dump_line RETURN VARCHAR2;
+
+/*------------------------------- allocate_ids  -------------------------*/
+/*
+  NAME
+    allocate_ids
+
+  DESCRIPTION
+    allocate a list of thes ids and return the starting number of that list
+
+  ARGUMENTS
+    numalloc  (IN)  -- number of thesaurus id to be allocated
+    start_id  (OUT) -- start id of the list of thesaurus id
+*/
+PROCEDURE allocate_ids (
+  numalloc  in  number,
+  start_id  out number
+);
+
+end drithsl;
+/

@@ -1,0 +1,374 @@
+rem 
+rem $Header: dr0query.pkh 08-feb-2005.17:31:20 wclin Exp $ 
+rem 
+rem Copyright (c) 1991, 2005, Oracle. All rights reserved.  
+rem  NAME
+rem    dr0query.pkb - DR Query
+rem  DESCRIPTION
+rem    This package contains the text query services.
+rem
+rem  PUBLIC FUNCTION(S)
+rem    store_sqe   - create a stored query
+rem    remove_sqe  - delete a stored query
+rem    pkencode    - encode composite textkey list
+rem    feedback    - feedback via Query Execution Plan
+rem    browse_word - display dictionary word
+rem  NOTES
+rem
+rem  MODIFIED    (MM/DD/YY)
+rem    wclin    02/08/05 - add sav_incmplt_prg_hitcnt 
+rem    wclin    09/18/03 - add disable_transactional_query 
+rem    ehuang   03/04/03 - add token_type to browse_word
+rem    gkaminag 07/15/02 - security phase 2
+rem    ymatsuda 10/17/01 - functional contains
+rem    wclin    09/25/01 - add chk_xpath()
+rem    gkaminag 08/22/00 - partitioning support
+rem    wclin    06/22/99 - remove workspace threshold
+rem    gkaminag 04/08/99 - nocopy on word browse for performance
+rem    gkaminag 03/18/99 - browse_word -> browse_words, per spec, fix diff
+rem    ehuang   03/09/99 - make resarr the 3rd arg
+rem    ehuang   02/23/99 - add browse_word
+rem    gkaminag 11/19/98 - optimizer improvements obsolete in-memory query
+rem    wclin    11/05/98 - add postfilter_batch preference
+rem    gkaminag 10/19/98 - count hits
+rem    mfaisal  09/24/98 - Hierarchical Query Feedback priv. fix
+rem    gkaminag 07/02/98 - independent sqe's
+rem    ymatsuda 06/09/98 -  add workspace threshold
+rem    mfaisal  05/14/98 -  make EXPLAIN non-commital
+rem    gkaminag 05/13/98 -  remove contains
+rem    ymatsuda 05/08/98 -  add preference package variable for benchmarking
+rem    gkaminag 05/07/98 -  remove score_sorted
+rem    gkaminag 05/01/98 -  fetch_hit return rowid
+rem    mfaisal  04/06/98 -  more Hierarchical Query Feedback
+rem    mfaisal  04/01/98 -  Adding Hierarchical Query Feedback
+rem    ehuang   03/30/98 -  policy->index
+rem    gkaminag 03/26/98 -  debugging
+rem    ehuang   03/23/98 -  new in-memory query API
+rem    ehuang   03/20/98 -  remove dead code
+rem    gkaminag 03/05/98 -  remove gettab/reltab
+rem    mfaisal  07/21/97 -  More feedback
+rem    mfaisal  07/14/97 -  Add feedback via Query Execution Plan
+rem    ehuang   05/23/97 -  Bug 495711
+rem    gkaminag 05/14/97 -  struct query IMQ
+rem    yucheng  05/13/97 -  add count_last
+rem    syang    01/13/97 -  add pkdecode
+rem    ymatsuda 12/16/96 -  change default param for contains
+rem    ymatsuda 12/13/96 -  add struct to count_hits
+rem    syang    12/18/96 -  support comp. textkeys in gettab
+rem    gkaminag 10/16/96 -  remove floorid parameter
+rem    ymatsuda 10/02/96 -  add struct_query
+rem    gkaminag 10/03/96 -  add floorid to two-step contains
+rem    gkaminag 09/27/96 -  add floorid to cursor contains
+rem    gkaminag 09/09/96 -  multiple columns in fetch_hit
+rem    gkaminag 08/16/96 -  estimate hits
+rem    ymatsuda 08/09/96 -  user defined markup tags
+rem    gkaminag 07/30/96 -  enable parallel contains
+rem    gkaminag 07/26/96 -  parallel contains (disabled)
+rem    gkaminag 07/23/96 -  add sorted concur
+rem    gkaminag 07/19/96 -  cursor interface
+rem    gkaminag 07/03/96 -  add ctx_query.count_hits
+rem    ymatsuda 07/02/96 -  add sqe services
+rem    qtran    10/13/94 -  Creation 
+
+create or replace package ctx_query authid current_user as
+
+  -- PREFERENCES FOR QUERY PROCESSING (INTERNAL USE ONLY)
+  preference             number not null := 0;
+  always_batch  	 constant number := 1;
+  order_by      	 constant number := 2;
+  postfilter_batch	 constant number := 4;
+  sav_incmplt_prg_hitcnt constant number := 32;
+
+  -- FLAG for disable transactional query
+  disable_transactional_query  boolean := FALSE;
+
+  -- PUBLIC DATA STRUCTURES
+  type BROWSE_REC is record
+  (
+    word      VARCHAR2(256)  NULL,
+    doc_count NUMBER(38,0)   NULL
+  );
+
+  type BROWSE_TAB is table of BROWSE_REC index by binary_integer;
+
+  -- PUBLIC CONSTANTS
+  BROWSE_BEFORE       constant varchar2(10) := 'BEFORE';
+  BROWSE_AROUND       constant varchar2(10) := 'AROUND';
+  BROWSE_AFTER        constant varchar2(10) := 'AFTER';
+
+/*------------------------------- count_hits ----------------------------*/
+/*
+  NAME
+    count_hits - get quick count of text results
+
+  DESCRIPTION
+    count text hits
+
+  ARGUMENTS
+    index_name  (IN) index name being queried
+    text_query  (IN) text query string
+    exact       (IN) exact count or upper bound
+    part_name   (IN) index partition name
+
+  NOTES
+    none
+
+  RETURNS
+    number of hits
+*/
+FUNCTION count_hits (
+  index_name  in varchar2
+ ,text_query  in varchar2
+ ,exact       in boolean   default TRUE
+ ,part_name   in varchar2  default NULL
+) return number;
+
+
+/*------------------------------- chk_xpath ----------------------------*/
+/*
+  NAME
+    chk_xpath - check  xpath expression 
+
+  DESCRIPTION
+    takes an xpath expression and return an expression context can 
+    process.
+
+  ARGUMENTS
+    index_name  (IN) index name being queried
+    text_query  (IN) xpath expression
+    part_name   (IN) index partition name
+
+  NOTES
+    none
+
+  RETURNS
+    number of hits
+*/
+FUNCTION chk_xpath (
+  index_name  in varchar2
+ ,text_query  in varchar2
+ ,part_name   in varchar2  default NULL
+) return varchar2;
+
+/*------------------------------- fcontains ----------------------------*/
+/*
+  NAME
+    fcontains - functional contains
+
+  DESCRIPTION
+
+  ARGUMENTS
+    text_value    (IN) text to search
+    text_query    (IN) text query
+    policy_name   (IN) policy name
+
+  NOTES
+    none
+
+  RETURNS
+    score
+*/
+FUNCTION fcontains (
+  text_value  in varchar2
+ ,text_query  in varchar2
+ ,policy_name in varchar2
+) return number;
+
+/*---------------------- chk_txnqry_disbl_switch --------------------------*/
+/*
+  NAME
+    chk_txnqry_disbl_switch
+
+  DESCRIPTION
+
+  ARGUMENTS
+
+  NOTES
+    none
+
+  RETURNS
+    0 or 1
+*/
+FUNCTION chk_txnqry_disbl_switch
+return number;
+
+/*------------------------------- store_sqe ----------------------------*/
+/*
+  NAME
+    store_sqe
+
+  DESCRIPTION
+    Create a stored query
+
+  ARGUMENTS
+    query_name  (IN) name of a stored query
+    text_query  (IN) text query string
+  NOTES
+  EXCEPTIONS
+    ORA-20000 - application error ( with an textile error stack)
+  RETURNS
+    none
+*/
+PROCEDURE store_sqe(
+  query_name in varchar2
+ ,text_query in varchar2
+);
+
+/*------------------------------- remove_sqe ----------------------------*/
+/*
+  NAME
+    remove_sqe
+
+  DESCRIPTION
+    Delete a stored query
+
+  ARGUMENTS
+    query_name   (IN) name of a stored query
+
+  NOTES
+
+  EXCEPTIONS
+    ORA-20000 - application error ( with an textile error stack)
+
+  RETURNS
+    none
+*/
+PROCEDURE remove_sqe(
+ query_name in varchar2
+);
+
+/*------------------------------ explain ----------------------------------*/
+/*
+  NAME
+    explain 
+ 
+  DESCRIPTION
+    Evaluate the query specified in 'text_query' parameter and return
+    the Query Execution Plan in the feedback table.  Do NOT execute the
+    query.
+ 
+  ARGUMENTS
+    index_name    (IN) index name being queried
+    text_query     (IN) ConText query string
+    explain_table (IN) the result table to receive the feedback result
+    sharelevel     (IN) feedback table share options:
+                        0 = single-use, 1 = multiple-use.
+    explain_id    (IN) ID to identify results returned
+    part_name     (IN) index partition name
+  NOTES
+    none
+  EXCEPTIONS
+    ORA-20000 - application error (with a textile error stack)
+  RETURNS
+    none
+*/
+PROCEDURE explain(
+  index_name   in varchar2,
+  text_query    in varchar2,
+  explain_table in varchar2,
+  sharelevel    in number default 0,
+  explain_id    in varchar2 default NULL,
+  part_name     in varchar2 default NULL
+);
+
+/*------------------------------ hfeedback ----------------------------------*/
+/*
+  NAME
+    hfeedback
+ 
+  DESCRIPTION
+    Evaluate the query specified in 'text_query' parameter and return
+    the Hierarchical Query Feedback in the feedback table.  Do NOT execute the
+    query.
+ 
+  ARGUMENTS
+    index_name     (IN) index name being queried
+    text_query     (IN) ConText query string
+    feedback_table (IN) the result table to receive the feedback result
+    sharelevel     (IN) feedback table share options:
+                        0 = single-use, 1 = multiple-use.
+    feedback_id    (IN) ID to identify results returned
+    part_name      (IN) index partition name
+  NOTES
+    none
+  EXCEPTIONS
+    ORA-20000 - application error (with a textile error stack)
+  RETURNS
+    none
+*/
+PROCEDURE hfeedback(
+  index_name     in varchar2,
+  text_query     in varchar2,
+  feedback_table in varchar2,
+  sharelevel     in number default 0,
+  feedback_id    in varchar2 default NULL,
+  part_name      in varchar2 default NULL
+);
+
+/*------------------------------ browse_words ------------------------------*/
+/*
+  NAME
+    browse_words
+ 
+  DESCRIPTION
+ 
+  ARGUMENTS
+    index_name     (IN) index name being queried
+    seed           (IN) seed word
+    restab         (IN) the result table 
+    browse_id      (IN) ID to identify results returned
+    numwords       (IN) length of the produced list
+    direction      (IN) direction of the browse
+    part_name      (IN) index partition name
+    token_type     (IN) token type 
+
+  NOTES
+
+  EXCEPTIONS
+
+  RETURNS
+*/
+PROCEDURE browse_words(
+  index_name  in   varchar2,
+  seed        in   varchar2,
+  restab      in   varchar2,
+  browse_id   in   number   default 0,
+  numwords    in   number   default 10,
+  direction   in   varchar2 default BROWSE_AROUND,
+  part_name   in   varchar2 default NULL,
+  token_type  in   number default 0
+);
+
+/*------------------------------ browse_words ------------------------------*/
+/*
+  NAME
+    browse_words
+ 
+  DESCRIPTION
+ 
+  ARGUMENTS
+    index_name     (IN) index name being queried
+    seed           (IN) seed word
+    resarr         (IN OUT) PL/SQL array
+    numwords       (IN) length of the produced list
+    direction      (IN) direction of the browse
+    part_name      (IN) index partition name
+    token_type     (IN) token type
+  NOTES
+
+  EXCEPTIONS
+
+  RETURNS
+*/
+PROCEDURE browse_words(
+  index_name  in             varchar2,
+  seed        in             varchar2,
+  resarr      in out  NOCOPY BROWSE_TAB,
+  numwords    in             number   default 10,
+  direction   in             varchar2 default BROWSE_AROUND,
+  part_name   in             varchar2 default NULL,
+  token_type  in             number default 0
+);
+
+end ctx_query;
+/

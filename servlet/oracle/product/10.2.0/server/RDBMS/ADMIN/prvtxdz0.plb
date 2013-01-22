@@ -1,0 +1,33 @@
+CREATE OR REPLACE PACKAGE xdb.dbms_xdbz0 wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+9
+cde 248
+lPJPtRkc0qVHcfuRc4BNwB/8+wUwg82c19xGfC/GAE6OAPLCf9SM24TeW02ZY1hhE5WZu7Vv
+y/ZEPFXnrKuhiia9Tgge5Ac+BNEzelsb65dhgFi8aIK5TGsUthzzoPbtRJGXwhYYdDzhGoBw
+8tWAPG+F8r4b9AQedJKNQmJu5Sq2ROPtNTLdJWFv8i//kcQyklkTPCXrGF58n48Wnkoo2jzp
+kn5E6tfVfe0GoZY2wVJat6LrS/Lrr8Th1SbCy9/hHvBdEzeyAG2BexmVhV53tukZdr99XSTZ
+AEdnUHpia2KOcBcxUNu4qeyc1b5kt7vJQst84n9VdcmLIZd2XSGVLE+LQ7uW1pi4YMxeNs1+
+bnE7RsMzsPJSTJWRdwCXSpu8CJcD5NXxTyWWs+4FGlde1kqSP92H9zE45uqwMkzhsQrVzkPh
+wum5QbyiFWa/zQqOpQ+smo3KztH1mlPny1z5c14UvNtTNB/HUKKGqQTATGKrY4YpQhsPevif
+n1qYSlGZ08qLAcQi2XdSK+tQbVXo8B34ayRaPAz/7gYmwz/FyMyQWaE2o0r5kfET6mYQT+0=
+
+
+/
+CREATE OR REPLACE PUBLIC SYNONYM dbms_xdbz0 FOR xdb.dbms_xdbz0;
+show errors;

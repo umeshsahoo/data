@@ -1,0 +1,106 @@
+Dump file c:\oraclexe\app\oracle\admin\xe\udump\xe_ora_2300.trc
+Wed Aug 22 10:52:12 2012
+ORACLE V10.2.0.1.0 - Production vsnsta=0
+vsnsql=14 vsnxtr=3
+Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+Windows NT Version V6.1 Service Pack 1
+CPU                 : 2 - type 586, 2 Physical Cores
+Process Affinity    : 0x00000000
+Memory (Avail/Total): Ph:3201M/3965M, Ph+PgF:6386M/7928M, VA:3148M/4095M
+Instance name: xe
+
+Redo thread mounted by this instance: 0 <none>
+
+Oracle process number: 18
+
+Windows thread id: 2300, image: ORACLE.EXE (SHAD)
+
+
+*** SERVICE NAME:() 2012-08-22 10:52:12.794
+*** SESSION ID:(38.1) 2012-08-22 10:52:12.794
+kccsga_update_ckpt: num_1 = 8, num_2 = 0, num_3 = 0, lbn_2 = 0, lbn_3 = 0
+Thread 1 checkpoint: logseq 15, block 2, scn 520254
+  cache-low rba: logseq 15, block 13154
+    on-disk rba: logseq 15, block 14383, scn 532557
+  start recovery at logseq 15, block 13154, scn 0
+----- Redo read statistics for thread 1 -----
+Read rate (ASYNC): 614Kb in 0.41s => 1.46 Mb/sec
+Total physical reads: 4096Kb
+Longest record: 13Kb, moves: 0/828 (0%)
+Change moves: 1/23 (4%), moved: 0Mb
+Longest LWN: 154Kb, moves: 0/53 (0%), moved: 0Mb
+Last redo scn: 0x0000.0008204c (532556)
+----------------------------------------------
+----- Recovery Hash Table Statistics ---------
+Hash table buckets = 32768
+Longest hash chain = 2
+Average hash chain = 293/289 = 1.0
+Max compares per lookup = 1
+Avg compares per lookup = 1398/1738 = 0.8
+----------------------------------------------
+*** 2012-08-22 10:52:17.459
+KCRA: start recovery claims for 293 data blocks
+*** 2012-08-22 10:52:17.474
+KCRA: blocks processed = 293/293, claimed = 293, eliminated = 0
+*** 2012-08-22 10:52:17.474
+Recovery of Online Redo Log: Thread 1 Group 2 Seq 15 Reading mem 0
+----- Recovery Hash Table Statistics ---------
+Hash table buckets = 32768
+Longest hash chain = 2
+Average hash chain = 293/289 = 1.0
+Max compares per lookup = 2
+Avg compares per lookup = 1186/1687 = 0.7
+----------------------------------------------
+Dump file c:\oraclexe\app\oracle\admin\xe\udump\xe_ora_2300.trc
+Mon Sep 03 10:40:11 2012
+ORACLE V10.2.0.1.0 - Production vsnsta=0
+vsnsql=14 vsnxtr=3
+Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+Windows NT Version V6.1 Service Pack 1
+CPU                 : 2 - type 586, 2 Physical Cores
+Process Affinity    : 0x00000000
+Memory (Avail/Total): Ph:3203M/3965M, Ph+PgF:6387M/7928M, VA:3148M/4095M
+Instance name: xe
+
+Redo thread mounted by this instance: 0 <none>
+
+Oracle process number: 18
+
+Windows thread id: 2300, image: ORACLE.EXE (SHAD)
+
+
+*** SERVICE NAME:() 2012-09-03 10:40:11.429
+*** SESSION ID:(38.1) 2012-09-03 10:40:11.429
+kccsga_update_ckpt: num_1 = 8, num_2 = 0, num_3 = 0, lbn_2 = 0, lbn_3 = 0
+Thread 1 checkpoint: logseq 22, block 2, scn 756801
+  cache-low rba: logseq 22, block 26808
+    on-disk rba: logseq 22, block 28081, scn 771121
+  start recovery at logseq 22, block 26808, scn 0
+----- Redo read statistics for thread 1 -----
+Read rate (ASYNC): 636Kb in 0.30s => 2.07 Mb/sec
+Total physical reads: 4096Kb
+Longest record: 21Kb, moves: 0/748 (0%)
+Change moves: 2/31 (6%), moved: 0Mb
+Longest LWN: 152Kb, moves: 0/50 (0%), moved: 0Mb
+Last redo scn: 0x0000.000bc430 (771120)
+----------------------------------------------
+----- Recovery Hash Table Statistics ---------
+Hash table buckets = 32768
+Longest hash chain = 2
+Average hash chain = 310/302 = 1.0
+Max compares per lookup = 2
+Avg compares per lookup = 1271/1600 = 0.8
+----------------------------------------------
+*** 2012-09-03 10:40:15.875
+KCRA: start recovery claims for 310 data blocks
+*** 2012-09-03 10:40:15.875
+KCRA: blocks processed = 310/310, claimed = 310, eliminated = 0
+*** 2012-09-03 10:40:15.875
+Recovery of Online Redo Log: Thread 1 Group 1 Seq 22 Reading mem 0
+----- Recovery Hash Table Statistics ---------
+Hash table buckets = 32768
+Longest hash chain = 2
+Average hash chain = 310/302 = 1.0
+Max compares per lookup = 2
+Avg compares per lookup = 1533/1563 = 1.0
+----------------------------------------------

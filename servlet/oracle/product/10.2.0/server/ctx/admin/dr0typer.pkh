@@ -1,0 +1,177 @@
+Rem
+Rem Copyright (c) 2000, 2005, Oracle. All rights reserved.  
+Rem  NAME
+Rem    dr0typer.pkh
+Rem  DESCRIPTION
+rem     EIX framework interface header definition for ctxcat index type
+Rem  RETURNS
+Rem
+Rem    NOTES
+Rem     
+Rem    MODIFIED   (MM/DD/YY)
+Rem    wclin       01/28/05 - remove grant exec to public priv 
+Rem    gkaminag    09/30/02 - security phase 3
+Rem    gkaminag    09/24/02 - security phase 3
+Rem    ehuang      07/31/02 - operators to itype
+Rem    gkaminag    03/02/01 - transportable tablespace support
+Rem    gkaminag    02/27/01 - ctxcat, ctxrule -> ODCI V2
+Rem    salpha      08/09/00 - clob support for 'matches'
+Rem    salpha      08/07/00 - dml for ctxrule
+Rem    salpha      06/27/00 - creation
+Rem
+
+create or replace type RuleIndexMethods authid current_user as object
+(
+   key 		RAW(4),
+   objid 	RAW(4),
+   tmpobjid	RAW(4),
+
+   static function ODCIGetInterfaces(ifclist OUT sys.ODCIObjectList)
+            return number,
+   static function ODCIIndexCreate(ia sys.odciindexinfo, parms varchar2,
+            env sys.ODCIEnv)
+            return number,
+   static function ODCIIndexAlter(ia sys.odciindexinfo,
+                          parms in out varchar2,
+                          altopt number, env sys.ODCIEnv)
+            return number,
+   static function ODCIIndexTruncate(ia sys.odciindexinfo,
+            env sys.ODCIEnv)
+            return number,
+   static function ODCIIndexDrop(ia sys.odciindexinfo,
+            env sys.ODCIEnv)
+            return number,
+   static function ODCIIndexInsert(ia sys.odciindexinfo,
+			   ridlist sys.odciridlist, env sys.ODCIEnv)
+            return number,
+
+   static function ODCIIndexDelete(ia sys.odciindexinfo,
+			   ridlist sys.odciridlist, env sys.ODCIEnv)
+            return number,
+
+   static function ODCIIndexUpdate(ia sys.odciindexinfo,
+			   ridlist sys.odciridlist, env sys.ODCIEnv) 
+            return number,
+
+   static function ODCIIndexStart(sctx in out RuleIndexMethods,
+                          ia sys.odciindexinfo,
+                          op sys.odcipredinfo,
+                          qi sys.odciqueryinfo,
+                          strt number, stop number, valarg varchar2,
+                          env SYS.ODCIEnv)
+            return number is language C
+	name "rulestart"
+	library dr$lib
+	with context
+	parameters(
+               context,
+               sctx,
+               sctx INDICATOR STRUCT,
+               ia,
+               ia INDICATOR STRUCT,
+               op,
+               op INDICATOR STRUCT,
+               qi,
+               qi INDICATOR STRUCT,
+               strt,
+               strt INDICATOR,
+               stop,
+               stop INDICATOR,
+	       valarg, 
+	       valarg INDICATOR,
+               valarg LENGTH,	       
+               env,
+               env INDICATOR STRUCT,
+               return OCINumber
+            ),   
+	static function ODCIIndexStart(sctx in out RuleIndexMethods,
+                          ia sys.odciindexinfo,
+        	          op sys.odcipredinfo,
+                	  qi sys.odciqueryinfo,
+                          strt number, stop number, valarg clob,
+                          env SYS.ODCIEnv)
+            return number is language C
+	name "rulecstart"
+	library dr$lib
+	with context
+	parameters(
+               context,
+               sctx,
+               sctx INDICATOR STRUCT,
+               ia,
+               ia INDICATOR STRUCT,
+               op,
+               op INDICATOR STRUCT,
+               qi,
+               qi INDICATOR STRUCT,
+               strt,
+               strt INDICATOR,
+               stop,
+               stop INDICATOR,
+	       valarg, 
+	       valarg INDICATOR,
+               env,
+               env INDICATOR STRUCT,
+               return OCINumber
+            ),
+   member function ODCIIndexFetch(nrows number,
+                          rids OUT sys.odciridlist, env SYS.ODCIEnv)
+            return number is language C
+            name "rulefetch"
+            library dr$lib
+            with context
+            parameters(
+               context,
+               self,
+               self INDICATOR STRUCT,
+               nrows,
+               nrows INDICATOR,
+               rids,
+               rids INDICATOR,
+               env,
+               env INDICATOR STRUCT,
+               return OCINumber
+            ),
+   member function ODCIIndexClose(env sys.ODCIEnv)
+            return number is language C
+            name "ruleclose"
+            library dr$lib
+            with context
+            parameters(
+               context,
+               self,
+               self INDICATOR STRUCT,
+               env,
+               env INDICATOR STRUCT,
+               return OCINumber
+            ),
+   static function ODCIIndexGetMetaData(ia        IN  sys.odciindexinfo, 
+					version   IN  varchar2,
+                                        new_block OUT PLS_INTEGER,
+                                        env       IN  sys.ODCIEnv)
+            return varchar2,
+   static function ODCIIndexUtilGetTableNames(ia        IN  sys.odciindexinfo,
+                                              read_only IN  PLS_INTEGER,
+                                              version   IN  varchar2,
+                                              context   OUT PLS_INTEGER)
+            return boolean,
+   static procedure ODCIIndexUtilCleanup(context IN PLS_INTEGER),
+   static function ODCIIndexSplitPartition(ia         IN SYS.ODCIIndexInfo,
+                                           part_name1 IN SYS.ODCIPartInfo,
+                                           part_name2 IN SYS.ODCIPartInfo,
+                                           parms      IN varchar2,
+                                           env        IN SYS.ODCIEnv)
+            return number,
+   static function ODCIIndexMergePartition(ia         IN SYS.ODCIIndexInfo,
+                                           part_name1 IN SYS.ODCIPartInfo,
+                                           part_name2 IN SYS.ODCIPartInfo,
+                                           parms      IN varchar2,
+                                           env        IN SYS.ODCIEnv)
+            return number, 
+   static function ODCIIndexExchangePartition(ia  IN SYS.ODCIIndexInfo,
+                                              ia1 IN SYS.ODCIIndexInfo,
+                                              env IN SYS.ODCIEnv)
+            return number
+);
+/
+

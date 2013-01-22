@@ -1,0 +1,2306 @@
+Dump file c:\oraclexe\app\oracle\admin\xe\bdump\xe_mmnl_2688.trc
+Fri Aug 10 14:56:21 2012
+ORACLE V10.2.0.1.0 - Production vsnsta=0
+vsnsql=14 vsnxtr=3
+Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+Windows NT Version V6.1 Service Pack 1
+CPU                 : 2 - type 586, 2 Physical Cores
+Process Affinity    : 0x00000000
+Memory (Avail/Total): Ph:2936M/3965M, Ph+PgF:6112M/7928M, VA:3138M/4095M
+Instance name: xe
+
+Redo thread mounted by this instance: 1
+
+Oracle process number: 12
+
+Windows thread id: 2688, image: ORACLE.EXE (MMNL)
+
+
+*** 2012-08-10 14:56:21.100
+*** SERVICE NAME:(SYS$BACKGROUND) 2012-08-10 14:56:21.098
+*** SESSION ID:(39.1) 2012-08-10 14:56:21.098
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 14:56:35.131
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 14:56:50.172
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 14:57:05.218
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 14:57:20.261
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 14:57:35.302
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 14:57:50.375
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 14:58:05.418
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 14:58:20.468
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 14:58:35.510
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 14:58:49.531
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 14:59:04.582
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 14:59:19.623
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 14:59:34.664
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 14:59:49.715
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:00:04.756
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:00:19.797
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:00:34.838
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:00:49.889
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:01:04.930
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:01:19.970
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:01:35.005
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:01:50.056
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:02:05.097
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:02:20.138
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:02:35.189
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:02:50.220
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:03:05.260
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:03:20.301
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:03:35.352
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:03:50.394
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:04:05.435
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:04:20.476
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:04:34.517
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:04:49.567
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:05:04.608
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:05:19.649
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:05:34.690
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:05:49.731
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:06:04.772
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:06:19.813
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:06:34.863
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:06:49.904
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:07:04.945
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:07:19.986
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:07:35.037
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:07:50.078
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:08:05.143
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:08:20.183
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:08:35.224
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:08:50.275
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:09:05.317
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:09:20.358
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:09:35.409
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:09:50.450
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:10:05.480
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:10:19.521
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:10:34.562
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:10:49.613
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:11:04.654
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:11:19.698
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:11:34.739
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:11:49.789
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:12:04.830
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:12:19.861
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:12:34.902
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:12:49.954
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:13:04.995
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:13:20.036
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:13:35.086
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:13:50.182
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:14:05.276
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:14:20.384
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:14:34.594
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:14:49.655
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:15:04.738
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:15:19.866
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:15:34.998
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:15:50.167
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:16:05.271
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:16:20.447
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:16:34.688
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:16:49.786
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:17:04.889
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:17:20.016
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:17:35.217
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:17:50.392
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:18:05.485
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:18:19.655
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:18:34.714
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:18:49.790
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:19:04.899
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:19:20.010
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:19:35.144
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:19:50.279
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:20:05.412
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:20:19.606
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:20:34.748
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:20:49.850
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:21:04.967
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:21:20.078
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:21:35.170
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:21:50.292
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:22:05.422
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:22:19.927
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:22:35.430
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:22:50.566
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:23:05.009
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:23:20.393
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:23:34.872
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:23:50.256
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:24:05.406
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:24:19.579
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:24:34.700
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:24:49.968
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:25:05.077
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:25:20.197
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:25:35.549
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:25:50.287
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:26:05.431
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:26:20.224
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:26:34.828
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:26:50.121
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:27:05.353
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:27:19.687
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:27:35.224
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:27:50.343
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:28:05.451
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:28:19.591
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:28:34.805
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:28:49.895
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:29:04.983
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:29:20.091
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:29:35.256
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:29:50.357
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:30:04.796
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:30:19.969
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:30:35.057
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:30:50.450
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:31:04.634
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:31:19.859
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:31:34.894
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:31:50.188
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:32:05.315
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:32:20.445
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:32:34.606
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:32:50.292
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:33:05.468
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:33:19.757
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:33:34.819
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:33:50.032
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:34:05.158
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:34:20.318
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:34:35.520
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:34:49.719
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:35:05.598
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:35:19.600
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:35:34.958
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:35:50.413
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:36:05.250
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:36:20.141
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:36:34.998
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:36:50.053
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:37:05.349
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:37:19.529
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:37:35.322
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:37:50.232
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:38:04.768
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:38:19.652
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:38:35.213
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:38:50.268
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:39:04.523
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:39:19.601
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:39:35.193
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:39:50.013
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:40:04.543
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:40:19.811
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:40:34.989
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:40:50.141
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:41:04.942
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:41:25.607
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:41:40.201
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:41:55.414
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:42:10.125
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:42:24.915
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:42:39.733
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:42:55.596
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:43:10.398
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:43:25.248
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:43:39.811
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:43:54.940
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:44:10.064
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:44:25.229
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:44:40.437
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:44:54.781
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:45:10.083
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:45:25.293
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:45:39.588
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:45:54.986
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:46:10.230
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:46:25.494
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:46:39.715
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:46:54.999
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:47:10.217
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:47:24.731
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:47:39.894
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:47:55.195
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:48:10.405
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:48:24.616
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:48:39.884
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:48:55.171
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:49:10.432
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:49:24.788
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:49:40.096
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:49:55.305
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:50:09.774
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:50:24.819
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:50:40.175
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:50:55.520
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:51:09.813
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:51:25.299
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:51:40.376
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:51:55.500
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:52:09.736
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:52:24.815
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:52:39.929
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:52:55.093
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:53:10.164
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:53:25.274
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:53:40.334
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:53:55.479
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:54:09.543
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:54:24.674
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:54:39.716
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:54:54.784
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:55:09.855
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:55:24.989
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:55:40.060
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:55:55.147
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:56:10.312
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:56:25.480
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:56:39.740
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:56:54.841
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:57:09.982
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:57:25.119
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:57:40.205
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:57:55.300
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:58:10.392
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:58:24.514
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:58:39.644
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:58:54.811
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:59:10.061
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:59:25.168
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:59:40.233
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 15:59:55.334
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:00:10.425
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:00:24.559
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:00:39.662
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:00:54.974
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:01:10.170
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:01:25.264
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:01:40.370
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:01:54.502
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:02:09.609
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:02:24.839
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:02:39.922
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:02:54.985
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:03:10.114
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:03:25.234
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:03:40.459
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:03:54.627
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:04:09.700
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:04:24.813
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:04:40.015
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:04:55.165
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:05:10.261
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:05:24.543
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:05:39.701
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:05:54.830
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:06:09.934
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:06:25.014
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:06:40.106
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:06:55.240
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:07:10.324
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:07:25.442
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:07:39.636
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:07:54.730
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:08:09.831
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:08:24.933
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:08:40.041
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:08:55.160
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:09:10.310
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:09:25.448
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:09:39.716
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:09:55.007
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:10:09.524
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:10:25.422
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:10:40.009
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:10:55.201
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:11:10.271
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:11:25.407
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:11:40.506
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:11:54.691
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:12:09.825
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:12:24.986
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:12:40.083
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:12:55.191
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:13:10.508
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:13:25.518
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:13:40.519
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:13:55.176
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:14:09.862
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:14:24.996
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:14:40.179
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:14:55.365
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:15:09.520
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:15:24.696
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:15:39.794
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:15:54.870
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:16:10.015
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:16:25.120
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:16:40.237
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:16:55.341
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:17:10.470
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:17:24.611
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:17:39.722
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:17:54.855
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:18:09.936
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:18:25.032
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:18:40.107
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:18:55.237
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:19:10.342
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:19:25.461
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:19:39.613
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:19:54.723
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:20:09.865
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:20:24.993
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:20:40.134
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:20:55.245
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:21:10.381
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:21:24.514
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:21:39.681
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:21:54.802
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:22:09.892
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:22:25.002
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:22:40.131
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:22:55.289
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:23:09.665
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:23:24.966
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:23:40.374
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:23:54.809
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:24:09.594
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:24:24.937
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:24:40.088
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:24:55.389
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:25:09.625
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:25:24.782
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:25:39.911
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:25:55.008
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:26:10.167
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:26:25.270
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:26:40.398
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:26:54.707
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:27:10.085
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:27:25.294
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:27:40.446
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:27:55.006
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:28:10.255
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:28:25.020
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:28:40.472
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:28:54.892
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:29:10.295
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:29:25.412
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:29:39.562
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:29:54.772
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:30:09.892
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:30:24.998
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:30:40.128
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:30:55.223
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:31:09.612
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:31:25.084
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:31:40.214
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:31:55.498
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:32:09.684
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:32:24.827
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:32:39.963
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:32:55.054
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:33:10.140
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:33:25.214
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:33:40.309
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:33:54.634
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:34:09.957
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:34:25.054
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:34:39.605
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:34:54.848
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:35:09.949
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:35:25.026
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:35:40.156
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:35:55.304
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:36:10.404
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:36:25.504
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:36:39.931
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:36:55.094
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:37:10.221
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:37:25.309
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:37:40.385
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:37:55.453
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:38:09.651
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:38:24.808
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:38:40.680
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:38:54.562
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:39:10.325
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:39:25.199
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:39:40.282
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:39:55.139
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:40:09.968
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:40:24.975
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:40:39.543
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:40:55.066
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:41:10.303
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:41:25.429
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:41:39.653
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:41:54.787
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:42:09.924
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:42:25.026
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:42:40.110
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:42:55.179
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:43:10.294
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:43:25.407
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:43:39.566
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:43:54.684
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:44:09.776
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:44:24.905
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:44:39.984
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:44:55.141
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:45:10.259
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:45:25.371
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:45:40.438
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:45:54.538
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:46:09.643
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:46:24.761
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:46:39.822
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:46:54.973
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:47:10.150
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:47:25.284
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:47:40.351
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:47:55.404
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:48:09.543
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:48:24.668
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:48:39.767
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:48:54.869
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:49:09.994
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:49:25.076
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:49:40.166
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:49:55.247
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:50:10.369
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:50:25.463
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:50:39.553
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:50:54.671
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:51:09.777
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:51:24.882
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:51:39.980
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:51:55.044
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:52:10.175
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:52:25.273
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:52:40.384
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:52:55.506
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:53:09.615
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:53:24.744
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:53:39.826
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:53:54.920
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:54:10.039
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:54:25.134
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:54:40.209
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:54:55.332
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:55:10.457
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:55:24.721
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:55:39.861
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:55:54.973
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:56:10.119
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:56:25.239
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:56:40.409
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:56:54.583
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:57:09.751
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:57:24.927
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:57:40.087
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:57:55.406
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:58:09.526
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:58:24.677
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:58:39.759
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:58:54.876
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:59:09.951
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:59:25.022
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:59:40.148
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 16:59:55.282
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:00:10.376
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:00:25.461
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:00:39.711
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:00:54.978
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:01:10.091
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:01:25.255
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:01:40.404
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:01:54.583
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:02:09.843
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:02:24.978
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:02:40.069
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:02:55.204
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:03:10.304
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:03:25.391
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:03:39.564
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:03:54.838
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:04:10.026
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:04:25.103
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:04:40.168
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:04:55.263
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:05:10.405
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:05:24.592
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:05:39.703
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:05:54.872
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:06:10.053
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:06:25.152
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:06:41.017
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:06:54.609
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:07:09.882
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:07:25.059
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:07:40.268
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:07:54.669
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:08:09.844
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:08:25.006
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:08:40.124
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:08:55.232
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:09:09.511
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:09:24.850
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:09:39.967
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:09:55.063
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:10:10.224
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:10:25.473
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:10:39.652
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:10:54.773
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:11:09.827
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:11:25.201
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:11:40.363
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:11:55.537
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:12:09.934
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:12:25.119
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:12:40.247
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:12:55.377
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:13:09.640
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:13:24.757
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:13:39.869
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:13:55.023
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:14:10.127
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:14:25.220
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:14:40.288
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:14:55.377
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:15:10.449
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:15:24.653
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:15:39.785
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:15:54.852
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:16:09.904
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:16:25.024
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:16:40.150
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:16:55.273
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:17:10.355
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:17:25.478
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:17:39.604
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:17:54.704
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:18:09.812
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:18:24.906
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:18:40.015
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:18:55.159
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:19:10.297
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:19:25.460
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:19:39.637
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:19:54.772
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:20:09.931
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:20:25.011
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:20:40.162
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:20:55.316
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:21:09.512
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:21:24.655
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:21:39.881
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:21:54.985
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:22:10.074
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:22:25.219
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:22:40.324
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:22:54.719
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:23:10.147
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:23:24.648
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:23:39.842
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:23:54.967
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:24:10.095
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:24:25.213
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:24:39.806
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:24:55.261
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:25:09.841
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:25:24.697
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:25:40.772
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:25:55.168
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:26:10.303
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:26:25.441
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:26:39.836
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:26:55.022
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:27:10.110
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:27:25.462
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:27:39.892
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:27:55.305
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:28:09.514
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:28:24.868
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:28:40.233
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:28:54.624
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:29:09.950
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:29:25.111
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:29:40.221
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:29:55.420
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:30:09.572
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:30:24.691
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:30:39.783
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:30:54.997
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:31:10.126
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:31:25.279
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:31:40.379
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:31:55.462
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:32:09.691
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:32:25.029
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:32:40.242
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:32:55.381
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:33:09.850
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:33:25.005
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:33:40.187
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:33:54.690
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:34:10.029
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:34:25.301
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:34:39.963
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:34:55.201
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:35:10.363
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:35:24.840
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:35:39.978
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:35:55.122
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:36:10.305
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:36:24.568
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:36:40.378
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:36:55.423
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:37:10.200
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:37:24.567
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:37:40.535
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:37:54.800
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:38:10.347
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:38:25.071
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:38:39.893
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:38:55.436
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:39:09.835
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:39:25.135
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:39:40.269
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:39:55.415
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:40:09.511
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:40:24.815
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:40:39.958
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:40:55.096
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:41:10.415
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:41:24.796
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:41:39.897
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:41:55.055
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:42:10.448
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:42:24.661
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:42:39.884
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:42:55.050
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:43:10.273
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:43:25.019
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:43:39.857
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:43:55.091
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:44:10.333
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:44:24.579
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:44:39.761
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:44:54.946
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:45:10.172
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:45:25.368
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:45:39.550
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:45:54.734
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:46:10.068
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:46:25.290
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:46:40.454
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:46:54.685
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:47:09.885
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:47:25.133
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:47:40.303
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:47:55.482
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:48:10.012
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:48:24.740
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:48:40.302
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:48:54.887
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:49:09.840
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:49:24.576
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:49:40.127
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:49:55.455
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:50:09.842
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:50:25.107
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:50:40.365
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:50:54.786
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:51:10.031
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:51:25.242
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:51:39.536
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:51:54.999
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:52:09.859
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:52:25.275
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:52:40.177
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:52:55.069
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:53:10.362
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:53:24.972
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:53:40.274
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:53:54.628
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:54:10.034
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:54:25.352
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:54:39.711
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:54:54.912
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:55:10.088
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:55:25.302
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:55:40.490
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:55:54.782
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:56:09.910
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:56:25.025
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:56:40.178
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:56:55.336
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:57:09.557
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:57:24.756
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:57:39.943
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:57:55.015
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:58:10.101
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:58:25.178
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:58:40.321
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:58:55.454
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:59:09.665
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:59:24.738
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:59:39.819
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 17:59:54.959
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:00:10.032
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:00:25.176
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:00:39.624
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:00:54.769
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:01:09.864
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:01:24.965
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:01:40.079
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:01:55.183
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:02:10.293
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:02:25.355
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:02:40.539
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:02:54.576
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:03:10.500
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:03:25.152
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:03:40.365
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:03:55.288
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:04:10.413
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:04:25.150
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:04:40.522
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:04:55.367
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:05:09.803
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:05:25.472
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:05:39.924
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:05:55.177
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:06:10.443
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:06:24.813
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:06:40.012
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:06:55.253
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:07:10.389
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:07:24.959
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:07:40.196
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:07:55.439
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:08:09.625
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:08:24.835
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:08:40.527
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:08:55.859
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:09:10.206
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:09:25.358
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:09:40.477
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:09:54.748
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:10:10.213
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:10:24.885
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:10:40.061
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:10:54.675
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:11:10.236
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:11:25.300
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:11:40.415
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:11:54.784
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:12:09.843
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:12:24.923
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:12:40.013
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:12:55.211
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:13:10.303
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:13:25.429
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:13:39.562
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:13:54.700
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:14:09.854
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:14:24.980
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:14:40.080
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:14:55.246
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:15:10.348
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:15:25.465
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:15:39.588
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:15:54.867
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:16:10.043
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:16:25.229
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:16:40.374
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:16:55.513
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:17:09.673
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:17:24.834
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:17:39.902
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:17:55.010
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:18:10.103
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:18:25.297
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:18:40.406
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:18:54.565
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:19:09.658
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:19:24.761
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:19:39.879
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:19:54.954
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:20:10.055
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:20:25.256
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:20:40.356
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:20:54.559
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:21:09.860
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:21:25.104
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:21:40.337
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:21:55.463
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:22:09.720
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:22:24.843
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:22:39.914
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:22:55.011
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:23:10.111
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:23:25.214
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:23:40.314
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:23:55.417
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:24:09.637
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:24:24.762
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:24:39.894
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:24:54.974
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:25:10.071
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:25:25.173
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:25:40.320
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:25:55.417
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:26:09.614
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:26:24.786
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:26:39.937
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:26:55.081
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:27:10.181
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:27:25.299
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:27:40.386
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:27:54.547
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:28:09.654
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:28:24.738
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:28:39.827
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:28:54.990
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:29:10.108
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:29:25.259
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:29:40.421
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:29:54.570
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:30:09.755
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:30:24.864
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:30:40.164
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:30:54.544
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:31:09.793
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:31:24.902
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:31:39.999
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:31:55.151
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:32:10.231
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:32:25.320
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:32:39.742
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:32:54.919
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:33:10.075
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:33:25.217
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:33:40.451
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:33:54.585
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:34:09.708
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:34:24.806
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:34:39.930
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:34:55.065
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:35:10.185
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:35:25.335
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:35:40.410
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:35:55.571
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:36:09.662
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:36:24.776
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:36:39.985
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:36:55.121
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:37:10.245
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:37:25.349
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:37:39.514
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:37:54.604
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:38:09.671
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:38:24.771
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:38:39.890
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:38:55.032
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:39:10.135
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:39:25.301
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:39:40.397
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:39:55.471
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:40:09.575
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:40:24.718
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:40:39.828
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:40:54.918
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:41:09.990
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:41:25.070
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:41:40.176
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:41:55.307
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:42:10.435
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:42:24.602
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:42:39.704
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:42:54.846
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:43:10.011
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:43:25.130
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:43:40.194
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:43:55.290
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:44:10.374
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:44:25.432
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:44:40.504
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:44:54.680
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:45:09.771
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:45:24.856
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:45:39.981
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:45:55.059
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:46:10.199
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:46:25.319
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:46:40.436
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:46:54.723
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:47:09.814
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:47:24.933
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:47:40.008
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:47:55.095
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:48:10.297
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:48:25.395
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:48:40.458
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:48:54.564
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:49:09.884
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:49:25.309
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:49:40.481
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:49:54.770
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:50:10.098
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:50:25.222
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:50:40.367
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:50:55.457
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:51:09.865
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:51:25.426
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:51:40.288
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:51:54.820
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:52:09.765
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:52:25.194
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:52:40.264
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:52:54.934
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:53:10.006
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:53:24.527
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:53:39.613
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:53:54.699
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:54:09.797
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:54:24.983
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:54:40.080
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:54:55.245
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:55:10.366
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:55:25.470
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:55:39.659
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:55:54.750
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:56:09.859
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:56:24.969
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:56:40.074
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:56:55.197
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:57:10.256
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:57:25.374
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:57:40.434
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:57:54.559
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:58:09.677
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:58:24.771
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:58:39.880
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:58:54.983
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:59:10.045
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:59:25.148
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:59:40.213
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 18:59:55.291
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:00:10.360
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:00:24.506
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:00:39.615
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:00:55.043
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:01:10.258
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:01:25.319
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:01:40.427
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:01:54.588
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:02:09.781
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:02:24.920
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:02:40.026
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:02:55.145
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:03:10.428
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:03:24.746
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:03:40.030
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:03:55.189
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:04:10.315
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:04:25.384
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:04:40.450
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:04:54.553
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:05:09.708
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:05:24.810
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:05:39.937
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:05:55.031
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:06:10.177
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:06:25.317
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:06:40.477
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:06:54.671
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:07:09.773
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:07:24.925
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:07:40.018
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:07:55.153
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:08:10.275
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:08:25.369
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:08:40.442
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:08:54.576
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:09:09.673
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:09:24.823
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:09:39.895
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:09:54.953
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:10:10.031
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:10:25.185
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:10:40.314
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:10:55.483
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:11:09.617
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:11:24.689
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:11:39.726
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:11:54.828
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:12:09.930
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:12:25.025
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:12:40.097
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:12:55.195
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:13:10.377
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:13:25.476
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:13:39.656
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:13:54.773
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:14:09.889
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:14:25.118
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:14:40.222
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:14:55.409
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:15:10.470
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:15:24.586
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:15:39.685
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:15:54.765
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:16:09.886
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:16:24.852
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:16:40.478
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:16:55.189
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:17:09.956
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:17:25.307
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:17:40.449
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:17:54.577
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:18:09.889
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:18:25.194
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:18:40.321
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:18:54.512
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:19:09.856
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:19:24.958
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:19:40.026
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:19:55.205
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:20:10.306
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:20:24.718
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:20:39.844
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:20:54.975
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:21:10.216
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:21:25.341
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:21:40.510
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:21:54.634
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:22:09.790
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:22:24.987
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:22:40.293
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:22:55.543
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:23:09.926
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:23:25.343
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:23:40.414
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:23:54.953
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:24:10.089
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:24:25.287
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:24:40.411
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:24:54.569
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:25:09.668
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:25:24.825
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:25:39.925
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:25:55.061
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:26:10.160
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:26:25.243
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:26:40.361
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:26:54.754
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:27:09.891
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:27:24.974
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:27:40.043
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:27:55.175
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:28:10.261
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:28:25.359
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:28:40.482
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:28:54.591
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:29:09.802
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:29:24.611
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:29:40.479
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:29:54.835
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:30:10.111
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:30:25.354
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:30:39.740
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:30:54.515
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:31:10.102
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:31:24.530
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:31:40.435
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:31:55.692
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:32:10.047
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:32:24.798
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:32:40.067
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:32:55.085
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:33:10.417
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:33:24.703
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:33:39.925
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:33:55.183
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:34:10.391
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:34:24.798
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:34:40.459
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:34:55.240
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:35:10.228
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:35:24.965
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:35:40.371
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:35:54.637
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:36:10.561
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:36:25.346
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:36:40.143
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:36:55.236
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:37:09.513
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:37:24.949
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:37:40.112
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:37:55.234
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:38:10.322
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:38:25.470
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:38:39.894
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:38:55.222
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:39:10.356
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:39:24.825
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:39:39.977
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:39:55.051
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:40:10.146
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:40:24.785
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:40:40.632
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:40:55.650
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:41:10.700
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:41:25.340
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:41:40.254
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()
+*** 2012-08-10 19:42:02.297
+ksugetosstat failed: op = NtQuerySystemInformation, location = slsupdatesta ()

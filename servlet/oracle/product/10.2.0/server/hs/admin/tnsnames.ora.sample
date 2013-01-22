@@ -1,0 +1,9 @@
+# This is a sample tnsnames.ora that contains the NET8 parameters that are
+# needed to connect to an HS Agent
+
+#hsagent  =
+#  (DESCRIPTION=
+#    (ADDRESS=(PROTOCOL=tcp)(HOST=localhost)(PORT=1521))
+#    (CONNECT_DATA=(SID=hsagent))
+#    (HS=)
+#  ) 

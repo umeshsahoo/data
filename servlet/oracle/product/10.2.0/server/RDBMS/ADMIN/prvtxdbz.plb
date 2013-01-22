@@ -1,0 +1,243 @@
+grant execute on sys.dbms_sys_sql to xdb
+/
+CREATE OR REPLACE LIBRARY xdb.SECURITY_LIB wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+16
+27 5d
+84SuZBFlRVWV4HAeCgS3Ul/26p8wg04I9Z7AdBjD558yy7KbdPRf/gj1Cee9nrLLUjLMuHQr
+58tSdAj1yaammk6e2Q==
+
+/
+CREATE OR REPLACE PROCEDURE xdb.setmodflg wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+7
+1dd 138
++O/3b/EuZl1s0uj4sbQsDpYXGnswgzv3LifbfHQCmP8+GVF8fzIdAiXXfJnaCT/KLdZ+XnLF
+/p3pKus+AinoUKt+mSk662qDFDNZ6QT0TqveVNQrynoO4gwiIH6vOPE/e++JPQMEU3cwHMFQ
+pgHvnIiNz7D4zFeVZu0bDulEUZ8YzPAeQJXwvUkv/vdT7TVih4rql3IxRCfHaCTaDb/QYsuB
+YcvUBs2BI1TkyEyKyA/r4jX6TsJyqL+XR1IGkgz5twbXmjtz1rfB1c3cOF8/pfjbe8S7GBmc
+r5DKxkAdpCwipvDrz3U=
+
+/
+show errors;
+grant execute on xdb.setmodflg to public;
+CREATE OR REPLACE FUNCTION isXMLTypeTable wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+8
+3c0 280
+tRnP4fGpKdTokqnFOo7WecEYXHMwgzJeDyBRZy+7gk/g8SP7ltQOvnHAKiLYV8PTVCOYDA2u
+YD4oMyNwMqGGxLtW5+ASxtn/+fnX0XQ/FQCU23bhvhjmgdKpGNfm9QZsgPv7B4AbNES2hvvD
+2+wD55gwLFY3xfN2yVJ2ZoZvt2+mhZruo+7yDebBB/geF6rgU4Bv4a5RiBj0Kmr4qba02Ewe
+VaA5pn70qCOeJVFHDU6Q7EG9pel2TJ/Sdq7GOC2q67AQPB3FOZRReAUcfUXR0DFrW0OPCnn4
+5qejiW9kMtsbefvyWu4Go9Fpj1xaf1YZToq4mV4WCt/EphPkMY8FH9b8RU3d4lKY6zatI1Mk
+jviKDq4dBIGhJOWJRQ2wMulwsS64vDoTrx65rjlhcy4i+ir+PGaHOWjQEmFzYw+2IWMeDfc5
+VUPs0SMb7NcXeMxFtAC3hWFVtSQLv11FtUg/3gsis1yM2bN060E7/Wk8sZAVVU1CnbJ8YUkN
+0+p9bBhgKhi4HHzlgy2eUxgKiFmR3btrq4G5ME+24Sx2jFFkUGTzDWcZQYZ6gfIU8PuE9E/e
+T/O0pc/ca8nW1SgsRyAXKtbbqOj1qGQSpRR01QBPE0N766l4LNlwzRA=
+
+/
+show errors;
+grant execute on isXMLTypeTable to public;
+CREATE OR REPLACE PACKAGE BODY xdb.DBMS_XDBZ0 wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+b
+5e13 14d1
+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
+
+
+/
+show errors;
+GRANT EXECUTE ON xdb.dbms_xdbz0 TO PUBLIC
+/
+show errors;
+CREATE or REPLACE trigger xdb.xdb_pi_trig
+BEFORE DROP OR TRUNCATE on DATABASE 
+BEGIN
+  BEGIN
+    IF (xdb.DBMS_XDBZ0.is_hierarchy_enabled_internal(sys.dictionary_obj_owner, sys.dictionary_obj_name, sys.dictionary_obj_owner)) THEN
+      xdb.XDB_PITRIG_PKG.pitrig_truncate(sys.dictionary_obj_owner, sys.dictionary_obj_name);
+    END IF;
+  EXCEPTION 
+    WHEN OTHERS THEN 
+     null;
+  END;
+  BEGIN
+    IF (xdb.DBMS_XDBZ0.is_hierarchy_enabled_internal(sys.dictionary_obj_owner, sys.dictionary_obj_name, sys.dictionary_obj_owner, xdb.DBMS_XDBZ.IS_ENABLED_RESMETADATA)) THEN
+      xdb.XDB_PITRIG_PKG.pitrig_dropmetadata(sys.dictionary_obj_owner, sys.dictionary_obj_name);
+    END IF;
+  EXCEPTION 
+    WHEN OTHERS THEN 
+     null;
+  END;
+END;
+/
+show errors;
+CREATE OR REPLACE PACKAGE BODY xdb.DBMS_XDBZ wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+b
+a36 2fe
+qBF8s2eMrhA/Op73+9kfjSCSh6Mwgw1cLiCMfC9V9jqUjEHTPuXlJ679za+0XgbRLfd5g1CZ
+tbUP9V+k4dv7g3m+L4o6MLvXbUx/+dCU575vsuPkEQW3hZo3MXTKCl+LFifWqRhDbGFb9ECI
+PxHfe6o1uaPZKDCRypQ0kjLJQZ9nWHhPdei085aIx70QxjwqlJJgXN66JnZvEY9ymoJl4t6h
+rZhE3gN2mSbPPUFQhmqJNepqFitKJopAL8G+R49ouYLD4E+yjo4lP9BG3vMgm7z8mEAw0LW+
+K2ihO02SDuZQCc+Qr8EQS9SeRn9mmLQ4a+g16v3pubFsZSolfEiyGlneS/9gHhCgfiY/FFx5
+nlZECleMQb3Fwx2u+0x9mvoQIPexYEXopB9TKH9sXunNrjYcnQHcFqt9AxGoijShv6ncfbeZ
+1ZSCdzd7o7Tb8Ntp72kmRl1H3h3ftZBlWePvGR3/REWnCAkMLWvqleevws3m4X2DNzggBVZj
+d2dN9PKcp4drvSmOhj7jglCzC5D35bTXQEqUo+WjUcV92qT8OtAs12z0LU4kt+6/XjbqtXIW
+hqtLUomTg9z42Gp8QcB5s1CJcwr9hZt1hNRCRynrXZMT78e3A+/N51Rl6X3+6V7SNCtT4NPa
+CtIyVQW846w732DjndbpF6KNtu9FAbLOb/2y4gVOqTRvE1qJ6Bl/HiqbKymWUFmDlB3+2bV/
+myz32u5s5ZLelgDX5wzqckMbaLWSpqZ72sw=
+
+/

@@ -1,0 +1,83 @@
+/* alter session set events = '10936 trace name context level 1'; */
+CREATE OR REPLACE LIBRARY xdb.DBMS_XMLPARSER_LIB wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+16
+2d 65
+yaXTsrNcb60PuA23WUNxCcxWNJQwg04I9Z7AdBjDuFKbskrQpYG9uHSen7IY/gj1Cee9nrLL
+UjLMuHQr58tSdAj1yaam1fV0pw==
+
+/
+create or replace package BODY xdb.dbms_xmlparser wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+b
+3c70 85d
+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
+fyuCI8R+jfw/I5j4KQ929rQG
+
+/
+show errors;
+CREATE OR REPLACE PUBLIC SYNONYM DBMS_XMLPARSER FOR xdb.dbms_xmlparser
+/
+GRANT EXECUTE ON xdb.dbms_xmlparser TO PUBLIC
+/
+show errors;

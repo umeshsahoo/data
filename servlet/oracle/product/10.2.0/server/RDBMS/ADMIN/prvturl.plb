@@ -1,0 +1,55 @@
+CREATE OR REPLACE LIBRARY utl_url_lib wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+16
+27 5d
+qeopSo3QIPB319FWWBYTg4px1P8wg04I9Z7AdBjD57II9Ciym/T+CPUJ572esstSMsy4dCvn
+y1J0CPVhyaamBryePQ==
+
+/
+CREATE OR REPLACE PACKAGE BODY utl_url wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+b
+8f7 270
+khBGtlasex6KAnWXQSvSsQY5Xkswgztc2SdqfC+KMQ+o4QI25ihjxG6RQnltxfGz73ncIol2
+wD5jbLUPJg22BZOVQvRwyA2Ch9f/SMWXh977FFwx7FfVJ7BEaxuh5widaKHJvvE2dIyUd8+r
+StAfnJHpKtUmPxvuoVhELnRU5kNFyclByg6nw9b77azYy1q2UwljNmn0jM85tfdBpNdwQBUh
+VLCM3iMlxkB3jCaorJcVRDh1mgxFNmU6g7m8xBNP0PSqXkKl03qDzteJPt7uVflDbZmR2IvC
+BDa4WFJgOyWoyhCIbt8pXfKW9Np7lMqZut9d1z7iF0n0Cd4SZpvIrkn9oh60DVDCboBCU9z9
+sXcehRGEInq5cbzuXM+RS9CPJugjmi8NmvjEIGhe3w2HRssxxAe3EdZxsW8Q8GDwEHj2uyJ4
+sVTai7nM1tAjeuBOTT4LSF8aUufdvCVOmdRQmQQBUz0n+nkeEYmaUsjQ8FLmZYUmtqddwwTd
+FmAXIwzzKanr1Vq6o7oAlHAepYCxP5n2TQMTPtLxxrBpuFj1yFWhfMaVWL+WerowIYWKBmXv
+TsHL60llEuLF3ekVD2YA4s+qnsaiy3IHDxXHj7Y=
+
+/

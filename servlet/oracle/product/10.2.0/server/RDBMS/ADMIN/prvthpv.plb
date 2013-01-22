@@ -1,0 +1,32 @@
+CREATE OR REPLACE PACKAGE sys.kupv$ft wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+9
+c32 284
+5BFpcjZXP7rsLwBsOGieF0OaN9Awg82cLl4VfC9AAP7qiq+IUonWzq1q3qHEaaG3Rxs1rUO1
+tZleDpeAY2mMSb8jqWu7t9ffu59/FotXbHUSA1NWdg6/A2Vb7lihvo9ifw7XpoNkYa6mau7X
+xBhOZCo7pfJTCdWm9cuVVjT8vdjgaUmIjiuOnYkIQETCdajQSIJXb/NQTf/3vYll4sGnQCvC
+oSbInGvDSujbpODpIE/09rsz27Ha4BvBkzebPUYw5LqNVT5ifx5TKiO/ukJ0xcLfQfcvgjGJ
+J5BexofqOMgL9KQIVT9YqLDh7fW4MjJvEYme9U+e0sie0nWe0ome0m6e0sA2dyOKE/g/9aX+
+usZ0eXxx0YrJOzff21P5zW4cygwqIPakTBPsEWK9XCOCLFe+CIpKnLWQaPsjWkQjWUQj8kQj
+3EQjreGSAEkXxvCkENi8G6y87zWd9A4PKCax5fU/SzwPcqY7AirYRENBvVa+yg3sJwsTbjnm
+CkU7Rtq0FA+uZXAaAFLnGLPKYHPzBSj2TBV73H6PEtA70PkuTnpUTMogHq7NsNUN68sBLA1Q
+jfezXzrcuRPEDMR6uXHbKSK8vYpr5Ov/RPIMsYZW2VpD1yxGCJVbsXnFzw==
+
+/
+GRANT EXECUTE ON sys.kupv$ft TO EXECUTE_CATALOG_ROLE;

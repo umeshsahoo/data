@@ -1,0 +1,75 @@
+rem 
+rem Copyright (c) 2002, 2003, Oracle Corporation.  All rights reserved.  
+rem  NAME
+rem    drvutl.pkb - DR Utilities package spec.
+rem
+rem  MODIFIED    (MM/DD/YY)
+Rem  smuralid     11/01/03  - deprecate trace_event; 
+Rem                           add set_ora_event_level
+Rem  yucheng      09/24/03  - add trace_event 
+Rem  smuralid     06/09/03  - add write_to_log
+Rem  gkaminag     03/06/03  - add getinvokerid
+Rem  gkaminag     12/10/02  - gkaminag_security_021203
+Rem  gkaminag     12/03/02 -  Creation 
+
+create or replace package drvutl authid current_user as
+
+/*--------------------------- CurrentUserid ------------------------------*/
+/* this basically does a select userenv('SCHEMAID') from dual and returns */
+/* the result.  This is needed because SQL and PL/SQL don't always agree  */
+/* on what userenv('SCHEMAID') should be */
+function CurrentUserid return binary_integer;
+
+/*------------------------------ SetInvoker ------------------------------*/
+/* set invoking user -- used by invoker's rights packages calling */
+/* definer's rights packages which need to know the invoker       */
+
+/* note: pass 0 to use current user -- this has to be done by select */
+/* from dual, NOT calling userenv directly                           */
+
+procedure SetInvoker(p_userid in binary_integer default 0);
+
+/*------------------------------ ClearInvoker ----------------------------*/
+/* clear invoking user -- if you call SetInvoker, make sure to call this */
+
+procedure ClearInvoker;
+
+/*------------------------------ GetInvoker ------------------------------*/
+/* get the last invoking username */
+
+function GetInvoker return varchar2;
+
+/*------------------------------ GetInvokerId ----------------------------*/
+/* get the last invoking userid */
+
+function GetInvokerId return number;
+
+/*-------------------------- get_ora_event_level ----------------------------*/
+/* Set an Oracle Event's level */
+
+function set_ora_event_level (
+  event   in number,
+  level   in number
+) return number;
+
+/*-------------------------- get_ora_event_level ----------------------------*/
+/* Get an Oracle Event's Level */
+
+function get_ora_event_level (
+  event   in number
+) return number;
+
+/*------------------------------ write_to_log -------------------------------*/
+/* Write a message to the ctx log file. 
+ * msg     - the message to dump 
+ * newline - should the message be terminated with a new line ?
+ *
+ * The reason this function is here instead of in dr0out (where the 
+ * rest of the log-file functionality changes are, is because we don't
+ * want to expose this yet to end users
+ */
+procedure write_to_log(msg in varchar2, 
+                       newline in binary_integer default 1);
+
+end drvutl;
+/

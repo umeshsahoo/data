@@ -1,0 +1,136 @@
+rem Copyright (c) 2002, 2003, Oracle Corporation.  All rights reserved.  
+rem
+rem    NAME
+rem      drvxtab.pkh - DR inVoker's rights indeX TABle access routines
+rem
+rem    DESCRIPTION
+rem      DDL operations on index tables -- mainly called by drvddl
+rem   
+rem    NOTES
+rem  
+rem    MODIFIED    (MM/DD/YY)
+rem    smuralid     03/06/03 - more utilities
+rem    gkaminag     06/19/02 - gkaminag_security_ph1_020603
+rem    gkaminag     06/03/02 - creation
+
+create or replace package drvxtab authid current_user as
+
+  DEFAULT_SEPARATOR       constant varchar2(1) := '$';
+  TMP1_SEPARATOR          constant varchar2(1) := 'M';
+  TMP2_SEPARATOR          constant varchar2(1) := 'N';
+
+/*---------------------------- exec_ddl -----------------------------------*/
+
+PROCEDURE exec_ddl(
+  stmt in varchar2, 
+  ignore_errors in boolean default FALSE
+);
+
+/*---------------------------- map_trigger_text ---------------------------*/
+
+FUNCTION map_trigger_text(
+  pfx     in varchar2, 
+  tpfx    in varchar2, 
+  tokcol  in varchar2 default 'token_text',
+  typecol in varchar2 default 'token_type'
+) 
+RETURN varchar2;
+
+
+/* ====================================================================== */
+/* ====================================================================== */
+/*                             CONTEXT                                    */
+/* ====================================================================== */
+/* ====================================================================== */
+
+/*----------------------- create_index_tables -----------------------------*/
+
+PROCEDURE create_index_tables( 
+  idx_owner in varchar2, 
+  idx_name  in varchar2,
+  idxid     in number,
+  part_id   in number default null,
+  temp      in boolean default FALSE
+);
+
+/*----------------------- create_index_indexes  ---------------------------*/
+
+PROCEDURE create_index_indexes( 
+  idx_owner in varchar2, 
+  idx_name  in varchar2,
+  idxid     in number,
+  part_id   in number default null,
+  temp      in boolean default FALSE
+);
+
+/*----------------------- drop_index_tables  ---------------------------*/
+
+PROCEDURE drop_index_tables( 
+  idx_owner in varchar2, 
+  idx_name  in varchar2,
+  idxid     in number,
+  has_p     in boolean default null,
+  part_id   in number default null,
+  temp      in boolean default FALSE,
+  isAlter   in boolean default FALSE
+);
+
+/*----------------------- trunc_index_tables  ---------------------------*/
+
+PROCEDURE trunc_index_tables( 
+  idx_owner in varchar2, 
+  idx_name  in varchar2,
+  idxid     in number,
+  part_id   in number default null
+);
+
+/*----------------------- rename_index_tables  ---------------------------*/
+
+PROCEDURE rename_index_tables( 
+  idx_owner in varchar2, 
+  idx_name  in varchar2,
+  idxid     in number,
+  new_name  in varchar2,
+  has_idx   in boolean,
+  part_id   in number default null
+);
+
+/*----------------------- exchange_index_tables  --------------------------*/
+
+PROCEDURE exchange_index_tables(
+  idxp_owner in varchar2,
+  idxp_name  in varchar2,
+  idxp_id    in number,
+  idxp_pid   in number,
+  idxn_owner in varchar2,
+  idxn_name  in varchar2,
+  idxn_id    in number
+);
+
+/*-------------------------- get_create_sql -------------------------------*/
+
+FUNCTION get_create_sql( 
+  idx_owner in varchar2, 
+  idx_name  in varchar2,
+  idxid     in number,
+  part_id   in number default null,
+  which     in varchar2,
+  sto       in out nocopy dr_def.vc500_tab,
+  sep       in varchar2 default DEFAULT_SEPARATOR,
+  x_part    in boolean default FALSE
+) RETURN VARCHAR2;
+
+/*-------------------------- get_object_name ------------------------------*/
+
+FUNCTION get_object_name( 
+  idx_owner in varchar2, 
+  idx_name  in varchar2,
+  idxid     in number,
+  part_id   in number default null,
+  which     in varchar2,
+  sep       in varchar2 default DEFAULT_SEPARATOR
+) RETURN VARCHAR2;
+
+
+end drvxtab;
+/

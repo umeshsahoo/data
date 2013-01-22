@@ -1,0 +1,152 @@
+rem 
+rem Copyright (c) 2002, Oracle Corporation.  All rights reserved.  
+rem
+rem    NAME
+rem      drvddlx.pkh - DR cartridge internal, inVoker's rights DDL services
+rem
+rem    DESCRIPTION
+rem      functions called by ConText cartridge routines to perform 
+rem      various DDL functionalities for ctxxpath index type
+rem   
+rem    NOTES
+rem  
+rem    MODIFIED    (MM/DD/YY)
+rem    gkaminag     10/14/02 - gkaminag_security_020924
+rem    gkaminag     06/03/02 - creation 
+
+create or replace package drvddlx authid current_user as
+
+/*----------------------- IndexCreate  -----------------------*/
+/*
+  NAME
+    IndexCreate
+
+  DESCRIPTION
+    create an index
+*/
+PROCEDURE IndexCreate(
+  ia          in  sys.odciindexinfo,
+  owner       in  varchar2,
+  index_name  in  varchar2,
+  table_owner in  varchar2,
+  table_name  in  varchar2,
+  column_name in  varchar2,
+  idxmem      in  number,
+  storage     in  varchar2
+);
+
+/*----------------------- IndexTransport  -----------------------*/
+/*
+  NAME
+    IndexTransport
+
+  DESCRIPTION
+    meta-data cleanup after transportable tablespace
+*/
+PROCEDURE IndexTransport( 
+    owner           in  varchar2,
+    index_name      in  varchar2,
+    table_owner     in  varchar2,
+    table_name      in  varchar2,
+    IndexInfoFlags  in  number
+);
+
+/*----------------------- IndexDrop  -------------------------*/
+/*
+  NAME
+    IndexDrop
+
+  DESCRIPTION
+    drop an index
+
+  ARGUMENTS
+    ia           index info
+*/
+PROCEDURE IndexDrop(
+  ia          in  sys.ODCIIndexInfo,
+  owner       in  varchar2, 
+  index_name  in  varchar2
+);
+
+/*----------------------- IndexRename  ---------------------*/
+/*
+  NAME
+    IndexRename
+
+  DESCRIPTION
+    rename an index
+
+  ARGUMENTS
+    ia           index info
+    owner        index owner
+    index_name   index name
+    new_name     new name
+*/
+PROCEDURE IndexRename(
+  ia           in sys.odciindexinfo,
+  owner        in varchar2,
+  index_name   in varchar2,
+  new_name     in varchar2
+);
+
+/*----------------------- IndexTruncate  ---------------------*/
+/*
+  NAME
+    IndexTruncate
+
+  DESCRIPTION
+    truncate an index
+
+  ARGUMENTS
+    owner        index owner
+    index_name   index name
+*/
+PROCEDURE IndexTruncate(
+  ia           in sys.odciindexinfo,
+  owner        in varchar2,
+  index_name   in varchar2
+);
+
+/*----------------------- IndexReplace  -------------------------*/
+/*
+  NAME
+    IndexReplace
+
+  DESCRIPTION
+    rebuild an index, replacing preferences as needed
+
+  ARGUMENTS
+    ia           index info
+    idx          index record
+    idxmem       index memory
+    storage      storage pref name
+*/
+PROCEDURE IndexReplace(
+  ia          in  sys.ODCIIndexInfo,
+  idx         in  dr_def.idx_rec,
+  idxmem      in  number,
+  storage     in  varchar2
+);
+
+/*----------------------- IndexResume  -------------------------*/
+/*
+  NAME
+    IndexResume
+
+  DESCRIPTION
+    resume index creation
+
+  ARGUMENTS
+    ia           index info
+    idx          index record
+    para         parallel degree
+    idxmem       index memory
+*/
+PROCEDURE IndexResume(
+  ia          in  sys.ODCIIndexInfo,
+  idx         in  dr_def.idx_rec,
+  idxmem      in  number
+);
+
+end drvddlx;
+/

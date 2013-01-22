@@ -1,0 +1,33 @@
+CREATE OR REPLACE PACKAGE dbms_repcat_internal wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+9
+5ed 203
+Hzy/tlWRQFa81TFMDG6XJr3tM5Ywgz3D10jWfHQZQq7uC0nNoIblpFl8IR12XUbcbpv5IH+E
+PqoCXI1halEOFM7BTsHb4rOOdbYaoUOMaXl8otk3Ri020nKmsa15gQqViPL9qKWOe9qcz/G9
+f9V/JE123craSkEtZqbZuGB/SYnEsVh3VVpczsBx4XXxafnhZva0Nh4ER/RZLeapsuPe5HRh
+JrGvrGkRRqhS3KEIGE1DgqfflWeGsttFVGDxu1D7VHIHTCTsxr4hoCpiKRX4W7hepx873Bx5
+exsCE8WovvyKzHUcGdsaFQaxrVOo5Pb19AGJYYD6obmixFk6ZjyJzy+x+Zy4RDuwfbosTRgU
+BpHnYZqA7QMHppbZVJG+M70y84JSXI7kq88e3Lc2eIQ4wyEv/2XNZRN7X6NpVzTCuVwNN+S8
+GVQ3ajpI7iEyDyE+Pds+Ld4LL811p06GgxH6d3kxioyaoHekW1tzJBzJNIvidxEDkCxPvPt2
+765p
+
+/
+CREATE OR REPLACE PUBLIC SYNONYM dbms_repcat_internal
+  FOR dbms_repcat_internal
+/

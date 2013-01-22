@@ -1,0 +1,955 @@
+Rem 
+rem $Header: dr0ddl.pkh 13-may-2005.15:01:01 gkaminag Exp $ 
+rem 
+rem Copyright (c) 1991, 2005, Oracle. All rights reserved.  
+rem    NAME
+rem      CTX_DDL.pkb - DRD text index services
+rem    DESCRIPTION
+rem      This package contains the client side services that allow the client
+rem      to define and control the text index.
+rem
+rem    NOTES
+rem    MODIFIED    (MM/DD/YY)
+rem      gkaminag  05/13/05  - add optlevel_rebuild 
+rem      gkaminag  11/24/03  - copy policy 
+rem      yucheng   10/22/03  - add replace_index_metadata 
+rem      smuralid  10/09/03  - sync_index: eliminate 'direct_path' param
+rem      gkaminag  10/20/03  - mdata phase 2 
+rem      gkaminag  10/23/03  - optimize type 
+rem      gkaminag  09/16/03  - mdata 
+rem      smuralid  04/21/03  - sync_index: new parameter 'direct_path' 
+rem      gkaminag  11/04/02  - add optlevel for token
+rem      gkaminag  07/02/02  - security overhaul phase 2
+rem      gkaminag  01/15/02  - parallel full optimize for context index.
+rem      gkaminag  01/11/02  - extend optimize_index with token_type.
+rem      gkaminag  10/23/01  - create_policy.
+rem      yucheng   10/12/01 -  parallel sync
+rem      gkaminag  08/15/00 -  partition support in sync
+rem      gkaminag  08/03/00 -  add memory parameter to sync_index
+rem      ehuang    07/17/00 -  rm add_xml_section
+rem      salpha    06/26/00 -  ctxrule implementation
+rem      ehuang    05/17/00 -  xml section
+rem      wclin     03/09/00 -  support single token optimization
+rem      gkaminag  02/21/00 -  implement ctxcat type
+rem      gkaminag  11/01/99 -  multi stoplist
+rem      gkaminag  07/14/99 -  add PL/SQL index optimization
+rem      gkaminag  06/11/99 -  attribute sections
+rem      gkaminag  06/07/99 -  multi-lingual lexer
+rem      gkaminag  05/25/99 -  stop sections
+rem      ehuang    04/08/99 -  add sync_index
+rem      gkaminag  07/30/98 -  increase max field sections to 64
+rem      gkaminag  07/09/98 -  remove optimize
+rem      gkaminag  07/09/98 -  add unset_attribute
+rem      gkaminag  06/05/98 -  sentpara sections
+rem      gkaminag  05/30/98 -  field section visibility
+rem      ehuang    05/18/98 -  add add_field_section
+rem      gkaminag  05/04/98 -  remove sync
+rem      gkaminag  04/17/98 -  new stopword types
+rem      ehuang    03/30/98 -  no more policy
+rem      gkaminag  04/02/98 -  section groups now have type
+rem      gkaminag  03/24/98 -  section group table column name changes
+rem      gkaminag  03/12/98 -  use driobj
+rem      ehuang    03/06/98 -  8.1 preference system API
+rem      ehuang    02/27/98 -  add stoplist management procedures
+rem      gkaminag  02/24/98 -  new dml queue
+rem      syang     02/23/98 -  move cartridge routines to dr0idx
+rem      syang     02/19/98 -  start_index interface change
+rem      syang     02/17/98 -  return err msg to cartridge
+rem      syang     01/14/98 -  add start_index, wrapup_index
+rem      gkaminag  12/08/97 -  8.1
+
+create or replace package CTX_DDL authid current_user as
+
+  OPTLEVEL_FAST                   constant varchar2(4)  := 'FAST';
+  OPTLEVEL_FULL                   constant varchar2(4)  := 'FULL';
+  OPTLEVEL_TOKEN                  constant varchar2(5)  := 'TOKEN';
+  OPTLEVEL_TOKEN_TYPE             constant varchar2(10) := 'TOKEN_TYPE';
+  OPTLEVEL_REBUILD                constant varchar2(7)  := 'REBUILD';
+  MAXTIME_UNLIMITED               constant number := 2147483647;
+
+  --
+  -- Public procedure prototypes
+  --
+
+/*---------------------------- create_preference ----------------------------*/
+/*
+  NAME
+    create_preference
+  DESCRIPTION
+    A preference is created to customized a tile (framework object).
+    
+    A preference references a framework object. It describes how a referenced
+    object is to be customized. 
+
+    This procedure validates the preference attribute settings and raise
+    an exveption if incorrect attribute settings are found. 
+
+  ARGUMENTS
+    preference_name -  preference name, this is structured as 
+                       [OWNER.]PREFERENCE_NAME
+    object_name     - object name
+  NOTES
+    a) this procedure clears out the list of attributes created (by 
+       calling the set_attribute()) prior to calling this procedure.
+  EXCEPTIONS
+
+  RETURNS
+    none
+*/
+procedure create_preference(
+  preference_name  in varchar2,
+  object_name      in varchar2);
+
+/*---------------------------- drop_preference ----------------------------*/
+/*
+  NAME
+    drop_preference
+  DESCRIPTION
+    delete the preference specified in 'name' from TexTile dictionary.
+    This procedure will raise an exception if the preference is referenced
+    in any policy.
+  ARGUMENTS
+    name    - preference name
+  NOTES
+    NONE
+  EXCEPTIONS
+    
+*/
+procedure drop_preference(preference_name  in varchar2 );
+
+/*---------------------------- set_attribute ----------------------------*/
+/*
+  NAME
+    set_attribute
+  DESCRIPTION
+    add an item into the  attribute name/value buffer for preference creation.
+    The caller calls this  procedure to set value for a named preference
+    attribute. 
+    the create_preference() procedure make used of all values set by this
+    procedure when creating the preference. The attribute name/value  buffer
+    is cleaned up once the preference is created.
+
+  ARGUMENTS
+    name     - preference attribute name
+    value    - the attribute value
+  NOTES
+    
+  EXCEPTIONS
+
+*/
+procedure set_attribute(preference_name in varchar2, 
+                        attribute_name  in varchar2, 
+                        attribute_value in varchar2);
+
+/*-------------------------- unset_attribute ----------------------------*/
+
+procedure unset_attribute(preference_name in varchar2, 
+                        attribute_name  in varchar2);
+
+
+/*-------------------- create_section_group  ---------------------------*/
+/*
+  NAME
+    create_section_group
+
+  DESCRIPTION
+    create a new section group.  
+ 
+    * section group name is unique within an owner.  
+    * Only CTXAPP and CTXADMIN users can create a section group.
+
+  ARGUMENTS
+    group_name  - section group name , [user.]section_group_name
+    group_type  - section group type ( from ctx_classes )
+  NOTES
+    
+  EXCEPTIONS
+
+*/
+PROCEDURE create_section_group(
+  group_name     in    varchar2
+, group_type     in    varchar2
+);
+
+/*-------------------- drop_section_group  ---------------------------*/
+/*
+  NAME
+    drop_section_group
+
+  DESCRIPTION
+    drop a new group.  Only CTXAPP and CTXADMIN can drop a section
+    group, moreover, they can only drop their own section group.
+
+  ARGUMENTS
+    group_name  -  section group name, [user.]section_group_name
+
+  NOTES
+    
+  EXCEPTIONS
+
+*/
+PROCEDURE drop_section_group(
+  group_name     in    varchar2
+);
+
+/*-------------------- add_zone_section  ---------------------------*/
+/*
+  NAME
+    add_zone_section
+
+  DESCRIPTION
+    add a new section.  
+
+    * tag is unique within a section group
+
+    * section names are not unique within a section group.  this allows
+      defining multiple patterns for the same logical section, makeing the
+      details transparent to searches.
+
+    * no field and zone section name within a section group should be the same
+  ARGUMENTS
+    group_name   - section group name, [user.]section_group_name
+    section_name - section name 
+    tag          - the pattern which marks the start of a section
+
+  NOTES
+    
+  EXCEPTIONS
+
+*/
+PROCEDURE add_zone_section(
+  group_name     in    varchar2,
+  section_name   in    varchar2,
+  tag            in    varchar2
+);
+
+
+/*-------------------- add_field_section  -------------------------*/
+/*
+  NAME
+    add_field_section
+
+  DESCRIPTION
+    add a new field section.  
+
+    * tag is unique within a section group
+
+    * at most 16 unique field sections with a section group
+
+    * no field and zone section name within a section group should be the same
+  ARGUMENTS
+    group_name   - section group name, [user.]section_group_name
+    section_name - section name 
+    tag          - the pattern which marks the start of a section
+
+  NOTES
+    
+  EXCEPTIONS
+
+*/
+PROCEDURE add_field_section(
+  group_name     in    varchar2,
+  section_name   in    varchar2,
+  tag            in    varchar2,
+  visible        in    boolean default FALSE
+);
+
+/*-------------------- add_special_section  ---------------------------*/
+/*
+  NAME
+    add_special_section
+
+  DESCRIPTION
+    add a special section to the group
+    special sections are not detected by tags.  Instead, they are
+    detected automatically in the document text.  
+
+  ARGUMENTS
+    group_name   - section group name, [user.]section_group_name
+    section_name - the special section to add
+
+  NOTES
+    The following are valid special sections:
+    
+    for all types:
+      SENTENCE
+      PARAGRAPH    
+
+  EXCEPTIONS
+
+*/
+PROCEDURE add_special_section(
+  group_name     in    varchar2
+, section_name   in    varchar2
+);
+
+/*-------------------- add_stop_section  -----------------------------*/
+/*
+  NAME
+    add_stop_section
+
+  DESCRIPTION
+    add a stop section to the group
+    stop sections can be added only to the auto sectioner.  They denote
+    those tags which should not be indexed.
+
+  ARGUMENTS
+    group_name   - section group name, [user.]section_group_name
+    tag          - the tag to stop
+
+  NOTES
+
+  EXCEPTIONS
+
+*/
+PROCEDURE add_stop_section(
+  group_name     in    varchar2
+, tag            in    varchar2
+);
+
+/*-------------------- add_attr_section  -----------------------------*/
+/*
+  NAME
+    add_attr_section
+
+  DESCRIPTION
+    add an attribute section to the group
+    attr sections can be added only to the xml sectioner.  
+    They denote attributes whose text should be indexed
+
+  ARGUMENTS
+    group_name   - section group name, [user.]section_group_name
+    section_name - section name 
+    tag          - the tag to index -- MUST be in form TAG@ATTR
+
+  NOTES
+
+  EXCEPTIONS
+
+*/
+PROCEDURE add_attr_section(
+  group_name     in    varchar2
+, section_name   in    varchar2
+, tag            in    varchar2
+);
+
+/*-------------------- add_mdata_section  -------------------------*/
+/*
+  NAME
+    add_mdata_section
+
+  DESCRIPTION
+    add a new mdata section.  
+
+    * tag is unique within a section group
+
+    * at most 99 unique mdata sections with a section group
+
+    * no section name unique within a section group
+
+  ARGUMENTS
+    group_name   - section group name, [user.]section_group_name
+    section_name - section name 
+    tag          - the pattern which marks the start of a section
+
+  NOTES
+    
+  EXCEPTIONS
+
+*/
+PROCEDURE add_mdata_section(
+  group_name     in    varchar2,
+  section_name   in    varchar2,
+  tag            in    varchar2
+);
+
+/*-------------------- remove_section ---------------------------*/
+/*
+  NAME
+    remove_section
+
+  DESCRIPTION
+    remove section/s from a section group. 
+    
+    * delete all sections with sec_name in section group 'grp_name'.
+
+    * Only CTXAPP and CTXADMIN can drop a section, moreover, they can 
+      only drop their own sections.
+
+  ARGUMENTS
+    group_name    -  section group name, [user.]section_group_name 
+    section_name  -  section name , [user.]section_name
+
+  NOTES
+    
+  EXCEPTIONS
+
+*/
+PROCEDURE remove_section(
+  group_name       in    varchar2, 
+  section_name     in    varchar2
+);
+
+/*-------------------- remove_section ---------------------------*/
+/*
+  NAME
+    remove_section
+
+  DESCRIPTION
+    remove a section from a section group. 
+    
+    * Only CTXAPP and CTXADMIN can drop a section, moreover, they can 
+      only drop their own sections.
+
+  ARGUMENTS
+    group_name  -  section group name, [user.]section_group_name
+    section_id  -  section id, [user.]section_name
+
+  NOTES
+    
+  EXCEPTIONS
+
+*/
+PROCEDURE remove_section(
+  group_name     in    varchar2,
+  section_id     in    number
+);
+
+
+/*-------------------- create_stoplist --------------------------*/
+/*
+  NAME
+    create_stoplist
+
+  DESCRIPTION
+    create a new stoplist
+
+  ARGUMENTS
+    stoplist_name - name of the stoplist
+    stoplist_type - type of stoplist
+
+  NOTES
+  
+  EXCEPTIONS
+
+*/
+PROCEDURE create_stoplist(
+  stoplist_name  in   varchar2,
+  stoplist_type  in   varchar2 default 'BASIC_STOPLIST'
+);
+
+/*-------------------- drop_stoplist --------------------------*/
+/*
+  NAME  
+    drop_stoplist
+
+  DESCRIPTION
+    delete a stoplist
+
+  ARGUMENTS
+    stoplist_name -  name of the stoplist
+
+  NOTES
+  
+  EXCEPTIONS
+
+*/
+PROCEDURE drop_stoplist(
+  stoplist_name  in   varchar2
+);
+
+/*-------------------- add_stopword --------------------------*/
+/*
+  NAME 
+    add_stopword
+
+  DESCRIPTION
+    add a stopword to a stoplist
+
+  ARGUMENTS
+    stoplist_name -  name of the stoplist
+    stopword      -  stopword to be added
+    language      -  language of the stopword (for MULTI_STOPLIST only)
+
+  NOTES
+  
+  EXCEPTIONS
+
+*/
+PROCEDURE add_stopword(
+  stoplist_name  in   varchar2,
+  stopword       in   varchar2,
+  language       in   varchar2 default NULL
+);
+
+/*-------------------- add_stoptheme --------------------------*/
+/*
+  NAME 
+    add_stoptheme
+
+  DESCRIPTION
+    add a stoptheme to a stoplist
+
+  ARGUMENTS
+    stoplist_name -  name of the stoplist
+    stoptheme     -  stoptheme to be added
+
+  NOTES
+  
+  EXCEPTIONS
+
+*/
+PROCEDURE add_stoptheme(
+  stoplist_name  in   varchar2,
+  stoptheme      in   varchar2
+);
+
+/*-------------------- add_stopclass --------------------------*/
+/*
+  NAME 
+    add_stopclass
+
+  DESCRIPTION
+    add a stopclass to a stoplist
+
+  ARGUMENTS
+    stoplist_name -  name of the stoplist
+    stopclass     -  stopclass to be added
+
+  NOTES
+    currently only the stopclass NUMBERS is supported
+
+*/
+PROCEDURE add_stopclass(
+  stoplist_name  in   varchar2,
+  stopclass      in   varchar2
+);
+
+/*-------------------- remove_stopword --------------------------*/
+/*
+  NAME 
+    remove_stopword
+
+  DESCRIPTION
+    remove a stopword from a stoplist
+
+  ARGUMENTS
+    stoplist_name  -  name of the stoplist
+    stopword       -  stopword to be removed
+    language       -  language of the stopword (for MULTI_STOPLIST only)
+ 
+  NOTES
+  
+  EXCEPTIONS
+
+*/
+PROCEDURE remove_stopword(
+  stoplist_name  in   varchar2,
+  stopword       in   varchar2,
+  language       in   varchar2 default NULL
+);
+
+/*-------------------- remove_stoptheme --------------------------*/
+/*
+  NAME 
+    remove_stoptheme
+
+  DESCRIPTION
+    remove a stoptheme from a stoplist
+
+  ARGUMENTS
+    stoplist_name  -  name of the stoplist
+    stoptheme       -  stoptheme to be removed
+ 
+  NOTES
+  
+  EXCEPTIONS
+
+*/
+PROCEDURE remove_stoptheme(
+  stoplist_name  in   varchar2,
+  stoptheme       in   varchar2
+);
+
+/*-------------------- remove_stopclass --------------------------*/
+/*
+  NAME 
+    remove_stopclass
+
+  DESCRIPTION
+    remove a stopclass from a stoplist
+
+  ARGUMENTS
+    stoplist_name  -  name of the stoplist
+    stopclass       -  stopclass to be removed
+ 
+  NOTES
+  
+  EXCEPTIONS
+
+*/
+PROCEDURE remove_stopclass(
+  stoplist_name  in   varchar2,
+  stopclass       in   varchar2
+);
+
+/*-------------------- add_sub_lexer ---------------------------*/
+/*
+  NAME 
+    add_sub_lexer
+
+  DESCRIPTION
+    add a sub lexer to a multi-lexer preference
+
+  ARGUMENTS
+    lexer_name     -  name of the multi-lingual lexer preference
+    language       -  language of the sub-lexer
+    sub_lexer      -  name of the sub-lexer preference for this language
+    alt_value      -  alternate value for the language
+
+  NOTES
+  
+  EXCEPTIONS
+
+*/
+PROCEDURE add_sub_lexer(
+  lexer_name     in   varchar2,
+  language       in   varchar2,
+  sub_lexer      in   varchar2,
+  alt_value      in   varchar2 default null
+);
+
+/*-------------------- remove_sub_lexer ---------------------------*/
+/*
+  NAME 
+    remove_sub_lexer
+
+  DESCRIPTION
+    remove a sub lexer from a multi-lexer preference
+
+  ARGUMENTS
+    lexer_name     -  name of the multi-lingual lexer preference
+    language       -  language of the sub-lexer
+
+  NOTES
+  
+  EXCEPTIONS
+
+*/
+PROCEDURE remove_sub_lexer(
+  lexer_name     in   varchar2,
+  language       in   varchar2
+);
+
+/*-------------------- sync_index --------------------------*/
+/*
+  NAME 
+    sync_index
+
+  DESCRIPTION
+    sync index
+
+  ARGUMENTS
+    idx_name  - index name
+    memory    - index memory
+    part_name - index partition name
+    parallel_degress - parallel degree
+
+  NOTES
+  
+  EXCEPTIONS
+
+*/
+PROCEDURE sync_index(
+  idx_name  in  varchar2 default NULL,
+  memory    in  varchar2 default NULL,
+  part_name in  varchar2 default NULL,
+  parallel_degree in number default 1
+);
+
+/*-------------------- optimize_index --------------------------*/
+/*
+  NAME 
+    optimize_index
+
+  DESCRIPTION
+    optimize index
+
+  ARGUMENTS
+    idx_name  - index name
+    optlevel  - optimization level -- FAST or FULL
+    maxtime   - max optimization time, in minutes, for FULL optimize
+    token     - text token string to optimize, for TOKEN optimize
+                note token types 1, 2, 5, 7, and 8 are case-sensitive.
+    part_name - index partition name
+    token_type - for TOKEN optimize only, the type of the token to optimize
+                 (default value: 0).  For name to type resolution, see
+                 ctx_report.token_type
+    parallel_degree - the degree of parallelism for this optimize.
+                 NOTE: parallel optimize is supported ONLY for FULL
+                 optimize, on CONTEXT indexes.  Any other conditions
+                 will produce an error message.
+  NOTES
+  
+  EXCEPTIONS
+
+*/
+PROCEDURE optimize_index(
+  idx_name   in  varchar2,
+  optlevel   in  varchar2,
+  maxtime    in  number    default null,
+  token      in  varchar2  default null,
+  part_name  in  varchar2  default null,
+  token_type in  number    default null,
+  parallel_degree in number default 1
+);
+
+/*-------------------- create_index_set  ---------------------------*/
+/*
+  NAME
+    create_index_set
+
+  DESCRIPTION
+    create a new index set.  
+ 
+    * index set name is unique within an owner.  
+    * Only CTXAPP users and CTXSYS can create an index set.
+
+  ARGUMENTS
+    set_name  - index set name.  user.name syntax allowed.
+
+  NOTES
+    
+  EXCEPTIONS
+
+*/
+PROCEDURE create_index_set(
+  set_name     in    varchar2
+);
+
+/*------------------------------ add_index ---------------------------------*/
+/*
+  NAME
+    add_index
+
+  DESCRIPTION
+    add a new index to an index set.  
+
+    * column list is unique within an index set
+
+    * at most 100 indexes in an index set
+
+  ARGUMENTS
+    set_name       - index set name
+    column_list    - column list for the index
+    storage_clause - index storage clause
+
+  NOTES
+    
+  EXCEPTIONS
+
+*/
+PROCEDURE add_index(
+  set_name       in    varchar2,
+  column_list    in    varchar2,
+  storage_clause in    varchar2 default null
+);
+
+/*-------------------- remove_index ---------------------------*/
+/*
+  NAME
+    remove_index
+
+  DESCRIPTION
+    remove index with the specified column list from an index set. 
+
+  ARGUMENTS
+    set_name      -  index set name
+    column_list   -  index column list
+
+  NOTES
+    
+  EXCEPTIONS
+
+*/
+PROCEDURE remove_index(
+  set_name       in    varchar2, 
+  column_list    in    varchar2
+);
+
+/*-------------------- drop_index_set  ---------------------------*/
+/*
+  NAME
+    drop_index_set
+
+  DESCRIPTION
+    drop an index set.
+
+  ARGUMENTS
+    set_name  -  index set name
+
+  NOTES
+    
+  EXCEPTIONS
+
+*/
+PROCEDURE drop_index_set(
+  set_name     in    varchar2
+);
+
+/*-------------------- create_policy  ---------------------------*/
+/*
+  NAME
+    create_policy
+
+  DESCRIPTION
+    create a policy.  
+
+  ARGUMENTS
+    policy_name   - the name for the new policy
+    filter        - the filter preference to use
+    section_group - the section group to use
+    lexer         - the lexer preference to use
+    stoplist      - the stoplist preference to use
+    wordlist      - the wordlist preference to use
+
+  NOTES
+    
+  EXCEPTIONS
+
+*/
+PROCEDURE create_policy(
+  policy_name   in varchar2,
+  filter        in varchar2 default NULL,
+  section_group in varchar2 default NULL,
+  lexer         in varchar2 default NULL,
+  stoplist      in varchar2 default NULL,
+  wordlist      in varchar2 default NULL
+);
+
+/*-------------------- update_policy  ---------------------------*/
+/*
+  NAME
+    update_policy
+
+  DESCRIPTION
+    update a policy.  Replaces the preferences of the policy.
+    arguments left null will not be replaced.
+
+  ARGUMENTS
+    policy_name   - the name for the policy
+    filter        - the new filter preference to use
+    section_group - the new section group to use
+    lexer         - the new lexer preference to use
+    stoplist      - the new stoplist preference to use
+    wordlist      - the new wordlist preference to use
+
+  NOTES
+    
+  EXCEPTIONS
+
+*/
+PROCEDURE update_policy(
+  policy_name   in varchar2,
+  filter        in varchar2 default NULL,
+  section_group in varchar2 default NULL,
+  lexer         in varchar2 default NULL,
+  stoplist      in varchar2 default NULL,
+  wordlist      in varchar2 default NULL
+);
+
+/*-------------------- copy_policy  ---------------------------*/
+/*
+  NAME
+    copy_policy
+
+  DESCRIPTION
+    create a policy which is a metadata copy of an existing policy 
+    or index.
+
+  ARGUMENTS
+    source_policy  - the source policy
+    policy_name    - the new policy
+
+  NOTES
+    currently the owner of the old and new policies must be the same
+*/
+PROCEDURE copy_policy(
+  source_policy  in varchar2,
+  policy_name    in varchar2
+);
+
+/*-------------------- drop_policy  ---------------------------*/
+/*
+  NAME
+    drop_policy
+
+  DESCRIPTION
+    drop a policy.  
+
+  ARGUMENTS
+    policy_name   - the name of the policy
+
+  NOTES
+    
+  EXCEPTIONS
+
+*/
+PROCEDURE drop_policy(
+  policy_name   in varchar2
+);
+
+/*-------------------- add_mdata  ---------------------------*/
+/*
+  NAME
+    add_mdata
+
+  DESCRIPTION
+    add mdata values to existing documents
+*/
+PROCEDURE add_mdata(
+  idx_name      in varchar2,
+  section_name  in varchar2,
+  mdata_value   in varchar2,
+  mdata_rowid   in rowid,
+  part_name     in varchar2  default null
+);
+PROCEDURE add_mdata(
+  idx_name      in varchar2,
+  section_name  in varchar2,
+  mdata_values  in sys.odcivarchar2list,
+  mdata_rowids  in sys.odciridlist,
+  part_name     in varchar2  default null
+);
+
+/*-------------------- remove_mdata  ---------------------------*/
+/*
+  NAME
+    remove_mdata
+
+  DESCRIPTION
+    remove mdata values from existing documents
+*/
+PROCEDURE remove_mdata(
+  idx_name      in varchar2,
+  section_name  in varchar2,
+  mdata_value   in varchar2,
+  mdata_rowid   in rowid,
+  part_name     in varchar2  default null
+);
+PROCEDURE remove_mdata(
+  idx_name      in varchar2,
+  section_name  in varchar2,
+  mdata_values  in sys.odcivarchar2list,
+  mdata_rowids  in sys.odciridlist,
+  part_name     in varchar2  default null
+);
+
+PROCEDURE replace_index_metadata(
+  idx_name         in varchar2,
+  parameter_string in varchar2
+);
+
+END ctx_ddl;
+/
+

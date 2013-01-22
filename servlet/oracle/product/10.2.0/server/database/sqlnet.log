@@ -1,0 +1,18 @@
+
+
+***********************************************************************
+Fatal NI connect error 12638, connecting to:
+ (DESCRIPTION=(ADDRESS=(PROTOCOL=BEQ)(PROGRAM=oracle)(ARGV0=oraclexe)(ARGS='(DESCRIPTION=(LOCAL=YES)(ADDRESS=(PROTOCOL=beq)))'))(CONNECT_DATA=(SID=xe)(CID=(PROGRAM=C:\oraclexe\app\oracle\product\10.2.0\server\bin\oradim.exe)(HOST=JANANI-J)(USER=SYSTEM))))
+
+  VERSION INFORMATION:
+	TNS for 32-bit Windows: Version 10.2.0.1.0 - Production
+	Oracle Bequeath NT Protocol Adapter for 32-bit Windows: Version 10.2.0.1.0 - Production
+  Time: 17-AUG-2012 09:53:27
+  Tracing not turned on.
+  Tns error struct:
+    ns main err code: 12638
+    TNS-12638: Credential retrieval failed
+    ns secondary err code: 0
+    nt main err code: 0
+    nt secondary err code: 0
+    nt OS err code: 0

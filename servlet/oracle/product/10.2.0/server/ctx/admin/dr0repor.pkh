@@ -1,0 +1,426 @@
+Rem 
+rem Copyright (c) 2001, 2003, Oracle Corporation.  All rights reserved.  
+rem    NAME
+rem      dr0repor.pkh
+rem    DESCRIPTION
+rem      This package contains reporting utilities
+rem
+rem    NOTES
+rem    MODIFIED    (MM/DD/YY)
+rem      ekwan     08/06/03  - Bug 3007647: support token_type=604 
+rem      ehuang    04/15/03  - 
+rem      ehuang    03/24/03  - xml support
+rem      qxiao     02/07/03  - add query log analysis
+rem      gkaminag  07/22/02  - security phase 2
+rem      gkaminag  01/14/02  - typo.
+rem      gkaminag  01/09/02  - add token_type.
+rem      gkaminag  12/17/01  - add token_info.
+rem      gkaminag  10/23/01  - policy support.
+rem      gkaminag  10/03/01  - Merged gkaminag_ctx_report_011002
+rem      gkaminag  10/02/01 -  creation
+
+create or replace package ctx_report authid current_user as
+
+-- constants
+FMT_TEXT  constant varchar2(10) := 'TEXT';
+FMT_XML   constant varchar2(10) := 'XML';
+
+-- type declaration
+type query_record is record(times number, query varchar2(4000));
+type query_table is table of query_record index by binary_integer;
+
+
+/*--------------------------- query_log_summary -----------------------------*/
+/*
+  NAME
+    query_log_summary - get the most(least) frequent queries from the query log file
+
+  DESCRIPTION
+    This version of query_summary returns the results into a PL/SQL table
+
+  ARGUMENTS
+    logfile      (IN)     the name of query log file
+    indexname    (IN)     the name of the context index, the default is null which 
+                          will return result for all context indexes
+    result_table (IN OUT) query_table to which to write the result
+    row_num      (IN)     the number of queries you want
+    most_freq    (IN)     whether you want the most frequent or least frequent quries
+
+*/
+procedure query_log_summary(
+  logfile       in varchar2,
+  indexname     in varchar2 default null,
+  result_table  in out nocopy query_table,
+  row_num       in number default 50,
+  most_freq     in boolean default true,
+  has_hit       in boolean default true
+);
+
+
+/*--------------------------- describe_index --------------------------------*/
+/*
+  NAME
+    describe_index
+
+  DESCRIPTION
+    create a report describing the index.  This includes the settings of
+    the index meta-data, the indexing objects used, the settings of the
+    attributes of the objects, and index partition descriptions, if any
+
+  ARGUMENTS
+    index_name    (IN)     the name of the index to describe
+    report        (IN OUT) CLOB locator to which to write the report
+    report_format (IN)     report format
+  NOTES
+    if report is NULL, a session-duration temporary CLOB will be created
+    and returned.  It is the caller's responsibility to free this temporary
+    CLOB as needed.
+ 
+    report clob will be truncated before report is generated, so any
+    existing contents will be overwritten by this call
+*/
+procedure describe_index(
+  index_name     in varchar2,
+  report         in out nocopy clob,
+  report_format  in varchar2 DEFAULT FMT_TEXT
+);
+
+function describe_index(
+  index_name     in varchar2,
+  report_format  in varchar2 DEFAULT FMT_TEXT
+) return clob;
+
+/*--------------------------- describe_policy -------------------------------*/
+/*
+  NAME
+    describe_policy
+
+  DESCRIPTION
+    create a report describing the policy.  This includes the settings of
+    the policy meta-data, the indexing objects used, the settings of the
+    attributes of the objects.
+
+  ARGUMENTS
+    policy_name (IN)     the name of the policy to describe
+    report     (IN OUT) CLOB locator to which to write the report
+    report_format (IN)     report format
+  NOTES
+    if report is NULL, a session-duration temporary CLOB will be created
+    and returned.  It is the caller's responsibility to free this temporary
+    CLOB as needed.
+ 
+    report clob will be truncated before report is generated, so any
+    existing contents will be overwritten by this call
+*/
+procedure describe_policy(
+  policy_name    in varchar2,
+  report         in out nocopy clob,
+  report_format  in varchar2 DEFAULT FMT_TEXT
+);
+
+function describe_policy(
+  policy_name    in varchar2,
+  report_format  in varchar2 DEFAULT FMT_TEXT
+) return clob;
+
+/*-------------------------- create_index_script ----------------------------*/
+/*
+  NAME
+    create_index_script
+
+  DESCRIPTION
+    create a SQL*Plus script which will create a text index that duplicates 
+    the named text index.  
+
+  ARGUMENTS
+    index_name      (IN)     the name of the index
+    report          (IN OUT) CLOB locator to which to write the script
+    prefname_prefix (IN)     optional prefix to use for preference names
+
+  NOTES
+    the created script will include creation of preferences identical to
+    those used in the named text index
+
+    if report is NULL, a session-duration temporary CLOB will be created
+    and returned.  It is the caller's responsibility to free this temporary
+    CLOB as needed.
+ 
+    report clob will be truncated before report is generated, so any
+    existing contents will be overwritten by this call
+
+    if prefname_prefix is omitted or NULL, index name will be used
+    prefname_prefix follows index length restrictions
+*/
+procedure create_index_script(
+  index_name      in varchar2,
+  report          in out nocopy clob,
+  prefname_prefix in varchar2 default null
+);
+
+function create_index_script(
+  index_name      in varchar2,
+  prefname_prefix in varchar2 default null
+) return clob;
+
+/*-------------------------- create_policy_script ---------------------------*/
+/*
+  NAME
+    create_policy_script
+
+  DESCRIPTION
+    create a SQL*Plus script which will create a text policy that duplicates 
+    the named text policy.  
+
+  ARGUMENTS
+    policy_name      (IN)     the name of the policy
+    report          (IN OUT) CLOB locator to which to write the script
+    prefname_prefix (IN)     optional prefix to use for preference names
+
+  NOTES
+    the created script will include creation of preferences identical to
+    those used in the named text policy
+
+    if report is NULL, a session-duration temporary CLOB will be created
+    and returned.  It is the caller's responsibility to free this temporary
+    CLOB as needed.
+ 
+    report clob will be truncated before report is generated, so any
+    existing contents will be overwritten by this call
+
+    if prefname_prefix is omitted or NULL, policy name will be used
+    prefname_prefix follows policy length restrictions
+*/
+procedure create_policy_script(
+  policy_name      in varchar2,
+  report          in out nocopy clob,
+  prefname_prefix in varchar2 default null
+);
+
+function create_policy_script(
+  policy_name      in varchar2,
+  prefname_prefix in varchar2 default null
+) return clob;
+  
+
+/*--------------------------- index_size --------------------------------*/
+/*
+  NAME
+    index_size
+
+  DESCRIPTION
+    create a report showing the internal objects of the text index or 
+    text index partition, and their tablespaces, allocated, and used sizes
+
+  ARGUMENTS
+    index_name (IN)     the name of the index to describe
+    report     (IN OUT) CLOB locator to which to write the report
+    part_name  (IN)     the name of the index partition (optional)
+    report_format  (IN) report format
+  NOTES
+    if part_name is NULL, and the index is a local partitioned text index,
+    then all objects of all partitions will be displayed.  If part_name is
+    provided, then only the objects of a particular partition will be
+    displayed.
+
+    if report is NULL, a session-duration temporary CLOB will be created
+    and returned.  It is the caller's responsibility to free this temporary
+    CLOB as needed.
+ 
+    report clob will be truncated before report is generated, so any
+    existing contents will be overwritten by this call
+*/
+procedure index_size(
+  index_name in varchar2,
+  report     in out nocopy clob,
+  part_name  in varchar2 default null,
+  report_format  in varchar2 DEFAULT FMT_TEXT
+);
+
+function index_size(
+  index_name  in varchar2,
+  part_name   in varchar2 default null,
+  report_format  in varchar2 DEFAULT FMT_TEXT
+) return clob;
+
+/*--------------------------- index_stats --------------------------------*/
+/*
+  NAME
+    index_stats
+
+  DESCRIPTION
+    create a report showing various calculated statistics about the text 
+    index
+
+  ARGUMENTS
+    index_name (IN)     the name of the index to describe
+    report     (IN OUT) CLOB locator to which to write the report
+    part_name  (IN)     the name of the index partition
+    frag_stats (IN)     calculate fragmentation statistics?
+    list_size  (IN)     number of elements in each compiled list
+    report_format  (IN) report format
+  NOTES
+    this procedure will fully scan the text index tables, so it may take
+    a long time to run for large indexes
+
+    if the index is a local partitioned index, then part_name MUST be
+    provided.  INDEX_STATS will calculate the statistics for that 
+    index partition.
+
+    if report is NULL, a session-duration temporary CLOB will be created
+    and returned.  It is the caller's responsibility to free this temporary
+    CLOB as needed.
+ 
+    report clob will be truncated before report is generated, so any
+    existing contents will be overwritten by this call
+
+    if frag_stats is FALSE, the report will not show any statistics
+    relating to size of index data.  However, the operation should
+    take less time and resources to calculate the token statistics.
+ 
+    list_size has a maximum value of 1000
+
+    index_stats will create and use a session-duration temporary
+    table, which will be created in CTXSYS temp tablespace.
+*/
+procedure index_stats(
+  index_name in varchar2,
+  report     in out nocopy clob,
+  part_name  in varchar2 default null,
+  frag_stats in boolean default TRUE,
+  list_size  in number  default 100,
+  report_format  in varchar2 DEFAULT FMT_TEXT
+);
+
+/*--------------------------- token_info --------------------------------*/
+/*
+  NAME
+    token_info
+
+  DESCRIPTION
+    create a report showing the information for a token, decoded
+
+  ARGUMENTS
+    index_name     (IN)     the name of the index 
+    report         (IN OUT) CLOB locator to which to write the report
+    token          (IN)     the token text 
+    token_type     (IN)     the token type
+    part_name      (IN)     the name of the index partition
+    raw_info       (IN)     include a hex dump of the index data
+    decoded_info   (IN)     decode and include docid and offset data
+    resolve_docids (IN)     resolve docids to rowids?
+     report_format (IN)     report format
+  NOTES
+    this procedure will fully scan the info for a token, so it may take a
+    long time to run for really large tokens.
+
+    if the index is a local partitioned index, then part_name MUST be
+    provided.  TOKEN_INFO will apply to just that index partition.
+
+    if report is NULL, a session-duration temporary CLOB will be created
+    and returned.  It is the caller's responsibility to free this temporary
+    CLOB as needed.
+ 
+    report clob will be truncated before report is generated, so any
+    existing contents will be overwritten by this call
+
+    token may be case-sensitive, depending on the passed-in token type.
+    THEME, ZONE, ATTR, PATH, and PATH ATTR tokens are case-sensitive.
+    Everything else gets passed through the lexer, so if the index's
+    lexer is case-sensitive, the token input is case-sensitive.
+
+    if raw_info is TRUE, the report will include a hex dump of the
+    raw data in the token_info column
+
+    if decoded_info is FALSE, ctx_report will not attempt to decode the
+    token information.  This is useful when you just want a dump of data.
+
+    To facilitate inline invocation, the boolean arguments are varchar2
+    in the function variant.  You can pass in 'Y', 'N', 'YES', 'NO', 'T', 'F', 
+    'TRUE', or 'FALSE'
+    
+*/
+procedure token_info(
+  index_name      in varchar2,
+  report          in out nocopy clob,
+  token           in varchar2,
+  token_type      in number,
+  part_name       in varchar2 default null,
+  raw_info        in boolean  default FALSE,
+  decoded_info    in boolean  default TRUE,
+  report_format   in varchar2 DEFAULT FMT_TEXT
+);
+
+function token_info(
+  index_name      in varchar2,
+  token           in varchar2,
+  token_type      in number,
+  part_name       in varchar2 default null,
+  raw_info        in varchar2 default 'N',
+  decoded_info    in varchar2 default 'Y',
+  report_format   in varchar2 DEFAULT FMT_TEXT
+) return clob;
+
+/*--------------------------- token_type --------------------------------*/
+/*
+  NAME
+    token_type
+
+  DESCRIPTION
+    this is a helper function which translates an English name into a
+    numeric token type.  This is suitable for use with token_info,
+    or any other CTX API which takes in a token_type.
+
+  ARGUMENTS
+    index_name     (IN)     the name of the index 
+    type_name      (IN)     an English name for token_type
+
+  NOTES
+    the following is legal input.  All input is case-insensitive.
+
+      input               meaning                             type returned
+      ------------------- ----------------------------------- -------------
+      TEXT                normal text token                               0
+      THEME               theme token                                     1
+      ZONE SEC            zone section                                    2
+      ATTR TEXT           text that occurs in an attribute                4
+      ATTR SEC            attribute section                               5
+      PREFIX              prefix token                                    6
+      PATH SEC            path section                                    7
+      PATH ATTR           path attribute section                          8
+      STEM                stem form token                                 9
+      ATTR TEXT PREFIX    prefix token occuring in attribute            604
+      ATTR TEXT STEM      stem token occuring in attribute              904
+      FIELD <name> TEXT   text token in field section <name>          16-79
+      FIELD <name> PREFIX prefix token in field section <name>      616-916
+      FIELD <name> STEM   stem token in field section <name>        916-979
+      
+    example:
+
+      typenum := ctx_report.token_type('myindex', 'field author text');
+
+    For FIELD types, the index meta-data needs to be read, so if you are
+    going to be calling this a lot for such things, you might want to 
+    consider caching the values in local variables rather than calling
+    token_type over and over again.
+
+    The constant types (0 - 9) also have constants in this package defined.
+*/
+function token_type(
+  index_name in varchar2,
+  type_name  in varchar2
+) return number;
+
+TOKEN_TYPE_TEXT      constant number := 0;
+TOKEN_TYPE_THEME     constant number := 1;
+TOKEN_TYPE_ZONE_SEC  constant number := 2;
+TOKEN_TYPE_ATTR_TEXT constant number := 4;
+TOKEN_TYPE_ATTR_SEC  constant number := 5;
+TOKEN_TYPE_PREFIX    constant number := 6;
+TOKEN_TYPE_PATH_SEC  constant number := 7;
+TOKEN_TYPE_PATH_ATTR constant number := 8;
+TOKEN_TYPE_STEM      constant number := 9;
+TOKEN_TYPE_ATTR_TXT_PFIX constant number := 604;
+TOKEN_TYPE_ATTR_TXT_STEM constant number := 904;
+
+end ctx_report;
+/

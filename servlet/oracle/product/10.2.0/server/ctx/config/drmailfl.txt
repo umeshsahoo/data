@@ -1,0 +1,70 @@
+#############################################################################
+#
+# This file is for configuration of the MAIL_FILTER
+#
+# We strongly recommend that you make a duplicate of this file whenever
+# editing it, to guard against overwriting by reinstallation or installation
+# of upgrade.  Alternatively, make a copy of this file and reset the value
+# of the system parameter MAIL_FILTER_CONFIG_FILE (use the call
+# ctxsys.ctx_adm.set_parameter to set this value)
+#
+# This file should be in the character set of the database using it.
+#
+#############################################################################
+
+
+
+#############################################################################
+#
+# the section below contains the behavior associated with each mime type.
+# The format is:
+#
+# <mime type><whitespace><behavior>
+#
+# these values are non-case-sensitive.
+#
+# mime type can be either a full type (like text/plain) or just a major type
+# (such as text), in which case that behavior will be used for all subtypes 
+# of that type (unless overridden by a type/subtype behavior line).
+#
+# behavior can be one of:
+#   INCLUDE    (include the message body in the output)
+#   IGNORE     (do not include the message body in the output)
+#   INSOFILTER (process the message body through the INSO filter)
+#
+# behavior specification for MULTIPART or MESSAGE types is not allowed.  Any 
+# such lines will be ignored
+#
+# The generic behavior section must precede the index-specific behavior
+# section
+#
+#############################################################################
+[behavior]
+text		                INCLUDE
+application	                IGNORE
+application/msword              INSOFILTER
+image		                IGNORE
+audio		                IGNORE
+video		                IGNORE
+model		                IGNORE
+
+#############################################################################
+#
+# the section below contains the mapping of charset values in mail
+# messages to Oracle NLS character set names.  The format is:
+#
+#   <charset as appears in email><whitespace><nls character set name>
+#
+# these values are non-case-sensitive.
+#
+# The mail filter can map most IANA character set names to Oracle character 
+# set names.  This list here is for overriding that mapping, or adding 
+# mappings that were not known at the time the mail filter code was written.
+#
+# UTF-16 mappings are included as an example 
+#
+#############################################################################
+[charsets]
+UTF-16		AL16UTF16
+UTF-16BE	AL16UTF16
+UTF-16LE	AL16UTF16LE

@@ -1,0 +1,85 @@
+rem
+rem Copyright (c) 2002, 2003, Oracle Corporation.  All rights reserved.  
+rem
+rem    NAME
+rem      drispl.pkh - DR Internal SToPList management
+rem    DESCRIPTION
+rem      This package contains internal code to create, manage, and drop
+rem      stoplists
+rem
+rem    NOTES
+rem    MODIFIED    (MM/DD/YY)
+rem    surman       09/09/03 - 3101316: Add drop_user_stoplists 
+rem    gkaminag     08/19/02 - gkaminag_security_phase2_020620
+rem    gkaminag     07/22/02  - 
+rem    gkaminag     07/02/02 -  creation
+
+create or replace package drispl as
+
+/*-------------------- create_stoplist --------------------------*/
+
+PROCEDURE create_stoplist(
+  stoplist_name  in   varchar2,
+  stoplist_type  in   varchar2 default 'BASIC_STOPLIST'
+);
+
+/*-------------------- drop_stoplist --------------------------*/
+
+PROCEDURE drop_stoplist(
+  stoplist_name  in   varchar2
+);
+
+/*-------------------- drop_user_stoplists ---------------------*/
+
+PROCEDURE drop_user_stoplists(
+  user_name in varchar2 := null
+);
+
+/*-------------------- add_stopobj --------------------------*/
+
+PROCEDURE add_stopobj(
+  stoplist_name  in   varchar2,
+  obj_type       in   varchar2,
+  stopword       in   varchar2,
+  language       in   varchar2 default NULL
+);
+
+/*-------------------- remove_stopobj --------------------------*/
+
+PROCEDURE remove_stopobj(
+  stoplist_name  in   varchar2,
+  obj_type       in   varchar2,
+  stopword       in   varchar2,
+  language       in   varchar2 default NULL
+);
+
+/*------------------------ copy_stoplist -----------------------------------*/
+
+function copy_stoplist(
+  p_idx_id     in  number, 
+  p_stoplist   in  varchar2,
+  p_rcount     out number
+) 
+return dr_def.pref_rec;
+
+/*----------------------- IndexAddStopword  -------------------------*/
+/* add a stopword to an already-existing index */
+
+PROCEDURE IndexAddStopword(
+  ia          in  sys.ODCIIndexInfo,
+  idx         in  dr_def.idx_rec,
+  stopword    in  varchar2,
+  language    in  varchar2
+);
+
+/*----------------------- GetIndexStopwords  -------------------------*/
+/* get stopwords from already-existing index */
+
+PROCEDURE GetIndexStopwords(
+  p_idx_id    in  binary_integer,
+  p_obj_id    in  binary_integer,
+  o_spw       in out nocopy dr_def.spw_tab
+);
+
+end drispl;
+/

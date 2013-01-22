@@ -1,0 +1,28 @@
+CREATE OR REPLACE PACKAGE dbms_sys_error wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+9
+f5e 185
+RGtsKSwdJDEs/A25ahQ3Ht0Av5Ewg83xrydqfHRAv7lefTx0CVrCMt4Dt/EWJt6KBPqTKT67
+tW/HRX+e9sbnoEs4pF+ykj9dD52VJ9BiNUwniEMW73/+dPJvvKZW/pQ9HbZ8xWsmavf5ERhH
+Du7Y8gHI0IxlSqMGMPsksUGFQfXbOogOivhKUGcussuQ1jnaa8ax63S0JzYbUtjFeGUq25HF
+8X34aQivd9NO9XZfkEgrIlxIM7Zd3wASvKjq2l1WV6X90Zn/VeutcgBExrWshkESyxOSchOb
+aHt+V37OZv5lB5n65/pTl0PHU8hNyE0KcSK3BUfuuezbmYFsiokzJU15oFnEBc+NfiuTKxoe
+ZgwYFJPcIVgjJTAwWyzJmc4=
+
+/

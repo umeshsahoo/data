@@ -1,0 +1,406 @@
+rem Copyright (c) 1999, 2003, Oracle Corporation.  All rights reserved.  
+rem
+rem    NAME
+rem      driparse.pkh - DR cartridge Internal PARSE routines
+rem
+rem    DESCRIPTION
+rem      functions called by ConText cartridge type to parse
+rem      parameters strings.  These routines do not do much
+rem      work on their own -- they mainly call back out to driddl.
+rem   
+rem    NOTES
+rem  
+rem    MODIFIED    (MM/DD/YY)
+rem    gkaminag     07/24/03 - replace metadata partition
+rem    gkaminag     06/05/03 - replace metadata
+rem    yucheng      05/01/03 - add sync attributes to CreateRec
+rem    wclin        05/09/03 - statement consistency support
+rem    daliao       11/05/02 - classifier
+rem    wclin        09/25/01 - ctxxpath
+rem    gkaminag     05/03/01 - bug 1749617
+rem    gkaminag     08/25/00 - partitioning support
+rem    gkaminag     08/10/00 - partitioning support
+rem    gkaminag     08/09/00 - local domain partition support
+rem    salpha       06/26/00 - ctxrule implementation
+rem    gkaminag     04/05/00 - ctxcat cleanup
+rem    gkaminag     02/21/00 - ctxcat implementation
+rem    gkaminag     11/07/99 - multi stoplist
+rem    ymatsuda     06/29/99 - remove parallel option
+rem    gkaminag     06/21/99 - format and charset collumns
+rem    gkaminag     06/09/99 - multi lexer
+rem    gkaminag     06/07/99 - multi-lingual lexer
+rem    gkaminag     04/28/99 - add section
+rem    ymatsuda     04/28/99 - parallel indexing
+rem    gkaminag     02/15/99 - creation
+
+create or replace package driparse authid definer as
+
+type createRec is record (
+  populate  boolean,
+  idxmem    number,
+  langcol   varchar2(256),
+  fmtcol    varchar2(256),
+  csetcol   varchar2(256),
+  datastore varchar2(65),
+  filter    varchar2(65),
+  section   varchar2(65),
+  lexer     varchar2(65),
+  wordlist  varchar2(65),
+  stoplist  varchar2(65),
+  storage   varchar2(65),
+  indexset  varchar2(65),
+  classifier      varchar2(65),
+  txntional       varchar2(65),
+  sync_type       varchar2(65),
+  sync_memory     varchar2(100),
+  sync_paradegree number,
+  sync_interval   varchar2(4000)
+);
+
+type alterRec is record (
+  operation  number,
+  op_subtype varchar2(10),
+  string1    varchar2(80),
+  string2    varchar2(64),
+  number1    number,
+  flag1      boolean,
+  idx_opt    createRec
+);  
+
+OP_NULL         constant number := -1;
+OP_SYNC         constant number :=  1;
+OP_RESUME       constant number :=  2;
+OP_REPLACE      constant number :=  3;
+OP_ADD_STOPWORD constant number :=  4;
+OP_OPTIMIZE     constant number :=  5;
+OP_ADD_SECTION  constant number :=  6;
+
+/* ======================================================================= */
+/* ======================================================================= */
+/*                               CONTEXT                                   */
+/* ======================================================================= */
+/* ======================================================================= */
+
+/*----------------------- InitCreateRec  -----------------------*/
+/*
+  NAME
+    InitCreateRec
+
+  DESCRIPTION
+    initialize createrec
+
+  ARGUMENTS
+
+  NOTES
+ 
+  EXCEPTIONS
+ 
+  RETURNS
+ 
+*/
+FUNCTION InitCreateRec return createRec;
+
+/*----------------------- ParseCreate  -----------------------*/
+/*
+  NAME
+    ParseCreate
+
+  DESCRIPTION
+    parse create index parameters string 
+
+  ARGUMENTS
+    params       paramstring
+    alter_op     zero unless called from ParseAlter
+    opts         create index options (OUT)
+
+  NOTES
+ 
+  EXCEPTIONS
+ 
+  RETURNS
+ 
+*/
+PROCEDURE ParseCreate(
+  params      in  varchar2,
+  alter_op    in  number,
+  opts        out createRec,
+  metadataonly out boolean
+);
+
+/*----------------------- ParsePartCreate  -----------------------*/
+/*
+  NAME
+    ParsePartCreate
+
+  DESCRIPTION
+    parse create index (partition create) parameters string 
+
+  ARGUMENTS
+    params       paramstring
+    opts         create index options (OUT)
+
+  NOTES
+ 
+  EXCEPTIONS
+ 
+  RETURNS
+ 
+*/
+PROCEDURE ParsePartCreate(
+  params      in  varchar2,
+  alter_op    in  number,
+  def_idxmem  in  number,
+  opts        out createRec,
+  metadataonly out boolean  
+);
+
+/*----------------------- ParseAlter  -----------------------*/
+/*
+  NAME
+    ParseAlter
+
+  DESCRIPTION
+    parse alter index parameters string 
+
+  ARGUMENTS
+    idxid        index id
+    params       paramstring
+    opts         alter index options (OUT)
+
+  NOTES
+ 
+  EXCEPTIONS
+ 
+  RETURNS
+ 
+*/
+PROCEDURE ParseAlter(
+  idxid       in     number,
+  params      in     varchar2,
+  opts        in out alterRec
+);
+
+/*----------------------- ParsePartAlter  -----------------------*/
+/*
+  NAME
+    ParsePartAlter
+
+  DESCRIPTION
+    parse alter index partition parameters string 
+
+  ARGUMENTS
+    idxid        index id
+    params       paramstring
+    opts         alter index options (OUT)
+
+  NOTES
+ 
+  EXCEPTIONS
+ 
+  RETURNS
+ 
+*/
+PROCEDURE ParsePartAlter(
+  idxid       in     number,
+  params      in     varchar2,
+  opts        in out alterRec
+);
+
+/* ======================================================================= */
+/* ======================================================================= */
+/*                               CTXCAT                                    */
+/* ======================================================================= */
+/* ======================================================================= */
+
+/*----------------------- ParseCreateCat  -----------------------*/
+/*
+  NAME
+    ParseCreateCat
+
+  DESCRIPTION
+    parse create index parameters string for ctxcat indextype 
+
+  ARGUMENTS
+    params       paramstring
+    opts         create index options (OUT)
+
+  NOTES
+ 
+  EXCEPTIONS
+ 
+  RETURNS
+ 
+*/
+PROCEDURE ParseCreateCat(
+  params      in  varchar2,
+  opts        out createRec
+);
+
+/*----------------------- ParseAlterCat  -----------------------*/
+/*
+  NAME
+    ParseAlterCat
+
+  DESCRIPTION
+    parse alter index parameters string for ctxcat indextype 
+
+  ARGUMENTS
+    params       paramstring
+    opts         create index options (OUT)
+
+  NOTES
+ 
+  EXCEPTIONS
+ 
+  RETURNS
+ 
+*/
+PROCEDURE ParseAlterCat(
+  idxid       in  number,
+  params      in  varchar2,
+  opts        out alterRec
+);
+
+/*----------------------- normalize_column_list  -----------------------*/
+/*
+  NAME
+    normalize_column_list
+
+  DESCRIPTION
+    normalize a column list
+
+  ARGUMENTS
+    column_list  column list
+
+  NOTES
+ 
+  EXCEPTIONS
+ 
+  RETURNS
+    normalized column list 
+*/
+FUNCTION normalize_column_list(
+  column_list in varchar2
+) RETURN varchar2;
+
+
+
+
+/* ======================================================================= */
+/* ======================================================================= */
+/*                               CTXRULE                                   */
+/* ======================================================================= */
+/* ======================================================================= */
+
+/*----------------------- ParseCreateRule  -----------------------*/
+/*
+  NAME
+    ParseCreateRule
+
+  DESCRIPTION
+    parse create index parameters string for ctxrule indextype
+
+  ARGUMENTS
+    params       paramstring
+    alter_op     zero unless called from ParseAlter
+    opts         create index options (OUT)
+
+  NOTES
+ 
+  EXCEPTIONS
+ 
+  RETURNS
+ 
+*/
+PROCEDURE ParseCreateRule(
+  params      in  varchar2,
+  alter_op    in  number,
+  opts        out createRec
+);
+
+/*----------------------- ParseAlterRule  -----------------------*/
+/*
+  NAME
+    ParseAlter
+
+  DESCRIPTION
+    parse alter index parameters string for ctxrule indextype
+
+  ARGUMENTS
+    idxid        index id
+    params       paramstring
+    opts         alter index options (OUT)
+
+  NOTES
+ 
+  EXCEPTIONS
+ 
+  RETURNS
+ 
+*/
+PROCEDURE ParseAlterRule(
+  idxid       in     number,
+  params      in     varchar2,
+  opts        in out alterRec
+);
+
+/* ======================================================================= */
+/* ======================================================================= */
+/*                             CTXXPATH                                    */
+/* ======================================================================= */
+/* ======================================================================= */
+
+/*----------------------- ParseCreateXPath  -----------------------*/
+/*
+  NAME
+    ParseCreateXPath
+
+  DESCRIPTION
+    parse create index parameters string for ctxxpath indextype 
+
+  ARGUMENTS
+    params       paramstring
+    opts         create index options (OUT)
+
+  NOTES
+ 
+  EXCEPTIONS
+ 
+  RETURNS
+ 
+*/
+PROCEDURE ParseCreateXPath(
+  params      in  varchar2,
+  alter_op    in  number,
+  opts        out createRec
+);
+
+/*----------------------- ParseAlterXPath  -----------------------*/
+/*
+  NAME
+    ParseAlter
+
+  DESCRIPTION
+    parse alter index parameters string 
+
+  ARGUMENTS
+    idxid        index id
+    params       paramstring
+    opts         alter index options (OUT)
+
+  NOTES
+ 
+  EXCEPTIONS
+ 
+  RETURNS
+ 
+*/
+PROCEDURE ParseAlterXPath(
+  idxid       in     number,
+  params      in     varchar2,
+  opts        in out alterRec
+);
+
+end driparse;
+/
+

@@ -1,0 +1,98 @@
+CREATE OR REPLACE PACKAGE dbms_streams_rpc wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+9
+12ac 487
+vOFU6mjQoG/PZHzgIy/Auav1SNEwg5VU+sCGyi+QA52sjF6N63HH5k1igqdnPWentrW1H+vn
+Pm8RsRoncSa094FFmh4uLqPRHDThK2/wCNRmuCPGK3y5ikynWVeiaTzaHYVTvnync6BNRInL
+NyI12fM0Q+myh8ULvsLxuiY9KodeNPvUGuC7dpWQhrvqZUu7bD2YPy8CzjpGN8JNYyNLaN3Z
+BUOpy9DgofIhIQ3g26SrQQKMnc4oCFrhwDzUVxsSjGWwxoZRUWNLww3RMJACQ6re7O+GfwuH
+N4GL2VQRejFelD2p9p7dX4GPMxb+if6T1WBN5PGfp+noltqUAsUkkU24wtFy2+5GfROihKDG
+0t/jRK3aaZxY9Iv8g8QqxHjw1yrvC/eZJ1tLK+XljKQ7Qxpb5Ose4CA2v1Uwf3lLYj0uZBIB
+1T+AQEXicZmKLiVatoM+E8Ybnbexp56i+4lpHD3rQjHvJ8Oe+KDNTZD/QqCnnAU0KK+ULjcJ
+ZucKCNkeBigQ8jZy+ATzg1hOBHewTaShmpBObOKzsEhq2B4dLdt/R/TcowKDDYBltAKcO4Aw
+kZOqTciQHKDbz+Ee77yZM8sRFfWqyd4d35sdTyVUgvL8nn6lt3BhOJnpnGrfZSFXtfeHuoUl
+vhQ7Mn3mrDzKmubZXZubzpdbVRumIrrwPLCEz+1jA5HkaHe6+tso6Dio6O+jftFNMc0K5p9H
++vS399Mn0FAEBXW5SPg94s76t0l9NpE4TRUevHRuoa9YK1epKVvUQKPONu5a4i3w7UAP9tA3
+PRMPhOWtK3IX60e8pDxAS0ZM+H/+7XOBapHHVfDnrgzaIEqPGlEHpAQTlPsLAjwquA2mtqMk
+FBSUpDi3gpXXPrMAoYRO/oKMfvyTLQfc3/N2rupJr1UJpVZFVY9Z5KilO4uLh7gIzhm+TzKv
+L9hq7nKhNv2hI0wFkqPqlC5grmihZ1iVUnFN1pUiE4YyIpavyCyw8s1to21bpMdpYZ96NOah
+qLV1R/FdPTdq31jdiwdMmyNFHOLYzbeC+op00n91n59mDaJVkhbI8EbTXiV4xyQtUYSlUEP3
+kXapoYlmIgkuBsh5Y/TyktxQqNo/1lB9SEpQGqS8of9wH2lDXSQJIJ354ZwpRH4=
+
+/
+DROP PUBLIC SYNONYM dbms_streams_rpc
+/
+create or replace public synonym dbms_streams_rpc for sys.dbms_streams_rpc
+/
+grant execute on dbms_streams_rpc to execute_catalog_role
+/
+CREATE OR REPLACE PACKAGE dbms_streams_rpc_internal wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+9
+bd b6
+vAhbqXx1OuRJhPazBNDMpZ++JocwgzJKLbJqfHQ2XhKepzN04hYYK0ZUoGcJ6cW5nel0GvSy
+XROWHL/OStIVFcheA3zq1AMNXsNSK6+kUBup4ltSHJdptGoZi2isQRYChGAM2AP33WLGuM7i
+2XtMVt53AHK6XNp5nY+UOPq1TzvQKFbxfL0=
+
+/
+CREATE OR REPLACE PACKAGE dbms_streams_pub_rpc wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+9
+23a 154
+JtndvNAzAZQxIk+LbsyFi2r1d3gwg43xLUgdqHRA2ppeMFka3EyCiLhX9XDIf1x4GbVi8seo
+LgrDXFY23yUXtd+OoP0j4RcJzVwCuG5jWNGV4d9M1h0FouMNxPLhVB+pLRiRDOK9+7a+h2Is
+bvQ3eFOTjwpOSuDqicSxRByTcGxr5ZC6RYdD6AssLag61sKtIDc/wwUmk80wo58mwdQrhMml
+GpAi8m/N0ZVtyW1uQjDVbDRDOoC7xEaZ2BFmfxsj0/ljtT7Odi3iyTRV6ra2GcYyNqh5ZWqt
+RvitGnyjSGPSde0oivjIJCO4t27FOQyKHPnw69lJ5OcSgQ==
+
+/
+grant execute on dbms_streams_pub_rpc to PUBLIC
+/

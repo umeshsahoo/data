@@ -1,0 +1,429 @@
+rem 
+rem $Header: driutl.pkh 22-oct-2003.16:19:29 yucheng Exp $ 
+rem 
+rem Copyright (c) 1991, 2003, Oracle Corporation.  All rights reserved.  
+rem  NAME
+rem    dr_utl.pkb - DR Utilities package spec.
+rem  DESCRIPTION
+rem    This package contains the client side services that enable the client
+rem    to control the text index.
+rem
+rem  PUBLIC FUNCTION(S)
+rem    get_utc   - get/parse User, table, column column spec.
+rem    get_policy_id - get policy id
+rem    get_policy    - get the whole policy
+rem    install_callabck - install a callback procedure
+rem  NOTES
+rem
+rem  MODIFIED    (MM/DD/YY)
+Rem     yucheng    10/22/03 - add lock_index 
+Rem     yucheng    06/06/03 - add syncmem_to_number
+Rem     gkaminag   12/04/02 - move invoker functions
+Rem     daliao     10/29/02 - add get_default_prefname
+Rem     gkaminag   07/23/02  - 
+Rem     gkaminag   07/18/02  - remove arr_table
+Rem     gkaminag   07/02/02  - security phase 2
+Rem     gkaminag   06/03/02  - keycomp function.
+Rem     ehuang     03/03/02  - .
+Rem     gkaminag   10/23/01  - policy loading.
+Rem     ehuang     09/03/01 -  extend index_rec
+Rem     gkaminag   08/22/00 -  index record version of get_ipartition
+Rem     gkaminag   08/15/00 -  add get_partition
+Rem     yucheng    08/08/00 -  partition support
+Rem     gkaminag   08/09/00 -  local domain partition support
+Rem     gkaminag   03/07/00 -  add idx_type to idx_record
+Rem     gkaminag   11/01/99 -  multi stoplist
+Rem     gkaminag   06/21/99 -  format and charset columns
+Rem     gkaminag   06/09/99 -  language column in idx record
+Rem     gkaminag   06/07/99 -  multi lexer
+Rem     gkaminag   05/21/99 -  trigger prefix
+Rem     ehuang     03/01/99 -  add make_pfx
+Rem     gkaminag   02/19/99 -  remove pragma
+Rem     gkaminag   02/15/99 -  move idx_has_p_table to drixtab
+Rem     gkaminag   01/28/99 -  substring indexing
+Rem     gkaminag   09/02/98 -  add option to get_user to ignore anonymous block
+Rem     gkaminag   08/13/98 -  add idxmem_to_number
+Rem     gkaminag   06/29/98 -  bug 683151
+Rem     gkaminag   05/19/98 -  mem to number
+Rem     gkaminag   05/11/98 -  using object id's
+Rem     gkaminag   05/08/98 -  add acess_index
+Rem     ehuang     05/08/98 -  index_rec to include all fields
+Rem     ehuang     03/30/98 -  dr$policy->dr$index
+Rem     ehuang     03/04/98 -  add new record types
+Rem     jkud       01/28/98 -  add get_rowid
+Rem     gkaminag   09/24/97 -  add verify_lexicon
+Rem     dyu        08/21/97 -  work around for 532862
+Rem     ymatsuda   08/19/97 -  add PICK_POLICY
+Rem     ehuang     07/28/97 -  Bug 518206 - add is_ops
+Rem     ehuang     06/04/97 -  Bg 478063 - add get_user
+Rem     gkaminag   05/13/97 -  add get_dbid
+Rem     ehuang     05/01/97 -  add validate_key
+Rem     ehuang     04/28/97 -  add split
+Rem     gkaminag   04/17/97 -  add section count
+Rem     ymatsuda   04/09/97 -  add lock_table
+Rem     ymatsuda   12/16/96 -  add dblink to parse_object_name
+Rem     ymatsuda   12/06/96 -  add install_callback
+Rem     syang      01/04/97 -  add pkey_toolong()
+Rem     qtran      03/10/95 -  added genid routine. return an id value.
+Rem     qtran      10/19/94 -  Creation 
+
+create or replace package driutl as
+
+/*-------------------------------- get_dbid --------------------------------*/
+/*
+  NAME
+   get_dbid - get database identifier
+  DESCRIPTION
+   returns a number which is unique to the database (in OPS, there are
+   multiple databases sharing a disk)
+*/
+function get_dbid return number;
+--  pragma restrict_references ( get_dbid, WNDS );
+
+/*--------------------------- parse_object_name ----------------------------*/
+/* parse object name user.name */
+
+procedure parse_object_name(
+  spec  in     varchar2, 
+  uname in out varchar2, 
+  oname in out varchar2
+);
+
+/*----------------------------- split_list --------------------------------*/
+/*
+  NAME
+    split_list - 
+
+  DESCRIPTION
+    A list can be contiguous or non-contiguous.
+
+    list=1,500,   contiguous=1 is a contig. list
+    list=1,4,5,6  contiguous=0 is a non-contig list
+
+    if we required 20 in the first list, it will be splited into:
+      lower_list=1,20
+      upper_list=21,500
+
+    if we required 2 in the second list, it will be splited into:
+      lower_list=1,4
+      upper_list=5,6
+
+  ARGUMENTS
+   list          (in)  the list 
+   contiguous    (in)  1= contig. 0=non-contig
+   size_required (in)  list length
+   lower_list    (out) lower list after splited
+   upper_list    (out) upper list after splited
+
+  NOTES  
+   None
+  EXCEPTIONS
+
+  RETURNS
+    none
+*/
+
+procedure split_list(
+  list in varchar2, 
+  contiguous    in number, 
+  size_required in number,
+  lower_list    out varchar2,
+  upper_list    out varchar2
+);
+
+
+/*-------------------------------- split -----------------------------------*/
+/*
+  NAME
+    split
+
+  DESCRIPTION
+    Takes a list of values separated by a delimiter and return a
+    array containing the values. a delimiter character preceded
+    by a backslash will be treated as part of the value instead.
+ 
+  ARGUMENTS
+    vlist      -    list of values                                           
+    delimiter  -    the delimiter, one character only                         
+    varr       -    array of values
+
+  NOTES
+  
+  EXCEPTIONS
+  
+  RETURNS
+*/
+PROCEDURE split(                                                               
+  vlist       in      varchar2                                              
+, delimiter   in      varchar2
+, varr        in out  dr_def.vc256_tab
+);
+
+/*---------------------------------- genid ---------------------------------*/
+/*
+  NAME
+    genid - generate an TexTile dictionary id number 
+  DESCRIPTION
+    TexTile dict. id number is used to assigned to INDEX or PREFERENCE.
+
+  ARGUMENTS
+    None
+  NOTES
+           
+  EXCEPTIONS
+
+  RETURNS
+    id number
+*/
+function genid return number;
+
+
+/*---------------------------- pkey_toolong ---------------------------------*/
+/*
+  NAME
+    pkey_toolong - check a length of a given primary key is too long or not
+  DESCRIPTION
+    as pkey can be an encoded composite pkey string, the checking need to be
+    done on the overall length and the individual textkey length
+
+  ARGUMENTS
+    pk -- primary key string
+  NOTES
+           
+  EXCEPTIONS
+
+  RETURNS
+    toolong boolean
+*/
+function pkey_toolong(pk in varchar2) return boolean;
+
+
+/*---------------------------- get_user ------------------------------*/
+/*
+  NAME
+    get_user - get the effective user
+
+  DESCRIPTION
+    returns the user name of user who directly calls  CTXSYS.(DR_% or
+    (CTX_%)
+ 
+    e.g.
+    USER_B has CTXAPP priv, USER_A does not. USER_B grants execute on
+    proc2 to USER_A.  
+
+    USER_A.proc1 -> USER_B.proc2 -> CTXSYS.(DR_% or CTX_%)
+
+    the effective user is USER_B, not USER_A. 
+
+    Must call get_user to return the effective user to be passed to
+    DRIACC.CAN
+
+  ARGUMENTS
+    
+  NOTES
+           
+  EXCEPTIONS
+*/
+function get_user(ignore_anon in boolean default FALSE) return varchar2;
+
+/*---------------------------- get_user_id ---------------------------*/
+/*
+  NAME
+    get_user_id - get user# from sys.user$
+*/
+function get_user_id(p_username in varchar2) return number;
+
+/*---------------------------- get_user_name ---------------------------*/
+/* opposite of get_user_id */
+
+function get_user_name(p_userid in binary_integer) return varchar2;
+
+/*---------------------------- get_obj_id ---------------------------*/
+/*
+  NAME
+    get_obj_id - get obj# from sys.obj$
+*/
+function get_obj_id(p_user_name in varchar2, p_object_name in varchar2,
+                    p_partition_name in varchar2 default NULL) 
+return number;
+
+/*---------------------------- is_ops ------------------------------*/
+/*
+  NAME
+    is_ops
+
+  DESCRIPTION
+    returns TRUE when running in parallel server mode, FALSE otherwise
+  ARGUMENTS
+    
+  NOTES
+           
+  EXCEPTIONS
+*/
+function is_ops return boolean;
+
+/*---------------------------- mem_to_number --------------------------*/
+/*
+  NAME
+    mem_to_number
+
+  DESCRIPTION
+    convert a memory size string to a number    
+
+  ARGUMENTS
+    
+  NOTES
+           
+  EXCEPTIONS
+*/
+function mem_to_number(memstring in varchar2, ulimit in number) return number;
+
+/*---------------------------- idxmem_to_number --------------------------*/
+/*
+  NAME
+    idxmem_to_number
+
+  DESCRIPTION
+    a bit more specialized -- this converts an idxmem string to a number.
+    if passed null it will return DEFAULT_INDEX_MEMORY.
+
+  ARGUMENTS
+    
+  NOTES
+           
+  EXCEPTIONS
+*/
+function idxmem_to_number(memstring in varchar2) return number;
+
+/*---------------------------- syncmem_to_number --------------------------*/
+/*
+  NAME
+    syncmem_to_number
+
+  DESCRIPTION
+    a bit more specialized -- this converts an syncmem string to a number.
+    if passed null it will return idexmem.
+
+  ARGUMENTS
+    
+  NOTES
+           
+  EXCEPTIONS
+*/
+function syncmem_to_number(memstring in varchar2,
+                           idxmem    in number) 
+return number;
+
+/*--------------------------- make_pfx ------------------------------------*/
+/*
+  NAME
+    make_pfx
+
+  DESCRIPTION
+    create propre index prefix
+
+  ARGUMENTS
+    
+  NOTES
+           
+  EXCEPTIONS
+*/
+
+FUNCTION make_pfx (idx_owner in varchar2, idx_name in varchar2, 
+                   pfx_type  in varchar2 default '$',
+                   part_id   in number default null) 
+return varchar2;
+
+/*--------------------------- check_language -----------------------------*/
+/*
+  NAME
+    check_language
+
+  DESCRIPTION
+    check a string to ensure it is a valid NLS language value
+    returns NLS version of language name and abbreviation
+
+  ARGUMENTS
+    
+  NOTES
+           
+  EXCEPTIONS
+*/
+
+FUNCTION check_language (
+  lang     in  varchar2,
+  nls_lang out varchar2,
+  nls_abb  out varchar2,
+  def_ok   in  boolean default TRUE
+) return boolean;
+
+/*--------------------------- lang_to_abbr -----------------------------*/
+/*
+  NAME
+    lang_to_abbr
+
+  DESCRIPTION
+    given an NLS language name, return the NLS abbreviation
+
+  ARGUMENTS
+    
+  NOTES
+    callable from SQL.  
+    Must be a valid language, in uppercase.
+    if lang is unknown, then NULL is returned.
+  EXCEPTIONS
+*/
+
+FUNCTION lang_to_abbr (
+  lang     in  varchar2
+) return varchar2;
+pragma restrict_references (lang_to_abbr, wnds, wnps, rnds, rnps);
+
+/*---------------------------- keycomp_ok ----------------------------------*/
+/* test database, return TRUE if key compressed indexes are enabled */
+
+FUNCTION keycomp_ok return BOOLEAN;
+
+/*---------------------- verify_np_index_tables ----------------------------*/
+
+PROCEDURE verify_np_index_tables (
+  idx_owner in varchar2,
+  idx_name  in varchar2,
+  idx_id    in number,
+  idx_pid   in number
+);
+
+/*--------------------------- get_slave_id --------------------------------*/
+
+PROCEDURE get_slave_id(
+  slaveid     out  varchar2
+);
+
+/*--------------------------- get_default_prefname ----------------------*/
+/* finding the default value by given the name of default preference */
+FUNCTION get_default_value(
+  defname       in   varchar2
+) return varchar2;
+
+/*---------------------------- bytestr -------------------------------*/
+/* return a byte amount in readble form */
+
+function bytestr (a in number) return varchar2;
+
+/*---------------------------- numstr ---------------------------------*/
+/* return a large number in readable form */
+
+function numstr (a in number) return varchar2;
+
+/*---------------------------- pctstr ---------------------------------*/
+/* calculate and return a percentage in readable form */
+
+function pctstr (fig in number, base in number, rnd in number default 2) 
+return varchar2;
+
+procedure lock_index(idxid in number);
+
+procedure lock_partition(idxid in number, ixpid in number);
+
+end driutl;
+/

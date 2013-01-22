@@ -1,0 +1,430 @@
+Rem Copyright (c) 1998, 2005, Oracle. All rights reserved.  
+Rem
+Rem    NAME
+Rem      drvodm.pkh - Interface to Oracle Data Mining
+Rem
+Rem    DESCRIPTION
+Rem
+Rem    RETURNS
+Rem 
+Rem    NOTES
+Rem
+Rem    MODIFIED   (MM/DD/YY)
+Rem       daliao   01/26/05 - lrg 1824561
+Rem       daliao   12/16/04 - bug 4044885
+Rem       daliao   11/20/04 - odm API change
+Rem       ehuang   12/09/03 - odm kmeans 
+Rem       ehuang   11/10/03 - odm integration 
+Rem       daliao   08/04/03 - get rid of temporary fix for trainsamp
+Rem       daliao   07/01/03 - OCIDuration
+Rem       daliao   06/18/03 - ODM API change
+Rem       daliao   01/27/03 - temparory fix due to ODM unavailability
+Rem       mfaisal  01/20/03 - fix install user
+Rem       daliao   01/09/03 - daliao_classification_10i_1
+Rem       daliao   01/08/03 - 
+Rem       daliao   12/05/02 - rename to drvodm
+Rem       daliao   11/13/02 - add more interface
+Rem       daliao   10/31/02 - daliao_classification10i
+Rem     daliao  10/28/2002 - rename drisvm to driodm  
+Rem	daliao	10/10/2002 - Creation 
+Rem
+
+PROMPT load odm cursor package dm_svm_cur
+
+-- Cursor package - just to group all cursors together in a package
+--
+CREATE OR REPLACE PACKAGE dm_svm_cur AS
+  TYPE transdbrec_t IS RECORD (
+    sequence_id    NUMBER,
+    attribute_id   NUMBER,
+    value          NUMBER
+  );
+  TYPE transdbcur_t IS REF CURSOR RETURN  transdbrec_t;
+
+  TYPE settingdbrec_t IS RECORD (
+    id             NUMBER,
+    value          VARCHAR2(128)
+  );
+  TYPE settingcur_t IS REF CURSOR RETURN  settingdbrec_t;
+END dm_svm_cur;
+/
+SHOW ERRORS;
+
+PROMPT load dummy function dm_svm_build
+
+-- DM SVM BUILD Output (dmsvmo)
+--
+CREATE OR REPLACE TYPE dmsvmbo AS OBJECT (
+  num_support_vector      NUMBER,
+  generalization_error    NUMBER
+);
+/
+
+-- DM SVM BUILD Output Set (dmsvmbos)
+--
+CREATE OR REPLACE TYPE dmsvmbos AS TABLE OF dmsvmbo;
+/
+
+-- DM_SVM_BUILD Table Function
+--
+CREATE OR REPLACE FUNCTION dm_svm_build_dummy (
+  model_name         IN     VARCHAR2,
+  mining_function    IN     INTEGER,
+  train_data_cursor         dm_svm_cur.transdbcur_t,
+  settings_cursor           dm_svm_cur.settingcur_t,
+  catterm_table_name IN     VARCHAR2,
+  java_api           IN     INTEGER DEFAULT 0  
+)  
+RETURN dmsvmbos AUTHID CURRENT_USER
+PIPELINED IS
+  rec  dmsvmbo := dmsvmbo(0,0);
+BEGIN
+ PIPE ROW(rec);		
+ return;
+END dm_svm_build_dummy;
+/
+SHOW ERRORS;
+
+CREATE PUBLIC SYNONYM dm_svm_build FOR dm_svm_build_dummy;
+
+PROMPT Load dummy function dm_svm_apply
+-- DM SVM BUILD Output (dmsvmo)
+--
+CREATE OR REPLACE TYPE dmsvmao AS OBJECT (
+  id          NUMBER,
+  score       NUMBER,
+  probability NUMBER
+);
+/
+
+-- DM SVM BUILD Output Set (dmsvmaos)
+--
+CREATE OR REPLACE TYPE dmsvmaos AS TABLE OF dmsvmao;
+/
+
+-- DM_SVM_APPLY Table Function
+--
+CREATE OR REPLACE FUNCTION dm_svm_apply_dummy (
+  model_name         IN     VARCHAR2,
+  apply_data_cursor         dm_svm_cur.transdbcur_t,
+  java_api           IN     INTEGER DEFAULT 0,
+  dur                IN     NUMBER DEFAULT 13    
+)  
+RETURN dmsvmaos AUTHID CURRENT_USER
+PIPELINED IS
+ rec  	dmsvmao := dmsvmao(1, 0, 0.1);
+BEGIN
+ PIPE ROW(rec);		
+ return;
+END dm_svm_apply_dummy;
+/
+SHOW ERRORS;
+
+CREATE PUBLIC SYNONYM dm_svm_apply FOR dm_svm_apply_dummy;
+
+PROMPT load dummy package odm_util 
+CREATE OR REPLACE PACKAGE odm_util_dummy authid current_user AS
+procedure drop_model
+  (p_model_name    VARCHAR2,
+   p_transactional CHAR DEFAULT 'T'
+  );
+end odm_util_dummy;
+/
+SHOW ERRORS;
+
+
+CREATE PUBLIC SYNONYM odm_util FOR odm_util_dummy;
+
+-- dummies needed for KMEANS
+
+CREATE OR REPLACE PACKAGE dm_cl_cur AS
+  TYPE transdbrec_t IS RECORD (
+    sequence_id    NUMBER,
+    attribute_id   NUMBER,
+    value          NUMBER
+  );
+  TYPE transdbcur_t IS REF CURSOR RETURN  transdbrec_t;
+
+  TYPE settingdbrec_t IS RECORD (
+    id             NUMBER,
+    value          VARCHAR2(128)
+  );
+  TYPE settingcur_t IS REF CURSOR RETURN  settingdbrec_t;
+END dm_cl_cur;
+/
+
+create or replace type dmclbo as object (
+  num_clusters         number,
+  num_leaves           number,
+  root_id              number,
+  num_levels           number,
+  input_data_rec_count number
+);
+/
+
+create or replace type dmclbos as table of dmclbo;
+/
+
+create or replace function dm_cl_build_dummy (
+  model_name in varchar2,
+  train_data_cursor in dm_cl_cur.transdbcur_t,
+  settings_cursor in dm_cl_cur.settingcur_t
+) return dmclbos authid current_user
+pipelined is
+  rec dmclbo := dmclbo(0,0,0,0,0);
+begin
+  PIPE ROW(rec);
+  return;
+end dm_cl_build_dummy;
+/
+
+create public synonym dm_cl_build for dm_cl_build_dummy;
+
+
+create or replace type dm_child as object (
+  id number
+);
+/
+
+create or replace type dm_children as table of dm_child;
+/
+
+create or replace type dm_centroid_dummy as object (
+  attribute_name varchar2(30),
+  mean           number,
+  mode_value     varchar2(4000),
+  variance       number
+);
+/
+
+create or replace type dm_centroids_dummy as table of dm_centroid_dummy;
+/
+create public synonym dm_centroids for dm_centroids_dummy;
+
+create or replace type dm_histogram_bin as object (
+  attribute_name varchar2(30),
+  bin_id         number,
+  lower_bound    number,
+  upper_bound    number,
+  label          varchar2(4000),
+  count          number
+);
+/
+
+create or replace type dm_histograms as table of dm_histogram_bin;
+/
+
+create or replace type dm_predicate as object (
+  attribute_name       varchar2(30),
+  conditional_operator char(2),
+  attribute_num_value  number,
+  attribute_str_value  varchar2(4000),
+  attribute_support    number,
+  attribute_confidence number
+);
+/
+
+create or replace type dm_predicates as table of dm_predicate;
+/
+
+create or replace type dm_rule as object (
+  rule_id         number,
+  antecedent      dm_predicates,
+  consequent      dm_predicates,
+  rule_support    number,
+  rule_confidence number
+);
+/
+
+create or replace type dm_cluster as object (
+  id           number,
+  record_count number,
+  parent       number,
+  tree_level   number,
+  dispersion   number,
+  child        dm_children,
+  centroid     dm_centroids,
+  histogram    dm_histograms,
+  rule         dm_rule
+);
+/
+
+create or replace type dm_clusters as table of dm_cluster;
+/
+
+create or replace package dbms_data_mining_dummy as
+  function get_model_details_km(model_name in varchar2) return dm_clusters;
+end dbms_data_mining_dummy;
+/
+create or replace package body dbms_data_mining_dummy as
+  function get_model_details_km(model_name in varchar2) return dm_clusters
+  is begin
+    return null;
+  end get_model_details_km;
+end dbms_data_mining_dummy;
+/
+create public synonym dbms_data_mining for dbms_data_mining_dummy;
+
+
+CREATE OR REPLACE PACKAGE drvodm AUTHID current_user AS
+
+/* type used for svm interface to odm containing training set */
+TYPE trainsamp IS RECORD (
+    sequence_id    NUMBER,  -- document id
+    attribute_id   NUMBER,  -- feature id >=0 
+                            -- or -1 for rows that contain doc. assignment info
+    value          NUMBER   -- feature weight
+                            -- or catid for rows for doc. assignment info
+  );
+
+TYPE trainsamps IS TABLE OF trainsamp; 
+
+/* type used for feature definition */
+TYPE feature IS RECORD (
+	text varchar2(160),     -- feature text
+	type number(3),         -- feature type with 0:single token, 
+				--		     1:theme
+ 				--		     9:stem words
+	id   number,            -- feature id
+	score number            -- statistic feature score which can be idf 
+				--    if need to calculate idf for feature 
+				--    weight in documents or simply document 
+			        --    frequency. 
+	);
+TYPE features IS TABLE OF feature;
+
+TYPE kmeanmodel_rec IS RECORD (
+	id integer,                  -- cluster id
+	parent number,  	     -- parent id
+	dispersion number,	     -- coherencen of the cluster
+        attribute_name varchar2(30));  -- attribute id 
+TYPE kmeanmodel is table of kmeanmodel_rec;
+        
+/* train SVM model */
+PROCEDURE svm_train(
+    	idx_owner varchar2,
+	idx_name  varchar2,
+	doctab    varchar2,
+	docid     varchar2,
+	cattab    varchar2,
+	catdocid  varchar2,
+	catid     varchar2,
+	restab    varchar2,
+	prefid    number
+);
+
+/* ----table function used for ODM to extract feature from training set ----*/
+/* DESCRIPTION
+   The result table is either created by users before calling this function or 
+   created in this program with the specified table name and under the current 
+   user (if the specified table does not exist).     
+   If user create the result table (which can support table schema for 
+   different users),
+   the restab should have the following three columns with the exact column 
+   names:
+	cat_id number
+	type number(3) not null
+	rule blob
+*/
+FUNCTION feature_prep(
+	index_name  varchar2, -- context index name on training document table.
+	docid     varchar2,   -- document id column name in document table
+	cattab    varchar2,   -- name of category table
+	catdocid  varchar2,   -- document id column name for category table
+	catid     varchar2,   -- category id column name for category table
+	restab    varchar2,   -- result table to write the model
+	preference varchar2   -- preference name
+) RETURN trainsamps PIPELINED;
+
+/* -- table function used for ODM to get features for test set ----------*/
+/* DESCRIPTION
+   This function is used in apply time. The <restab> is the result table
+   output from calling feature preparation function based on training set. 
+*/
+FUNCTION feature_prep(
+	index_name  varchar2, -- context index name on training document table.
+	docid     varchar2,   -- document id column name in document table
+	restab    varchar2    -- table storing the feature definition
+) RETURN trainsamps PIPELINED;
+
+/* ----------------------- for ODM to explain features ------------------*/
+/* DESCRIPTION
+   The <restab> is the result table output from calling feature preparation 
+   function based on training set.
+*/
+FUNCTION feature_explain(
+	restab    varchar2    -- table storing the feature definition
+	) RETURN features PIPELINED;
+
+
+
+/*--------------------------------------------------------------------------*/
+/*                                                                          */
+/*------------The following functions is internal functions  ---------------*/
+/*                                                                          */ 
+/*--------------------------------------------------------------------------*/
+
+/* feature preparation table function without checking input parameter */
+FUNCTION feature_prep_nc(
+	idx_owner varchar2,
+	idx_name  varchar2,
+	doctab    varchar2,
+	docid     varchar2,
+	cattab    varchar2,
+	catdocid  varchar2,
+	catid     varchar2,
+	restab    varchar2,
+	prefid    number,
+	temp_table varchar2
+) RETURN trainsamps PIPELINED;
+
+/* start classify a document.Assume: The document feature vector has been 
+   generated */
+PROCEDURE start_classify(model_name varchar2, dur number);
+
+/* output next suggested class and score 
+   RETURN: 0 no data (finish the scan), 1 return a data */
+FUNCTION next_suggest(
+	docid OUT number, 
+	catid   OUT number, 
+	scr   OUT number) return binary_integer;
+
+
+/* type used for ODM setup */
+TYPE settingdbrec_t IS RECORD (
+    id             NUMBER,
+    value          VARCHAR2(128)
+  );
+TYPE setting_t IS TABLE of settingdbrec_t;
+
+FUNCTION odmtrainset return setting_t PIPELINED;
+
+FUNCTION  get_features 
+RETURN trainsamps PIPELINED;
+
+PROCEDURE fvstab(
+	fvstab    OUT varchar2);
+
+PROCEDURE fi2ttab(
+	fi2ttab    OUT varchar2);
+
+
+FUNCTION odmktrainset(p_srt in varchar2,
+p_cluster_num in number) return setting_t PIPELINED;
+
+-- generate model
+PROCEDURE odm_genmodel(
+p_fvstab in varchar2,
+p_srtab  in varchar2,
+p_cluster_num in number,
+o_modname OUT varchar2);
+
+FUNCTION odm_readkmeanmodel(
+	p_modname varchar2) return kmeanmodel PIPELINED;
+
+-- drop model
+PROCEDURE odm_drpmodel(
+p_modname IN varchar2);
+
+END drvodm;
+/

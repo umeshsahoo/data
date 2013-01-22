@@ -1,0 +1,103 @@
+Dump file c:\oraclexe\app\oracle\admin\xe\bdump\xe_s000_2124.trc
+Thu Sep 13 12:27:29 2012
+ORACLE V10.2.0.1.0 - Production vsnsta=0
+vsnsql=14 vsnxtr=3
+Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+Windows NT Version V6.1 Service Pack 1
+CPU                 : 2 - type 586, 2 Physical Cores
+Process Affinity    : 0x00000000
+Memory (Avail/Total): Ph:1388M/3965M, Ph+PgF:2670M/7928M, VA:3129M/4095M
+Instance name: xe
+
+Redo thread mounted by this instance: 1
+
+Oracle process number: 14
+
+Windows thread id: 2124, image: ORACLE.EXE (S000)
+
+
+*** 2012-09-13 12:27:29.149
+*** SERVICE NAME:(SYS$USERS) 2012-09-13 12:27:29.146
+*** SESSION ID:(16.268) 2012-09-13 12:27:29.146
+Memory Notification: Library Cache Object loaded into SGA
+Heap size 2207K exceeds notification threshold (2048K)
+LIBRARY OBJECT HANDLE: handle=a6e70a98 mutex=A6E70B4C(0)
+name=XDB.XDbD/PLZ01TcHgNAgAIIegtw== 
+hash=e0f82b0c545a707da230a62675d34c80 timestamp=02-07-2006 22:42:01
+namespace=XDBS flags=KGHP/TIM/SML/[02000000]
+kkkk-dddd-llll=0000-0000-0000 lock=S pin=S latch#=2 hpc=0002 hlc=0002
+lwt=A6E70AF4[A6E70AF4,A6E70AF4] ltm=A6E70AFC[A6E70AFC,A6E70AFC]
+pwt=A6E70AD8[A6E70AD8,A6E70AD8] ptm=A6E70AE0[A6E70AE0,A6E70AE0]
+ref=A6E70B14[A6E70B14,A6E70B14] lnd=A6E70B20[A6E70B20,A6E70B20]
+  LIBRARY OBJECT: object=a656c468
+  type=XDBS flags=EXS/LOC[0005] pflags=[0000] status=VALD load=X
+  DATA BLOCKS:
+  data#     heap  pointer    status pins change whr alloc(K)  size(K)
+  ----- -------- -------- --------- ---- ------ --- -------- --------
+      0 a6e4f71c a656c524 I/P/A/-/-    0 NONE   00      0.34     1.05
+      1 a656c560 a6647c10 I/P/A/-/-    1 NONE   00   2207.19  2220.16
+Memory Notification: Library Cache Object loaded into SGA
+Heap size 2199K exceeds notification threshold (2048K)
+LIBRARY OBJECT HANDLE: handle=a9552688 mutex=A955273C(0)
+name=XDB.XD7DujEWKdQzCT1MWnFJ6WfA== 
+hash=80bb7241ea61d6f90c2acd166c8c04be timestamp=02-07-2006 22:43:16
+namespace=XDBS flags=KGHP/TIM/SML/[02000000]
+kkkk-dddd-llll=0000-0001-0001 lock=S pin=S latch#=1 hpc=0002 hlc=0002
+lwt=A95526E4[A95526E4,A95526E4] ltm=A95526EC[A95526EC,A95526EC]
+pwt=A95526C8[A95526C8,A95526C8] ptm=A95526D0[A95526D0,A95526D0]
+ref=A9552704[A9552704,A9552704] lnd=A9552710[AE1C22F8,AF475E58]
+  LIBRARY OBJECT: object=a8cb96a4
+  type=XDBS flags=EXS/LOC[0005] pflags=[0000] status=VALD load=X
+  DEPENDENCIES: count=45 size=48
+  dependency#    table reference   handle position flags
+  ----------- -------- --------- -------- -------- -------------------
+            0 a8cb9a60  a8cb97f8 a95982b8        0 DEP[01]
+            1 a8cb9a60  a8cb982c a959a840        0 DEP[01]
+            2 a8cb9a60  a8cb9860 a95543c4        0 DEP[01]
+            3 a8cb9a60  a8cb9894 a9555bd8        0 DEP[01]
+            4 a8cb9a60  a8cb98c8 a9552f6c        0 DEP[01]
+            5 a8cb9a60  a8cb98fc a9486fac        0 DEP[01]
+            6 a8cb9a60  a8cb9930 a95554a4        0 DEP[01]
+            7 a8cb9a60  a8cb9964 a9556cf0        0 DEP[01]
+            8 a8cb9a60  a8cb9998 a9558288        0 DEP[01]
+            9 a8cb9a60  a8cb99cc a9590c2c        0 DEP[01]
+           10 a8cb9a60  a8cb9a00 af4971b4        0 DEP[01]
+           11 a8cb9a60  a8cbd994 a4970e30        0 DEP[01]
+           12 a8cb9a60  a8cbd9c8 a948639c        0 DEP[01]
+           13 a8cb9a60  a8cbd9fc a955a02c        0 DEP[01]
+           14 a8cb9a60  a8cbda30 a948f038        0 DEP[01]
+           15 a8cb9a60  a8cbda64 a955ac78        0 DEP[01]
+           16 a8cbdd60  a8cbda98 a949026c        0 DEP[01]
+           17 a8cbdd60  a8cbdacc a94a5d7c        0 DEP[01]
+           18 a8cbdd60  a8cbdb00 a959e4c4        0 DEP[01]
+           19 a8cbdd60  a8cbdb34 a95cfe58        0 DEP[01]
+           20 a8cbdd60  a8cbdb68 a955b4a4        0 DEP[01]
+           21 a8cbdd60  a8cbdb9c a95d76e0        0 DEP[01]
+           22 a8cbdd60  a8cbdbd0 a9536b28        0 DEP[01]
+           23 a8cbdd60  a8cbdc04 a9672448        0 DEP[01]
+           24 a8cbdd60  a8cbdc38 a955c308        0 DEP[01]
+           25 a8cbdd60  a8cbdc6c a955ce10        0 DEP[01]
+           26 a8cbdd60  a8cbdca0 a955e788        0 DEP[01]
+           27 a8cbdd60  a8cbdcd4 a96a3fcc        0 DEP[01]
+           28 a8cbdd60  a8cbdd08 a970687c        0 DEP[01]
+           29 a8cbdd60  a8cbd564 a964c8a8        0 DEP[01]
+           30 a8cbdd60  a8cbd598 a956248c        0 DEP[01]
+           31 a8cbdd60  a8cbd5cc a953a1a8        0 DEP[01]
+           32 a8cbd930  a8cbd600 a6f7a4f4        0 DEP[01]
+           33 a8cbd930  a8cbd634 a954a784        0 DEP[01]
+           34 a8cbd930  a8cbd668 a6fa2460        0 DEP[01]
+           35 a8cbd930  a8cbd69c a6fd7f64        0 DEP[01]
+           36 a8cbd930  a8cbd6d0 a95414ec        0 DEP[01]
+           37 a8cbd930  a8cbd704 a9540258        0 DEP[01]
+           38 a8cbd930  a8cbd738 a9565454        0 DEP[01]
+           39 a8cbd930  a8cbd76c a9582ab0        0 DEP[01]
+           40 a8cbd930  a8cbd7a0 abbff68c        0 DEP[01]
+           41 a8cbd930  a8cbd7d4 a6f39e7c        0 DEP[01]
+           42 a8cbd930  a8cbd808 a95b4884        0 DEP[01]
+           43 a8cbd930  a8cbd83c a6efa9b8        0 DEP[01]
+           44 a8cbd930  a8cbd870 af475dd0        0 DEP[01]
+  DATA BLOCKS:
+  data#     heap  pointer    status pins change whr alloc(K)  size(K)
+  ----- -------- -------- --------- ---- ------ --- -------- --------
+      0 a9702158 a8cb973c I/P/A/-/-    0 NONE   00      2.89     3.14
+      1 a8cbd8c8 ab7b4da8 I/P/A/-/-    1 NONE   00   2199.85  2215.80

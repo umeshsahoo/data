@@ -1,0 +1,54 @@
+Dump file c:\oraclexe\app\oracle\admin\xe\udump\xe_ora_2140.trc
+Wed Sep 05 10:12:03 2012
+ORACLE V10.2.0.1.0 - Production vsnsta=0
+vsnsql=14 vsnxtr=3
+Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+Windows NT Version V6.1 Service Pack 1
+CPU                 : 2 - type 586, 2 Physical Cores
+Process Affinity    : 0x00000000
+Memory (Avail/Total): Ph:3233M/3965M, Ph+PgF:6420M/7928M, VA:3148M/4095M
+Instance name: xe
+
+Redo thread mounted by this instance: 0 <none>
+
+Oracle process number: 18
+
+Windows thread id: 2140, image: ORACLE.EXE (SHAD)
+
+
+*** SERVICE NAME:() 2012-09-05 10:12:03.370
+*** SESSION ID:(38.1) 2012-09-05 10:12:03.370
+kccsga_update_ckpt: num_1 = 8, num_2 = 0, num_3 = 0, lbn_2 = 0, lbn_3 = 0
+Thread 1 checkpoint: logseq 24, block 2, scn 823878
+  cache-low rba: logseq 24, block 15304
+    on-disk rba: logseq 24, block 16557, scn 838349
+  start recovery at logseq 24, block 15304, scn 0
+----- Redo read statistics for thread 1 -----
+Read rate (ASYNC): 626Kb in 0.24s => 2.55 Mb/sec
+Total physical reads: 4096Kb
+Longest record: 11Kb, moves: 0/932 (0%)
+Change moves: 2/40 (5%), moved: 0Mb
+Longest LWN: 328Kb, moves: 0/45 (0%), moved: 0Mb
+Last redo scn: 0x0000.000ccacc (838348)
+----------------------------------------------
+----- Recovery Hash Table Statistics ---------
+Hash table buckets = 32768
+Longest hash chain = 2
+Average hash chain = 295/295 = 1.0
+Max compares per lookup = 2
+Avg compares per lookup = 1543/1869 = 0.8
+----------------------------------------------
+*** 2012-09-05 10:12:07.894
+KCRA: start recovery claims for 295 data blocks
+*** 2012-09-05 10:12:07.894
+KCRA: blocks processed = 295/295, claimed = 295, eliminated = 0
+*** 2012-09-05 10:12:07.909
+Recovery of Online Redo Log: Thread 1 Group 1 Seq 24 Reading mem 0
+*** 2012-09-05 10:12:20.109
+----- Recovery Hash Table Statistics ---------
+Hash table buckets = 32768
+Longest hash chain = 2
+Average hash chain = 295/295 = 1.0
+Max compares per lookup = 1
+Avg compares per lookup = 1637/1822 = 0.9
+----------------------------------------------

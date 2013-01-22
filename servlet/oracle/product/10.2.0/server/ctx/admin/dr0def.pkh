@@ -1,0 +1,174 @@
+rem 
+rem $Header: dr0def.pkh 11-jul-2003.13:30:59 yucheng Exp $ 
+rem 
+rem Copyright (c) 1991, 2003, Oracle Corporation.  All rights reserved.  
+rem  NAME
+rem    dr_def.pkh - DR basic DEFinitions.
+rem  DESCRIPTION
+rem
+rem  this package contains basic definitions used by all components. Notes 
+rem  that this package is not externalized for TexTile user.
+rem 
+rem  PUBLIC FUNCTION(S)
+rem    
+rem  NOTES
+rem
+rem  MODIFIED    (MM/DD/YY)
+Rem     yucheng    07/11/03  - add IXP_SYNC_TYPE to ixp_rec
+Rem     yucheng    05/23/03  - add sync atrributes to index and partition rec
+Rem     gkaminag   10/01/02  - security phase 3
+Rem     surman     08/22/02  - 2513196: Increase size of idx_rec.idx_text_name
+Rem     gkaminag   07/22/02  - 
+Rem     gkaminag   07/18/02  - add vc256tab
+Rem     gkaminag   07/03/02  - add extra fields to pref_rec
+Rem     gkaminag   06/11/02  - move common structures here.
+Rem     qtran      01/24/95 -  Creation 
+Rem     qtran      01/24/95 -  Creation 
+
+create or replace package dr_def as
+
+  -- exceptions used by all components
+  textile_error  EXCEPTION;
+  -- Max word length for words in stop list
+  max_word_length CONSTANT NUMBER := 64;
+
+  type NAME_TAB  is table of varchar2(60) index by binary_integer;
+  type ID_TAB    is table of binary_integer index by binary_integer;
+
+type pref_rec is record (
+  pre_id             number(38)
+, pre_owner          varchar2(30)
+, pre_owner#         number
+, pre_name           varchar2(30)
+, pre_obj_id         number(38)
+, pre_cla_id         number(38)
+, pre_valid          char(1)
+, pre_extra1         number
+);
+
+type obj_rec is record (
+  obj_cla_id         number(38)
+, obj_id             number(38)
+, obj_name           varchar2(30)
+, obj_desc           varchar2(80)
+, obj_system         char(1)
+);
+
+type idx_rec is record (
+  IDX_ID              NUMBER(38)
+, IDX_TYPE            NUMBER
+, IDX_OWNER           VARCHAR2(30)
+, IDX_OWNER#          NUMBER
+, IDX_NAME            VARCHAR2(30)
+, IDX_TABLE_OWNER     VARCHAR2(30)
+, IDX_TABLE           VARCHAR2(30)
+, IDX_TABLE#          NUMBER
+, IDX_KEY_NAME        VARCHAR2(256)
+, IDX_KEY_TYPE        NUMBER
+, IDX_TEXT_NAME       VARCHAR2(256)
+, IDX_TEXT_TYPE       NUMBER
+, IDX_TEXT_LENGTH     NUMBER
+, IDX_DOCID_COUNT     NUMBER
+, IDX_STATUS          VARCHAR2(12)
+, IDX_VERSION         NUMBER
+, IDX_NEXTID          NUMBER
+, IDX_LANGUAGE_COLUMN VARCHAR2(256)
+, IDX_FORMAT_COLUMN   VARCHAR2(256)
+, IDX_CHARSET_COLUMN  VARCHAR2(256)
+, IDX_OPTION          VARCHAR2(40)
+, IDX_OPT_TOKEN       VARCHAR2(64)
+, IDX_OPT_TYPE        NUMBER
+, IDX_OPT_COUNT       NUMBER
+, IDX_SYNC_TYPE       VARCHAR2(20) 
+, IDX_SYNC_MEMORY     VARCHAR2(100)
+, IDX_SYNC_PARA_DEGREE NUMBER
+, IDX_SYNC_INTERVAL    VARCHAR2(4000)
+);
+
+type ixp_rec is record (
+  IXP_ID              NUMBER(38)
+, IXP_NAME            VARCHAR2(30)
+, IXP_IDX_ID          NUMBER
+, IXP_TABLE_PARTITION VARCHAR2(30)
+, IXP_DOCID_COUNT     NUMBER
+, IXP_STATUS          VARCHAR2(12)
+, IXP_NEXTID          NUMBER
+, IXP_OPT_TOKEN       VARCHAR2(64)
+, IXP_OPT_TYPE        NUMBER
+, IXP_OPT_COUNT       NUMBER
+, IXP_SYNC_TYPE       VARCHAR2(20)
+);
+
+type ixp_tab is table of ixp_rec index by binary_integer;
+
+type sec_rec is record (
+  sec_id      number,
+  sec_type    number,
+  sec_tname   varchar2(10),
+  sec_name    varchar2(30),
+  sec_tag     varchar2(64),
+  sec_fid     number,
+  sec_visible varchar2(1)
+);
+
+type sec_tab is table of sec_rec index by binary_integer;
+
+type rowid_tab is table of rowid index by binary_integer;
+
+type vc256_tab is table of varchar2(256) index by binary_integer;
+type vc500_tab is table of varchar2(500) index by binary_integer;
+
+type ixo_rec is record (
+  ixo_cla_id         number,
+  ixo_cla_name       varchar2(30),
+  ixo_obj_id         number,
+  ixo_obj_name       varchar2(30),
+  ixo_acnt           number
+);
+
+type ixo_tab is table of ixo_rec index by binary_integer;
+
+type ixv_rec is record (
+  ixv_oat_name       varchar2(30),
+  ixv_value          varchar2(500)
+);
+
+type ixv_tab is table of ixv_rec index by binary_integer;
+
+type spw_rec is record (
+  spw_type           varchar2(10),
+  spw_language       varchar2(30),
+  spw_word           varchar2(80)
+);
+
+type spw_tab is table of spw_rec index by binary_integer;
+
+type slx_rec is record (
+  slx_language       varchar2(80),
+  slx_lang_abbr      varchar2(3),
+  slx_alt_value      varchar2(30),
+  slx_obj_name       varchar2(30),
+  slx_ixv            ixv_tab
+);
+
+type slx_tab is table of slx_rec index by binary_integer;
+
+type ixx_rec is record (
+  ixx_collist        varchar2(500),
+  ixx_storage        varchar2(500)
+);
+
+type ixx_tab is table of ixx_rec index by binary_integer;
+
+type ixc_rec is record (
+  ixc_cnum           binary_integer,
+  ixc_cname          varchar2(256),
+  ixc_ctype          varchar2(30),
+  ixc_clen           varchar2(20)
+);
+
+type ixc_tab is table of ixc_rec index by binary_integer;
+
+end dr_def;
+/
+

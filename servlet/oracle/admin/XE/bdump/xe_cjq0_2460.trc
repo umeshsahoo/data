@@ -1,0 +1,3553 @@
+Dump file c:\oraclexe\app\oracle\admin\xe\bdump\xe_cjq0_2460.trc
+Tue Jan 22 11:03:43 2013
+ORACLE V10.2.0.1.0 - Production vsnsta=0
+vsnsql=14 vsnxtr=3
+Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+Windows NT Version V6.1 Service Pack 1
+CPU                 : 2 - type 586, 2 Physical Cores
+Process Affinity    : 0x00000000
+Memory (Avail/Total): Ph:2632M/3965M, Ph+PgF:5870M/7928M, VA:3135M/4095M
+Instance name: xe
+
+Redo thread mounted by this instance: 1
+
+Oracle process number: 10
+
+Windows thread id: 2460, image: ORACLE.EXE (CJQ0)
+
+
+*** 2013-01-22 11:03:43.390
+*** SERVICE NAME:(SYS$BACKGROUND) 2013-01-22 11:03:43.390
+*** SESSION ID:(41.1) 2013-01-22 11:03:43.390
+*** 2013-01-22 11:03:43.390
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:03:53.733
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:04:03.748
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:04:13.767
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:04:23.776
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:04:33.790
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:04:43.806
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:04:53.821
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:05:03.836
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:05:13.851
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:05:23.864
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:05:33.883
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:05:43.887
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:05:53.903
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:06:03.911
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:06:13.926
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:06:23.941
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:06:33.954
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:06:43.976
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:06:53.992
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:07:04.007
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:07:14.028
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:07:24.037
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:07:34.051
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:07:44.066
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:07:54.082
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:08:04.102
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:08:14.117
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:08:24.132
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:08:34.163
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:08:44.210
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:08:54.225
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:09:04.256
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:09:14.318
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:09:24.349
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:09:34.381
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:09:44.401
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:09:54.439
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:10:04.478
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:10:14.535
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:10:24.551
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:10:34.566
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:10:44.581
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:10:54.623
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:11:04.688
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:11:14.718
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:11:24.748
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:11:34.795
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:11:44.841
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:11:54.888
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:12:04.903
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:12:14.934
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:12:24.963
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:12:34.994
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:12:45.041
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:12:55.056
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:13:05.071
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:13:15.086
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:13:25.117
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:13:35.148
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:13:45.179
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:13:55.209
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:14:05.287
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:14:15.318
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:14:25.349
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:14:35.364
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:14:45.379
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:14:55.394
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:15:05.425
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:15:15.472
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:15:25.534
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:15:35.549
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:15:45.564
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:15:55.595
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:16:05.657
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:16:15.672
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:16:25.719
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:16:35.734
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:16:45.765
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:16:55.795
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:17:05.811
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:17:15.826
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:17:25.841
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:17:35.872
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:17:45.903
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:17:55.948
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:18:05.992
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:18:16.028
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:18:26.090
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:18:36.126
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:18:46.167
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:18:56.188
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:19:06.216
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:19:16.242
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:19:26.268
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:19:36.291
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:19:46.307
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:19:56.341
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:20:06.370
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:20:16.379
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:20:26.405
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:20:36.434
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:20:46.465
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:20:56.489
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:21:06.525
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:21:16.536
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:21:26.632
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:21:36.647
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:21:46.678
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:21:56.693
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:22:06.740
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:22:16.755
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:22:26.786
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:22:36.813
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:22:46.862
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:22:56.877
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:23:06.892
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:23:16.914
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:23:27.018
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:23:37.064
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:23:47.095
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:23:57.111
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:24:07.141
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:24:17.158
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:24:27.180
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:24:37.226
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:24:47.273
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:24:57.288
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:25:07.323
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:25:17.363
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:25:27.378
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:25:37.409
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:25:47.443
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:25:57.458
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:26:07.520
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:26:17.570
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:26:27.585
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:26:37.601
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:26:47.616
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:26:57.647
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:27:07.662
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:27:17.685
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:27:27.716
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:27:37.731
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:27:47.746
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:27:57.777
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:28:07.792
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:28:17.823
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:28:27.870
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:28:37.885
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:28:47.900
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:28:57.915
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:29:07.931
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:29:17.961
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:29:27.977
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:29:38.023
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:29:48.038
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:29:58.053
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:30:08.084
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:30:18.115
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:30:28.130
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:30:38.161
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:30:48.223
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:30:58.238
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:31:08.285
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:31:18.300
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:31:28.362
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:31:38.393
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:31:48.424
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:31:58.439
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:32:08.454
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:32:18.500
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:32:28.516
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:32:38.546
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:32:48.562
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:32:58.593
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:33:08.623
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:33:18.654
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:33:28.685
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:33:38.716
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:33:48.747
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:33:58.762
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:34:08.777
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:34:18.792
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:34:28.807
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:34:38.823
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:34:48.838
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:34:58.853
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:35:08.884
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:35:18.915
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:35:28.930
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:35:38.961
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:35:48.992
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:35:59.007
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:36:09.022
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:36:19.037
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:36:29.068
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:36:39.083
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:36:49.114
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:36:59.129
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:37:09.160
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:37:19.191
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:37:29.206
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:37:39.253
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:37:49.283
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:37:59.314
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:38:09.345
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:38:19.391
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:38:29.407
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:38:39.438
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:38:49.468
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:38:59.484
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:39:09.514
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:39:19.530
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:39:29.545
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:39:39.560
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:39:49.575
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:39:59.622
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:40:09.637
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:40:19.668
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:40:29.699
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:40:39.729
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:40:49.760
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:40:59.775
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:41:09.791
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:41:19.837
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:41:29.852
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:41:39.867
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:41:49.945
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:41:59.960
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:42:09.976
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:42:19.991
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:42:30.037
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:42:40.052
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:42:50.083
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:43:00.098
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:43:10.114
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:43:20.144
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:43:30.160
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:43:40.190
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:43:50.221
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:44:00.268
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:44:10.283
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:44:20.298
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:44:30.329
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:44:40.344
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:44:50.359
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:45:00.375
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:45:10.405
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:45:20.421
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:45:30.436
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:45:40.467
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:45:50.482
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:46:00.513
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:46:10.559
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:46:20.590
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:46:30.605
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:46:40.636
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:46:50.667
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:47:00.682
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:47:10.713
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:47:20.728
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:47:30.743
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:47:40.774
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:47:50.800
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:48:00.815
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:48:10.831
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:48:20.846
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:48:30.861
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:48:40.876
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:48:50.895
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:49:00.925
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:49:10.943
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:49:20.958
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:49:30.974
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:49:41.009
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:49:51.032
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:50:01.063
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:50:11.081
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:50:21.111
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:50:31.127
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:50:41.178
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:50:51.201
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:51:01.219
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:51:11.265
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:51:21.280
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:51:31.298
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:51:41.313
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:51:51.325
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:52:01.359
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:52:11.374
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:52:21.404
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:52:31.419
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:52:41.450
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:52:51.475
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:53:01.515
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:53:11.554
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:53:21.585
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:53:31.678
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:53:41.711
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:53:51.752
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:54:01.767
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:54:11.785
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:54:21.800
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:54:31.820
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:54:41.836
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:54:51.845
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:55:01.863
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:55:11.878
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:55:21.911
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:55:31.932
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:55:41.962
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:55:51.975
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:56:01.990
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:56:12.005
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:56:22.033
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:56:32.064
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:56:42.081
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:56:52.091
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:57:02.106
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:57:12.124
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:57:22.157
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:57:32.177
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:57:42.213
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:57:52.246
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:58:02.285
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:58:12.300
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:58:22.349
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:58:32.367
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:58:42.387
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:58:52.420
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:59:02.432
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:59:12.473
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:59:22.506
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:59:32.573
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:59:42.603
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 11:59:52.627
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:00:02.683
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:00:12.692
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:00:22.741
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:00:32.779
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:00:42.804
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:00:52.840
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:01:03.012
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:01:13.038
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:01:23.058
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:01:33.073
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:01:43.083
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:01:53.114
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:02:03.131
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:02:13.147
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:02:23.204
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:02:33.245
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:02:43.276
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:02:53.291
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:03:03.351
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:03:13.384
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:03:23.427
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:03:33.473
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:03:43.534
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:03:53.658
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:04:03.691
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:04:13.708
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:04:23.724
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:04:33.739
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:04:43.754
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:04:53.785
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:05:03.800
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:05:13.831
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:05:23.846
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:05:33.873
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:05:43.904
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:05:53.919
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:06:03.929
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:06:13.976
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:06:24.006
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:06:34.037
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:06:44.052
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:06:54.083
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:07:04.098
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:07:14.114
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:07:24.129
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:07:34.144
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:07:44.159
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:07:54.174
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:08:04.205
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:08:14.215
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:08:24.261
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:08:34.276
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:08:44.328
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:08:54.359
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:09:04.412
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:09:14.434
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:09:24.446
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:09:34.457
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:09:44.501
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:09:54.527
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:10:04.565
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:10:14.589
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:10:24.607
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:10:34.684
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:10:44.717
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:10:54.732
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:11:04.768
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:11:14.783
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:11:24.819
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:11:34.850
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:11:44.872
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:11:54.908
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:12:04.923
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:12:14.954
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:12:24.989
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:12:35.005
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:12:45.045
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:12:55.076
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:13:05.094
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:13:15.109
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:13:25.140
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:13:35.169
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:13:45.192
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:13:55.260
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:14:05.291
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:14:15.322
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:14:25.338
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:14:35.354
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:14:45.363
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:14:55.384
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:15:05.399
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:15:15.416
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:15:25.463
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:15:35.478
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:15:45.539
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:15:55.554
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:16:05.569
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:16:15.587
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:16:25.602
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:16:35.617
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:16:45.642
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:16:55.658
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:17:05.691
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:17:15.706
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:17:25.752
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:17:35.770
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:17:45.793
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:17:55.824
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:18:05.869
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:18:15.887
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:18:25.902
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:18:35.917
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:18:45.947
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:18:55.963
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:19:05.978
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:19:16.011
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:19:26.026
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:19:36.054
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:19:46.077
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:19:56.092
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:20:06.128
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:20:16.143
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:20:26.158
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:20:36.176
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:20:46.199
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:20:56.215
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:21:06.248
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:21:16.279
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:21:26.294
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:21:36.343
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:21:46.381
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:21:56.396
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:22:06.414
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:22:16.429
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:22:26.450
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:22:36.480
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:22:46.519
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:22:56.552
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:23:06.583
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:23:16.614
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:23:26.626
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:23:36.641
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:23:46.653
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:23:56.699
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:24:06.730
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:24:16.748
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:24:26.779
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:24:36.794
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:24:46.819
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:24:56.834
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:25:06.862
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:25:16.896
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:25:26.911
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:25:36.944
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:25:46.970
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:25:56.983
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:26:07.000
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:26:17.031
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:26:27.049
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:26:37.064
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:26:47.095
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:26:57.113
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:27:07.143
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:27:17.190
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:27:27.228
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:27:37.259
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:27:47.308
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:27:57.351
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:28:07.382
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:28:17.416
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:28:27.446
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:28:37.477
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:28:47.510
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:28:57.541
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:29:07.575
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:29:17.590
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:29:27.636
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:29:37.672
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:29:47.703
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:29:57.718
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:30:07.759
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:30:17.790
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:30:27.805
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:30:37.825
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:30:47.858
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:30:57.906
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:31:07.921
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:31:17.937
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:31:27.951
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:31:37.966
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:31:47.984
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:31:57.999
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:32:08.033
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:32:18.050
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:32:28.066
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:32:38.097
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:32:48.126
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:32:58.140
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:33:08.173
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:33:18.188
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:33:28.214
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:33:38.284
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:33:48.294
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:33:58.309
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:34:08.327
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:34:18.342
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:34:28.357
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:34:38.390
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:34:48.406
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:34:58.423
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:35:08.451
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:35:18.466
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:35:28.483
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:35:38.530
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:35:48.542
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:35:58.598
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:36:08.629
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:36:18.662
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:36:28.693
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:36:38.708
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:36:48.744
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:36:58.759
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:37:08.793
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:37:18.808
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:37:28.823
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:37:38.841
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:37:48.856
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:37:58.876
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:38:08.887
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:38:18.918
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:38:28.985
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:38:39.047
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:38:49.140
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:38:59.189
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:39:09.220
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:39:19.250
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:39:29.281
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:39:39.312
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:39:49.348
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:39:59.394
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:40:09.405
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:40:19.430
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:40:29.469
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:40:39.518
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:40:49.534
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:40:59.564
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:41:09.582
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:41:19.608
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:41:29.686
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:41:39.713
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:41:49.728
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:41:59.759
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:42:09.774
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:42:19.805
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:42:29.835
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:42:39.851
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:42:49.882
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:42:59.912
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:43:09.928
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:43:19.943
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:43:29.974
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:43:39.989
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:43:50.035
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:44:00.082
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:44:10.112
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:44:20.159
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:44:30.190
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:44:40.205
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:44:50.236
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:45:00.267
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:45:10.282
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:45:20.297
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:45:30.311
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:45:40.327
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:45:50.346
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:46:00.361
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:46:10.377
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:46:20.450
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:46:30.489
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:46:40.622
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:46:50.632
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:47:00.681
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:47:10.697
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:47:20.724
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:47:30.739
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:47:40.755
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:47:50.772
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:48:00.806
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:48:10.839
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:48:20.862
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:48:30.879
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:48:40.910
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:48:50.943
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:49:00.979
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:49:11.009
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:49:21.032
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:49:31.050
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:49:41.065
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:49:51.080
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:50:01.129
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:50:11.176
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:50:21.201
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:50:31.234
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:50:41.249
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:50:51.261
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:51:01.292
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:51:11.323
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:51:21.335
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:51:31.366
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:51:41.384
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:51:51.435
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:52:01.466
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:52:11.492
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:52:21.601
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:52:31.616
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:52:41.636
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:52:51.683
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:53:01.700
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:53:11.736
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:53:21.770
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:53:31.787
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:53:41.818
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:53:51.849
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:54:01.890
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:54:11.906
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:54:21.921
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:54:31.937
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:54:41.955
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:54:51.988
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:55:02.034
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:55:12.071
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:55:22.086
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:55:32.107
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:55:42.125
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:55:52.156
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:56:02.187
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:56:12.212
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:56:22.258
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:56:32.274
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:56:42.291
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:56:52.306
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:57:02.337
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:57:12.349
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:57:22.380
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:57:32.388
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:57:42.406
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:57:52.433
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:58:02.453
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:58:12.572
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:58:22.598
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:58:32.731
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:58:42.746
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:58:52.764
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:59:02.792
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:59:12.817
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:59:22.833
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:59:32.863
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:59:42.899
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 12:59:52.914
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 13:00:02.930
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 13:00:12.973
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 13:00:22.988
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 13:00:33.004
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 13:00:43.019
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 13:00:53.034
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 13:01:03.050
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 13:01:13.085
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 13:01:23.102
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+*** 2013-01-22 13:01:33.131
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !
+OER 7451 in Load Indicator : Error Code = OSD-04500: illegal option specified
+O/S-Error: (OS 1) Incorrect function. !

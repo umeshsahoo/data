@@ -1,0 +1,41 @@
+rem 
+rem Copyright (c) 2002, 2003, Oracle Corporation.  All rights reserved.  
+rem  NAME
+rem    drierr.pkh - DR Internal routines: Errors
+rem  DESCRIPTION
+rem    Stored procedure interface to support an error stack
+rem
+rem  NOTES
+rem  MODIFIED    (MM/DD/YY)
+rem     gkaminag  10/21/03 - mdata phase 2 
+rem     gkaminag  06/06/02 - creation
+rem
+
+create or replace package drierr authid definer as
+
+/*-------------------------- AddODCIWarning -------------------------------*/
+
+procedure AddODCIWarning(c1 in binary_integer);
+
+/*---------------------------- RecordIndexError -------------------------*/
+/* records an error to the dr$index_error table */
+
+procedure RecordIndexError(
+  p_idxid           in binary_integer,
+  p_textkey         in varchar2,
+  p_stack           in varchar2
+);
+
+procedure RecordIndexErrorId(
+  p_idxid           in binary_integer,
+  p_textkey         in varchar2,
+  msgid             in binary_integer,
+  arg1	            in varchar2	default NULL,
+  arg2	            in varchar2	default NULL,
+  arg3	            in varchar2	default NULL,
+  arg4	            in varchar2	default NULL,
+  arg5	            in varchar2	default NULL
+);
+
+end drierr;
+/

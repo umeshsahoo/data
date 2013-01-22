@@ -1,0 +1,131 @@
+Rem
+Rem Copyright (c) 1998, 2003, Oracle Corporation.  All rights reserved.  
+Rem  NAME
+Rem    drv0ddl.pkh - DR cartridge Misc DDL services
+Rem  DESCRIPTION
+rem
+Rem  RETURNS
+Rem
+Rem    NOTES
+Rem
+Rem    MODIFIED   (MM/DD/YY)
+Rem    smuralid   10/28/03 - smuralid_2table_optimize 
+Rem    smuralid   06/04/03  - 
+Rem    smuralid   03/06/03  - Creation
+
+drop type dr$itab_t force;
+create or replace type dr$itab_t as object(
+  token_text  varchar2(64),
+  token_type  number(3),
+  token_first number,
+  token_last  number,
+  token_count number,
+  token_info  blob
+);
+/
+drop type dr$itab_set_t force;
+create or replace type dr$itab_set_t as table of dr$itab_t;
+/
+drop type dr$itab0_t force;
+create or replace type dr$itab0_t as object(
+  token_text       varchar2(64),
+  token_type       number(3),
+  token_first      number,
+  token_last       number,
+  token_count      number,
+  token_info_raw   raw(4000),
+  token_info_blob  blob
+);
+/
+drop type dr$itab0_set_t force;
+create or replace type dr$itab0_set_t as table of dr$itab0_t;
+/
+
+drop type dr$opttf_impl_t force;
+create or replace type dr$opttf_impl_t authid current_user as object(
+  key     RAW(16),
+
+  static function ODCITableStart(
+      sctx        OUT    dr$opttf_impl_t, 
+      optim_state IN     dr$optim_state_t,
+      mycur              SYS_REFCURSOR,
+      tempItab           VARCHAR2,
+      ntab               VARCHAR2)
+     return PLS_INTEGER,
+
+  static function ODCITableStart2(
+      sctx OUT    dr$opttf_impl_t, 
+      mycur       SYS_REFCURSOR,
+      tempItab    VARCHAR2,
+      ntab        VARCHAR2)
+     return PLS_INTEGER
+    is
+    language C
+    library dr$lib
+    name "optStart"
+    with context
+    parameters (
+      context,
+      sctx,
+      sctx INDICATOR STRUCT,
+      mycur,
+      tempItab,
+      ntab,
+      return INT
+    ),
+
+  member function ODCITableFetch(self IN OUT dr$opttf_impl_t, nrows IN Number,
+                                 outarr OUT dr$itab0_set_t) return PLS_INTEGER
+    as language C
+    library dr$lib
+    name "optFetch"
+    with context
+    parameters (
+      context,
+      self,
+      self INDICATOR STRUCT,
+      nrows,
+      outarr OCIColl,
+      outarr INDICATOR sb2,
+      return INT
+    ),
+
+  member function ODCITableClose(self IN dr$opttf_impl_t) return PLS_INTEGER
+    as language C
+    library dr$lib
+    name "optClose"
+    with context
+    parameters (
+      context,
+      self,
+      self INDICATOR STRUCT,
+      return INT
+    )
+);
+/
+
+create or replace package drv0ddl authid current_user is
+
+  TYPE itab_rec_t is record(
+    token_text  varchar2(64),
+    token_type  number(3),
+    token_first number,
+    token_last  number,
+    token_count number,
+    token_info_raw   raw(4000),
+    token_info_blob  blob);
+
+   TYPE itab_typ_cur is ref cursor return itab_rec_t;
+
+   FUNCTION optimize_index(
+     optim_state dr$optim_state_t,
+     crsr        drv0ddl.itab_typ_cur,
+     tempItab    VARCHAR2,
+     ntab        VARCHAR2
+   ) return dr$itab0_set_t
+     order crsr BY (token_text, token_type, token_first)
+     parallel_enable (partition crsr BY HASH(token_text))
+     pipelined using dr$opttf_impl_t ;
+end drv0ddl;
+/
+

@@ -1,0 +1,41 @@
+Dump file c:\oraclexe\app\oracle\admin\xe\udump\xe_ora_5188.trc
+Thu Sep 27 12:31:40 2012
+ORACLE V10.2.0.1.0 - Production vsnsta=0
+vsnsql=14 vsnxtr=3
+Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+Windows NT Version V6.1 Service Pack 1
+CPU                 : 2 - type 586, 2 Physical Cores
+Process Affinity    : 0x00000000
+Memory (Avail/Total): Ph:1276M/3965M, Ph+PgF:2352M/7928M, VA:3123M/4095M
+Instance name: xe
+
+Redo thread mounted by this instance: 1
+
+Oracle process number: 28
+
+Windows thread id: 5188, image: ORACLE.EXE (SHAD)
+
+
+*** 2012-09-27 12:31:40.393
+*** ACTION NAME:() 2012-09-27 12:31:40.372
+*** MODULE NAME:(SQL*Plus) 2012-09-27 12:31:40.372
+*** SERVICE NAME:(SYS$USERS) 2012-09-27 12:31:40.372
+*** SESSION ID:(25.19) 2012-09-27 12:31:40.372
+Warning: Exception during DBMS_CDC_UTILITY.DROP_USER JANANY
+Memory Notification: Library Cache Object loaded into SGA
+Heap size 2244K exceeds notification threshold (2048K)
+LIBRARY OBJECT HANDLE: handle=af48f298 mutex=AF48F34C(0)
+name=XDB.XDbD/PLZ01TcHgNAgAIIegtw== 
+hash=e0f82b0c545a707da230a62675d34c80 timestamp=02-07-2006 22:42:01
+namespace=XDBS flags=KGHP/TIM/SML/[02000000]
+kkkk-dddd-llll=0000-0000-0000 lock=S pin=S latch#=2 hpc=0002 hlc=0002
+lwt=AF48F2F4[AF48F2F4,AF48F2F4] ltm=AF48F2FC[AF48F2FC,AF48F2FC]
+pwt=AF48F2D8[AF48F2D8,AF48F2D8] ptm=AF48F2E0[AF48F2E0,AF48F2E0]
+ref=AF48F314[AF48F314,AF48F314] lnd=AF48F320[AF48F320,AF48F320]
+  LIBRARY OBJECT: object=a5630214
+  type=XDBS flags=EXS/LOC[0005] pflags=[0000] status=VALD load=X
+  DATA BLOCKS:
+  data#     heap  pointer    status pins change whr alloc(K)  size(K)
+  ----- -------- -------- --------- ---- ------ --- -------- --------
+      0 a9b86928 a56302d0 I/P/A/-/-    0 NONE   00      0.34     1.05
+      1 a563030c a5716528 I/P/A/-/-    1 NONE   00   2244.46  2258.62

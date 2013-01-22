@@ -1,0 +1,371 @@
+Rem
+Rem $Header: dr0type.pkh 07-mar-2005.10:12:52 wclin Exp $
+Rem
+Rem Copyright (c) 1998, 2005, Oracle. All rights reserved.  
+Rem  NAME
+Rem    dr0type.pkh
+Rem  DESCRIPTION
+rem     EIX framework interface header definition
+Rem  RETURNS
+Rem
+Rem    NOTES
+Rem     
+Rem    MODIFIED   (MM/DD/YY)
+Rem    wclin       03/07/05 - remove pub. priv for TextOptStats 
+Rem    wclin       01/28/05 - remove grant exec to public priv 
+Rem    wclin       08/07/03 - remove flag attribute 
+Rem    wclin       02/13/03 - use st_delv2 for ODCIStatsDelete()
+Rem    ehuang      08/26/02 - move textoptstats type here
+Rem    ehuang      07/31/02 - operators to itype
+Rem    gkaminag    06/03/02 - invoker's rights.
+Rem    ehuang      09/29/01 - add uritype bindings.
+Rem    wclin       03/19/01 - add TextIndexMethods.flag
+Rem    yucheng     12/14/00 - GetTableNames change
+Rem    yucheng     12/12/00 - remove GetTable
+Rem    wclin       12/08/00 - parameter change for ODCIStatsDelete()
+Rem    wclin       11/10/00 - change impl attr. names
+Rem    gkaminag    09/19/00 - more xml support
+Rem    ymatsuda    08/17/00 - impl type change
+Rem    yucheng     08/14/00 - add local partition interface
+Rem    wclin       08/08/00 - fix ODCIStatsFunctionCost() parameter
+Rem    ehuang      06/20/00 - xmltype support
+Rem    yucheng     06/21/00 - enable local partition
+Rem    wclin       12/30/99 - fix bug 1134309
+Rem    ehuang      06/03/99 - add odciindexutilcleanup and gettablenames
+Rem    dyu         02/02/99 - Separate ctxx library from dr0type.pkh
+Rem    wclin       08/31/98 - static ODCI methods
+Rem    wclin       08/13/98 - package name change
+Rem    gkaminag    08/11/98 - add safe callout library creation
+Rem    ehuang      07/29/98 - new arg to ODCIIndexGetMetaData
+Rem    wclin       07/16/98 - re-enable ilms for DML
+Rem    wclin       07/14/98 - disable ILMS for dmls
+Rem    yucheng     07/09/98 - add LENGTH to query string
+Rem    wclin       06/30/98 - grant privileges
+Rem    ymatsuda    06/28/98 - ialter param arg mode
+Rem    wclin       06/09/98 - add public synonyms
+Rem    wclin       06/03/98 - remove syncrn
+Rem    wclin       06/03/98 - use ilms
+Rem    wclin       06/01/98 - move ConText declaration to dr0type.pkb
+Rem    wclin       05/13/98 - add RAW length for ODCIStatsCollect
+Rem    ehuang      05/13/98 - separate header from body
+Rem    ehuang      05/08/98 - add ODCIGetMetaData
+Rem    wclin       05/07/98 - specify rights model for ilms callouts
+Rem    wclin       04/28/98 - more odci api changes
+Rem    wclin       04/28/98 - disable ILMS
+Rem    yucheng     04/25/98 - add new trusted callback for commit callback
+Rem    wclin       04/20/98 - ilms and api changes
+Rem    wclin       04/15/98 - separate dmls
+Rem    syang       04/14/98 - ialter parameter change
+Rem    wclin       04/02/98 - change textindextype to context
+Rem    dyu         04/01/98 - temp fix for query on long column
+Rem    wclin       03/20/98 - support long
+Rem    wclin       03/13/98 - Add EIX OPT interfaces
+Rem    yucheng     03/10/98 - func and lib name fix
+Rem    wclin       03/12/98 - do not drop/replace types
+Rem    wclin       02/27/98 - direct callout for ifetch and iclose
+Rem    ymatsuda    02/12/98 - use text_dml for iinsert,idelete,iupdate
+Rem    wclin       02/06/98 - no row data dml support
+Rem    wclin       02/02/98 - support anc. op with mult. prim. op bindings
+Rem    syang       01/27/98 - add itruncate and ialter
+Rem    wclin       01/07/98 - get rid of nclob
+Rem    wclin       12/29/97 - implement iupdate and idelete.
+Rem    wclin       12/23/97 - change to use packages
+Rem    wclin       12/17/97 - implement trusted call-out for TextcontainsVC2
+Rem    wclin       12/12/97 - implement score function
+Rem    wclin       12/11/97 - new EIX interface changes
+Rem    wclin       12/10/97 - Add ancillary data support
+Rem    wclin       12/10/97 - Add more datatypes support
+Rem    wclin       12/09/97 - create index-based functional implementation.
+Rem    wclin       12/03/97 - fix datatype mapping
+Rem    wclin       11/14/97 - add iinsert()
+Rem    ymatsuda    08/22/97 - fix datatype mapping
+Rem    yucheng     08/05/97 - creation
+Rem    yucheng     08/05/97 - Created
+Rem
+
+--------------------------------------
+-- CREATE INDEX IMPLEMENTATION TYPE --
+--------------------------------------
+
+REM please note: whenever ODCIIndexInfo changes, please make appropriate 
+REM changes to dr0preup.sql, which creates a dummy type for upgrade,
+REM as well as any t* scripts which create dummy types
+
+create or replace type TextIndexMethods authid current_user as object
+(
+   key 		RAW(4),
+   objid 	RAW(4),
+   tmpobjid	RAW(4),
+ 
+   static function ODCIGetInterfaces(ifclist OUT sys.ODCIObjectList)
+            return number,
+   static function ODCIIndexCreate(ia sys.odciindexinfo, parms varchar2,
+            env sys.ODCIEnv)
+            return number,
+   static function ODCIIndexAlter(ia sys.odciindexinfo,
+                          parms in out varchar2,
+                          altopt number, env sys.ODCIEnv)
+            return number,
+   static function ODCIIndexTruncate(ia sys.odciindexinfo,
+            env sys.ODCIEnv)
+            return number,
+   static function ODCIIndexDrop(ia sys.odciindexinfo,
+            env sys.ODCIEnv)
+            return number,
+   static function ODCIIndexInsert(ia sys.odciindexinfo,
+			   ridlist sys.odciridlist, env sys.ODCIEnv)
+            return number,
+
+   static function ODCIIndexDelete(ia sys.odciindexinfo,
+			   ridlist sys.odciridlist, env sys.ODCIEnv)
+            return number,
+
+   static function ODCIIndexUpdate(ia sys.odciindexinfo,
+			   ridlist sys.odciridlist, env sys.ODCIEnv) 
+            return number,
+
+   static function ODCIIndexStart(sctx in out TextIndexMethods,
+                          ia sys.odciindexinfo,
+                          op sys.odcipredinfo,
+                          qi sys.odciqueryinfo,
+                          strt number, stop number, valarg varchar2,
+                          env SYS.ODCIEnv)
+            return number is language C
+            name "start"
+            library dr$lib
+            with context
+            parameters(
+               context,
+               sctx,
+               sctx INDICATOR STRUCT,
+               ia,
+               ia INDICATOR STRUCT,
+               op,
+               op INDICATOR STRUCT,
+               qi,
+               qi INDICATOR STRUCT,
+               strt,
+               strt INDICATOR,
+               stop,
+               stop INDICATOR,
+	       valarg, 
+	       valarg INDICATOR,
+               valarg LENGTH,
+               env,
+               env INDICATOR STRUCT,
+               return OCINumber
+            ),
+   member function ODCIIndexFetch(nrows number,
+                          rids OUT sys.odciridlist, env SYS.ODCIEnv)
+            return number is language C
+            name "fetch"
+            library dr$lib
+            with context
+            parameters(
+               context,
+               self,
+               self INDICATOR STRUCT,
+               nrows,
+               nrows INDICATOR,
+               rids,
+               rids INDICATOR,
+               env,
+               env INDICATOR STRUCT,
+               return OCINumber
+            ),
+   member function ODCIIndexClose(env sys.ODCIEnv) 
+            return number is language C
+            name "close"
+            library dr$lib
+            with context
+            parameters(
+               context,
+               self,
+               self INDICATOR STRUCT,
+               env,
+               env INDICATOR STRUCT,
+               return OCINumber
+            ),
+   static function ODCIIndexGetMetaData(ia        IN  sys.odciindexinfo, 
+					version   IN  varchar2,
+                                        new_block OUT PLS_INTEGER,
+                                        env       IN  sys.ODCIEnv)
+            return varchar2,
+   static function ODCIIndexUtilGetTableNames(ia        IN  sys.odciindexinfo,
+                                              read_only IN  PLS_INTEGER,
+                                              version   IN  varchar2,
+                                              context   OUT PLS_INTEGER)
+            return boolean,
+   static procedure ODCIIndexUtilCleanup(context IN PLS_INTEGER),
+   static function ODCIIndexSplitPartition(ia         IN SYS.ODCIIndexInfo,
+                                           part_name1 IN SYS.ODCIPartInfo,
+                                           part_name2 IN SYS.ODCIPartInfo,
+                                           parms      IN varchar2,
+                                           env        IN SYS.ODCIEnv)
+            return number,
+   static function ODCIIndexMergePartition(ia         IN SYS.ODCIIndexInfo,
+                                           part_name1 IN SYS.ODCIPartInfo,
+                                           part_name2 IN SYS.ODCIPartInfo,
+                                           parms      IN varchar2,
+                                           env        IN SYS.ODCIEnv)
+            return number, 
+   static function ODCIIndexExchangePartition(ia  IN SYS.ODCIIndexInfo,
+                                              ia1 IN SYS.ODCIIndexInfo,
+                                              env IN SYS.ODCIEnv)
+            return number
+);
+/
+
+----------------------------------------------
+-- CREATE EIX OPTIMIZER IMPLEMENTATION TYPE --
+----------------------------------------------
+create or replace type TextOptStats authid definer as object
+(
+   stats_ctx RAW(4),
+   static function ODCIGetInterfaces(ifclist OUT sys.ODCIObjectList)  
+       return number,
+   static function ODCIStatsCollect(idx sys.ODCIIndexInfo, 
+                                    options sys.ODCIStatsOptions,
+                                    statistics OUT RAW,
+                                    env sys.ODCIEnv)
+            return number is language C
+            name "st_coll"
+            library dr$lib
+            with context
+            parameters(
+               context,
+               idx, 
+               idx INDICATOR STRUCT,
+               options,
+               options INDICATOR STRUCT,
+               statistics,
+               statistics INDICATOR,
+               statistics LENGTH,
+               env,
+               env     INDICATOR STRUCT,
+               return OCINumber
+             ),
+  
+   static function ODCIStatsDelete(idx sys.ODCIIndexInfo, statistics OUT RAW,
+                                   env sys.ODCIEnv)
+            return number is language C
+            name "st_delv2"
+            library dr$lib
+            with context
+            parameters(
+               context,
+               idx,
+               idx INDICATOR STRUCT,
+               statistics,
+               statistics INDICATOR,
+               statistics LENGTH,
+               env,
+               env     INDICATOR STRUCT,
+               return OCINumber
+            ),
+
+   static function ODCIStatsSelectivity(pred sys.ODCIPredInfo, 
+                                        sel  OUT NUMBER,
+                                        args sys.ODCIArgDescList,
+                                        strt NUMBER, 
+                                        stop NUMBER, 
+                                        colval varchar2,
+                                        valarg varchar2,
+                                        env  sys.ODCIEnv)
+            return number is language C
+            name "st_sel"
+            library dr$lib
+            with context
+            parameters(
+               context,
+               pred,
+               pred INDICATOR STRUCT,
+               sel, 
+               sel INDICATOR,
+               args,
+               args INDICATOR,
+               strt,
+               strt INDICATOR,
+               stop,
+               stop INDICATOR,
+               colval, 
+               colval INDICATOR,
+               valarg, 
+               valarg INDICATOR,
+               env,
+               env INDICATOR STRUCT,
+               return OCINumber
+             ),
+  
+   static function ODCIStatsFunctionCost(func sys.ODCIFuncinfo, 
+                                         cost IN OUT sys.ODCICost,
+                                         args sys.ODCIArgDescList,
+                                         colval varchar2,
+                                         valarg varchar2,
+                                         env  sys.ODCIEnv)
+            return number is language C
+            name "st_fcost"
+            library dr$lib
+            with context
+            parameters(
+               context,
+               func,
+               func INDICATOR STRUCT,
+               cost,
+               cost INDICATOR STRUCT,
+               args,
+               args INDICATOR,
+               colval, 
+               colval INDICATOR,
+               valarg, 
+               valarg INDICATOR,
+               env,
+               env INDICATOR STRUCT,
+               return OCINumber
+             ),
+
+   static function ODCIStatsIndexCost(idx sys.ODCIIndexInfo, 
+                                      sel NUMBER,
+                                      cost IN OUT sys.ODCICost,
+                                      qi sys.ODCIQueryInfo,
+                                      pred sys.ODCIPredInfo,
+                                      args sys.ODCIArgDescList, 
+                                      strt NUMBER,
+                                      stop NUMBER,
+                                      valarg varchar2,
+                                      env  sys.ODCIEnv)
+            return number is language C
+            name "st_icost"
+            library dr$lib
+            with context
+            parameters(
+               context,
+               idx,
+               idx INDICATOR STRUCT,
+               sel,
+               sel INDICATOR,
+               cost,
+               cost INDICATOR STRUCT,
+               qi,
+               qi INDICATOR STRUCT,
+               pred,
+               pred INDICATOR STRUCT,
+               args,
+               args INDICATOR,
+               strt,
+               strt INDICATOR,
+               stop,
+               stop INDICATOR,
+               valarg, 
+               valarg INDICATOR,
+               env,
+               env    INDICATOR STRUCT,
+               return OCINumber
+             ),
+  
+  pragma restrict_references(ODCIStatsSelectivity, WNDS, WNPS), 
+  pragma restrict_references(ODCIStatsFunctionCost, WNDS, WNPS), 
+  pragma restrict_references(ODCIStatsIndexCost, WNDS, WNPS) 
+);
+/
+

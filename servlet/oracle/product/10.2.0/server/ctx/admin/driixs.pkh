@@ -1,0 +1,78 @@
+rem
+rem Copyright (c) 2002, 2003, Oracle Corporation.  All rights reserved.  
+rem
+rem    NAME
+rem      driixs.pkh - DR Internal IndeX Set management
+rem    DESCRIPTION
+rem      This package contains internal code to create, manage, and drop
+rem      index sets
+rem
+rem    NOTES
+rem    MODIFIED    (MM/DD/YY)
+rem    surman       09/09/03 - 3101316: Add drop_user_index_sets 
+rem    gkaminag     10/01/02 - security phase 3
+rem    gkaminag     08/19/02 - gkaminag_security_phase2_020620
+rem    gkaminag     07/22/02  - 
+rem    gkaminag     07/02/02 -  creation
+
+create or replace package driixs as
+
+/*-------------------- create_index_set  ---------------------------*/
+
+PROCEDURE create_index_set(
+  set_name     in    varchar2
+);
+
+/*------------------------------ add_index -------------------------*/
+
+PROCEDURE add_index(
+  set_name       in    varchar2,
+  column_list    in    varchar2,
+  storage_clause in    varchar2 default null
+);
+
+/*-------------------- remove_index ---------------------------*/
+
+PROCEDURE remove_index(
+  set_name       in    varchar2, 
+  column_list    in    varchar2
+);
+
+/*-------------------- drop_index_set  ---------------------------*/
+
+PROCEDURE drop_index_set(
+  set_name     in    varchar2
+);
+
+/*---------------------- drop_user_index_sets ----------------------*/
+PROCEDURE drop_user_index_sets(
+  user_name in varchar2 := null
+);
+
+/*------------------------ copy_index_set ------------------------------*/
+
+function copy_index_set(
+  p_idx_id     in  number, 
+  p_indexset   in  varchar2,
+  p_rcount     out number
+) 
+return dr_def.pref_rec;
+
+/*----------------------- GetIndexIndexSet --- -------------------------*/
+/* get index set from already-existing index */
+
+PROCEDURE GetIndexIndexSet(
+  p_idx_id    in  binary_integer,
+  o_ixx       in out nocopy dr_def.ixx_tab
+);
+
+/*----------------------- GetIndexIXSColumns -----------------------------*/
+/* get index set columns from already-existing index */
+
+PROCEDURE GetIndexIXSColumns(
+  p_idx_id    in  binary_integer,
+  o_cols      in out nocopy dr_def.ixc_tab
+);
+
+end driixs;
+/

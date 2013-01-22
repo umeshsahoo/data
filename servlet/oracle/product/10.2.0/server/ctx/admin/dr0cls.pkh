@@ -1,0 +1,238 @@
+Rem Copyright (c) 1998, 2003, Oracle Corporation.  All rights reserved.  
+Rem
+Rem    NAME
+Rem      dr0cls.pkh - Classification Training Service
+Rem
+Rem    DESCRIPTION
+Rem
+Rem    RETURNS
+Rem 
+Rem    NOTES
+Rem
+Rem    MODIFIED   (MM/DD/YY)
+Rem       daliao   09/02/03 - bug-3096033, no default preference
+Rem       daliao   01/13/03 - add clustering
+Rem       daliao   09/24/02 - add another generic training API. 
+Rem       daliao   01/31/02 - daliao_classification
+Rem	daliao	10/2/2001 - Creation 
+Rem
+
+CREATE OR REPLACE PACKAGE ctx_cls AUTHID current_user AS
+
+/*------------------------------- TYPE DEFINITIONS ----------------------------*/
+/* in-memory table for document assignment */
+TYPE doc_rec IS RECORD (
+	docid     number,   -- document ID to identify the document
+	clusterid number,   -- the ID of the cluster the document is assigned to
+	score     number    -- the similarity score between document and cluster
+);
+TYPE doc_tab is TABLE OF doc_rec INDEX BY BINARY_INTEGER;
+
+/* in-memory table for cluster information */
+TYPE cluster_rec IS RECORD (
+	clusterid number,         -- cluster ID to identify a cluster
+	descript  varchar2(4000), -- a string to describe the cluster
+        label     varchar2(200),  -- a suggested label for the cluster
+        sze       number,         -- number of documents assigned to the cluster
+	quality_score number,     -- the quality score of the cluster
+	parent    number          -- parent cluster id. negative means no parent
+); 
+TYPE cluster_tab IS TABLE OF cluster_rec INDEX BY BINARY_INTEGER;
+
+TYPE docid_tab IS TABLE OF number INDEX BY BINARY_INTEGER;
+
+/*------------------------------- train for ctx-rules --------------------------*/
+/*
+   NAME
+     train - automatically generate ctx-rules from training examples
+  
+   DESCRIPTION
+     This procedure will generate the ctx-rules for a given set of training 
+     examples. The training examples are contained in the following two tables
+	
+	table1:  doctab must have the following columns:
+		 docid		number primary key
+		 text		doc. column which can be indexed by context index
+        table2:  category table must have the following columns:
+		 docid		CONSTRAINT fk_id REFERENCES doctab(id)
+		 category_id	number	
+	
+	the foreign key in category table is recommended by not required.
+
+     The rules will be written to the result table specified.
+     The query table must have the following columns:
+  
+       category_id		number         (the category_id)       
+       query	              	varchar2(4000) (the rule)
+       confidence               number         (the confidence level 
+						(percentage) that a document
+						is relevant if this rule is 
+						satisfied )
+  		
+     The names of table and column are not necessary the same as above.       
+
+   ARGUMENTS
+     index_name               - the name of the text index
+     docid                    - the name of docid column in document table
+     cattab		      - the name of category table
+     catdocid		      - the name of docid column in categroy table 
+     catid		      - the name of category ID column in category table
+     restab		      - the name of result table
+     rescatid                 - the name of category ID column in result table
+     resquery                 - the name of query column in result table
+     resconfid                - the name of confidence column in result table
+     preference               - the name of preference
+*/
+
+PROCEDURE train (
+  index_name    in varchar2,
+  docid	 	in varchar2,
+  cattab        in varchar2,
+  catdocid      in varchar2,
+  catid         in varchar2, 	
+  restab        in varchar2,
+  rescatid      in varchar2,
+  resquery      in varchar2,
+  resconfid     in varchar2,
+  preference    in varchar2 DEFAULT NULL
+);
+
+/*------------------------------- generic train API ---------------------------*/
+/*
+   NAME
+     train - automatically generate predicative model from examples for 
+             classification
+  
+   DESCRIPTION
+     This procedure will generate the predicative model from a given set of 
+     training examples. The training examples are contained in the following 
+     two tables
+	
+	table1:  doctab must have the following columns:
+		 docid	  	number primary key
+		 text	 	doc. column which can be indexed by context index 
+        table2:  category table must have the following columns:
+		 docid		number
+		 category_id	number	
+
+     The names of table and column are not necessary the same as above.       
+
+     The predicative model (classifier) will be written to the result tables.
+     The result table is either created by users before calling this function or 
+     created in this program with the specified table name and under the current 
+     user (if the specified table does not exist).     
+     If user create the result table (which can support table schema for 
+     different users), the table should have the following three columns with the 
+     exact column names:
+		cat_id number
+		type number(3) not null
+		rule clob
+  		
+   ARGUMENTS
+     index_name               - the name of the text index
+     docid                    - the name of docid column in document table
+     cattab		      - the name of category table
+     catdocid		      - the name of docid column in categroy table 
+     catid		      - the name of category ID column in category table
+     restab                   - the name of generated result table
+     preference               - the name of preference
+*/
+PROCEDURE train (
+  index_name    	in varchar2,
+  docid	 		in varchar2,
+  cattab        	in varchar2,
+  catdocid      	in varchar2,
+  catid         	in varchar2, 	
+  restab 	    	in varchar2,
+  preference    	in varchar2
+);
+
+
+
+/* ---------- clustering API for permanent table result------------------------*/
+/*
+  NAME 
+    clustering - clustering a collection 
+  
+  DESCRIPTION 
+    This procedure will generate a set of sub-group (clusters) from a provided
+    collection of documents. The collection is given by a table which having a 
+    context index built with or without population. The collection table at least
+    has the following two collums, whose name may not be exactly the same. 
+	 docid	  	number primary key
+	 text	 	doc. column which can be indexed by context index
+
+    The output of clustering is represented by two tables:
+
+	table 1: document membership table having the following collums with the
+		 exact same names
+	 docid     number -- document ID to identify a document
+	 clusterid number -- the ID of the cluster the document is assigned to
+	 score     number -- the similarity score between document and cluster
+
+	table 2: cluster description table having the following collums with the
+		 exact same names
+	 clusterid number         -- cluster ID to identify a cluster
+	 descript  varchar2(4000) -- a string to describe the cluster
+         label     varchar2(200)  -- a suggested label for the cluster
+         size      number         -- number of documents assigned to the cluster
+	 quality_score number     -- the quality score of the cluster
+	 parent    number         -- parent cluster id. negative means no parent
+	
+     The output tables can either be created by users before calling this 
+     function or created in this program with the specified table name and 
+     under the current user (if the specified table does not exist). 
+
+   ARGUMENTS:
+     index_name               - the name of the text index
+     docid                    - the name of docid column in document table
+     doctab_name              - the name of document membership table	
+     clstab_name              - the name of cluster description table   
+     pref_name                - the name of the preference  	
+*/
+PROCEDURE clustering (
+  index_name            in varchar2,
+  docid                 in varchar2,
+  doctab_name           in varchar2,
+  clstab_name           in varchar2,
+  pref_name             in varchar2 DEFAULT NULL
+);
+
+/* ---------- clustering API for in-memory table result------------------------*/
+/*
+  NAME 
+    clustering - clustering a collection 
+  
+  DESCRIPTION 
+    This procedure will generate a set of sub-group (clusters) from a provided
+    collection of documents. The collection is given by a table which having a 
+    context index built with or without population. The collection table at least
+    has the following two collums, whose name may not be exactly the same. 
+	 docid	  	number primary key
+	 text	 	doc. column which can be indexed by context index
+
+    The output of clustering is represented by two in-memory tables:
+
+	table 1: document membership table ctx_cls.doc_tab
+	table 2: cluster description table ctx_cls.cluster_tab
+
+   ARGUMENTS:
+     index_name               - the name of the text index
+     docid                    - the name of docid column in document table
+     dids                     - docid list to be clustered
+     doctab_name              - the name of document membership table	
+     clstab_name              - the name of cluster description table   
+     pref_name                - the name of the preference  	
+*/
+PROCEDURE clustering (
+  index_name            in varchar2,
+  docid                 in varchar2,
+  dids                  in docid_tab,
+  doctab_name           in out nocopy doc_tab,
+  clstab_name           in out nocopy cluster_tab,
+  pref_name             in varchar2 DEFAULT NULL
+);
+
+
+END ctx_cls;
+/

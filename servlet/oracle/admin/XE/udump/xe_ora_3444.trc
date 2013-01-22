@@ -1,0 +1,24 @@
+Dump file c:\oraclexe\app\oracle\admin\xe\udump\xe_ora_3444.trc
+Tue Oct 16 15:11:26 2012
+ORACLE V10.2.0.1.0 - Production vsnsta=0
+vsnsql=14 vsnxtr=3
+Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+Windows NT Version V6.1 Service Pack 1
+CPU                 : 2 - type 586, 2 Physical Cores
+Process Affinity    : 0x00000000
+Memory (Avail/Total): Ph:996M/3965M, Ph+PgF:1557M/7928M, VA:3122M/4095M
+Instance name: xe
+
+Redo thread mounted by this instance: 1
+
+Oracle process number: 18
+
+Windows thread id: 3444, image: ORACLE.EXE (SHAD)
+
+
+*** 2012-10-16 15:11:26.881
+*** ACTION NAME:() 2012-10-16 15:11:26.835
+*** MODULE NAME:(SQL*Plus) 2012-10-16 15:11:26.835
+*** SERVICE NAME:(SYS$USERS) 2012-10-16 15:11:26.835
+*** SESSION ID:(14.54) 2012-10-16 15:11:26.835
+Warning: Exception during DBMS_CDC_UTILITY.DROP_USER APPROVALTFS

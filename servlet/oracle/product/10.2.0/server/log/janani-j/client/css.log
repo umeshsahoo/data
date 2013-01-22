@@ -1,0 +1,650 @@
+Oracle Database 10g CRS Release 10.2.0.1.0 Production Copyright 1996, 2005 Oracle.  All rights reserved.
+[  OCRUTL][3288]u_set_comp_error: Parameter was NULL
+[  OCRUTL][3288]u_set_ocr_error: Parameter was NULL
+2012-08-10 11:52:43.785: [  OCROSD][3288]utgdv:1:could not open registry key SOFTWARE\Oracle\ocr os error The system could not find the environment option that was entered.
+
+[  OCRUTL][3288]u_set_gbl_comp_error: Parameter was NULL
+[  OCRUTL][3288]u_set_gbl_comp_error: Parameter was NULL
+2012-08-10 11:52:43.785: [  OCRRAW][3288]proprinit: Could not open raw device 
+2012-08-10 11:52:43.785: [ default][3288]a_init:7!: Backend init unsuccessful : [33]
+[  OCRUTL][3288]u_set_ocr_error: Parameter was NULL
+2012-08-10 11:52:43.785: [ CSSCLNT][3288]clsssinit: error(33 ) in OCR initialization
+
+[  OCRUTL][3288]u_set_comp_error: Parameter was NULL
+[  OCRUTL][3288]u_set_ocr_error: Parameter was NULL
+2012-08-10 11:52:45.115: [  OCROSD][3288]utgdv:1:could not open registry key SOFTWARE\Oracle\ocr os error The system could not find the environment option that was entered.
+
+[  OCRUTL][3288]u_set_gbl_comp_error: Parameter was NULL
+[  OCRUTL][3288]u_set_gbl_comp_error: Parameter was NULL
+2012-08-10 11:52:45.116: [  OCRRAW][3288]proprinit: Could not open raw device 
+2012-08-10 11:52:45.116: [ default][3288]a_init:7!: Backend init unsuccessful : [33]
+[  OCRUTL][3288]u_set_ocr_error: Parameter was NULL
+2012-08-10 11:52:45.116: [ CSSCLNT][3288]clsssinit: error(33 ) in OCR initialization
+
+[  OCRUTL][6044]u_set_comp_error: Parameter was NULL
+[  OCRUTL][6044]u_set_ocr_error: Parameter was NULL
+2012-08-10 11:52:49.520: [  OCROSD][6044]utgdv:1:could not open registry key SOFTWARE\Oracle\ocr os error The system could not find the environment option that was entered.
+
+[  OCRUTL][6044]u_set_gbl_comp_error: Parameter was NULL
+[  OCRUTL][6044]u_set_gbl_comp_error: Parameter was NULL
+2012-08-10 11:52:49.520: [  OCRRAW][6044]proprinit: Could not open raw device 
+2012-08-10 11:52:49.520: [ default][6044]a_init:7!: Backend init unsuccessful : [33]
+[  OCRUTL][6044]u_set_ocr_error: Parameter was NULL
+2012-08-10 11:52:49.520: [ CSSCLNT][6044]clsssinit: error(33 ) in OCR initialization
+
+[  OCRUTL][1608]u_set_comp_error: Parameter was NULL
+[  OCRUTL][1608]u_set_ocr_error: Parameter was NULL
+2012-08-10 14:55:54.112: [  OCROSD][1608]utgdv:1:could not open registry key SOFTWARE\Oracle\ocr os error The system could not find the environment option that was entered.
+
+[  OCRUTL][1608]u_set_gbl_comp_error: Parameter was NULL
+[  OCRUTL][1608]u_set_gbl_comp_error: Parameter was NULL
+2012-08-10 14:55:54.112: [  OCRRAW][1608]proprinit: Could not open raw device 
+2012-08-10 14:55:54.112: [ default][1608]a_init:7!: Backend init unsuccessful : [33]
+[  OCRUTL][1608]u_set_ocr_error: Parameter was NULL
+2012-08-10 14:55:54.112: [ CSSCLNT][1608]clsssinit: error(33 ) in OCR initialization
+
+[  OCRUTL][1624]u_set_comp_error: Parameter was NULL
+[  OCRUTL][1624]u_set_ocr_error: Parameter was NULL
+2012-08-13 10:09:18.046: [  OCROSD][1624]utgdv:1:could not open registry key SOFTWARE\Oracle\ocr os error The system could not find the environment option that was entered.
+
+[  OCRUTL][1624]u_set_gbl_comp_error: Parameter was NULL
+[  OCRUTL][1624]u_set_gbl_comp_error: Parameter was NULL
+2012-08-13 10:09:18.046: [  OCRRAW][1624]proprinit: Could not open raw device 
+2012-08-13 10:09:18.046: [ default][1624]a_init:7!: Backend init unsuccessful : [33]
+[  OCRUTL][1624]u_set_ocr_error: Parameter was NULL
+2012-08-13 10:09:18.046: [ CSSCLNT][1624]clsssinit: error(33 ) in OCR initialization
+
+[  OCRUTL][1608]u_set_comp_error: Parameter was NULL
+[  OCRUTL][1608]u_set_ocr_error: Parameter was NULL
+2012-08-14 09:30:46.638: [  OCROSD][1608]utgdv:1:could not open registry key SOFTWARE\Oracle\ocr os error The system could not find the environment option that was entered.
+
+[  OCRUTL][1608]u_set_gbl_comp_error: Parameter was NULL
+[  OCRUTL][1608]u_set_gbl_comp_error: Parameter was NULL
+2012-08-14 09:30:46.638: [  OCRRAW][1608]proprinit: Could not open raw device 
+2012-08-14 09:30:46.638: [ default][1608]a_init:7!: Backend init unsuccessful : [33]
+[  OCRUTL][1608]u_set_ocr_error: Parameter was NULL
+2012-08-14 09:30:46.638: [ CSSCLNT][1608]clsssinit: error(33 ) in OCR initialization
+
+[  OCRUTL][1612]u_set_comp_error: Parameter was NULL
+[  OCRUTL][1612]u_set_ocr_error: Parameter was NULL
+2012-08-16 10:28:23.371: [  OCROSD][1612]utgdv:1:could not open registry key SOFTWARE\Oracle\ocr os error The system could not find the environment option that was entered.
+
+[  OCRUTL][1612]u_set_gbl_comp_error: Parameter was NULL
+[  OCRUTL][1612]u_set_gbl_comp_error: Parameter was NULL
+2012-08-16 10:28:23.371: [  OCRRAW][1612]proprinit: Could not open raw device 
+2012-08-16 10:28:23.371: [ default][1612]a_init:7!: Backend init unsuccessful : [33]
+[  OCRUTL][1612]u_set_ocr_error: Parameter was NULL
+2012-08-16 10:28:23.371: [ CSSCLNT][1612]clsssinit: error(33 ) in OCR initialization
+
+[  OCRUTL][1696]u_set_comp_error: Parameter was NULL
+[  OCRUTL][1696]u_set_ocr_error: Parameter was NULL
+2012-08-17 09:53:20.444: [  OCROSD][1696]utgdv:1:could not open registry key SOFTWARE\Oracle\ocr os error The system could not find the environment option that was entered.
+
+[  OCRUTL][1696]u_set_gbl_comp_error: Parameter was NULL
+[  OCRUTL][1696]u_set_gbl_comp_error: Parameter was NULL
+2012-08-17 09:53:20.444: [  OCRRAW][1696]proprinit: Could not open raw device 
+2012-08-17 09:53:20.444: [ default][1696]a_init:7!: Backend init unsuccessful : [33]
+[  OCRUTL][1696]u_set_ocr_error: Parameter was NULL
+2012-08-17 09:53:20.444: [ CSSCLNT][1696]clsssinit: error(33 ) in OCR initialization
+
+[  OCRUTL][1852]u_set_comp_error: Parameter was NULL
+[  OCRUTL][1852]u_set_ocr_error: Parameter was NULL
+2012-08-17 09:54:37.137: [  OCROSD][1852]utgdv:1:could not open registry key SOFTWARE\Oracle\ocr os error The system could not find the environment option that was entered.
+
+[  OCRUTL][1852]u_set_gbl_comp_error: Parameter was NULL
+[  OCRUTL][1852]u_set_gbl_comp_error: Parameter was NULL
+2012-08-17 09:54:37.137: [  OCRRAW][1852]proprinit: Could not open raw device 
+2012-08-17 09:54:37.137: [ default][1852]a_init:7!: Backend init unsuccessful : [33]
+[  OCRUTL][1852]u_set_ocr_error: Parameter was NULL
+2012-08-17 09:54:37.137: [ CSSCLNT][1852]clsssinit: error(33 ) in OCR initialization
+
+[  OCRUTL][1584]u_set_comp_error: Parameter was NULL
+[  OCRUTL][1584]u_set_ocr_error: Parameter was NULL
+2012-08-17 11:35:45.293: [  OCROSD][1584]utgdv:1:could not open registry key SOFTWARE\Oracle\ocr os error The system could not find the environment option that was entered.
+
+[  OCRUTL][1584]u_set_gbl_comp_error: Parameter was NULL
+[  OCRUTL][1584]u_set_gbl_comp_error: Parameter was NULL
+2012-08-17 11:35:45.293: [  OCRRAW][1584]proprinit: Could not open raw device 
+2012-08-17 11:35:45.293: [ default][1584]a_init:7!: Backend init unsuccessful : [33]
+[  OCRUTL][1584]u_set_ocr_error: Parameter was NULL
+2012-08-17 11:35:45.293: [ CSSCLNT][1584]clsssinit: error(33 ) in OCR initialization
+
+[  OCRUTL][1612]u_set_comp_error: Parameter was NULL
+[  OCRUTL][1612]u_set_ocr_error: Parameter was NULL
+2012-08-20 08:25:58.687: [  OCROSD][1612]utgdv:1:could not open registry key SOFTWARE\Oracle\ocr os error The system could not find the environment option that was entered.
+
+[  OCRUTL][1612]u_set_gbl_comp_error: Parameter was NULL
+[  OCRUTL][1612]u_set_gbl_comp_error: Parameter was NULL
+2012-08-20 08:25:58.687: [  OCRRAW][1612]proprinit: Could not open raw device 
+2012-08-20 08:25:58.687: [ default][1612]a_init:7!: Backend init unsuccessful : [33]
+[  OCRUTL][1612]u_set_ocr_error: Parameter was NULL
+2012-08-20 08:25:58.687: [ CSSCLNT][1612]clsssinit: error(33 ) in OCR initialization
+
+[  OCRUTL][1608]u_set_comp_error: Parameter was NULL
+[  OCRUTL][1608]u_set_ocr_error: Parameter was NULL
+2012-08-21 10:43:45.495: [  OCROSD][1608]utgdv:1:could not open registry key SOFTWARE\Oracle\ocr os error The system could not find the environment option that was entered.
+
+[  OCRUTL][1608]u_set_gbl_comp_error: Parameter was NULL
+[  OCRUTL][1608]u_set_gbl_comp_error: Parameter was NULL
+2012-08-21 10:43:45.495: [  OCRRAW][1608]proprinit: Could not open raw device 
+2012-08-21 10:43:45.495: [ default][1608]a_init:7!: Backend init unsuccessful : [33]
+[  OCRUTL][1608]u_set_ocr_error: Parameter was NULL
+2012-08-21 10:43:45.495: [ CSSCLNT][1608]clsssinit: error(33 ) in OCR initialization
+
+[  OCRUTL][1620]u_set_comp_error: Parameter was NULL
+[  OCRUTL][1620]u_set_ocr_error: Parameter was NULL
+2012-08-22 10:52:07.878: [  OCROSD][1620]utgdv:1:could not open registry key SOFTWARE\Oracle\ocr os error The system could not find the environment option that was entered.
+
+[  OCRUTL][1620]u_set_gbl_comp_error: Parameter was NULL
+[  OCRUTL][1620]u_set_gbl_comp_error: Parameter was NULL
+2012-08-22 10:52:07.878: [  OCRRAW][1620]proprinit: Could not open raw device 
+2012-08-22 10:52:07.878: [ default][1620]a_init:7!: Backend init unsuccessful : [33]
+[  OCRUTL][1620]u_set_ocr_error: Parameter was NULL
+2012-08-22 10:52:07.878: [ CSSCLNT][1620]clsssinit: error(33 ) in OCR initialization
+
+[  OCRUTL][1744]u_set_comp_error: Parameter was NULL
+[  OCRUTL][1744]u_set_ocr_error: Parameter was NULL
+2012-08-23 10:52:50.661: [  OCROSD][1744]utgdv:1:could not open registry key SOFTWARE\Oracle\ocr os error The system could not find the environment option that was entered.
+
+[  OCRUTL][1744]u_set_gbl_comp_error: Parameter was NULL
+[  OCRUTL][1744]u_set_gbl_comp_error: Parameter was NULL
+2012-08-23 10:52:50.661: [  OCRRAW][1744]proprinit: Could not open raw device 
+2012-08-23 10:52:50.661: [ default][1744]a_init:7!: Backend init unsuccessful : [33]
+[  OCRUTL][1744]u_set_ocr_error: Parameter was NULL
+2012-08-23 10:52:50.661: [ CSSCLNT][1744]clsssinit: error(33 ) in OCR initialization
+
+[  OCRUTL][1632]u_set_comp_error: Parameter was NULL
+[  OCRUTL][1632]u_set_ocr_error: Parameter was NULL
+2012-08-27 10:31:07.121: [  OCROSD][1632]utgdv:1:could not open registry key SOFTWARE\Oracle\ocr os error The system could not find the environment option that was entered.
+
+[  OCRUTL][1632]u_set_gbl_comp_error: Parameter was NULL
+[  OCRUTL][1632]u_set_gbl_comp_error: Parameter was NULL
+2012-08-27 10:31:07.121: [  OCRRAW][1632]proprinit: Could not open raw device 
+2012-08-27 10:31:07.121: [ default][1632]a_init:7!: Backend init unsuccessful : [33]
+[  OCRUTL][1632]u_set_ocr_error: Parameter was NULL
+2012-08-27 10:31:07.121: [ CSSCLNT][1632]clsssinit: error(33 ) in OCR initialization
+
+[  OCRUTL][1580]u_set_comp_error: Parameter was NULL
+[  OCRUTL][1580]u_set_ocr_error: Parameter was NULL
+2012-08-28 10:35:46.503: [  OCROSD][1580]utgdv:1:could not open registry key SOFTWARE\Oracle\ocr os error The system could not find the environment option that was entered.
+
+[  OCRUTL][1580]u_set_gbl_comp_error: Parameter was NULL
+[  OCRUTL][1580]u_set_gbl_comp_error: Parameter was NULL
+2012-08-28 10:35:46.503: [  OCRRAW][1580]proprinit: Could not open raw device 
+2012-08-28 10:35:46.503: [ default][1580]a_init:7!: Backend init unsuccessful : [33]
+[  OCRUTL][1580]u_set_ocr_error: Parameter was NULL
+2012-08-28 10:35:46.503: [ CSSCLNT][1580]clsssinit: error(33 ) in OCR initialization
+
+[  OCRUTL][1588]u_set_comp_error: Parameter was NULL
+[  OCRUTL][1588]u_set_ocr_error: Parameter was NULL
+2012-08-29 10:26:03.169: [  OCROSD][1588]utgdv:1:could not open registry key SOFTWARE\Oracle\ocr os error The system could not find the environment option that was entered.
+
+[  OCRUTL][1588]u_set_gbl_comp_error: Parameter was NULL
+[  OCRUTL][1588]u_set_gbl_comp_error: Parameter was NULL
+2012-08-29 10:26:03.169: [  OCRRAW][1588]proprinit: Could not open raw device 
+2012-08-29 10:26:03.169: [ default][1588]a_init:7!: Backend init unsuccessful : [33]
+[  OCRUTL][1588]u_set_ocr_error: Parameter was NULL
+2012-08-29 10:26:03.169: [ CSSCLNT][1588]clsssinit: error(33 ) in OCR initialization
+
+[  OCRUTL][1556]u_set_comp_error: Parameter was NULL
+[  OCRUTL][1556]u_set_ocr_error: Parameter was NULL
+2012-08-30 11:02:20.921: [  OCROSD][1556]utgdv:1:could not open registry key SOFTWARE\Oracle\ocr os error The system could not find the environment option that was entered.
+
+[  OCRUTL][1556]u_set_gbl_comp_error: Parameter was NULL
+[  OCRUTL][1556]u_set_gbl_comp_error: Parameter was NULL
+2012-08-30 11:02:20.921: [  OCRRAW][1556]proprinit: Could not open raw device 
+2012-08-30 11:02:20.921: [ default][1556]a_init:7!: Backend init unsuccessful : [33]
+[  OCRUTL][1556]u_set_ocr_error: Parameter was NULL
+2012-08-30 11:02:20.921: [ CSSCLNT][1556]clsssinit: error(33 ) in OCR initialization
+
+[  OCRUTL][1644]u_set_comp_error: Parameter was NULL
+[  OCRUTL][1644]u_set_ocr_error: Parameter was NULL
+2012-08-31 10:16:01.091: [  OCROSD][1644]utgdv:1:could not open registry key SOFTWARE\Oracle\ocr os error The system could not find the environment option that was entered.
+
+[  OCRUTL][1644]u_set_gbl_comp_error: Parameter was NULL
+[  OCRUTL][1644]u_set_gbl_comp_error: Parameter was NULL
+2012-08-31 10:16:01.091: [  OCRRAW][1644]proprinit: Could not open raw device 
+2012-08-31 10:16:01.091: [ default][1644]a_init:7!: Backend init unsuccessful : [33]
+[  OCRUTL][1644]u_set_ocr_error: Parameter was NULL
+2012-08-31 10:16:01.091: [ CSSCLNT][1644]clsssinit: error(33 ) in OCR initialization
+
+[  OCRUTL][1632]u_set_comp_error: Parameter was NULL
+[  OCRUTL][1632]u_set_ocr_error: Parameter was NULL
+2012-09-03 10:40:07.092: [  OCROSD][1632]utgdv:1:could not open registry key SOFTWARE\Oracle\ocr os error The system could not find the environment option that was entered.
+
+[  OCRUTL][1632]u_set_gbl_comp_error: Parameter was NULL
+[  OCRUTL][1632]u_set_gbl_comp_error: Parameter was NULL
+2012-09-03 10:40:07.092: [  OCRRAW][1632]proprinit: Could not open raw device 
+2012-09-03 10:40:07.092: [ default][1632]a_init:7!: Backend init unsuccessful : [33]
+[  OCRUTL][1632]u_set_ocr_error: Parameter was NULL
+2012-09-03 10:40:07.092: [ CSSCLNT][1632]clsssinit: error(33 ) in OCR initialization
+
+[  OCRUTL][1564]u_set_comp_error: Parameter was NULL
+[  OCRUTL][1564]u_set_ocr_error: Parameter was NULL
+2012-09-04 09:01:29.828: [  OCROSD][1564]utgdv:1:could not open registry key SOFTWARE\Oracle\ocr os error The system could not find the environment option that was entered.
+
+[  OCRUTL][1564]u_set_gbl_comp_error: Parameter was NULL
+[  OCRUTL][1564]u_set_gbl_comp_error: Parameter was NULL
+2012-09-04 09:01:29.828: [  OCRRAW][1564]proprinit: Could not open raw device 
+2012-09-04 09:01:29.828: [ default][1564]a_init:7!: Backend init unsuccessful : [33]
+[  OCRUTL][1564]u_set_ocr_error: Parameter was NULL
+2012-09-04 09:01:29.828: [ CSSCLNT][1564]clsssinit: error(33 ) in OCR initialization
+
+[  OCRUTL][1624]u_set_comp_error: Parameter was NULL
+[  OCRUTL][1624]u_set_ocr_error: Parameter was NULL
+2012-09-05 10:12:00.577: [  OCROSD][1624]utgdv:1:could not open registry key SOFTWARE\Oracle\ocr os error The system could not find the environment option that was entered.
+
+[  OCRUTL][1624]u_set_gbl_comp_error: Parameter was NULL
+[  OCRUTL][1624]u_set_gbl_comp_error: Parameter was NULL
+2012-09-05 10:12:00.577: [  OCRRAW][1624]proprinit: Could not open raw device 
+2012-09-05 10:12:00.577: [ default][1624]a_init:7!: Backend init unsuccessful : [33]
+[  OCRUTL][1624]u_set_ocr_error: Parameter was NULL
+2012-09-05 10:12:00.577: [ CSSCLNT][1624]clsssinit: error(33 ) in OCR initialization
+
+[  OCRUTL][1620]u_set_comp_error: Parameter was NULL
+[  OCRUTL][1620]u_set_ocr_error: Parameter was NULL
+2012-09-06 10:39:30.658: [  OCROSD][1620]utgdv:1:could not open registry key SOFTWARE\Oracle\ocr os error The system could not find the environment option that was entered.
+
+[  OCRUTL][1620]u_set_gbl_comp_error: Parameter was NULL
+[  OCRUTL][1620]u_set_gbl_comp_error: Parameter was NULL
+2012-09-06 10:39:30.658: [  OCRRAW][1620]proprinit: Could not open raw device 
+2012-09-06 10:39:30.658: [ default][1620]a_init:7!: Backend init unsuccessful : [33]
+[  OCRUTL][1620]u_set_ocr_error: Parameter was NULL
+2012-09-06 10:39:30.658: [ CSSCLNT][1620]clsssinit: error(33 ) in OCR initialization
+
+[  OCRUTL][1652]u_set_comp_error: Parameter was NULL
+[  OCRUTL][1652]u_set_ocr_error: Parameter was NULL
+2012-09-07 09:33:14.901: [  OCROSD][1652]utgdv:1:could not open registry key SOFTWARE\Oracle\ocr os error The system could not find the environment option that was entered.
+
+[  OCRUTL][1652]u_set_gbl_comp_error: Parameter was NULL
+[  OCRUTL][1652]u_set_gbl_comp_error: Parameter was NULL
+2012-09-07 09:33:14.901: [  OCRRAW][1652]proprinit: Could not open raw device 
+2012-09-07 09:33:14.901: [ default][1652]a_init:7!: Backend init unsuccessful : [33]
+[  OCRUTL][1652]u_set_ocr_error: Parameter was NULL
+2012-09-07 09:33:14.901: [ CSSCLNT][1652]clsssinit: error(33 ) in OCR initialization
+
+[  OCRUTL][1656]u_set_comp_error: Parameter was NULL
+[  OCRUTL][1656]u_set_ocr_error: Parameter was NULL
+2012-09-10 10:30:54.935: [  OCROSD][1656]utgdv:1:could not open registry key SOFTWARE\Oracle\ocr os error The system could not find the environment option that was entered.
+
+[  OCRUTL][1656]u_set_gbl_comp_error: Parameter was NULL
+[  OCRUTL][1656]u_set_gbl_comp_error: Parameter was NULL
+2012-09-10 10:30:54.935: [  OCRRAW][1656]proprinit: Could not open raw device 
+2012-09-10 10:30:54.935: [ default][1656]a_init:7!: Backend init unsuccessful : [33]
+[  OCRUTL][1656]u_set_ocr_error: Parameter was NULL
+2012-09-10 10:30:54.935: [ CSSCLNT][1656]clsssinit: error(33 ) in OCR initialization
+
+[  OCRUTL][1600]u_set_comp_error: Parameter was NULL
+[  OCRUTL][1600]u_set_ocr_error: Parameter was NULL
+2012-09-10 10:43:38.926: [  OCROSD][1600]utgdv:1:could not open registry key SOFTWARE\Oracle\ocr os error The system could not find the environment option that was entered.
+
+[  OCRUTL][1600]u_set_gbl_comp_error: Parameter was NULL
+[  OCRUTL][1600]u_set_gbl_comp_error: Parameter was NULL
+2012-09-10 10:43:38.926: [  OCRRAW][1600]proprinit: Could not open raw device 
+2012-09-10 10:43:38.926: [ default][1600]a_init:7!: Backend init unsuccessful : [33]
+[  OCRUTL][1600]u_set_ocr_error: Parameter was NULL
+2012-09-10 10:43:38.926: [ CSSCLNT][1600]clsssinit: error(33 ) in OCR initialization
+
+[  OCRUTL][1556]u_set_comp_error: Parameter was NULL
+[  OCRUTL][1556]u_set_ocr_error: Parameter was NULL
+2012-09-11 09:47:28.700: [  OCROSD][1556]utgdv:1:could not open registry key SOFTWARE\Oracle\ocr os error The system could not find the environment option that was entered.
+
+[  OCRUTL][1556]u_set_gbl_comp_error: Parameter was NULL
+[  OCRUTL][1556]u_set_gbl_comp_error: Parameter was NULL
+2012-09-11 09:47:28.700: [  OCRRAW][1556]proprinit: Could not open raw device 
+2012-09-11 09:47:28.700: [ default][1556]a_init:7!: Backend init unsuccessful : [33]
+[  OCRUTL][1556]u_set_ocr_error: Parameter was NULL
+2012-09-11 09:47:28.700: [ CSSCLNT][1556]clsssinit: error(33 ) in OCR initialization
+
+[  OCRUTL][1588]u_set_comp_error: Parameter was NULL
+[  OCRUTL][1588]u_set_ocr_error: Parameter was NULL
+2012-09-12 09:51:47.575: [  OCROSD][1588]utgdv:1:could not open registry key SOFTWARE\Oracle\ocr os error The system could not find the environment option that was entered.
+
+[  OCRUTL][1588]u_set_gbl_comp_error: Parameter was NULL
+[  OCRUTL][1588]u_set_gbl_comp_error: Parameter was NULL
+2012-09-12 09:51:47.575: [  OCRRAW][1588]proprinit: Could not open raw device 
+2012-09-12 09:51:47.575: [ default][1588]a_init:7!: Backend init unsuccessful : [33]
+[  OCRUTL][1588]u_set_ocr_error: Parameter was NULL
+2012-09-12 09:51:47.575: [ CSSCLNT][1588]clsssinit: error(33 ) in OCR initialization
+
+[  OCRUTL][1572]u_set_comp_error: Parameter was NULL
+[  OCRUTL][1572]u_set_ocr_error: Parameter was NULL
+2012-09-13 09:46:39.866: [  OCROSD][1572]utgdv:1:could not open registry key SOFTWARE\Oracle\ocr os error The system could not find the environment option that was entered.
+
+[  OCRUTL][1572]u_set_gbl_comp_error: Parameter was NULL
+[  OCRUTL][1572]u_set_gbl_comp_error: Parameter was NULL
+2012-09-13 09:46:39.866: [  OCRRAW][1572]proprinit: Could not open raw device 
+2012-09-13 09:46:39.866: [ default][1572]a_init:7!: Backend init unsuccessful : [33]
+[  OCRUTL][1572]u_set_ocr_error: Parameter was NULL
+2012-09-13 09:46:39.866: [ CSSCLNT][1572]clsssinit: error(33 ) in OCR initialization
+
+[  OCRUTL][1580]u_set_comp_error: Parameter was NULL
+[  OCRUTL][1580]u_set_ocr_error: Parameter was NULL
+2012-09-13 09:47:55.761: [  OCROSD][1580]utgdv:1:could not open registry key SOFTWARE\Oracle\ocr os error The system could not find the environment option that was entered.
+
+[  OCRUTL][1580]u_set_gbl_comp_error: Parameter was NULL
+[  OCRUTL][1580]u_set_gbl_comp_error: Parameter was NULL
+2012-09-13 09:47:55.761: [  OCRRAW][1580]proprinit: Could not open raw device 
+2012-09-13 09:47:55.761: [ default][1580]a_init:7!: Backend init unsuccessful : [33]
+[  OCRUTL][1580]u_set_ocr_error: Parameter was NULL
+2012-09-13 09:47:55.761: [ CSSCLNT][1580]clsssinit: error(33 ) in OCR initialization
+
+[  OCRUTL][1596]u_set_comp_error: Parameter was NULL
+[  OCRUTL][1596]u_set_ocr_error: Parameter was NULL
+2012-09-17 11:20:36.559: [  OCROSD][1596]utgdv:1:could not open registry key SOFTWARE\Oracle\ocr os error The system could not find the environment option that was entered.
+
+[  OCRUTL][1596]u_set_gbl_comp_error: Parameter was NULL
+[  OCRUTL][1596]u_set_gbl_comp_error: Parameter was NULL
+2012-09-17 11:20:36.559: [  OCRRAW][1596]proprinit: Could not open raw device 
+2012-09-17 11:20:36.559: [ default][1596]a_init:7!: Backend init unsuccessful : [33]
+[  OCRUTL][1596]u_set_ocr_error: Parameter was NULL
+2012-09-17 11:20:36.559: [ CSSCLNT][1596]clsssinit: error(33 ) in OCR initialization
+
+[  OCRUTL][1612]u_set_comp_error: Parameter was NULL
+[  OCRUTL][1612]u_set_ocr_error: Parameter was NULL
+2012-09-18 09:44:55.871: [  OCROSD][1612]utgdv:1:could not open registry key SOFTWARE\Oracle\ocr os error The system could not find the environment option that was entered.
+
+[  OCRUTL][1612]u_set_gbl_comp_error: Parameter was NULL
+[  OCRUTL][1612]u_set_gbl_comp_error: Parameter was NULL
+2012-09-18 09:44:55.871: [  OCRRAW][1612]proprinit: Could not open raw device 
+2012-09-18 09:44:55.871: [ default][1612]a_init:7!: Backend init unsuccessful : [33]
+[  OCRUTL][1612]u_set_ocr_error: Parameter was NULL
+2012-09-18 09:44:55.871: [ CSSCLNT][1612]clsssinit: error(33 ) in OCR initialization
+
+[  OCRUTL][1544]u_set_comp_error: Parameter was NULL
+[  OCRUTL][1544]u_set_ocr_error: Parameter was NULL
+2012-09-20 09:46:12.200: [  OCROSD][1544]utgdv:1:could not open registry key SOFTWARE\Oracle\ocr os error The system could not find the environment option that was entered.
+
+[  OCRUTL][1544]u_set_gbl_comp_error: Parameter was NULL
+[  OCRUTL][1544]u_set_gbl_comp_error: Parameter was NULL
+2012-09-20 09:46:12.200: [  OCRRAW][1544]proprinit: Could not open raw device 
+2012-09-20 09:46:12.200: [ default][1544]a_init:7!: Backend init unsuccessful : [33]
+[  OCRUTL][1544]u_set_ocr_error: Parameter was NULL
+2012-09-20 09:46:12.200: [ CSSCLNT][1544]clsssinit: error(33 ) in OCR initialization
+
+[  OCRUTL][1568]u_set_comp_error: Parameter was NULL
+[  OCRUTL][1568]u_set_ocr_error: Parameter was NULL
+2012-09-21 10:17:42.227: [  OCROSD][1568]utgdv:1:could not open registry key SOFTWARE\Oracle\ocr os error The system could not find the environment option that was entered.
+
+[  OCRUTL][1568]u_set_gbl_comp_error: Parameter was NULL
+[  OCRUTL][1568]u_set_gbl_comp_error: Parameter was NULL
+2012-09-21 10:17:42.227: [  OCRRAW][1568]proprinit: Could not open raw device 
+2012-09-21 10:17:42.227: [ default][1568]a_init:7!: Backend init unsuccessful : [33]
+[  OCRUTL][1568]u_set_ocr_error: Parameter was NULL
+2012-09-21 10:17:42.227: [ CSSCLNT][1568]clsssinit: error(33 ) in OCR initialization
+
+[  OCRUTL][1600]u_set_comp_error: Parameter was NULL
+[  OCRUTL][1600]u_set_ocr_error: Parameter was NULL
+2012-09-24 09:49:03.074: [  OCROSD][1600]utgdv:1:could not open registry key SOFTWARE\Oracle\ocr os error The system could not find the environment option that was entered.
+
+[  OCRUTL][1600]u_set_gbl_comp_error: Parameter was NULL
+[  OCRUTL][1600]u_set_gbl_comp_error: Parameter was NULL
+2012-09-24 09:49:03.074: [  OCRRAW][1600]proprinit: Could not open raw device 
+2012-09-24 09:49:03.074: [ default][1600]a_init:7!: Backend init unsuccessful : [33]
+[  OCRUTL][1600]u_set_ocr_error: Parameter was NULL
+2012-09-24 09:49:03.074: [ CSSCLNT][1600]clsssinit: error(33 ) in OCR initialization
+
+[  OCRUTL][1620]u_set_comp_error: Parameter was NULL
+[  OCRUTL][1620]u_set_ocr_error: Parameter was NULL
+2012-09-25 09:57:53.325: [  OCROSD][1620]utgdv:1:could not open registry key SOFTWARE\Oracle\ocr os error The system could not find the environment option that was entered.
+
+[  OCRUTL][1620]u_set_gbl_comp_error: Parameter was NULL
+[  OCRUTL][1620]u_set_gbl_comp_error: Parameter was NULL
+2012-09-25 09:57:53.325: [  OCRRAW][1620]proprinit: Could not open raw device 
+2012-09-25 09:57:53.325: [ default][1620]a_init:7!: Backend init unsuccessful : [33]
+[  OCRUTL][1620]u_set_ocr_error: Parameter was NULL
+2012-09-25 09:57:53.325: [ CSSCLNT][1620]clsssinit: error(33 ) in OCR initialization
+
+[  OCRUTL][1608]u_set_comp_error: Parameter was NULL
+[  OCRUTL][1608]u_set_ocr_error: Parameter was NULL
+2012-09-26 10:16:01.509: [  OCROSD][1608]utgdv:1:could not open registry key SOFTWARE\Oracle\ocr os error The system could not find the environment option that was entered.
+
+[  OCRUTL][1608]u_set_gbl_comp_error: Parameter was NULL
+[  OCRUTL][1608]u_set_gbl_comp_error: Parameter was NULL
+2012-09-26 10:16:01.509: [  OCRRAW][1608]proprinit: Could not open raw device 
+2012-09-26 10:16:01.509: [ default][1608]a_init:7!: Backend init unsuccessful : [33]
+[  OCRUTL][1608]u_set_ocr_error: Parameter was NULL
+2012-09-26 10:16:01.509: [ CSSCLNT][1608]clsssinit: error(33 ) in OCR initialization
+
+[  OCRUTL][1584]u_set_comp_error: Parameter was NULL
+[  OCRUTL][1584]u_set_ocr_error: Parameter was NULL
+2012-09-27 10:19:30.802: [  OCROSD][1584]utgdv:1:could not open registry key SOFTWARE\Oracle\ocr os error The system could not find the environment option that was entered.
+
+[  OCRUTL][1584]u_set_gbl_comp_error: Parameter was NULL
+[  OCRUTL][1584]u_set_gbl_comp_error: Parameter was NULL
+2012-09-27 10:19:30.802: [  OCRRAW][1584]proprinit: Could not open raw device 
+2012-09-27 10:19:30.802: [ default][1584]a_init:7!: Backend init unsuccessful : [33]
+[  OCRUTL][1584]u_set_ocr_error: Parameter was NULL
+2012-09-27 10:19:30.802: [ CSSCLNT][1584]clsssinit: error(33 ) in OCR initialization
+
+[  OCRUTL][1600]u_set_comp_error: Parameter was NULL
+[  OCRUTL][1600]u_set_ocr_error: Parameter was NULL
+2012-09-28 10:14:47.400: [  OCROSD][1600]utgdv:1:could not open registry key SOFTWARE\Oracle\ocr os error The system could not find the environment option that was entered.
+
+[  OCRUTL][1600]u_set_gbl_comp_error: Parameter was NULL
+[  OCRUTL][1600]u_set_gbl_comp_error: Parameter was NULL
+2012-09-28 10:14:47.400: [  OCRRAW][1600]proprinit: Could not open raw device 
+2012-09-28 10:14:47.400: [ default][1600]a_init:7!: Backend init unsuccessful : [33]
+[  OCRUTL][1600]u_set_ocr_error: Parameter was NULL
+2012-09-28 10:14:47.400: [ CSSCLNT][1600]clsssinit: error(33 ) in OCR initialization
+
+[  OCRUTL][1600]u_set_comp_error: Parameter was NULL
+[  OCRUTL][1600]u_set_ocr_error: Parameter was NULL
+2012-10-03 09:14:35.417: [  OCROSD][1600]utgdv:1:could not open registry key SOFTWARE\Oracle\ocr os error The system could not find the environment option that was entered.
+
+[  OCRUTL][1600]u_set_gbl_comp_error: Parameter was NULL
+[  OCRUTL][1600]u_set_gbl_comp_error: Parameter was NULL
+2012-10-03 09:14:35.417: [  OCRRAW][1600]proprinit: Could not open raw device 
+2012-10-03 09:14:35.417: [ default][1600]a_init:7!: Backend init unsuccessful : [33]
+[  OCRUTL][1600]u_set_ocr_error: Parameter was NULL
+2012-10-03 09:14:35.417: [ CSSCLNT][1600]clsssinit: error(33 ) in OCR initialization
+
+[  OCRUTL][1564]u_set_comp_error: Parameter was NULL
+[  OCRUTL][1564]u_set_ocr_error: Parameter was NULL
+2012-10-04 10:03:35.292: [  OCROSD][1564]utgdv:1:could not open registry key SOFTWARE\Oracle\ocr os error The system could not find the environment option that was entered.
+
+[  OCRUTL][1564]u_set_gbl_comp_error: Parameter was NULL
+[  OCRUTL][1564]u_set_gbl_comp_error: Parameter was NULL
+2012-10-04 10:03:35.292: [  OCRRAW][1564]proprinit: Could not open raw device 
+2012-10-04 10:03:35.292: [ default][1564]a_init:7!: Backend init unsuccessful : [33]
+[  OCRUTL][1564]u_set_ocr_error: Parameter was NULL
+2012-10-04 10:03:35.292: [ CSSCLNT][1564]clsssinit: error(33 ) in OCR initialization
+
+[  OCRUTL][1584]u_set_comp_error: Parameter was NULL
+[  OCRUTL][1584]u_set_ocr_error: Parameter was NULL
+2012-10-05 10:28:37.074: [  OCROSD][1584]utgdv:1:could not open registry key SOFTWARE\Oracle\ocr os error The system could not find the environment option that was entered.
+
+[  OCRUTL][1584]u_set_gbl_comp_error: Parameter was NULL
+[  OCRUTL][1584]u_set_gbl_comp_error: Parameter was NULL
+2012-10-05 10:28:37.074: [  OCRRAW][1584]proprinit: Could not open raw device 
+2012-10-05 10:28:37.074: [ default][1584]a_init:7!: Backend init unsuccessful : [33]
+[  OCRUTL][1584]u_set_ocr_error: Parameter was NULL
+2012-10-05 10:28:37.074: [ CSSCLNT][1584]clsssinit: error(33 ) in OCR initialization
+
+[  OCRUTL][1576]u_set_comp_error: Parameter was NULL
+[  OCRUTL][1576]u_set_ocr_error: Parameter was NULL
+2012-10-08 10:21:23.246: [  OCROSD][1576]utgdv:1:could not open registry key SOFTWARE\Oracle\ocr os error The system could not find the environment option that was entered.
+
+[  OCRUTL][1576]u_set_gbl_comp_error: Parameter was NULL
+[  OCRUTL][1576]u_set_gbl_comp_error: Parameter was NULL
+2012-10-08 10:21:23.246: [  OCRRAW][1576]proprinit: Could not open raw device 
+2012-10-08 10:21:23.246: [ default][1576]a_init:7!: Backend init unsuccessful : [33]
+[  OCRUTL][1576]u_set_ocr_error: Parameter was NULL
+2012-10-08 10:21:23.246: [ CSSCLNT][1576]clsssinit: error(33 ) in OCR initialization
+
+[  OCRUTL][1536]u_set_comp_error: Parameter was NULL
+[  OCRUTL][1536]u_set_ocr_error: Parameter was NULL
+2012-10-09 10:26:51.503: [  OCROSD][1536]utgdv:1:could not open registry key SOFTWARE\Oracle\ocr os error The system could not find the environment option that was entered.
+
+[  OCRUTL][1536]u_set_gbl_comp_error: Parameter was NULL
+[  OCRUTL][1536]u_set_gbl_comp_error: Parameter was NULL
+2012-10-09 10:26:51.503: [  OCRRAW][1536]proprinit: Could not open raw device 
+2012-10-09 10:26:51.503: [ default][1536]a_init:7!: Backend init unsuccessful : [33]
+[  OCRUTL][1536]u_set_ocr_error: Parameter was NULL
+2012-10-09 10:26:51.503: [ CSSCLNT][1536]clsssinit: error(33 ) in OCR initialization
+
+[  OCRUTL][1524]u_set_comp_error: Parameter was NULL
+[  OCRUTL][1524]u_set_ocr_error: Parameter was NULL
+2012-10-10 10:46:03.610: [  OCROSD][1524]utgdv:1:could not open registry key SOFTWARE\Oracle\ocr os error The system could not find the environment option that was entered.
+
+[  OCRUTL][1524]u_set_gbl_comp_error: Parameter was NULL
+[  OCRUTL][1524]u_set_gbl_comp_error: Parameter was NULL
+2012-10-10 10:46:03.610: [  OCRRAW][1524]proprinit: Could not open raw device 
+2012-10-10 10:46:03.610: [ default][1524]a_init:7!: Backend init unsuccessful : [33]
+[  OCRUTL][1524]u_set_ocr_error: Parameter was NULL
+2012-10-10 10:46:03.610: [ CSSCLNT][1524]clsssinit: error(33 ) in OCR initialization
+
+[  OCRUTL][1596]u_set_comp_error: Parameter was NULL
+[  OCRUTL][1596]u_set_ocr_error: Parameter was NULL
+2012-10-11 10:25:36.200: [  OCROSD][1596]utgdv:1:could not open registry key SOFTWARE\Oracle\ocr os error The system could not find the environment option that was entered.
+
+[  OCRUTL][1596]u_set_gbl_comp_error: Parameter was NULL
+[  OCRUTL][1596]u_set_gbl_comp_error: Parameter was NULL
+2012-10-11 10:25:36.200: [  OCRRAW][1596]proprinit: Could not open raw device 
+2012-10-11 10:25:36.200: [ default][1596]a_init:7!: Backend init unsuccessful : [33]
+[  OCRUTL][1596]u_set_ocr_error: Parameter was NULL
+2012-10-11 10:25:36.200: [ CSSCLNT][1596]clsssinit: error(33 ) in OCR initialization
+
+[  OCRUTL][1564]u_set_comp_error: Parameter was NULL
+[  OCRUTL][1564]u_set_ocr_error: Parameter was NULL
+2012-10-12 09:50:37.460: [  OCROSD][1564]utgdv:1:could not open registry key SOFTWARE\Oracle\ocr os error The system could not find the environment option that was entered.
+
+[  OCRUTL][1564]u_set_gbl_comp_error: Parameter was NULL
+[  OCRUTL][1564]u_set_gbl_comp_error: Parameter was NULL
+2012-10-12 09:50:37.460: [  OCRRAW][1564]proprinit: Could not open raw device 
+2012-10-12 09:50:37.460: [ default][1564]a_init:7!: Backend init unsuccessful : [33]
+[  OCRUTL][1564]u_set_ocr_error: Parameter was NULL
+2012-10-12 09:50:37.460: [ CSSCLNT][1564]clsssinit: error(33 ) in OCR initialization
+
+[  OCRUTL][1592]u_set_comp_error: Parameter was NULL
+[  OCRUTL][1592]u_set_ocr_error: Parameter was NULL
+2012-10-15 10:29:31.746: [  OCROSD][1592]utgdv:1:could not open registry key SOFTWARE\Oracle\ocr os error The system could not find the environment option that was entered.
+
+[  OCRUTL][1592]u_set_gbl_comp_error: Parameter was NULL
+[  OCRUTL][1592]u_set_gbl_comp_error: Parameter was NULL
+2012-10-15 10:29:31.746: [  OCRRAW][1592]proprinit: Could not open raw device 
+2012-10-15 10:29:31.746: [ default][1592]a_init:7!: Backend init unsuccessful : [33]
+[  OCRUTL][1592]u_set_ocr_error: Parameter was NULL
+2012-10-15 10:29:31.746: [ CSSCLNT][1592]clsssinit: error(33 ) in OCR initialization
+
+[  OCRUTL][1640]u_set_comp_error: Parameter was NULL
+[  OCRUTL][1640]u_set_ocr_error: Parameter was NULL
+2012-10-15 15:36:59.261: [  OCROSD][1640]utgdv:1:could not open registry key SOFTWARE\Oracle\ocr os error The system could not find the environment option that was entered.
+
+[  OCRUTL][1640]u_set_gbl_comp_error: Parameter was NULL
+[  OCRUTL][1640]u_set_gbl_comp_error: Parameter was NULL
+2012-10-15 15:36:59.261: [  OCRRAW][1640]proprinit: Could not open raw device 
+2012-10-15 15:36:59.261: [ default][1640]a_init:7!: Backend init unsuccessful : [33]
+[  OCRUTL][1640]u_set_ocr_error: Parameter was NULL
+2012-10-15 15:36:59.261: [ CSSCLNT][1640]clsssinit: error(33 ) in OCR initialization
+
+[  OCRUTL][1592]u_set_comp_error: Parameter was NULL
+[  OCRUTL][1592]u_set_ocr_error: Parameter was NULL
+2012-10-16 09:27:29.252: [  OCROSD][1592]utgdv:1:could not open registry key SOFTWARE\Oracle\ocr os error The system could not find the environment option that was entered.
+
+[  OCRUTL][1592]u_set_gbl_comp_error: Parameter was NULL
+[  OCRUTL][1592]u_set_gbl_comp_error: Parameter was NULL
+2012-10-16 09:27:29.252: [  OCRRAW][1592]proprinit: Could not open raw device 
+2012-10-16 09:27:29.252: [ default][1592]a_init:7!: Backend init unsuccessful : [33]
+[  OCRUTL][1592]u_set_ocr_error: Parameter was NULL
+2012-10-16 09:27:29.252: [ CSSCLNT][1592]clsssinit: error(33 ) in OCR initialization
+
+[  OCRUTL][1524]u_set_comp_error: Parameter was NULL
+[  OCRUTL][1524]u_set_ocr_error: Parameter was NULL
+2012-10-23 11:20:09.717: [  OCROSD][1524]utgdv:1:could not open registry key SOFTWARE\Oracle\ocr os error The system could not find the environment option that was entered.
+
+[  OCRUTL][1524]u_set_gbl_comp_error: Parameter was NULL
+[  OCRUTL][1524]u_set_gbl_comp_error: Parameter was NULL
+2012-10-23 11:20:09.717: [  OCRRAW][1524]proprinit: Could not open raw device 
+2012-10-23 11:20:09.717: [ default][1524]a_init:7!: Backend init unsuccessful : [33]
+[  OCRUTL][1524]u_set_ocr_error: Parameter was NULL
+2012-10-23 11:20:09.717: [ CSSCLNT][1524]clsssinit: error(33 ) in OCR initialization
+
+[  OCRUTL][1576]u_set_comp_error: Parameter was NULL
+[  OCRUTL][1576]u_set_ocr_error: Parameter was NULL
+2012-11-01 12:12:04.417: [  OCROSD][1576]utgdv:1:could not open registry key SOFTWARE\Oracle\ocr os error The system could not find the environment option that was entered.
+
+[  OCRUTL][1576]u_set_gbl_comp_error: Parameter was NULL
+[  OCRUTL][1576]u_set_gbl_comp_error: Parameter was NULL
+2012-11-01 12:12:04.417: [  OCRRAW][1576]proprinit: Could not open raw device 
+2012-11-01 12:12:04.417: [ default][1576]a_init:7!: Backend init unsuccessful : [33]
+[  OCRUTL][1576]u_set_ocr_error: Parameter was NULL
+2012-11-01 12:12:04.417: [ CSSCLNT][1576]clsssinit: error(33 ) in OCR initialization
+
+[  OCRUTL][1540]u_set_comp_error: Parameter was NULL
+[  OCRUTL][1540]u_set_ocr_error: Parameter was NULL
+2012-11-02 09:49:30.073: [  OCROSD][1540]utgdv:1:could not open registry key SOFTWARE\Oracle\ocr os error The system could not find the environment option that was entered.
+
+[  OCRUTL][1540]u_set_gbl_comp_error: Parameter was NULL
+[  OCRUTL][1540]u_set_gbl_comp_error: Parameter was NULL
+2012-11-02 09:49:30.073: [  OCRRAW][1540]proprinit: Could not open raw device 
+2012-11-02 09:49:30.073: [ default][1540]a_init:7!: Backend init unsuccessful : [33]
+[  OCRUTL][1540]u_set_ocr_error: Parameter was NULL
+2012-11-02 09:49:30.073: [ CSSCLNT][1540]clsssinit: error(33 ) in OCR initialization
+
+[  OCRUTL][1556]u_set_comp_error: Parameter was NULL
+[  OCRUTL][1556]u_set_ocr_error: Parameter was NULL
+2012-11-15 03:21:03.173: [  OCROSD][1556]utgdv:1:could not open registry key SOFTWARE\Oracle\ocr os error The system could not find the environment option that was entered.
+
+[  OCRUTL][1556]u_set_gbl_comp_error: Parameter was NULL
+[  OCRUTL][1556]u_set_gbl_comp_error: Parameter was NULL
+2012-11-15 03:21:03.173: [  OCRRAW][1556]proprinit: Could not open raw device 
+2012-11-15 03:21:03.173: [ default][1556]a_init:7!: Backend init unsuccessful : [33]
+[  OCRUTL][1556]u_set_ocr_error: Parameter was NULL
+2012-11-15 03:21:03.173: [ CSSCLNT][1556]clsssinit: error(33 ) in OCR initialization
+
+[  OCRUTL][1568]u_set_comp_error: Parameter was NULL
+[  OCRUTL][1568]u_set_ocr_error: Parameter was NULL
+2012-11-21 03:49:47.502: [  OCROSD][1568]utgdv:1:could not open registry key SOFTWARE\Oracle\ocr os error The system could not find the environment option that was entered.
+
+[  OCRUTL][1568]u_set_gbl_comp_error: Parameter was NULL
+[  OCRUTL][1568]u_set_gbl_comp_error: Parameter was NULL
+2012-11-21 03:49:47.502: [  OCRRAW][1568]proprinit: Could not open raw device 
+2012-11-21 03:49:47.502: [ default][1568]a_init:7!: Backend init unsuccessful : [33]
+[  OCRUTL][1568]u_set_ocr_error: Parameter was NULL
+2012-11-21 03:49:47.502: [ CSSCLNT][1568]clsssinit: error(33 ) in OCR initialization
+
+[  OCRUTL][1616]u_set_comp_error: Parameter was NULL
+[  OCRUTL][1616]u_set_ocr_error: Parameter was NULL
+2012-12-13 03:24:10.286: [  OCROSD][1616]utgdv:1:could not open registry key SOFTWARE\Oracle\ocr os error The system could not find the environment option that was entered.
+
+[  OCRUTL][1616]u_set_gbl_comp_error: Parameter was NULL
+[  OCRUTL][1616]u_set_gbl_comp_error: Parameter was NULL
+2012-12-13 03:24:10.286: [  OCRRAW][1616]proprinit: Could not open raw device 
+2012-12-13 03:24:10.286: [ default][1616]a_init:7!: Backend init unsuccessful : [33]
+[  OCRUTL][1616]u_set_ocr_error: Parameter was NULL
+2012-12-13 03:24:10.286: [ CSSCLNT][1616]clsssinit: error(33 ) in OCR initialization
+
+[  OCRUTL][1720]u_set_comp_error: Parameter was NULL
+[  OCRUTL][1720]u_set_ocr_error: Parameter was NULL
+2012-12-22 03:18:14.500: [  OCROSD][1720]utgdv:1:could not open registry key SOFTWARE\Oracle\ocr os error The system could not find the environment option that was entered.
+
+[  OCRUTL][1720]u_set_gbl_comp_error: Parameter was NULL
+[  OCRUTL][1720]u_set_gbl_comp_error: Parameter was NULL
+2012-12-22 03:18:14.593: [  OCRRAW][1720]proprinit: Could not open raw device 
+2012-12-22 03:18:14.593: [ default][1720]a_init:7!: Backend init unsuccessful : [33]
+[  OCRUTL][1720]u_set_ocr_error: Parameter was NULL
+2012-12-22 03:18:14.593: [ CSSCLNT][1720]clsssinit: error(33 ) in OCR initialization
+
+[  OCRUTL][1656]u_set_comp_error: Parameter was NULL
+[  OCRUTL][1656]u_set_ocr_error: Parameter was NULL
+2013-01-10 03:27:37.212: [  OCROSD][1656]utgdv:1:could not open registry key SOFTWARE\Oracle\ocr os error The system could not find the environment option that was entered.
+
+[  OCRUTL][1656]u_set_gbl_comp_error: Parameter was NULL
+[  OCRUTL][1656]u_set_gbl_comp_error: Parameter was NULL
+2013-01-10 03:27:37.212: [  OCRRAW][1656]proprinit: Could not open raw device 
+2013-01-10 03:27:37.212: [ default][1656]a_init:7!: Backend init unsuccessful : [33]
+[  OCRUTL][1656]u_set_ocr_error: Parameter was NULL
+2013-01-10 03:27:37.212: [ CSSCLNT][1656]clsssinit: error(33 ) in OCR initialization
+
+[  OCRUTL][1540]u_set_comp_error: Parameter was NULL
+[  OCRUTL][1540]u_set_ocr_error: Parameter was NULL
+2013-01-21 12:21:36.025: [  OCROSD][1540]utgdv:1:could not open registry key SOFTWARE\Oracle\ocr os error The system could not find the environment option that was entered.
+
+[  OCRUTL][1540]u_set_gbl_comp_error: Parameter was NULL
+[  OCRUTL][1540]u_set_gbl_comp_error: Parameter was NULL
+2013-01-21 12:21:36.025: [  OCRRAW][1540]proprinit: Could not open raw device 
+2013-01-21 12:21:36.025: [ default][1540]a_init:7!: Backend init unsuccessful : [33]
+[  OCRUTL][1540]u_set_ocr_error: Parameter was NULL
+2013-01-21 12:21:36.025: [ CSSCLNT][1540]clsssinit: error(33 ) in OCR initialization
+

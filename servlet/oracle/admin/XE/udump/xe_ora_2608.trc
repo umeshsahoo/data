@@ -1,0 +1,54 @@
+Dump file c:\oraclexe\app\oracle\admin\xe\udump\xe_ora_2608.trc
+Mon Aug 13 10:09:28 2012
+ORACLE V10.2.0.1.0 - Production vsnsta=0
+vsnsql=14 vsnxtr=3
+Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+Windows NT Version V6.1 Service Pack 1
+CPU                 : 2 - type 586, 2 Physical Cores
+Process Affinity    : 0x00000000
+Memory (Avail/Total): Ph:3131M/3965M, Ph+PgF:6314M/7928M, VA:3148M/4095M
+Instance name: xe
+
+Redo thread mounted by this instance: 0 <none>
+
+Oracle process number: 18
+
+Windows thread id: 2608, image: ORACLE.EXE (SHAD)
+
+
+*** SERVICE NAME:() 2012-08-13 10:09:28.950
+*** SESSION ID:(38.1) 2012-08-13 10:09:28.950
+kccsga_update_ckpt: num_1 = 8, num_2 = 0, num_3 = 0, lbn_2 = 0, lbn_3 = 0
+*** 2012-08-13 10:09:43.543
+Thread 1 checkpoint: logseq 7, block 2, scn 284543
+  cache-low rba: logseq 7, block 33998
+    on-disk rba: logseq 7, block 35570, scn 291471
+  start recovery at logseq 7, block 33998, scn 0
+----- Redo read statistics for thread 1 -----
+Read rate (ASYNC): 786Kb in 0.75s => 1.02 Mb/sec
+Total physical reads: 4096Kb
+Longest record: 12Kb, moves: 0/1127 (0%)
+Change moves: 1/22 (4%), moved: 0Mb
+Longest LWN: 297Kb, moves: 0/46 (0%), moved: 0Mb
+Last redo scn: 0x0000.0004728e (291470)
+----------------------------------------------
+----- Recovery Hash Table Statistics ---------
+Hash table buckets = 32768
+Longest hash chain = 2
+Average hash chain = 323/321 = 1.0
+Max compares per lookup = 1
+Avg compares per lookup = 1797/2162 = 0.8
+----------------------------------------------
+*** 2012-08-13 10:09:44.310
+KCRA: start recovery claims for 323 data blocks
+*** 2012-08-13 10:09:44.313
+KCRA: blocks processed = 323/323, claimed = 323, eliminated = 0
+*** 2012-08-13 10:09:44.677
+Recovery of Online Redo Log: Thread 1 Group 2 Seq 7 Reading mem 0
+----- Recovery Hash Table Statistics ---------
+Hash table buckets = 32768
+Longest hash chain = 2
+Average hash chain = 323/321 = 1.0
+Max compares per lookup = 2
+Avg compares per lookup = 2112/2118 = 1.0
+----------------------------------------------

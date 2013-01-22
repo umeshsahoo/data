@@ -1,0 +1,27 @@
+CREATE OR REPLACE PACKAGE BODY dbms_streams_cdc_adm wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+b
+11f 124
+kkh6xUwYVwm1EIVGuEThreK07rMwgxDQLUoVfC+iZDPqfoBm3I6x6IO0DOCQt1T2wS89xQfv
+zKZE7rUyvCEh594hXkd9oYbMqguEaSiL5+i5rEaFRq0Ns6zoHXTyQhwhWPe94elrGVpt7VLb
+lQTjQ5MFHD/IMm3kXKyy5ejUM57K9gKYazibZWAen1th9xRlJ8XfKf5FhZtTcl7/Xnv6ieKY
+AT+FzwzAQUgpZZptwJg6Rxof2I1mEgfwzi2f36BLEHjmu1Ut2MO8CSaqqjrtks4dsevMrw==
+
+
+/

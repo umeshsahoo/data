@@ -1,0 +1,34 @@
+CREATE OR REPLACE PACKAGE dbms_repcat_admin wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+9
+87f 243
+ABOPmZBFOLD4EDFLaU7Jb7BKy7wwg9cr2UjWfC+KKjqeLPSOgVD23G2TdtVL6Pa3ibe1tZYn
+hINnboCEd+WnAqkxWJAN6nU5XcuOGGZkOxd+FFco6TuhqUzRAhG0Wlajy/PUBf7FA8t2PFrc
+RnUAS2jhnTuEkWUEOys2jeP3vn+U4TvfqGX/9KDgDgujKHfpLBguBZE76TyVV+vKuNB5Q2/2
+dYAsUr0nWTEpNOW/ncj0hTtYaHNWc2iNdS2e6tdUrMlpsoWAv4TS4b6wWRTSGckQnaHKhIcQ
+oZAyhqmDE02hUKBT9EnU7THuaBhKir7wP/T5hfkb5EITz0xO9MBBPgHJiG0tbiU8qPhNUsUL
+vlTPbRzGzoxJ4RwFzOpNUJjirz4cj8WFI17LLidJS+cZ+dvW1jQV9/Sm/g/4PCnymLkqvIHd
+dFW+Y6f5ahXkUW1bnGDjwmwpoL3BWGGTkzd7Q/DWg3uA3NxqccajDG1Iq1OeE7mj6IaG6CBS
+aSrbA+stp9GOumbvoaCTWr5vW8UVjfgeN+z5vC30rTr+i11ixwwaZnPGtDTP4WphRBE=
+
+/
+CREATE OR REPLACE PUBLIC SYNONYM dbms_repcat_admin FOR dbms_repcat_admin
+/
+GRANT EXECUTE ON dbms_repcat_admin TO execute_catalog_role
+/

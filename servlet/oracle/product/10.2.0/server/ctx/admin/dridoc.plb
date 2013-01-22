@@ -1,0 +1,31 @@
+CREATE OR REPLACE PACKAGE BODY dridoc wrapped 
+a000000
+1f
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+b
+5c5 25c
+v2rZUjPzDTMyTsvp4X9vEmKjmmQwg2PD2UoVfHRox50VgOXpEZyGKxJatpxgoKGNGo7cc7Wd
+VEkp1uHp4+nmwIoIC9Qr/dTQiqnI9lL7OBpQdnUufbEE18ygOWuJB8JRnR5YLxM2Zx8C6VsJ
+Nycedtenz5Tl1tUXD/GsoF2cBnowj8Ef7F4k6sdWmlJVxVtPpZBsrRwaUV+6R0DyGphrST3j
+K2EYdhuokaDCNnJ2/UkNZBmNTWeY0/BEwXk9K5Q1iVSbR6erL6DU96owqcEj4ECcR4rt4aSS
+aB+O4w08Ma4IhUmfjHdwkSh/hCDh6R4B/7ZkuryS4ycGHiy/z7UyRC35trLUzg41dd32j/CK
+qMlD5khpIA/GGoU7CTCf7RXRqFHv+5PdQKNO8sHbJI6hhAAY++M0YQACn2jKx31LSKA4i2Xo
+fq9Yb8SC/1ENIQ/8iDgBUpOViJNyJg/z6R3ZBjJIHQeAd9T9yv1veHy5pz25J8TMPXPUhut+
+XPPN5hJwhP72we8me++kwuhr3hfid0KZhIz+V2TYtwZyPDqR/xWPc+ZqMO4EhL0JPkoIGUeR
+UEf5iJ2xMcYssydSlQ==
+
+/

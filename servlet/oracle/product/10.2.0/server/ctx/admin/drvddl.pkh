@@ -1,0 +1,503 @@
+rem 
+rem Copyright (c) 2002, 2003, Oracle Corporation.  All rights reserved.  
+rem
+rem    NAME
+rem      drvddl.pkh - DR cartridge internal, inVoker's rights DDL services
+rem
+rem    DESCRIPTION
+rem      functions called by ConText cartridge routines to perform 
+rem      various DDL functionalities
+rem   
+rem    NOTES
+rem  
+rem    MODIFIED    (MM/DD/YY)
+rem    wclin        10/16/03 - spprt altr idx rplc metadata (non)txntional 
+rem    smuralid     10/09/03 - IndexSync: direct_path defaults to false 
+rem    gkaminag     10/23/03 - optimize type 
+rem    yucheng      08/11/03 - local online indexing support 
+rem    gkaminag     07/24/03 - replace metadata partition
+rem    yucheng      06/26/03 - Fix bug 2960964
+rem    smuralid     06/23/03 - IndexPartResume: add 'isReplace' param
+rem    gkaminag     06/11/03 - replace lang col and lexer
+rem    gkaminag     06/05/03 - replace metadata
+rem    yucheng      05/08/03 - DML enhancements
+rem    smuralid     04/21/03 - IndexSync: new parameter 'direct_path'
+rem    wclin        05/09/03 - statement consistency support
+rem    gkaminag     03/06/03 - switch user on opt if needed
+rem    smuralid     12/25/02 - IndexCreate: eliminate 'roption' parameter
+rem    yucheng      11/20/02 - inter-partition parallel support
+rem    smuralid     11/18/02 - parallel optimize issues
+rem    gkaminag     07/03/02 - security phase 2
+rem    gkaminag     06/25/02 - gkaminag_misc_020625
+rem    gkaminag     06/03/02 - creation 
+
+create or replace package drvddl authid current_user as
+
+  pv_idx_mem            number;
+  pv_is_import          boolean;
+  pv_master_params      varchar2(2000);
+  pv_partition_populate boolean;
+
+  px_partition_error    EXCEPTION;
+
+  PARALLEL_OP  constant number :=  1;      
+  CREATE_OP    constant number := 16;      
+  RESUME_OP    constant number := 32;      
+
+  P_CREATE_OP  constant number := 16 + 1;  
+  P_RESUME_OP  constant number := 32 + 1;  
+  P_SYNC_OP    constant number := 64 + 1;  
+
+/*----------------------- PartitionCreate  -----------------------*/
+
+PROCEDURE PartitionCreate(
+  ia              in  sys.ODCIIndexInfo,
+  owner           in  varchar2,
+  index_name      in  varchar2,
+  index_partition in  varchar2,
+  table_owner     in  varchar2,
+  table_name      in  varchar2,
+  table_partition in  varchar2,
+  idxmem          in  number,
+  storage         in  varchar2,
+  populate        in  boolean default TRUE,
+  sync_type       in  varchar2 default NULL,
+  sync_memory     in  varchar2 default NULL,
+  sync_paradegree in  number   default NULL,
+  sync_interval   in  varchar2 default NULL,
+  is_online       in  boolean default FALSE 
+);
+
+/*----------------------- IndexCreate  -----------------------*/
+/*
+  NAME
+    IndexCreate
+
+  DESCRIPTION
+    create an index
+
+  ARGUMENTS
+    owner        index owner
+    index_name   index name
+    table_owner  table owner
+    table_name   table name
+    column_name  text column name
+    column_type  text column type (optional)
+    populate     populate/nopopulate
+    para         parallel degree
+    langcol      language column
+    fmtcol       format column name
+    csetcol      charset column name
+    idxmem       index memory
+    datastore    datastore pref name
+    filter       filter pref name
+    section      section group pref name
+    lexer        lexer pref name
+    wordlist     wordlist pref name
+    stoplist     stoplist pref name
+    storage      storage pref name
+    txntional    transactional pref name
+
+  NOTES
+ 
+  EXCEPTIONS
+ 
+  RETURNS
+ 
+*/
+PROCEDURE IndexCreate(
+  ia          in  sys.odciindexinfo,
+  owner       in  varchar2,
+  index_name  in  varchar2,
+  index_part  in  varchar2,
+  table_owner in  varchar2,
+  table_name  in  varchar2,
+  table_part  in  varchar2,
+  column_name in  varchar2,
+  column_type in varchar2,
+  call_prop   in  number,
+  populate    in  boolean,
+  para        in  number,
+  langcol     in  varchar2,
+  fmtcol      in  varchar2,
+  csetcol     in  varchar2,
+  idxmem      in  number,
+  datastore   in  varchar2,
+  filter      in  varchar2,
+  section     in  varchar2,
+  lexer       in  varchar2,
+  wordlist    in  varchar2,
+  stoplist    in  varchar2,
+  storage     in  varchar2,
+  txntional   in  varchar2,
+  sync_type   in  varchar2,
+  sync_memory     in  varchar2,
+  sync_paradegree in  number,
+  sync_interval   in  varchar2
+);
+
+/*----------------------- IndexDrop  -------------------------*/
+/*
+  NAME
+    IndexDrop
+
+  DESCRIPTION
+    drop an index
+
+  ARGUMENTS
+    ia           index info
+*/
+PROCEDURE IndexDrop(
+  ia          in  sys.ODCIIndexInfo,
+  owner       in  varchar2, 
+  index_name  in  varchar2,
+  call_prop   in  number
+);
+
+/*----------------------- IndexTruncate  ---------------------*/
+/*
+  NAME
+    IndexTruncate
+
+  DESCRIPTION
+    truncate an index
+
+  ARGUMENTS
+    ia           index info
+    owner        index owner
+    index_name   index name
+    ixp_name     index partition name
+    call_prop    call property
+*/
+PROCEDURE IndexTruncate(
+  ia           in sys.odciindexinfo,
+  owner        in varchar2,
+  index_name   in varchar2,
+  ixp_name     in varchar2,
+  call_prop    in number
+
+);
+
+/*----------------------- IndexTransport  -----------------------*/
+/*
+  NAME
+    IndexTransport
+
+  DESCRIPTION
+    transport tablespace support 
+
+  ARGUMENTS
+    owner        index owner
+    index_name   index name
+    index_part   index partition name
+    table_owner  table owner
+    table_name   table name
+    table_part   table partition name
+
+  NOTES
+
+  EXCEPTIONS
+
+  RETURNS
+
+*/
+PROCEDURE IndexTransport(
+  owner       in  varchar2,
+  index_name  in  varchar2,
+  index_part  in  varchar2,
+  table_owner in  varchar2,
+  table_name  in  varchar2,
+  table_part  in  varchar2,
+  IndexInfoFlags in number,
+  CallProperty   in number
+);
+
+/*----------------------- PartitionSplit  -----------------------*/
+/*
+  NAME
+    PartitionSplit
+
+  DESCRIPTION
+    split one partition into two
+
+  ARGUMENTS
+    ia          ODCIIndexInfo for the spliting partition
+    part1       ODCIPartInfo for resulting partition
+    part2       ODCIPartInfo for resulting partition
+
+
+  NOTES
+
+  EXCEPTIONS
+
+  RETURNS
+
+*/
+PROCEDURE PartitionSplit(
+  ia              in  sys.odciindexinfo,
+  part1           in  sys.odcipartinfo,     
+  part2           in  sys.odcipartinfo
+);
+
+/*----------------------- PartitionMerge  -----------------------*/
+/*
+  NAME
+    PartitionMerge
+
+  DESCRIPTION
+    split one partition into two
+
+  ARGUMENTS
+    ia          ODCIIndexInfo for the resulting partition
+    part1       ODCIPartInfo for one of the merging partitions
+    part2       ODCIPartInfo for one of the merging  partition
+
+
+  NOTES
+
+  EXCEPTIONS
+
+  RETURNS
+
+*/
+PROCEDURE PartitionMerge(
+  ia              in  sys.odciindexinfo,
+  part1           in  sys.odcipartinfo,     
+  part2           in  sys.odcipartinfo      
+);
+
+/*----------------------- PartitionExchange  -----------------------*/
+/*
+  NAME
+    PartitionExchange
+
+  DESCRIPTION
+    Swap a partition with a table 
+
+  ARGUMENTS
+    ia          ODCIIndexInfo for the partition index to be exchanged 
+    ia1         ODCIIndexinfo for the index on the table 
+
+
+  NOTES
+
+  EXCEPTIONS
+
+  RETURNS
+
+*/
+PROCEDURE PartitionExchange(
+  ia              in  sys.odciindexinfo,
+  ia1             in  sys.odciindexinfo
+);
+
+/*----------------------- IndexRename  ---------------------*/
+/*
+  NAME
+    IndexRename
+
+  DESCRIPTION
+    rename an index
+
+  ARGUMENTS
+    ia           index info
+    owner        index owner
+    index_name   index name
+    new_name     new name
+*/
+PROCEDURE IndexRename(
+  ia           in sys.odciindexinfo,
+  owner        in varchar2,
+  index_name   in varchar2,
+  new_name     in varchar2
+);
+
+/*----------------------- IndexReplace  -------------------------*/
+/*
+  NAME
+    IndexReplace
+
+  DESCRIPTION
+    rebuild an index, replacing preferences as needed
+
+  ARGUMENTS
+    ia           index info
+    idx          index record
+    idxmem       index memory
+    para         parallel degree
+    langcol      language column
+    fmtcol       format column name
+    csetcol      charset column name
+    datastore    datastore pref name
+    filter       filter pref name
+    section      section group pref name
+    lexer        lexer pref name
+    wordlist     wordlist pref name
+    stoplist     stoplist pref name
+    storage      storage pref name
+    isonline     is online ? 
+*/
+PROCEDURE IndexReplace(
+  ia          in  sys.ODCIIndexInfo,
+  idx         in out nocopy  dr_def.idx_rec,
+  idxmem      in  number,
+  para        in  number,
+  langcol     in  varchar2,
+  fmtcol      in  varchar2,
+  csetcol     in  varchar2,
+  datastore   in  varchar2,
+  filter      in  varchar2,
+  section     in  varchar2,
+  lexer       in  varchar2,
+  wordlist    in  varchar2,
+  stoplist    in  varchar2,
+  storage     in  varchar2,
+  txntional   in  varchar2,
+  sync_type   in  varchar2,
+  sync_memory     in   varchar2,
+  sync_paradegree in   number,
+  sync_interval   in   varchar2,
+  isonline    in  boolean default FALSE,
+  metadataonly in boolean default FALSE
+);
+
+/*----------------------- IndexPartReplace  -------------------------*/
+/*
+  NAME
+    IndexPartReplace
+
+  DESCRIPTION
+    rebuild a index partition, replacing preferences as needed
+
+  ARGUMENTS
+    ia           index info
+    idx          index record
+    ixp          index partition
+    idxmem       index memory
+    storage      storage pref name
+    para         parallel degree
+*/
+PROCEDURE IndexPartReplace(
+  ia          in  sys.ODCIIndexInfo,
+  idx         in  dr_def.idx_rec,
+  ixp         in  dr_def.ixp_rec,
+  idxmem      in  number,
+  storage     in  varchar2,
+  para        in  number,
+  sync_type   in  varchar2,
+  sync_memory     in   varchar2,
+  sync_paradegree in   number,
+  sync_interval   in   varchar2,
+  metadataonly in boolean default FALSE
+);
+
+/*----------------------- IndexResume  -------------------------*/
+/*
+  NAME
+    IndexResume
+
+  DESCRIPTION
+    resume index creation
+
+  ARGUMENTS
+    ia           index info
+    idx          index record
+    para         parallel degree
+    idxmem       index memory
+    isOnline     is online?
+    isreplace    called from replace
+*/
+PROCEDURE IndexResume(
+  ia          in  sys.ODCIIndexInfo,
+  idx         in  dr_def.idx_rec,
+  para        in  number,
+  idxmem      in  number,
+  isonline    in  boolean default FALSE,
+  isreplace   in  boolean default FALSE
+);
+
+/*----------------------- IndexPartResume  -------------------------*/
+/*
+  NAME
+    IndexPartResume
+
+  DESCRIPTION
+    resume index creation on a partition
+
+  ARGUMENTS
+    ia           index info which also has partition info
+    idx          index record
+    para         parallel degree
+    idxmem       index memory
+*/
+PROCEDURE IndexPartResume(
+  ia          in  sys.ODCIIndexInfo,
+  idx         in  dr_def.idx_rec,
+  para        in  number,
+  idxmem      in  number
+);
+
+/*----------------------- IndexOptimize  -------------------------*/
+/*
+  NAME
+    IndexOptimize
+
+  DESCRIPTION
+    optimize the index
+
+  ARGUMENTS
+    idx          index record
+    ixpname      partition name
+    operation    FAST, FULL, or TOKEN
+    maxtime      maxtime for gc
+    token	 text token string 
+*/
+PROCEDURE IndexOptimize(
+  idx         in  dr_def.idx_rec,
+  ixpname     in  varchar2,
+  operation   in  varchar2,
+  maxtime     in  number,
+  token       in  varchar2,
+  ttype       in  number,
+  pdegree     in  number
+);
+
+TYPE popcurtyp is ref cursor return ctxsys.dr$number_sequence%rowtype;
+
+FUNCTION IndexOptimizeParFn(
+  crsr        in popcurtyp,
+  idxownid    in number,
+  idxowner    in varchar2,
+  idxname     in varchar2,
+  ixpname     in varchar2,
+  optmode     in number,
+  maxtime     in number,
+  logfile     in varchar2,
+  maxhash     in number,
+  ttype       in number
+) return varchar2;
+
+/*----------------------- IndexSync  -------------------------*/
+/*
+  NAME
+    IndexSync
+
+  DESCRIPTION
+    sync the index
+
+  ARGUMENTS
+    idx          index record
+    idxmem       index memory
+    ixpname      index partition name
+    direct_path  should we use direct-path inserts ?
+*/
+PROCEDURE IndexSync(
+  idx         in  dr_def.idx_rec,
+  ixpname     in  varchar2,
+  idxmem      in  number,
+  parallel_degree in number default 1,
+  direct_path in  boolean default false
+);
+
+end drvddl;
+/

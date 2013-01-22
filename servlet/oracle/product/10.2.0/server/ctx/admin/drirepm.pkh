@@ -1,0 +1,51 @@
+Rem 
+rem Copyright (c) 2001, 2003, Oracle Corporation.  All rights reserved.  
+rem    NAME
+rem      drirepm.pkh
+rem    DESCRIPTION
+rem      This package contains functions for the meta-data calls in the
+rem      ctx_report package
+rem
+rem    NOTES
+rem    MODIFIED    (MM/DD/YY)
+rem      ehuang    05/21/03  - 
+rem      ehuang    03/24/03  - xml support
+rem      gkaminag  12/21/01  - Merged gkaminag_report_011217
+rem      gkaminag  12/17/01  - creation
+
+create or replace package drirepm as
+
+/*--------------------------- describe_index --------------------------------*/
+
+procedure describe_index(
+  index_name    in varchar2,
+  report        in out nocopy clob,
+  report_format in varchar2 DEFAULT 'TEXT'
+);
+
+/*--------------------------- describe_policy -------------------------------*/
+
+procedure describe_policy(
+  policy_name   in varchar2,
+  report        in out nocopy clob,
+  report_format in varchar2 DEFAULT 'TEXT'
+);
+
+/*-------------------------- create_index_script ----------------------------*/
+
+procedure create_index_script(
+  index_name      in varchar2,
+  report          in out nocopy clob,
+  prefname_prefix in varchar2 default null
+);
+
+/*-------------------------- create_policy_script ---------------------------*/
+
+procedure create_policy_script(
+  policy_name      in varchar2,
+  report          in out nocopy clob,
+  prefname_prefix in varchar2 default null
+);
+
+end drirepm;
+/

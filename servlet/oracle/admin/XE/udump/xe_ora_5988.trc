@@ -1,0 +1,27 @@
+Dump file c:\oraclexe\app\oracle\admin\xe\udump\xe_ora_5988.trc
+Fri Aug 10 11:53:31 2012
+ORACLE V10.2.0.1.0 - Production vsnsta=0
+vsnsql=14 vsnxtr=3
+Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+Windows NT Version V6.1 Service Pack 1
+CPU                 : 2 - type 586, 2 Physical Cores
+Process Affinity    : 0x00000000
+Memory (Avail/Total): Ph:1448M/3965M, Ph+PgF:4055M/7928M, VA:3143M/4095M
+Instance name: xe
+
+Redo thread mounted by this instance: 0 <none>
+
+Oracle process number: 18
+
+Windows thread id: 5988, image: ORACLE.EXE (SHAD)
+
+
+*** SERVICE NAME:() 2012-08-10 11:53:31.787
+*** SESSION ID:(38.3) 2012-08-10 11:53:31.787
+kccsga_update_ckpt: num_1 = 8, num_2 = 0, num_3 = 0, lbn_2 = 0, lbn_3 = 0
+Control file created with size 430 blocks
+*** ACTION NAME:() 2012-08-10 11:53:37.070
+*** 2012-08-10 11:53:37.070 60679 kcrr.c
+ARCH: Archival disabled due to shutdown: 1089
+*** 2012-08-10 11:53:38.071 60679 kcrr.c
+ARCH: Archival disabled due to shutdown: 1089

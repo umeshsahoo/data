@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<!DOCTYPE HelpAttributes>
+<HelpAttributes DTDVersion="1.0">
+   <AttName Name="DocSet" Display="Yes" UIString="DocSet" AttType="Enum">
+      <AttVal Name="Oracle Data Provider Help" Display="Yes" UIString="Oracle Data Provider for .NET" />
+   </AttName>
+</HelpAttributes>

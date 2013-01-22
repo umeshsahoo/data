@@ -1,0 +1,11 @@
+;;; 
+Import: Release 10.2.0.1.0 - Production on Thursday, 27 September, 2012 12:37:12
+
+Copyright (c) 2003, 2005, Oracle.  All rights reserved.
+;;; 
+Connected to: Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+ORA-39000: bad dump file specification
+ORA-31640: unable to open dump file "C:\oraclexe\app\oracle\admin\XE\dpdump\mdb111_small.dpdmp" for read
+ORA-27041: unable to open file
+OSD-04002: unable to open file
+O/S-Error: (OS 2) The system cannot find the file specified.

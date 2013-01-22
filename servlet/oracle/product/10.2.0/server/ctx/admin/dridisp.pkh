@@ -1,0 +1,121 @@
+rem 
+rem $Header: dridisp.pkh 04-feb-2003.12:35:00 gkaminag Exp $ 
+rem 
+Rem Copyright (c) 1991, 2003, Oracle Corporation.  All rights reserved.  
+Rem    NAME
+Rem      drdisp.pkh - Dispatcher
+Rem    DESCRIPTION
+Rem
+Rem    MODIFIED   (MM/DD/YY)
+Rem     gkaminag   02/04/03  - remove safe callout
+Rem     gkaminag   08/14/02  - move execasown to drvdisp
+Rem     gkaminag   07/18/02  - add lob argument
+Rem     gkaminag   07/02/02  - add execasown
+Rem     gkaminag   04/09/02  - remove ctxsrv.
+Rem     yucheng    10/12/01 -  parallel sync
+Rem     yucheng    09/05/01 -  parallel support
+Rem     gkaminag   08/11/00 -  trusted callout takes partition name
+Rem     yucheng    12/29/99 -  add ret3 to safe callout
+Rem     gkaminag   11/23/99 -  safe to trusted migration
+Rem     gkaminag   09/16/98 -  make safe_callout private
+Rem     gkaminag   08/10/98 -  add safe callout execute
+Rem     gkaminag   03/20/98 -  package name change
+Rem     ehuang     07/28/97 -  Bug 518206 - extends get_cmd to ret pipe
+Rem     ymatsuda   01/13/97 -  add clear_oob
+Rem     ymatsuda   10/31/96 -  add CMD_REFRESH
+Rem     wkeese     09/24/94 -  Add sequence number for listener ID 
+Rem     wkeese     09/12/94 -  Creation 
+
+create or replace package dridisp is
+
+  /*
+   * NAME
+   *   EXECTRUST - synchronous trust callout command
+   *
+   * RETURN
+   *
+   */
+  procedure EXECTRUST(
+                     idx_owner  in     varchar2,
+                     idx_name   in     varchar2,
+                     part_name  in     varchar2,
+                     func_code  in     number,
+  		     arg1       in     varchar2 default NULL,
+  		     arg2       in     varchar2 default NULL,
+  		     arg3       in     varchar2 default NULL,
+  		     arg4       in     varchar2 default NULL,
+  		     arg5       in     varchar2 default NULL,
+  		     arg6       in     varchar2 default NULL,
+  		     arg7       in     varchar2 default NULL,
+  		     arg8       in     varchar2 default NULL,
+  		     arg9       in     varchar2 default NULL,
+  		     arg10      in     varchar2 default NULL
+                    );
+
+  /*
+   * NAME
+   *   EXECTRUST_RET - synchronous trust callout command with return
+   *
+   * RETURN
+   *
+   */
+  procedure EXECTRUST_RET(
+                     idx_owner  in     varchar2,
+                     idx_name   in     varchar2,
+                     part_name  in     varchar2,
+                     func_code  in     number,
+                     ret1       out    varchar2,
+                     ret2       out    varchar2,
+  		     arg1       in     varchar2 default NULL,
+  		     arg2       in     varchar2 default NULL,
+  		     arg3       in     varchar2 default NULL,
+  		     arg4       in     varchar2 default NULL,
+  		     arg5       in     varchar2 default NULL,
+  		     arg6       in     varchar2 default NULL,
+  		     arg7       in     varchar2 default NULL,
+  		     arg8       in     varchar2 default NULL,
+  		     arg9       in     varchar2 default NULL,
+  		     arg10      in     varchar2 default NULL
+                    );
+
+  /*
+   * NAME
+   *   EXECTRUST_RET1 - synchronous trust callout command with 1 return
+   *
+   * RETURN
+   *
+   */
+  function EXECTRUST_RET1(
+                     idx_owner  in     varchar2,
+                     idx_name   in     varchar2,
+                     part_name  in     varchar2,
+                     func_code  in     number,
+  		     arg1       in     varchar2 default NULL,
+  		     arg2       in     varchar2 default NULL,
+  		     arg3       in     varchar2 default NULL,
+  		     arg4       in     varchar2 default NULL,
+  		     arg5       in     varchar2 default NULL,
+  		     arg6       in     varchar2 default NULL,
+  		     arg7       in     varchar2 default NULL,
+  		     arg8       in     varchar2 default NULL,
+  		     arg9       in     varchar2 default NULL,
+  		     arg10      in     varchar2 default NULL
+                    )
+   return varchar2;
+
+/*--------------------------- trusted_tablefunc ----------------------------*/
+
+FUNCTION trusted_tablefunc
+(
+  idxo      in  varchar2,
+  idxn      in  varchar2,
+  idxp      in  varchar2,
+  cur       in  SYS_REFCURSOR,
+  opcode    in  varchar2,
+  memory    in  varchar2,
+  tstamp    in  varchar2
+) return number;
+
+
+end dridisp;
+/

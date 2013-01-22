@@ -1,0 +1,30 @@
+SQL> startup nomount pfile="C:\oraclexe\app\oracle\product\10.2.0\server\config\scripts\init.ora";
+ORACLE instance started.
+
+Total System Global Area  805306368 bytes                                       
+Fixed Size                  1289996 bytes                                       
+Variable Size             209715444 bytes                                       
+Database Buffers          591396864 bytes                                       
+Redo Buffers                2904064 bytes                                       
+SQL> @C:\oraclexe\app\oracle\product\10.2.0\server\config\scripts\rmanRestoreDatafiles.sql;
+SQL> set echo off;
+
+TO_CHAR(SYSTIMEST                                                               
+-----------------                                                               
+20120810 11:52:59                                                               
+
+Allocating device....                                                           
+Specifying datafiles...                                                         
+Specifing datafiles...                                                          
+Restoring ...                                                                   
+Restore done.                                                                   
+
+PL/SQL procedure successfully completed.
+
+
+TO_CHAR(SYSTIMEST                                                               
+-----------------                                                               
+20120810 11:53:30                                                               
+
+Connected.
+SQL> spool C:\oraclexe\app\oracle\product\10.2.0\server\config\log\cloneDBCreation.log

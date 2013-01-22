@@ -1,0 +1,205 @@
+rem 
+rem $Header: driacc.pkh 21-nov-2003.16:20:12 gkaminag Exp $ 
+rem 
+Rem Copyright (c) 1991, 2003, Oracle Corporation.  All rights reserved.  
+Rem    NAME
+Rem      dr0acc.pkh - <one-line expansion of the name>
+Rem    DESCRIPTION
+Rem      <short description of component this file declares/defines>
+Rem    RETURNS
+Rem 
+Rem    NOTES
+Rem      <other useful comments, qualifications, etc.>
+Rem    MODIFIED   (MM/DD/YY)
+Rem     gkaminag   11/21/03  - enh 3275562 
+Rem     ehuang     11/05/98 -  add validate_procedure
+Rem     ehuang     03/25/98 -  rename to driacc
+Rem     rmohsin    07/25/96 -  Adding can_execute
+Rem     gkaminag   03/07/96 -  Add verify colspec
+Rem     gkaminag   02/27/96 -  Creation 
+CREATE OR REPLACE PACKAGE driacc AS
+--
+-- NAME
+--   split_spec - parse a spec into distinct parts
+--
+-- DESCRIPTION 
+--   This procedure takes an object spec and splits it into parts
+-- 
+-- ARGUMENTS
+--   p_spec     (IN)     - the spec
+--   p_type     (IN)     - COL, TABLE, POLICY, or PROC
+--   p_owner    (OUT)    - the owner name
+--   p_object   (OUT)    - the object or package name
+--   p_function (OUT)    - the function name
+--   p_link     (OUT)    - the db link name
+--
+-- NOTES
+--
+-- RETURN
+--
+PROCEDURE split_spec (
+  p_spec     IN VARCHAR2,
+  p_type     IN VARCHAR2,
+  p_owner    IN OUT VARCHAR2,
+  p_object   IN OUT VARCHAR2,
+  p_function IN OUT VARCHAR2,
+  p_link     IN OUT VARCHAR2
+);
+--
+--
+-- NAME
+--   can - test whether user can access an object
+--
+-- DESCRIPTION 
+--   This function tests whether a user can access an object.
+--   if the spec passed in is a synonym reference, will also
+--   transform the spec to the base object.  
+-- 
+-- ARGUMENTS
+--   p_user     (IN)     - the user name
+--   p_access   (IN)     - what kind of access (SELECT/EXECUTE/INSERT)
+--   p_spec     (IN OUT) - spec of object
+--
+-- NOTES
+--
+-- RETURN
+--   true if can access, false otherwise.
+--
+FUNCTION can (
+  p_user     IN VARCHAR2,
+  p_access   IN VARCHAR2,
+  p_spec     IN OUT VARCHAR2
+) RETURN BOOLEAN;
+--
+--
+-- NAME
+--   can_execute - test whether user can execute a function/procedure
+--
+-- DESCRIPTION 
+--   This function tests whether a user can execute a function/procedure.
+--   if the spec passed in is a synonym reference, will also
+--   transform the spec to the base object.
+-- 
+-- ARGUMENTS
+--   p_user     (IN)     - the user name
+--   p_spec     (IN)     - spec of object
+--
+-- NOTES
+--
+-- RETURN
+--   fully qualified name if can access, empty string otherwise.
+--
+FUNCTION can_execute (
+  p_user     IN VARCHAR2,
+  p_spec     IN VARCHAR2
+) RETURN VARCHAR2;
+--
+--
+-- NAME
+--   verify_colspec - verify a column spec
+--
+-- DESCRIPTION 
+--   This function takes a column spec, synonym-reduces, then
+--   verifies that the column exists. 
+-- 
+-- ARGUMENTS
+--   p_colspec  (IN)     - the column spec
+--   p_owner    (OUT)    - the owner
+--   p_table    (OUT)    - the table name
+--   p_column   (OUT)    - the column name
+--   p_dblink   (OUT)    - the database link name
+--
+-- NOTES
+--
+-- RETURN
+--   true if everything checks out, false otherwise.
+--
+FUNCTION verify_colspec (
+  p_colspec    IN     VARCHAR2,
+  p_owner      IN OUT VARCHAR2,
+  p_table      IN OUT VARCHAR2,
+  p_column     IN OUT VARCHAR2,
+  p_link       IN OUT VARCHAR2
+) RETURN BOOLEAN;
+--
+--
+-- NAME
+--   verify_procedure - verify a procedure
+--
+-- DESCRIPTION 
+--   This function takes package.procedure_name or procedure_name 
+--   verifies that it exists and that ctxsys owns the package/procedure
+--   this is called from the user datastore validation
+-- 
+-- ARGUMENTS
+--   p_spec     (IN)  - package.procedure or procedure name
+--
+-- NOTES
+--
+-- RETURN
+--   true if everything checks out, false otherwise.
+--
+FUNCTION verify_procedure (
+  p_spec       IN OUT     VARCHAR2
+) RETURN BOOLEAN;
+--
+--
+--
+-- NAME
+--   user_in_role - does a user have a specific role?
+--
+-- DESCRIPTION 
+--   This function takes a user name and a role name and
+--   returns true if the user has that role
+-- 
+-- ARGUMENTS
+--   p_user     (IN)     - the user
+--   p_role     (IN)     - the role name
+--
+-- NOTES
+--
+-- RETURN
+--   true if everything checks out, false otherwise.
+--
+FUNCTION user_in_role (
+  p_user       IN     VARCHAR2,
+  p_role       IN     VARCHAR2
+) RETURN BOOLEAN;
+
+
+--
+-- NAME
+--   ud_access
+--
+-- DESCRIPTION 
+--   This function takes the index owner name and ensures that the
+--   index owner can execute the user datastore procedure.  It is called
+--   from set_store_objects
+-- 
+-- ARGUMENTS
+--   p_user     (IN)     - the index owner
+--   p_spec     (IN)     - the user datastore procedure name
+--
+-- NOTES
+--   normally, would just be able to use CAN, but in this case 
+--   if the user datastore has just PROCEDURE, then a user with
+--   package CTXSYS and procedure PROCEDURE would be able to fool CAN
+--
+-- RETURN
+--   true if everything checks out, false otherwise.
+--
+FUNCTION ud_access (
+  p_user       IN     VARCHAR2,
+  p_spec       IN     VARCHAR2
+) RETURN BOOLEAN;
+
+FUNCTION user_access (
+  p_user     IN VARCHAR2,
+  p_access   IN VARCHAR2,
+  p_owner    IN VARCHAR2,
+  p_object   IN VARCHAR2
+) RETURN BOOLEAN;
+
+
+END driacc;
+/

@@ -1,0 +1,206 @@
+rem 
+rem Copyright (c) 2000, 2002, Oracle Corporation.  All rights reserved.  
+rem    NAME
+rem      drvddlc.pkh - DR cartridge DDL services package spec.
+rem    DESCRIPTION
+rem  
+rem      functions called by ConText cartridge routines to perform 
+rem      various DDL functionalities for ctxcat indextype
+rem   
+rem    PUBLIC FUNCTION(S)
+rem      
+rem    NOTES
+rem  
+rem    MODIFIED    (MM/DD/YY)
+Rem    gkaminag     10/14/02 - gkaminag_security_020924
+Rem    gkaminag     10/09/02 - 
+Rem    gkaminag     09/27/02 - migrate from driddlc.pkb
+rem    gshank       09/03/02 - Theme lexing
+rem    gshank       08/21/02 - Theme lexing
+rem    gkaminag     06/11/02 - API Changes.
+rem    wclin        03/27/01 - kglpurge in index truncate
+rem    gkaminag     03/02/01 - transportable tablespace support
+rem    gkaminag     04/05/00 - ctxcat cleanup
+rem    gkaminag     02/22/00 - creation
+
+create or replace package drvddlc authid current_user as
+
+/*----------------------- IndexCreate  -----------------------*/
+/*
+  NAME
+    IndexCreate
+
+  DESCRIPTION
+    create an index
+
+  ARGUMENTS
+    owner        index owner
+    index_name   index name
+    table_owner  table owner
+    table_name   table name
+    column_name  text column name
+    langcol      language column
+    fmtcol       format column name
+    csetcol      charset column name
+    idxmem       index memory
+    datastore    datastore pref name
+    filter       filter pref name
+    section      section group pref name
+    lexer        lexer pref name
+    wordlist     wordlist pref name
+    stoplist     stoplist pref name
+    storage      storage pref name
+    indexset     index set name
+
+  NOTES
+ 
+  EXCEPTIONS
+ 
+  RETURNS
+ 
+*/
+PROCEDURE IndexCreate(
+  ia          in  sys.odciindexinfo,
+  owner       in  varchar2,
+  index_name  in  varchar2,
+  table_owner in  varchar2,
+  table_name  in  varchar2,
+  column_name in  varchar2,
+  langcol     in  varchar2,
+  fmtcol      in  varchar2,
+  csetcol     in  varchar2,
+  idxmem      in  number,
+  datastore   in  varchar2,
+  filter      in  varchar2,
+  section     in  varchar2,
+  lexer       in  varchar2,
+  wordlist    in  varchar2,
+  stoplist    in  varchar2,
+  storage     in  varchar2,
+  indexset    in  varchar2
+);
+
+/*----------------------- IndexRename  ---------------------*/
+/*
+  NAME
+    IndexRename
+
+  DESCRIPTION
+    rename an index
+
+  ARGUMENTS
+    ia           index info
+    owner        index owner
+    index_name   index name
+    new_name     new name
+*/
+PROCEDURE IndexRename(
+  ia           in sys.odciindexinfo,
+  owner        in varchar2,
+  index_name   in varchar2,
+  new_name     in varchar2
+);
+
+/*----------------------- IndexTruncate  ---------------------*/
+/*
+  NAME
+    IndexTruncate
+
+  DESCRIPTION
+    truncate an index
+
+  ARGUMENTS
+    owner        index owner
+    index_name   index name
+*/
+PROCEDURE IndexTruncate(
+  ia           in sys.odciindexinfo,
+  owner        in varchar2,
+  index_name   in varchar2
+);
+
+/*----------------------- IndexDrop  -------------------------*/
+/*
+  NAME
+    IndexDrop
+
+  DESCRIPTION
+    drop an index
+
+  ARGUMENTS
+    ia           index info
+*/
+PROCEDURE IndexDrop(
+  ia          in  sys.ODCIIndexInfo,
+  owner       in  varchar2, 
+  index_name  in  varchar2
+);
+
+/*----------------------- IndexReplace  -------------------------*/
+/*
+  NAME
+    IndexReplace
+
+  DESCRIPTION
+    rebuild an index, replacing preferences as needed
+
+  ARGUMENTS
+    ia           index info
+    idx          index record
+    idxmem       index memory
+    para         parallel degree (ignored)
+    idxset       index set name
+    lexer        lexer pref name
+    wordlist     wordlist pref name
+    stoplist     stoplist pref name
+    storage      storage pref name
+
+*/
+PROCEDURE IndexReplace(
+  ia          in  sys.ODCIIndexInfo,
+  idx         in  dr_def.idx_rec,
+  idxmem      in  number,
+  para        in  number,
+  idxset      in  varchar2,
+  lexer       in  varchar2,
+  wordlist    in  varchar2,
+  stoplist    in  varchar2,
+  storage     in  varchar2
+);
+
+/*----------------------- IndexTransport  -----------------------*/
+/*
+  NAME
+    IndexTransport
+
+  DESCRIPTION
+    transport tablespace support 
+
+  ARGUMENTS
+    owner        index owner
+    index_name   index name
+    index_part   index partition name
+    table_owner  table owner
+    table_name   table name
+    table_part   table partition name
+
+  NOTES
+
+  EXCEPTIONS
+
+  RETURNS
+
+*/
+PROCEDURE IndexTransport(
+  owner       in  varchar2,
+  index_name  in  varchar2,
+  index_part  in  varchar2,
+  table_owner in  varchar2,
+  table_name  in  varchar2,
+  table_part  in  varchar2,
+  IndexInfoFlags in number,
+  CallProperty   in number
+);
+
+end drvddlc;
+/

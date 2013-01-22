@@ -1,0 +1,111 @@
+rem Copyright (c) 1997, 2002, Oracle Corporation.  All rights reserved.  
+rem    NAME
+rem      driopt.pkb - DR Internal OPTimizer helpers
+rem    DESCRIPTION
+rem      This package contains internal code used during optimization
+rem
+rem    NOTES
+rem    MODIFIED    (MM/DD/YY)
+rem      gkaminag   06/11/02  - non-function locking.
+rem      gkaminag   01/15/02  - parallel optimize.
+rem      gkaminag   09/06/00 -  partition support
+rem      gkaminag   08/18/00 -  partition support
+rem      gkaminag   08/09/99 -  optimization locking
+rem      gkaminag   05/22/98 -  new garbage collection
+rem      gkaminag   04/11/97 -  creation
+
+create or replace package driopt as
+
+  p_inv_count number;
+
+  LOCK_WAIT     constant number := null;
+  LOCK_NOWAIT   constant number := 0;
+  IGNORE_ERRORS constant boolean := TRUE;
+
+/*------------------------------ lock_opt --------------------------------*/
+
+procedure lock_opt(
+  cid        in number,
+  pid        in number,
+  timeout    in number
+);
+function lock_opt_ret(
+  cid        in number,
+  pid        in number,
+  timeout    in number
+) return number;
+
+/*------------------------- lock_opt_all_part ----------------------------*/
+/* NOTE: gets multiple locks.  If fails, it's up to calling procedure to  */
+/* release any locks it may have gotten                                   */
+procedure lock_opt_all_part(
+  cid        in number
+);
+
+/*----------------------------- unlock_opt ------------------------------*/
+
+procedure unlock_opt(
+  ignore_errors in boolean default false
+);
+
+/*------------------------ unlock_opt_all_part ---------------------------*/
+
+procedure unlock_opt_all_part(
+  ignore_errors in boolean default false
+);
+
+/*---------------------------- start_timer ---------------------------*/
+/*
+  NAME
+    start_timer
+
+  DESCRIPTION
+    start the optimization timer
+*/
+procedure start_timer;
+
+/*---------------------------- get_timer ------------------------------*/
+/*
+  NAME
+    get_timer
+
+  DESCRIPTION
+    get the amount of minutes since last start_timer call
+*/
+function get_timer return number;
+
+/*---------------------------- get_state ------------------------------*/
+/*
+  NAME
+    get_state
+
+  DESCRIPTION
+    get the current state of optimization
+*/
+procedure get_state(
+  p_idx_id      in  number
+, p_ixp_id      in  number
+, p_opt_token   out varchar2
+, p_opt_type    out number
+, p_opt_count   out number
+);
+
+/*---------------------------- set_state ------------------------------*/
+/*
+  NAME
+    set_state
+
+  DESCRIPTION
+    set the new state of optimization for next time
+*/
+procedure set_state(
+  p_idx_id      in  number
+, p_ixp_id      in  number
+, p_opt_token   in  varchar2
+, p_opt_type    in  number
+, p_opt_count   in  number default null
+);
+
+end driopt;
+/
+

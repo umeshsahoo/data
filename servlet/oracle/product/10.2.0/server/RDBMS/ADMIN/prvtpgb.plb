@@ -1,0 +1,39 @@
+create or replace package body utl_pg wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+b
+18e6 35b
+kNt0sxqkna908cWKfBYLwg4n8Cowg82T2UgKfC/t9rwVDMUyjXkrQATilHpg1BTEVaW1qlJ5
+1pkaCHxN/rNEK2Ng/LQLcq1OV97Z2dVkRNXSQ/CBYYiD7PrRC1i6VgtOrj2E3mM5PPJe1V5D
+GL/qi5w2n4bo5PrXKSoLT5x4dzvN37JEaHQWSxNAYytiuGxaQBSxUPWyByP4f7+9nM785h5g
+uDBIsEVFfV0SS7fd1wXKrxijdaBChgYmEtl0nZ18734g3aoi0Bs4uvYwO1dOgFgYnKxDQ/ai
+XUNfqDlb4Jp0f93zgkmFLtIbar6hS8vDtd/lUArmdcdh8ApqspWU3BsHROKG+lugtbKjT0s2
+caRI/TqjQ7lN/SBLfgFKHI3Ct6Hsh7p2Ct9XK0O5hSnR52p1Ej23HtiEwpScQ0wcIMCWr4t/
+0iiHPA73pJLvf9D/MQeAu2XwAsTxK01w6Q5ptKbs8HZRSEsGnLL9aTxb6/Lf15fS2S3AB0BU
+bMatH26v/Dhd5ybuX21xE8nHCVgEH77c8G1xO8lOpJyo6uK9WuBz7DiazJVvEyV5xVml2C8N
+RrjU0sbQJmYxhFCLrN+OoPQO8B32b/r5qd822OT4kbicvBrlwQRnT/PR2HciAMY+qyyICONU
+X0ed/+f+iKEHfF+kKchZW5Vk4FQN42slYFLaGPoL0ekG+VuLCUa+CNV11ow3jApFELjSE7iO
+y0oiWMLvAL0nUr58Q+Pcz8yc4Kz1sXGOLGe3ddWmCcC2zbPMR+DTnx77HBbCb+lIA46gjk82
+PkUMQLnxDqI6voAj4GuTeh8faHVF1AIh4pCcqVMP6yQh/yQ/HSMDm3w=
+
+/
+show errors
+create or replace public synonym utl_pg for sys.utl_pg
+/
+grant execute on sys.utl_pg to public
+/

@@ -1,0 +1,198 @@
+rem Copyright (c) 1997, 2002, Oracle Corporation.  All rights reserved.  
+rem    NAME
+rem      dricon.pkh - DR Internal CONstraint management
+rem    DESCRIPTION
+rem      This package contains internal code to check for unique
+rem      key constraints and such
+rem
+rem    NOTES
+rem    MODIFIED    (MM/DD/YY)
+rem      daliao     10/16/02  - add exist_tab
+rem      gkaminag   02/05/02  - bug 2213345: handle XMLType detail columns.
+rem      salpha     06/26/00 -  ctxrule implementation
+rem      gkaminag   02/23/00 -  ctxcat implementation
+rem      gkaminag   10/11/99 -  keyless index
+rem      gkaminag   06/21/99 -  format and charset columns
+rem      gkaminag   06/09/99 -  language column
+rem      ehuang     03/18/99 -  add get_type_data_type
+rem      ehuang     11/04/98 -  set_store_obj to take idx_owner
+rem      gkaminag   05/05/98 -  add find_pk
+rem      ehuang     03/30/98 -  mv validate_pol to driload
+rem      gkaminag   03/18/98 -  put datastore logic here
+rem      ehuang     01/25/98 -  expose get_column_type
+rem      gkaminag   12/09/97 -  text column length
+rem      gkaminag   12/04/97 -  remove lineno parameters
+rem      dyu        08/21/97 -  workaround 532862
+rem      ehuang     04/28/97 -  add validate_pol
+rem      gkaminag   04/11/97 -  creation
+
+create or replace package dricon as
+
+/*---------------------------- set_datatype_obj ------------------------*/
+/*
+  NAME
+    set_datatype_obj
+ 
+  DESCRIPTION
+    calculates which datatype object is needed
+
+  RETURNS
+    names of datatype preference and obj_id
+*/
+PROCEDURE set_datatype_obj(
+  p_texttype      in  number,  
+  p_datatype_pref out varchar2,
+  p_datatype_id   out number
+);
+
+/*---------------------------- set_store_obj ------------------------*/
+/*
+  NAME
+    set_store_obj
+ 
+  DESCRIPTION
+    calculates which datastore objects are needed
+
+  RETURNS
+    names of store interface and store type to use
+*/
+PROCEDURE set_store_obj(
+  p_dstore_pref   in  varchar2,
+  p_texttype      in  number,  
+  p_idx_owner     in  varchar2,
+  p_key_name      in  varchar2,
+  p_storex_pref   out varchar2,
+  p_datatype_pref out varchar2
+);
+
+/*---------------------------- get_data_type ------------------------*/
+/*
+  NAME
+    get_data_type
+ 
+  DESCRIPTION
+    simple way to get the data type of a table column
+
+  RETURNS
+    datatype as a word.  type_num is the datatype as the oracle type id.
+
+  NOTES
+    all arguments should be UPPER'ed first
+*/
+FUNCTION get_data_type(
+  p_owner   IN  varchar2, 
+  p_tabname IN  varchar2, 
+  p_colname IN  varchar2,
+  type_num  OUT number,
+  dtlength  OUT number,
+  dtscale   OUT number
+) return varchar2;
+
+/*----------------------- get_type_data_type ------------------------*/
+/*
+  NAME
+    get_type_data_type
+ 
+  DESCRIPTION
+    get the data type of a type table column
+
+  RETURNS
+    datatype as a word.  type_num is the datatype as the oracle type id.
+
+  NOTES
+    all arguments should be UPPER'ed first
+*/
+PROCEDURE get_type_data_type(
+  p_typename IN  varchar2,    -- type name with owner prefix
+  p_colname  IN  varchar2,    -- text column name with no owner prefix
+  p_typenum  OUT number,      -- text column datatype
+  p_dtlen    OUT number       -- text column data length
+);
+
+/*----------------------------- validate_tab -------------------------------*/
+/*
+  NAME
+    validate_tab - VALIDATE TABle
+  DESCRIPTION
+    validate table exists
+
+  NOTES
+    Assumes that p_owner, p_table_name are NON-NULL
+*/
+PROCEDURE validate_tab(
+  owner         in  varchar2,     -- owner of table
+  tabname       in  varchar2      -- table name
+);
+
+/* ----------------- test if the table exists ------------------------ */
+/* NAME 
+     exist_tab - test if table exists
+   DESCRIPTION
+     return true when table exists, 
+            false when table does not exist
+
+   NOTES
+    Assumes that p_owner, p_table_name are NON-NULL
+*/
+FUNCTION exist_tab(
+	l_owner   IN VARCHAR2,
+	l_tabname IN VARCHAR2) return boolean;
+
+/*----------------------- validate_text_column ----------------------------*/
+/*
+  NAME
+    validate_text_column
+
+  DESCRIPTION
+    validate column exists, get the type and length, and make sure
+    we can index this type.
+
+  NOTES
+    Assumes that table exists
+*/
+
+procedure validate_text_column(
+  p_idx_type    in     number,
+  owner         in     varchar2,     -- owner of table
+  tabname       in     varchar2,     -- table name
+  column_name   in     varchar2,
+  coltype       out    number,
+  collen        out    number
+);
+
+/*----------------------- validate_meta_column ----------------------------*/
+/*
+  NAME
+    validate_meta_column
+
+  DESCRIPTION
+    validate column exists, ensure type, normalize name
+
+  NOTES
+    Assumes that table exists
+*/
+PROCEDURE validate_meta_column(
+  p_owner       in     varchar2,
+  p_tabname     in     varchar2,  
+  p_langcol     in     varchar2,
+  p_type_error  in     number,
+  p_norm        in out varchar2
+);
+
+/*--------------------- get_primary_key -------------------------------*/
+/*
+  NAME
+    get_primary_key
+ 
+  DESCRIPTION
+    detect the primary key columns, determine their type and number
+*/
+PROCEDURE get_primary_key(
+  p_owner       in  varchar2,
+  p_table_name  in  varchar2,
+  keyname       out varchar2,
+  keytype       out number
+);
+
+end dricon;
+/

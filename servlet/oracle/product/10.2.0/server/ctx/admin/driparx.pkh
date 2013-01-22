@@ -1,0 +1,83 @@
+Rem
+Rem Copyright (c) 1998, 2003, Oracle Corporation.  All rights reserved.  
+Rem  NAME
+Rem    drvparx.pkh - DR cartridge PARallel indeX services
+Rem  DESCRIPTION
+rem
+Rem  RETURNS
+Rem
+Rem    NOTES
+Rem
+Rem    MODIFIED   (MM/DD/YY)
+Rem    gkaminag    10/23/03  - optimize type 
+Rem    ehuang      10/24/03  - tracing 
+Rem    smuralid    04/21/03  - dr$popindex_state_t: add direct_path
+Rem    smuralid    01/07/03  - smuralid_logging_for_px
+Rem    smuralid    12/20/02  - PX support
+Rem    smuralid    12/19/02  - Creation
+Rem
+
+drop type dr$session_state_t force;
+create type dr$session_state_t as object(
+  logfile   varchar2(2000),
+  events    number,
+  traces    number
+);
+/
+
+drop type dr$optim_state_t force;
+create type dr$optim_state_t as object(
+  session_state   dr$session_state_t,
+  optmode         varchar2(256),
+  maxtime         varchar2(256),
+  maxhash         number,
+  ttype           number
+);
+/
+
+drop type dr$popindex_state_t force;
+create type dr$popindex_state_t as object(
+  session_state   dr$session_state_t,
+  opcode          varchar2(128),
+  index_memory    varchar2(256),
+  tstamp          varchar2(256),
+  direct_path     varchar2(10)
+);
+/
+
+drop type dr$createindex_state_t force;
+create type dr$createindex_state_t as object(
+  session_state   dr$session_state_t,
+  index_memory    number,
+  populate        varchar2(1),
+  import          varchar2(1),
+  params          varchar2(1000)  
+);
+/
+
+drop type dr$trc_rec force;
+create type dr$trc_rec as object (
+  trc_id          number,
+  trc_value       number
+);
+/
+create type dr$trc_tab as table of dr$trc_rec;
+/
+
+create or replace package driparx as
+
+  procedure set_session_state(sess_state dr$session_state_t);
+  function  get_session_state return dr$session_state_t;
+  procedure end_parallel_op(sess_state dr$session_state_t);
+
+  procedure  setContext(mykey  in varchar2, myval in sys.anydata);
+  procedure  clearContext(mykey in varchar2);
+  function   getContext(mykey in varchar2) return sys.anydata;
+ 
+end driparx;
+/
+
+
+
+
+

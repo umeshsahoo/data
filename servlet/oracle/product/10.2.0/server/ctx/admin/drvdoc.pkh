@@ -1,0 +1,138 @@
+rem 
+rem Copyright (c) 2002, 2004, Oracle. All rights reserved.  
+rem
+rem    NAME
+rem      drvdoc.pkh - DR inVoker's rights DOC services
+rem
+rem    DESCRIPTION
+rem      functions called by ConText cartridge routines to perform 
+rem      document services helper functionalities
+rem   
+rem    NOTES
+rem
+rem    MODIFIED    (MM/DD/YY)
+rem    daliao       06/18/04 - kwic document service 
+rem    gkaminag     07/22/02 - gkaminag_security_phase2_020620
+rem    gkaminag     07/19/02 - creation 
+
+create or replace package drvdoc authid current_user as
+
+/*------------------------------- get_rowid ------------------------------*/
+/* translates a primary key string into a rowid */
+
+FUNCTION get_rowid (
+  p_idx     in dr_def.idx_rec,
+  p_textkey in varchar2
+) RETURN VARCHAR2;
+
+/*--------------------------- restab_chk ------------------------------*/
+/* various checks on result tables */
+
+PROCEDURE restab_chk (
+  query_id in number,
+  restab   in            varchar2,
+  resout   in out nocopy varchar2
+);
+
+/*--------------------------- reslob_chk ------------------------------*/
+/* various checks on result lob */
+
+PROCEDURE reslob_chk (
+  reslob in out nocopy clob
+);
+
+
+/*--------------------------- gist_options ----------------------------*/
+/* set gist options */
+
+PROCEDURE gist_options(
+  glvl     in     varchar2,
+  pov      in     varchar2,
+  forcepov in     boolean,
+  numpar   in     number,
+  maxpct   in     number,
+  numthm   in     number
+);
+
+/*--------------------------- theme_options ----------------------------*/
+/* set theme options */
+
+PROCEDURE theme_options(
+  full_themes in boolean,
+  num_themes  in number
+);
+ 
+/*------------------------------- ling_request ---------------------------*/
+/* performs a linguistic request -- common code to themes and gist */
+
+PROCEDURE ling_request (
+  index_name  in varchar2,
+  textkey     in varchar2,
+  inmem       in boolean,
+  direct      in boolean,
+  reslob      in out nocopy clob
+);
+
+/*---------------------- token_request ---------------------------------*/
+/* do a tokens call */
+
+PROCEDURE token_request (
+  index_name  in   varchar2,
+  textkey     in   varchar2,
+  inmem       in   boolean,
+  direct      in   boolean
+);
+
+
+/*--------------------------- markup_options ----------------------------*/
+/* check and set markup options */
+
+PROCEDURE markup_options(
+  plaintext in boolean,
+  tagset    in varchar2,
+  starttag  in varchar2,
+  endtag    in varchar2,
+  prevtag   in varchar2,
+  nexttag   in varchar2
+);
+
+/*---------------------- concordance_options ----------------------------*/
+/* check and set concordance options */
+
+PROCEDURE concordance_options(
+  starttag  		IN  VARCHAR2,  
+  endtag  		IN  VARCHAR2,  
+  entity_translation  	IN  BOOLEAN,  
+  kwiclength  		IN  NUMBER,  
+  maxsegments  		IN  NUMBER,  
+  separator  		IN  VARCHAR2  
+);
+
+/*--------------------------- highlight_options ----------------------------*/
+/* check and set highlight options */
+
+PROCEDURE highlight_options(
+  plaintext in boolean
+);
+
+/*--------------------------- filter_options ----------------------------*/
+/* check and set filter options */
+
+PROCEDURE filter_options(
+  plaintext in boolean
+);
+
+/*--------------------------- highlight_request ----------------------------*/
+/* common code to markup, highlight, filter */
+
+procedure highlight_request (
+  index_name in varchar2,
+  textkey    in varchar2,
+  query      in varchar2,
+  inmem      in boolean,
+  direct     in boolean,
+  reslob     in out nocopy clob
+);
+
+end drvdoc;
+/

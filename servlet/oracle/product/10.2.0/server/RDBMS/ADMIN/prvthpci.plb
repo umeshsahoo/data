@@ -1,0 +1,65 @@
+CREATE OR REPLACE PACKAGE SYS.KUPC$QUEUE_INT wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+9
+874 2ad
++JOtrWir/P5GJ5dmxP+zExYpQvYwgzunr0gafHRAEos+wFQmuiaYCRJDjtNqkf3T/FcD7F4Z
+tWLfL3DhAQRFYuxqWsszwZqqVnvRGTAdite/BsaYWyg1iOBo66GhG2srOchSxhiuAA14rIkq
+X7ZSUp6EyerkVgQLqn6U3GhasllYzu8Rpm2wIkZnHLIeT4KAUgbOoz9FRw0Y7mLSvuBYPlVO
+jgOq+NQi1Daxq3xQY/2lxQFXhxUfFtqg4RqAcOE3ts9Q4FF2VEjWSEYCKkYrsF9HI6NApFKb
+SF/RFZXrqHC9q2a4R4xJipuP2kK3DEcNjwyXVkUdWJza/GTWpA/rjb96saYCNp1evxH3w5nt
+5N5A1MRcbhE0umj2l0gZu4Nmbnhx33a9YlcfZCdCqZfq3A4YXKxLGWkGDMQS9bq5YwHtRuoc
+U13qMXudiWZzLPhMUCSwCeYyngZB+tQAmeA0PGoty43p6Zza5Q3KjSBq9SMXJQNa86Z3QmiO
+sSnkcrjLR8m6gltgG6kIQ0Jbir1haFSCwQvVRcaNEYoF9firz0cZNkZUd7Mz9LuR/4g+Wk3P
+t2c7vWHiB+SNDatTiCcK0bg+COi2KIXCS2+oeNHH6uhyybsTutbX552HSCAvYQvrDeK/GaMp
+Rd9VLtlVTFyzSQogbZvuLEyj1A0=
+
+/
+GRANT EXECUTE ON SYS.KUPC$QUEUE_INT TO EXECUTE_CATALOG_ROLE;
+CREATE OR REPLACE PACKAGE SYS.KUPC$QUE_INT wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+9
+699 278
+NL7DEwgjBQKsdFomctlYYXAy6KMwgztcNUoFfHSKMWRQa92fN+ko7YsUDKCM4la+jlhmSXO1
+H41jtC12EpiyJ11wcIXuuFp7jMO7wlsI/4ySkm2oq4DmZZDwb6t7hqYCdFE+rsbc9wjcWmYm
+/39sfEaLuu9GzikFMKfcui/UYyw1KLQ03C/hf3t/AB/0/FYIximpiv9DXaZeYGYTtxnJR7VB
+9QDg8qOZBCl7yfM7UtNkCLajYNKeIe/nAsq9HHsTPV3sxqyfcEOka8QCzDDoq8sU9GqyO4+L
+DdPor+bTpwbNViAoD5lkDCDX5dVkUAcVT5CBOIPe7doAaVYNJMrZnvp0fK0JfjJ6oPpdoI3x
+YmL92aXtTueckPvByFdn596Vrrq9aDkCG8xgQzHM87e9wd7qQdi+bYnlVfce4pf4LiNsXTt8
+PoKrWsZhxcLSi7SDdt9RCBF9kh8dOVBAB1eAwaFW1+gJcNHE2UW6kl+MuoS7zVu4RcNTa9kt
+z3cSzQhmXQFphtnoqghGRHL6DDoQolqgNzPv+U/FGKujuW0hu8+xO4jHf4JgJiocuaEAfuYp
+5kH+0jESEULEkKra3TsdKkvsze6BilYJq66BH/WSm1vTy0+i
+
+/
+GRANT EXECUTE ON SYS.KUPC$QUE_INT TO EXECUTE_CATALOG_ROLE;

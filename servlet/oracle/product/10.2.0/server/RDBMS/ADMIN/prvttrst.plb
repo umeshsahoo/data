@@ -1,0 +1,32 @@
+CREATE OR REPLACE PACKAGE BODY dbms_distributed_trust_admin wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+b
+814 268
+fAYXNctSm6ar5TjtVLdZjU47VyEwg0Ncr0jWfHRVvg/uahQRmC7rSoQANgZhs8om8VDiSfm1
+lovIZ5MMLyU8TNRszHb4ACRB7t0YKGGEhZQkHXLV67g42G9Cefd4K7HU31/q5qx8bbn7VxFc
+ymQq4YBCSFSTRVdnStqo3kR7lrNmfg3l3W7XDLoY8qfD+X/2ZOfeabqj2EXt4YArPBHKLkHq
++l7C8qciJmlcbNgFjF0AI99g8P89KbxoPLZoI85BaAQArK1R3HPmMMO6HxLomqdBKqAARRvA
+Y/KRJYTuSfN/w0zvjHj+YovToHuIhQKRkmhptlOEzdbC4mYtbSJA0j5WDV4ME+KnhwK8/FN+
+uIOMA4TRkwL9/iWsyAUMizmHawA2SxKJEBe7/bTCJXAR8J9qL6/18wlcfgPpbpGxVXZKh5tB
+AZwjLpvyKfPixHhmidZv4pZgwQkxHmimdg7BWFD+f0uo98BzaYGogxQlXaLbAR5FbVi1wHiS
+Kc4X+bWy+Grtc7V4Myx4XdCKVyfkznWt2EuQHA0OKqCaEg6hTncw15fIu61MDiXIwuwXnDLa
+NANT28Yie1/WNdlvza/b0CISzuHU0v75
+
+/
+show errors;

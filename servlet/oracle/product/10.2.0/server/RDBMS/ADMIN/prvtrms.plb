@@ -1,0 +1,33 @@
+create or replace package body "DBMS_TG4RMS" wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+b
+ec3 316
+Ty9uJnNtJ49nXNvvXSrP8Bh5Y1kwg82cmiATfC/G/m6dFfxt1o4uTD28Nlzs1lVHxSRmhlke
+t5WpbPcRZ98ph5vGchu9yOhW2WHEwJZ2aLEimkPO40fITuPoNlnh5DbipduZRE8ZZZY04RZ2
+dKZ1Ld2oMP/nZwSYrFvmDwd7pt0dMvTQeuFNKLxmi881isnD6aXbY/kL+K3dXfvXTMsOzytQ
+JcWrKyXIEjQrsiDiZGRiulsbkfJzYHy8ZM+myhtKbQQxmidtY4OttvzvMxRNcvqJfJjM2GxX
+sOOHonYBkx7Kv78rDKXTAdqwDA4r+rs2Lq0NI88o8bty8laNFmZjl2NHeG1Dxiy+WeptDVpR
+ZdPld7/gjc9AcJgA9VwSUEDXySAFn7rVDt7MgEU0WrFmGVqN2Z3y4exWMrYyxefVcnrFkRzQ
+XKjfQ8X95nnM8ZFRRwK8J5AxaqCMMhkL6/FxYFFxaPz686Fl4qd3AxfLJ0esH99DO0iO98Mp
+oSxARaqMI2DY2SV97h6SY+tlh55YtYpahTFuVLWH62ZiAhyaLupMT2DJRbWEUVfZXIMqDBux
+bK3KCC2yv7soOmBurbF1CHqsPiVBOKz03sz9DDOPRlT445jvp4vscNu9BCIBK64DYFDritPs
+zTinc6jXxcz209fu/8rixwMcz1Uq7R2lpH0zq89OiDwn88Db3oUmtkHGD3yGIaWB02Bz3nLd
+QTcffLhefYMl7+SkZ7H3uyr55Y3G77SqtO3HvJBnR2n/Nkr56IMsP/skz1hJ
+
+/

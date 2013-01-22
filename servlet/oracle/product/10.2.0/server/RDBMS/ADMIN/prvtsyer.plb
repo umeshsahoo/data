@@ -1,0 +1,32 @@
+CREATE OR REPLACE PACKAGE BODY dbms_sys_error wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+b
+1c27 295
+TMqhfBe2RS9ah+2cylWK5oupAJAwg83qs0isfI5VAw+zgC4wafI3RrCe6mAvfEScOl21tZUW
+/ZlFn9aZX1MNKBtAx32+wW4REgY4lwvK+GZFyBFPjbGbCYc14+bIGnEQ0ebcUeeoe5nK3pKe
+4Z8e5G73/4NJrR+c9vHqL9ZLK6ItU+O/kGSWcUZycbQ8ANyh3Pvc8MLC5Vyx8W3vpW6iuI/B
+C+nL5FQVG8rwKxwXblo+Bt2Eyh5QkmntvY4Dfn8DWagXCokLrt47y37+hTjbaJpKedXG6G3w
+Ox3rHBzXydNc7F16QKF7S+vGszFWMomnwiQRJstHb4FPPnO/tZi1e0uYEVTiZVZyRirKVqS0
+uiGTrljYIPGQ1ZOktOo3naaNir0nj7FyIK4zrElshf1nRDH4bKbr9GvFQ+mMP4LboRk0ZMcb
+xEgPUHQ2Qhovq0d6+g5RroZnx2rC7JAgxEIwXjlzL1kL6FV/XkggdnlC0py3Dv6hWrIbSsxS
+dJK1ExtggIiMjuDCcRTZNcareWfWe93SpMgnWfOjHOmbdhTQqELRQHhRZ7koRPHxWW2jHOmb
+dhTQqELR8cE4MO+DwYHeT3cBxbSbFvHBykJ0+sf3eij6Tn808z2BEurqGGr+xD9pqiLt+4WT
+J0c=
+
+/

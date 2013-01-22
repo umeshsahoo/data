@@ -1,0 +1,69 @@
+rem Copyright (c) 2000, 2002, Oracle Corporation.  All rights reserved.  
+rem
+rem    NAME
+rem      drvxtabr.pkh - 
+rem
+rem    DESCRIPTION
+rem
+rem   
+rem    NOTES
+rem  
+rem    MODIFIED    (MM/DD/YY)
+rem    gkaminag     10/14/02 - gkaminag_security_020924
+rem    gkaminag     09/27/02 - security phase 3
+rem    ehuang       08/08/00 - move ctxrule from drvxtab
+rem    ehuang       08/18/00 - creation
+
+create or replace package drvxtabr authid current_user as
+
+/* ====================================================================== */
+/* ====================================================================== */
+/*                             CTXRULE                                    */
+/* ====================================================================== */
+/* ====================================================================== */
+
+/*----------------------- create_tables --------------------------*/
+
+PROCEDURE create_tables( 
+  idx_owner in varchar2, 
+  idx_name  in varchar2,
+  idxid     in number
+);
+
+/*----------------------- create_indexes  ------------------------*/
+
+PROCEDURE create_indexes( 
+  idx_owner in varchar2, 
+  idx_name  in varchar2,
+  idxid     in number
+);
+
+/*----------------------- drop_tables  ---------------------------*/
+
+PROCEDURE drop_tables( 
+  idx_owner in varchar2, 
+  idx_name  in varchar2,
+  idxid     in number
+);
+
+/*----------------------- trunc_tables  ---------------------------*/
+
+PROCEDURE trunc_tables( 
+  idx_owner in varchar2, 
+  idx_name  in varchar2,
+  idxid     in number
+);
+
+/*----------------------- rename_tables  ---------------------------*/
+
+PROCEDURE rename_tables( 
+  idx_owner in varchar2, 
+  idx_name  in varchar2,
+  idxid     in number,
+  new_name  in varchar2,
+  has_idx   in boolean
+);
+
+end drvxtabr;
+/
+

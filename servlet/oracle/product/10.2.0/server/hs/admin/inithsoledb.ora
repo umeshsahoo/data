@@ -1,0 +1,13 @@
+# This is a sample agent init file that contains the HS parameters that are
+# needed for an OLEDB Agent. 
+
+#
+# HS init parameters
+#
+HS_FDS_CONNECT_INFO ="UDLFILE=<full path name of the udl file>"
+HS_FDS_TRACE_LEVEL = <trace_level>
+
+#
+# Environment variables required for the non-Oracle system
+#
+#set <envvar>=<value>

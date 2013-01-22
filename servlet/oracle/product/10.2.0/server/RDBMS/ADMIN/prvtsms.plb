@@ -1,0 +1,55 @@
+  CREATE OR REPLACE PACKAGE dbms_sumvdm wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+9
+1b6 117
+qqPXM5p8kxSZqWhb+v5G9DJH3HEwg/D3AJ5qfHRg2v6Oq7p9dy1r1gvV8PRiW/rc+l34mlHL
+bCRQL5Ky5g7+yF8SY9qB5nwNnFb6KNRP+9iJCSXHUBHT73SFYYgDLRyhfg67do9leEtfZT7Q
+S9vTdBgyCs4/BTdqE8jQOAzsLaXMrbTo3TLny5Svhr33tuJKSMy/WPHHwI8hl/pgBqI83SAY
+ovqxhdXsNoILLNvU3YaqeKHSf7tWtHoj8eiMOKfiXCnIRzPW5etb1cVxMA==
+
+/
+ CREATE OR REPLACE PACKAGE dbms_sumadv wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+9
+7f8 1de
+opZq+Xgdg1N+VRJXWIGNK5sBHvgwg0NcmEhqfHSKbmRQdeGk7NxEZbPTC7azmYmOakzOtarM
+Yy7r3VKH51CoQ8od4dB7GbMJNu1Ab43ecfHDdnXXWczsJquGQ/bwdiHsFU1l6FYv3hm/Gtrp
+hzoGq13BQ1e3zFvBUBPNvct1fBCcwye8+OXxyJXWhCoYo78d2NqPxJxPXZR9VoirbcJmE/dy
+bLB2U2EWXWOIxSlqlxuJoxoJ6S70rJrWBIKScb/bCZcffeQbgJCAaK5BcNYaX38m9ED9m92E
+AW4t6RmEe0WICQGU1ATTXJRACspxeogq84DIpFGrP7MgKbvH5A8TVD1fyEMQqNWZzSxY4/1L
+RGXy+pEpHWElaMHuHa7kiVT+SuQdcitth0Wo8p3fsfL12YK42UTAubu5HWR5poK5M4qlLVl9
+x6vurDWTNGGx2mEB6YsEx9xzIx8sIgjZsK40QKCf
+
+/

@@ -1,0 +1,34 @@
+# This file contains commands to generate a shared object or DLL
+# for a natively compiled PL/SQL unit. 
+# This file can have multiple commands. 
+# Each command should be specified in a single line by itself terminated by
+# a newline.
+# Lines starting with a # character are comments which are ignored.
+# Each command is executed by creating (forking) a process and
+# giving the command to the process to be executed directly.
+# That means no other program (such as a shell or make) is used
+# to interpret these commands.
+# The command(s) use the following symbolic names as placeholders
+# which will be replaced by actual names before executing the command(s).
+#
+# 	%(src) -  refers to the name of the generated C source file.
+# 	%(obj) -  refers to the name of the generated object file.
+# 	%(dll)  -  refers to the name of the generated dll file.
+
+# The variable $(ORACLE_HOME) will be replaced by its actual value
+# before executing the command(s).
+
+# The /Zm option is needed only when compiling a large plsql procedure.
+
+cl.exe %(src) /nologo /Zm200 /Og /Oy /MD /Fo%(obj) /I$(ORACLE_HOME)/rdbms/public /I$(ORACLE_HOME)/plsql/include /link /nologo /dll $(ORACLE_HOME)/lib/orapls10.lib /out:%(dll)
+
+#GCC (MINGW) is now supported for plsql native comp on windows.
+#Download MinGW-3.1.0-1.exe from http://www.mingw.org.
+#The following two commands assume that GCC is installed at the default
+#location which is c:/MinGW. Change the paths to gcc and ld appropriately
+#if the installation is done in a different directory.
+#Finally, to use GCC for native comp, comment the above command line for cl.exe
+#and uncomment the following two comand lines.
+#c:/MinGW/bin/gcc -c %(src) -O1 -I$(ORACLE_HOME)/rdbms/public -I$(ORACLE_HOME)/plsql/include -o %(obj)
+#c:/MinGW/bin/ld -shared -e 0x0 %(obj) $(ORACLE_HOME)/plsql/lib/libpncrt.a $(ORACLE_HOME)/lib/orapls10.lib -o %(dll)
+

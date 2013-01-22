@@ -1,0 +1,114 @@
+rem
+rem  Copyright (c) 1995, 1996, 1997, 1998, 1999 by Oracle Corporation
+rem    NAME
+rem      dr0ths.pkh - Spec for ConText Option thesaurus package
+rem    DESCRIPTION
+rem      This contains the interface to the thesaurus procedures
+rem
+rem    RETURNS
+rem
+rem    NOTES
+rem
+rem    MODIFIED   (MM/DD/YY)
+rem      gkaminag  03/09/99 -  driths split
+rem      mfaisal   09/01/98 -  add missing DEFAULT language
+rem      ehuang    08/05/98 -  add TR, TRSYN
+rem      gkaminag  03/12/98 -  dr0ths -> driths
+rem      gkaminag  03/17/97 -  add commit interval
+rem      gkaminag  03/11/97 -  case-sensitivity, bti/nti
+rem      gkaminag  01/08/97 -  add enhance for admin
+rem      gkaminag  12/10/96 -  ISO 2788
+rem      gkaminag  08/26/96 -  delete_thesaurus -> drop_thesauaurs
+rem      gkaminag  08/26/96 -  add errcode
+rem      ehuang    08/09/96 -  changed level to lvl so that the connect by won'
+rem      ehuang    08/08/96 -  changed parameter names
+rem      gkaminag  07/29/96 -  thesaurus package
+rem      gkaminag  07/29/96    creation
+rem
+
+CREATE OR REPLACE PACKAGE driths AS
+
+   type phrtab is table of dr$ths_phrase%rowtype index by binary_integer;
+
+/*--------------------------------- get_ths -------------------------------*/
+/*
+  NAME
+    get_ths -- lookup thesaurus id and case-sensitivity
+ 
+  ARGUMENTS
+    tname  - thesaurus name
+    tid    - thesaurus id (OUT)
+    tcs    - thesaurus case sensitivity (OUT)
+    modify - set to TRUE if you want to do ownership checking
+
+  NOTES
+    error if thesaurus does not exist
+*/
+PROCEDURE get_ths(
+  tname  in  varchar2,
+  tid    out number,
+  tcs    out boolean,
+  modify in  boolean  default FALSE
+);  
+
+/*--------------------------------- parse_phrase ---------------------------*/
+/*
+  NAME
+    parse_phrase
+
+  DESCRIPTION
+    This procedure parses a phrase into phrase and qualifier parts
+
+  RETURN
+*/
+
+PROCEDURE parse_phrase (
+  phrase in     varchar2,
+  ppart  out    varchar2,
+  qpart  out    varchar2
+);
+
+/*--------------------------------- lookup -------------------------------*/
+/*
+  NAME
+    lookup -- lookup phrase in a thesaurus
+
+  DESCRIPTION
+    This procedure looks up a phrase in the given thesaurus
+
+  RETURN
+    TRUE if phrase is found, FALSE otherwise 
+*/
+
+FUNCTION lookup (
+  tname  in     varchar2,
+  phrase in     varchar2,
+  resarr in out phrtab
+) return boolean;
+
+
+/*----------------------------- lookup_single-----------------------------*/
+/*
+  NAME
+    lookup_single -- lookup a single phrase in a thesaurus
+
+  DESCRIPTION
+    This procedure looks up a phrase in the given thesaurus
+
+  RETURN
+    phrase id
+ 
+  NOTES
+    phrase must exist in thesaurus
+    if hits multiple phrases, only the first is returned
+*/
+FUNCTION lookup_single (
+  tid    in     number,
+  phrase in     varchar2,
+  qual   in     varchar2
+) return number;
+
+
+end driths;
+/
+

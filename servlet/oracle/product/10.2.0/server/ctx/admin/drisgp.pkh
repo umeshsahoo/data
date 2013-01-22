@@ -1,0 +1,134 @@
+rem
+rem Copyright (c) 2002, 2003, Oracle Corporation.  All rights reserved.  
+rem
+rem    NAME
+rem      drisgp.pkh - DR Internal Section GrouP management
+rem    DESCRIPTION
+rem      This package contains internal code to create, manage, and drop
+rem      section groups
+rem
+rem    NOTES
+rem    MODIFIED    (MM/DD/YY)
+rem    gkaminag     10/21/03 - mdata phase 2 
+rem    surman       09/09/03 - 3101316: Add drop_user_section_groups 
+rem    gkaminag     09/16/03 - mdata 
+rem    gkaminag     08/19/02 - gkaminag_security_phase2_020620
+rem    gkaminag     07/22/02  - 
+rem    gkaminag     07/02/02 -  creation
+
+create or replace package drisgp as
+
+  SEC_TYPE_UNKNOWN             constant number :=  0;
+  SEC_TYPE_ZONE                constant number :=  1;
+  SEC_TYPE_FIELD               constant number :=  2;
+  SEC_TYPE_SPECIAL             constant number :=  3;
+  SEC_TYPE_STOP                constant number :=  4;
+  SEC_TYPE_ATTR                constant number :=  5;
+  SEC_TYPE_XML                 constant number :=  6;
+  SEC_TYPE_MDATA               constant number :=  7;
+
+  SEC_ZONE_FID                 constant number :=  1;  
+  SEC_FIELD_MIN_FID            constant number :=  16; 
+  SEC_FIELD_MAX_FID            constant number :=  79;
+  SEC_MAX_FIELD                constant number :=  64;
+
+  SEC_MDATA_MIN_FID            constant number := 400; 
+  SEC_MDATA_MAX_FID            constant number := 499;
+  SEC_MAX_MDATA                constant number := 100;
+
+/*-------------------- create_section_group  ---------------------------*/
+/* create a new section group */
+
+PROCEDURE create_section_group(
+  p_group_name   in    varchar2
+, p_group_type   in    varchar2
+);
+
+/*-------------------- drop_section_group  ---------------------------*/
+/* drop a section group */
+
+PROCEDURE drop_section_group(
+  p_group_name   in    varchar2
+);
+
+/*-------------------- drop_user_section_groups ----------------------*/
+/* Drop section groups owned by a user */
+
+PROCEDURE drop_user_section_groups(
+  p_user_name in varchar2 := null
+);
+
+/*-------------------- add_section --------------------*/
+/* add a section to a section group */
+
+PROCEDURE add_section(
+  p_group_name     in     varchar2,
+  p_section_name   in     varchar2,
+  p_tag            in     varchar2,
+  p_section_type   in     binary_integer,
+  p_visible        in     boolean,
+  p_options        in     varchar2 default NULL
+);
+
+/*-------------------- remove_section ---------------------------*/
+
+PROCEDURE remove_section(
+  group_name    in    varchar2,
+  section_name  in    varchar2
+);
+
+PROCEDURE remove_section(
+  group_name     in    varchar2,
+  section_id     in    number
+);
+
+/*--------------------------- get_default_section ------------------*/
+/* get the default value for the section group preference */
+
+function get_default_section(
+  p_dstore_pref in varchar2,
+  p_filter_pref in varchar2,
+  p_dtype_pref  in varchar2
+)
+return varchar2;
+
+/*------------------------ copy_section_group ------------------------------*/
+/* copy section group info into index meta data */
+
+function copy_section_group(
+  p_idx_id     in  number, 
+  p_sgroup     in  varchar2,
+  p_rcount     out number
+) 
+return dr_def.pref_rec;
+
+/*----------------------- IndexAddSection  ---------------------------*/
+/* add a section to an already existing index */
+
+PROCEDURE IndexAddSection(
+  ia          in  sys.ODCIIndexInfo,
+  idx         in  dr_def.idx_rec,
+  sectype     in  varchar2,
+  secname     in  varchar2,
+  tag         in  varchar2,
+  visible     in  number
+);
+
+/*----------------------- LoadSectionMD  ---------------------------*/
+/* load section metadata from the index values table */
+
+PROCEDURE LoadSectionMD(
+  p_idxid    in         binary_integer,
+  p_fonly    in         boolean,
+  o_sectab   out nocopy dr_def.sec_tab
+);
+
+/*----------------------- GetSectionType  ---------------------------*/
+/* return type of section given name */
+FUNCTION GetSectionType(
+  p_idxid    in         binary_integer,
+  p_secname  in         varchar2
+) return binary_integer;
+
+end drisgp;
+/

@@ -1,0 +1,64 @@
+CREATE OR REPLACE PACKAGE BODY dbms_tsm wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+b
+bb2 288
+Zx7GkxD9OC2T7CA1ftDfJdLNZLgwg0OJmgxqfC/GEBkP80AotqK4zmGwIa1FcBOJceW5Jl+9
+ZeSvuPm1MEwNTMTYzd/pdyJf0Tohv/7tu2zuBuwH3eHvSVk5f8nLC9QtsR5/p1TvZ+hvBHtI
+TG8KUMCwXxxQGwvn49JJXtOTOhbXuKwf9ZfeDU/pnlU6/O+9fWVjKWdicM2M/UiVdQXuiMye
+KVu5dlTX7yM9ejk8qnFWwdnBsCKYXEhHRrNKyHoMSN5PcHbPVm/3l8a3sPPydRYnW42n8rgX
+VmpwUzcS8jUXjcsFvuf1WukarwHaugyonEkJN0NhJx8m/V970h5UKbD4DLUFFNP34S6w2YGp
+9tOUJhRwRDg6aHdNZ96e8r6t568/8JoX+G25PhXVRQcFPkUHeauy0ObeH32W8AXEcdBEQ8N0
+GzINCWGytMk7xLUQjUiPHC7rj+Wke9uWZq4+eyV8182QLg8/S+2kMloJ/ebf6OBfkCGnAzAQ
+fWncxktP6IUUuHjR25axK3+/soehPZYVsicyfqcSYyJB8doRuYPk+an4GbdFvzB6aP/uCEsu
+aoazY60CGPaua+ATZMhis/qYvl3NjzUZ15ovmSgqEsReXr8HRGLZjbP62k1gsFs=
+
+/
+show errors;
+/
+CREATE OR REPLACE PACKAGE BODY dbms_tsm_prvt wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+b
+48d 1ba
+nXCmlmFEV2Py8BGWnVwgLmQyZKAwg1XDLgxqZy+BaA9/jiiUohowwjB1ikopUJF4R0ijx5f6
+1uNUpbXWXvbXB6gId9YSVBW8xCDJmnoJDjFw8sgwujcum2nGyLECfu9wddemnghAfj42Xdjh
+ww5Q5vupZ6hLvyq6EW/a51xTzI3ZOZ35BrqeLbkP7Ab9u3aI7R9D25pRdSqXwGcyhD30bFOY
+CeFbVX0+8VdH0us43HyqVao0ep27wUuGUzk7843AMGIYBvLLbbtqC/dPPbtSphGTODFw0uGD
+z96SCQDa1LOd/DLNJZBMe9fZhWP8hFhoLse6TBTZLejQA6VAMtPrNEqKOLiISawlnmMc2D9J
+ZcHDfOX/QmU6427eKaPn1r/wPxXcEzuTgrfx3XMdaNxju80PYyDdBPDrhcoyMFUs//wGtuIp
+01M=
+
+/
+show errors;
+/

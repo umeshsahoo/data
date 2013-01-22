@@ -1,0 +1,64 @@
+Rem
+Rem $Header: dbmschnf.sql 09-jul-2004.10:40:33 ssvemuri Exp $
+Rem
+Rem dbmschnf.sql
+Rem
+Rem Copyright (c) 2003, 2004, Oracle. All rights reserved.  
+Rem
+Rem    NAME
+Rem      dbmschnf.sql - <one-line expansion of the name>
+Rem
+Rem    DESCRIPTION
+Rem      <short description of component this file declares/defines>
+Rem
+Rem    NOTES
+Rem      <other useful comments, qualifications, etc.>
+Rem
+Rem    MODIFIED   (MM/DD/YY)
+Rem    ssvemuri    07/09/04 - ssvemuri_change_notification
+Rem    bsinha      10/22/03 - Created
+Rem
+
+CREATE or REPLACE PACKAGE dbms_change_notification AUTHID CURRENT_USER as
+QOS_RELIABLE CONSTANT BINARY_INTEGER := 1;
+QOS_DEREG_NFY CONSTANT BINARY_INTEGER := 2;
+QOS_ROWIDS CONSTANT BINARY_INTEGER :=4;
+
+EVENT_NONE CONSTANT BINARY_INTEGER :=0;
+EVENT_STARTUP CONSTANT BINARY_INTEGER := 1;
+EVENT_SHUTDOWN CONSTANT BINARY_INTEGER := 2;
+EVENT_SHUTDOWN_ANY CONSTANT BINARY_INTEGER := 3;
+EVENT_DROP_DB CONSTANT BINARY_INTEGER := 4;
+EVENT_DEREG CONSTANT BINARY_INTEGER := 5;
+EVENT_OBJCHANGE CONSTANT BINARY_INTEGER := 6;
+
+ALL_OPERATIONS CONSTANT BINARY_INTEGER := 0;
+ALL_ROWS CONSTANT BINARY_INTEGER := 1;
+INSERTOP CONSTANT BINARY_INTEGER := 2;
+UPDATEOP CONSTANT BINARY_INTEGER := 4;
+DELETEOP CONSTANT BINARY_INTEGER := 8;
+ALTEROP  CONSTANT BINARY_INTEGER := 16;
+DROPOP   CONSTANT BINARY_INTEGER := 32;
+UNKNOWNOP CONSTANT BINARY_INTEGER := 64;
+
+
+FUNCTION NEW_REG_START_OC4J(regds IN sys.chnf$_reg_info_oc4j)
+  RETURN NUMBER;
+
+FUNCTION NEW_REG_START(regds IN sys.chnf$_reg_info)
+  RETURN NUMBER;
+
+PROCEDURE ENABLE_REG(regid IN NUMBER);
+PROCEDURE REG_END;
+PROCEDURE DEREGISTER(regid IN NUMBER);
+PROCEDURE SET_ROWID_THRESHOLD(tbname IN varchar2, threshold IN NUMBER);
+END;
+/
+
+CREATE or REPLACE PUBLIC SYNONYM dbms_change_notification FOR sys.dbms_change_notification
+/
+
+CREATE OR REPLACE LIBRARY dbms_chnf_lib TRUSTED AS STATIC
+/
+
+

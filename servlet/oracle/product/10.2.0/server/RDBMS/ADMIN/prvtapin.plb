@@ -1,0 +1,32 @@
+create or replace package body dbms_application_info wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+b
+b86 2bd
+GnoQTqkGClO+UcPpr0nYqqyEp+Ewgw1cr0iGyo5oHpLVUz2NV9gz7LY3Hx+U1kQwE0HYHOUc
+xQFjXAr5+YMvq4ovnBTRH7r3mkc0QjShhH0AJqY7lBKifkwTSiHwj4lU4pHGQ2CoSBj5yncR
+6TcNqy+w2IJwmKMtK2cpLJAUKg4kouvaUaoLok3WBHMjmPxSORQJPTZS3jUg50TDCXr77Uxr
+CKHVpRRDY3G80dYMHTgmn1z2A73vXz6GvRWivxe26LpZmKFEW95Vd9l9c1YMjEVB0sEfpBzM
+kFWaQRYeYQR8ybgJFpMm1InsDDm6D69jhkhGKTnoniHRadR/5uWlPz5AJ+S4/gRrqttwhKM4
+934ChYTCoupwJD2i8iKvP0OozD2xec3hWmB54yJXFAUjECLjXKfjW2O7ZOFSufV0dPAQ/+WQ
+bt3PTrwSVXNztGvEsKqWciB4Quaj+jutVPF2MP/CLtH1tNahcQ9vPYS5KHD2TSP0sO+qwxnV
+pvo5Q4Cei1F71zJx848A+YlsSRrG10ol1G2l027sWI+aKBcbJlUfNYq09JYL33nG9MKFt/SU
+sDDTTMZx+nDcws+A6IcTsNmRKWWtRVlAh5BP6hfB5r5CQsnJQwGgncu4+Q8smBNAahCv+BtS
+BIM0Fni2z7hvxhw4ZHgUZycuKx1azM6NxT/kWyDF0EU=
+
+/

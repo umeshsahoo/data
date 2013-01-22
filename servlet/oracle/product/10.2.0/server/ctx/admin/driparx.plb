@@ -1,0 +1,36 @@
+create or replace package body driparx wrapped 
+a000000
+1f
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+b
+b98 3dd
+IkxagPtmSPwjMdtu4UJbkvlkaCEwg5UrLiAFfHRVrZ2sB/vwmMouxAWsy2kBG5QnDEEiCcEa
+JCUsJPKfirTCt+hnLXaOum9PhcaA8pSGZH7Qpdib712jw1mxykfhDiUYC7khrDUesqvvidLU
+ZW3ZpTx68df+r3ggA9RBLydeSx3y6XJb6DqZ6yScnd8xp7wihoeFU8XL4FvBDhWp9en3NxCv
+yZSpYB6gaNR4ia1Yfh+MeT8kAi/AOOUqPIU7n9QjwhJxOaCUbtBi/IEsqG8VtCqWx5aRSg3Q
+BfR6Bctzu3NT+nP/QQWD1RfVF7ECg7uiN/GNsh+X6KkX2b1yt/ovz0AFtp8YmT58kxH9DrCm
+GZru/5oCndGblIpUOHwTmceXLBSE9slqWdPsi8AI93ctNI4Us8pDS800s8lE9L9e+/AVS+xS
+IaVb37Wxc8Y3+PDqhP4TMqjjfPeOv3QgwRTEIUT4CMErhbYyqsX4bddrJrMIfuaXTYAawL5r
+dyRxKU40u9oZ7smgLtn5okTML+vpJGItMZd5EPI9zo1WTIsptrjQSVgJW76OsxvNxzsb+EMF
+YFX3xvnKmRDxy1crjlQwXEyt1IUhxUWc7sbyP7Mtglw6c8glH/sA7Q+7vWNrPXqgi1ywS/a6
+qt7rMZGGoEaw84ahIO7yo9jNwnq8BvNGirm9k5zrjJOCQkdYAbA5Xhwo2Fe1fEhvRAKyKP4k
+Z1yKZIQPxxuNjm7YuSzKBJneXG3rNg3r5XRmyFvZQQW+xB8Us9uEzr1RBx0N6U7cEbL41gzr
+frgKn/Z/52SdeN5hloh8F43DY8CoPVmrb5MTU3qVa0/vkPLWkuEdf5LRVJvba940fgDaQ8KL
+VAIuumjEuAyFTEPe9LDy9LFrxykdU8UoQyGYgeMGYZd5WZfryu/HPqm3R6ssvsUMOLAekB9a
+X3IMip+8xyU8Y6XokSEKjPcea4eD/c4zBSQfZSaR
+
+/

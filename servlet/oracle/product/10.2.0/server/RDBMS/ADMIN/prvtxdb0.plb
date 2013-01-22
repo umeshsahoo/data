@@ -1,0 +1,33 @@
+create or replace package xdb.dbms_xdbutil_int wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+9
+470 24c
+7FRe6aL3GtdDkSW0J7a6Ejll/nIwgzvD10gFfHQZra5rjJmOamEL1qQR9EoNlxpnzN7Am/id
+lU1Xx7cbzalRe1dLlbuuGvGvJGrLTH2wZSzmDyrorfF7TXvUj8+UNSW+b44f2cmGcW8FT1eP
+drip7HdC6FFwyuVeIDKunVXQzVxsCDaJAse+6uTHBTAH8ofvt/q4tVvtuchpZ3/1M9x8a21d
+M8o/NjqBEeMoKwiGutvWqDYNnpBjZFwoXmUv3GnD4EhCrjZVm39LIHFDVLy6axyC+cbdwivs
+DCy5PeOuaJ2yIORGleDV0r2Y604b7QXPeZJU3HtxjQeO+sCqYLEImQ2tOlSfTApFH6AiBe7F
+3PgWo6iybuHyWxD6DoaBOpC9EotGZ7+Iv03XmDcAvJrmEiiwz62N34FThC0zbjq1vYeeNMXn
+NBa66NGZywh8EodNivhqmPfqoM0W0DB9TTinRZTJjpzsnyB6QMV9nvwjsEUztIRFmz+a/HuD
+n8X7gqMRm8aRACCAap/XH5rQxHO66GhneQkFYPhM8IdauvBRWfdfKiNOOMV4tcUFIKr7ERuy
+cg==
+
+/
+show errors
+grant execute on sys.dbms_sys_sql to xdb;

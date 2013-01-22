@@ -1,0 +1,48 @@
+rem
+rem Copyright (c) 2002, Oracle Corporation.  All rights reserved.  
+rem
+rem    NAME
+rem      drimlx.pkh - DR Internal Multi LeXer preference management
+rem    DESCRIPTION
+rem      This package contains internal code to create, manage, and drop
+rem      multi-lexers
+rem
+rem    NOTES
+rem    MODIFIED    (MM/DD/YY)
+rem    gkaminag     08/19/02 - gkaminag_security_phase2_020620
+rem    gkaminag     07/22/02  - 
+rem    gkaminag     07/02/02 -  creation
+
+create or replace package drimlx as
+
+/*-------------------- add_sub_lexer ---------------------------*/
+
+PROCEDURE add_sub_lexer(
+  lexer_name     in   varchar2,
+  language       in   varchar2,
+  sub_lexer      in   varchar2,
+  alt_value      in   varchar2 default NULL
+);
+
+/*-------------------- remove_sub_lexer ---------------------------*/
+
+PROCEDURE remove_sub_lexer(
+  lexer_name     in   varchar2,
+  language       in   varchar2
+);
+
+/*----------------------- copy_multi_lexer -------------------------------*/
+procedure copy_multi_lexer(
+  p_idx_id in  number,
+  p_pref   in  dr_def.pref_rec,
+  p_rcount out number
+);
+
+/*----------------------- GetIndexMultiLexer -----------------------------*/
+procedure GetIndexMultiLexer(
+  p_idx_id in  number,
+  o_slx in out nocopy dr_def.slx_tab
+);
+
+end drimlx;
+/

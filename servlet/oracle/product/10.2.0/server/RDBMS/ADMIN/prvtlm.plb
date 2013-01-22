@@ -1,0 +1,33 @@
+create or replace PACKAGE BODY dbms_logmnr wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+b
+926 306
+ARzjeJWrcjHZsqDiqEqyCiIixggwg+1cr0oayo5oHtLquPbaOLYSwreK9U8vUGzvfWbsR/q1
+tW0QqaCsO4Ycny4Pif4cXERcVdOSNcVKGEAQZiuFSNgT8sXwor/Argr9l5NkrZJQhBfj34h7
+qPhTnErFISThh8OWmeLzhmwp9tbARhCt6kdvnTR61RVt92BaHNCR26WAzTp6KF8M/hhYDuiO
+Kurbv1eOHbPSH7NkHpvoKlHMkFu65+nSwRaJ7lzbisBbQlpsvcL2RRSJjF8GBwlLQeda9Vg6
+pGeLbEGpPwitQPElaKbpBANz2oWmFasfEUKAE2JLRUhrzdsa+EzQ7APJipT2YbuvogffMpY9
+dZsZIhgmaz00hpcwoSO3pZruDAUqn63k6oodJvhQOC0HQKR3wFSMPJKWSHL/ftrGLtDfuHif
+wLVAlb8aWGjwvOJZej+0mgftEEcxD87nRxCs51YwbI4hIsKWFqxJ1DCL1h3gdqgVOAzIdp5m
+kLsI86lCxinnc62wxjQaizp2GrbgqO6RhhFYV4LDXUvRpmxpODIGyF9GAn7ge7FTi8Lqd9yu
+dnNo9MZMU1JoHxq+KQ3yji0R6ljTnGic9cpDZpEwvgDcOfsgjmHw6jTKKcRjFgkWudYGD5nT
+PGY+5qIClYqAQcGcWp7n1x0JUzWuRria7XSCPV0J3tETNyzEZyOQTGdgiH1kUnqxweVtYB4r
+pYx+A06Bc3PB/uSyP8QegTOSn9lOA7Kh+HLOzSjRsdGh
+
+/

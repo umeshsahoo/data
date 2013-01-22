@@ -1,0 +1,18 @@
+# This is a sample listener.ora that contains the NET8 parameters that are
+# needed to connect to an HS Agent
+
+# LISTENER =
+#  (ADDRESS_LIST=
+#       (ADDRESS=(PROTOCOL=tcp)(HOST=localhost)(PORT=1521))
+#       (ADDRESS=(PROTOCOL=ipc)(KEY=PNPKEY)))
+
+# SID_LIST_LISTENER=
+#   (SID_LIST=
+#       (SID_DESC=
+#          (SID_NAME=hsagent)
+#          (ORACLE_HOME=/private/app/oracle/product/9.0.1)
+#          (PROGRAM=hsagent)
+#        )
+#       )
+
+#CONNECT_TIMEOUT_LISTENER = 0 

@@ -1,0 +1,189 @@
+rem 
+rem Copyright (c) 2002, 2004, Oracle Corporation.  All rights reserved.  
+rem
+rem    NAME
+rem      drvdml.pkh - DR cartridge internal, inVoker's rights DML services
+rem
+rem    DESCRIPTION
+rem      functions called by ConText cartridge routines to perform 
+rem      various DML functionalities
+rem   
+rem    NOTES
+rem      SECURITY SECURITY SECURITY
+rem        this package is public execute because several of its procedures
+rem        are called from C code.  ensure that every public call is 
+rem        protected by security checking or some other method
+rem      SECURITY SECURITY SECURITY
+rem
+rem    MODIFIED    (MM/DD/YY)
+rem    smuralid     01/15/04 - add another overload of MaintainKtab 
+rem    gkaminag     11/18/03 - bug 3237317 
+rem    smuralid     10/09/03 - ProcessDML: direct_path defaults to false 
+rem    gkaminag     10/21/03 - mdata phase 2 
+rem    yucheng      06/12/03 - 
+rem    yucheng      05/27/03 - add auto_sync_index
+rem    smuralid     04/03/03 - post-pass for $K maintenance
+rem    gkaminag     09/24/02 - security phase 3
+rem    gkaminag     06/19/02 - gkaminag_security_ph1_020603
+rem    gkaminag     06/03/02 - creation 
+
+create or replace package drvdml authid current_user as
+
+  -- CTXCAT holding variables
+  type vctab is table of varchar2(30) index by binary_integer;
+  c_vctab           vctab;
+  c_cttab           vctab;
+
+  type numtab is table of number index by binary_integer;
+  c_numtab          numtab;
+
+  type dttab is table of date index by binary_integer;
+  c_dttab           dttab;
+
+  type cntab is table of varchar2(256) index by binary_integer;
+  c_cntab           cntab;
+
+  c_text_vc2        varchar2(4000);
+  c_text_clob       clob;
+  c_rowid           rowid;
+
+  type updtab is table of boolean index by binary_integer;
+  c_updtab          updtab;
+
+/*--------------------------- ProcessDML ------------------------*/
+/*
+  NAME
+    ProcessDML
+
+  DESCRIPTION
+    do a sync
+
+  ARGUMENTS
+    CID             in     - column to work on 
+    parallel_degree in     - parallel degree
+    direct_path     in     - use direct-path inserts ?
+
+*/
+procedure ProcessDML (
+  p_idxid  in  binary_integer,
+  p_ixpid  in  binary_integer,
+  p_idxmem in  binary_integer,
+  p_pardeg in  binary_integer default 1,
+  p_direct_path in boolean default false
+);
+
+/*--------------------------- MaintainKTab -------------------------*/
+/*
+  NAME
+    MaintainKTab
+
+  DESCRIPTION
+    update the $K table after index creation/sync
+
+  ARGUMENTS
+    idx               in     - the index
+    ixp               in     - the partition of the index 
+    p_startDocid      in     - docid to start from
+    p_parallel_degree in     - parallel degree
+
+*/
+procedure MaintainKTab (
+  idx         in  dr_def.idx_rec,
+  ixp         in  dr_def.ixp_rec,  
+  p_startDocid  in  number default null,
+  p_parallel_degree in number default 1
+);
+/*--------------------------- MaintainKTab -------------------------*/
+/*
+  NAME
+    MaintainKTab
+
+  DESCRIPTION
+    update the $K table after index creation/sync
+
+  ARGUMENTS
+    p_idxid           in     - the index id
+    p_ixpid           in     - the partition id
+    p_startDocid      in     - docid to start from
+    p_parallel_degree in     - parallel degree
+*/
+procedure MaintainKTab (
+  p_idxid           in binary_integer,
+  p_ixpid           in binary_integer,
+  p_startDocid      in  number default null,
+  p_parallel_degree in number default 1
+);
+
+/*--------------------------- DeletePending ------------------------*/
+
+procedure DeletePending (
+  p_idxid  in binary_integer,
+  p_ixpid  in binary_integer,
+  p_rids   in varchar2
+);
+
+/*----------------------------- CleanDML ---------------------------*/
+
+procedure CleanDML (
+  p_idxid  in binary_integer,
+  p_ixpid  in binary_integer,
+  p_tabid  in binary_integer
+);
+
+/*-------------------------- SetLockFailed -------------------------*/
+
+procedure SetLockFailed (
+  p_idxid  in binary_integer,
+  p_ixpid  in binary_integer,
+  p_rid    in rowid
+);
+
+/*--------------------------- ctxcat_dml ----------------------------*/
+
+procedure ctxcat_dml(
+  idx_owner in varchar2, 
+  idx_name  in varchar2,
+  doindex   in boolean,
+  updop     in boolean
+);
+
+/*----------------------- auto_sync_index ------------------------*/
+
+PROCEDURE auto_sync_index(
+  idx_name  in  varchar2 default NULL,
+  memory    in  varchar2 default NULL,
+  part_name in  varchar2 default NULL,
+  parallel_degree in number default 1,
+  logfile   in  varchar2 default NULL,
+  events    in  number   default NULL
+);
+
+/*----------------------- com_sync_index -------------------------*/
+PROCEDURE com_sync_index(
+  idx_name  in  varchar2 default null,
+  memory    in  varchar2 default null,
+  part_name in  varchar2 default null
+);
+
+/*----------------------- add_rem_mdata --------------------------*/
+
+PROCEDURE add_rem_mdata(
+  add_rem      in varchar2,
+  idx_name     in varchar2,
+  section_name in varchar2,
+  mdata_values in sys.odcivarchar2list,
+  mdata_rowids in sys.odciridlist,
+  part_name    in varchar2
+);
+
+/*----------------------------- csync -----------------------------*/
+
+PROCEDURE csync(
+  idx_id          in number,
+  memory          in varchar2 default NULL,
+  part_name       in varchar2 default NULL,
+  parallel_degree in number default 1
+);
+
+end drvdml;
+/

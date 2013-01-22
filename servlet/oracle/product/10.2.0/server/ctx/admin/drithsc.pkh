@@ -1,0 +1,347 @@
+rem
+rem Copyright (c) 1999, 2003, Oracle Corporation.  All rights reserved.  
+rem
+rem    NAME
+rem      drithsc.pkh - Spec for ConText Option thesaurus package
+rem
+rem    DESCRIPTION
+rem      thesaurus Creation functions
+rem
+rem    NOTES
+rem
+rem    MODIFIED   (MM/DD/YY)
+rem    surman      09/09/03  - 3101316: Add drop_user_thesauri 
+rem    ehuang      12/01/99 -  add update_translation
+rem    ehuang      04/22/99 -  add maintenance api
+rem    gkaminag    03/09/99 -  creation
+
+CREATE OR REPLACE PACKAGE drithsc AS
+
+  -- last phrase id for TR
+  pv_last_id number;
+
+/*---------------------------- create_thesaurus -------------------------*/
+/*
+  NAME
+    create_thesaurus
+
+  DESCRIPTION
+    create a new, empty thesaurus
+
+  ARGUMENTS
+    tname    (IN) thesaurus name
+    casesens (IN) case-sensitivity
+
+  RETURN
+    new thesaurus ID
+
+  NOTES
+    error if thesaurus already exists
+*/
+function create_thesaurus(
+  tname    in varchar2, 
+  casesens in boolean  default false) 
+return number;
+
+/*---------------------------- drop_thesaurus -------------------------*/
+/*
+   NAME
+     drop_thesaurus - drop a thesaurus
+  
+   DESCRIPTION
+     This procedure drops an existing thesaurus with the indicated name
+     
+   ARGUMENTS
+     tid  -- thesaurus id
+  
+   NOTES
+     no error if the thesaurus does not exist
+*/
+procedure drop_thesaurus(tid in number);
+
+/*------------------------ drop_user_thesauri -------------------------*/
+/*
+   NAME
+     drop_user_thesauri - drops thesauri owner by a user
+
+   DESCRIPTION
+     This procedure drops all thesauri owned by the indicated user.  If
+     the username is null, then all thesauri owned by non-existent users
+     are dropped (called by ctx_adm.recover).
+
+   ARGUMENTS
+     user_name
+*/
+procedure drop_user_thesauri(user_name in varchar2 := null);
+
+/*------------------------- trunc_thesaurus -------------------------*/
+/*
+   NAME
+     trunc_thesaurus - truncate a thesaurus
+  
+   DESCRIPTION
+     This procedure truncate a thesaurus
+     
+   ARGUMENTS
+     tid     -- thesaurus id
+
+   NOTES
+*/
+procedure trunc_thesaurus(tid in number);
+
+/*------------------------- rename_thesaurus -------------------------*/
+/*
+   NAME
+     rename_thesaurus - rename a thesaurus
+  
+   DESCRIPTION
+     This procedure rename a thesaurus
+     show 
+
+   ARGUMENTS
+     tid     -- thesaurus id
+     tname   -- new thesaurus name
+
+   NOTES
+*/
+procedure rename_thesaurus(
+   tid     in number,
+   tname   in varchar2
+);
+
+/*---------------------------- create_phrase -------------------------*/
+/*
+   NAME
+     create_phrase -- add a phrase to a thesaurus
+  
+   DESCRIPTION
+     This procedure adds a phrase, or information about the phrase,
+     to the thesaurus.
+  
+   ARGUMENTS
+     tid      --  thesaurus id
+     tcs      --  TRUE if thesaurus is case-sensitive
+     phrase   --  phrase to add/modify
+     rel      --  relationship type
+     id       --  relationship id
+  
+   NOTES
+     no error if the phrase already exists.
+     note funny order of arguments.  PHRASE is the REL of RELID.
+     Thus, create_phrase(123, 'animal', 'BT', <id of dog>)
+
+   RETURN
+     created phrase id
+*/
+function create_phrase (
+  tid    in number,
+  tcs    in boolean,
+  phrase in varchar2,
+  rel    in varchar2 default null,
+  relid  in number   default null
+) return number;
+
+/*---------------------------- drop_phrase -------------------------*/
+/*
+   NAME
+     drop_phrase -- drop a phrase from a thesaurus
+  
+   DESCRIPTION
+     This procedure drops a phrase from the thesaurus
+  
+   ARGUMENTS
+     phrid       --  phrase id
+  
+   NOTES
+
+   RETURN
+*/
+procedure drop_phrase (
+  phrid  in number
+);
+
+/*--------------------------- rename_phrase -------------------------*/
+/*
+   NAME
+     create_phrase -- rename a phrase in  a thesaurus
+  
+   DESCRIPTION
+     This procedure renames a phrase
+  
+   ARGUMENTS
+     phrid    --  phrase id
+     phrase   --  phrase to add/modify
+  
+   NOTES
+
+   RETURN
+
+*/
+procedure rename_phrase (
+  phrid  in   number,
+  phrase in   varchar2
+);
+
+
+/*------------------------------- make_pt -----------------------------*/
+/*
+   NAME
+     make_pt -- name a phrase the preferred term
+  
+   DESCRIPTION
+     This procedure makes a phrase the preferred term
+  
+   ARGUMENTS
+     phrid    --  phrase id
+  
+   NOTES
+
+   RETURN
+
+*/
+procedure make_pt (
+  phrid  in   number
+);
+
+/*----------------------------- change_sn -----------------------------*/
+/*
+   NAME
+     change_sn -- change the scope notes of a phrase
+  
+   DESCRIPTION
+     This procedure changes the scope notes of a phrase
+  
+   ARGUMENTS
+     phrid    --  phrase id
+     sn       --  new scope notes
+
+   NOTES
+
+   RETURN
+
+*/
+procedure change_sn (
+  phrid  in   number,
+  sn     in   varchar2
+);
+
+/*------------------------------- create_tr -----------------------------*/
+/*
+   NAME
+     create_tr -- add a translation to a thesaurus
+  
+   DESCRIPTION
+     This procedure adds a translation to the thesaurus
+  
+   ARGUMENTS
+     id1      --  phrase id 1
+     lang     --  language
+     trans    --  translation
+  
+   NOTES
+
+   RETURN
+*/
+procedure create_tr(
+  id1   in number,
+  lang  in varchar2,
+  trans in varchar2
+);
+
+/*------------------------------- drop_tr -----------------------------*/
+/*
+   NAME
+     drop_tr -- drop a translation/s from a thesaurus
+  
+   DESCRIPTION
+     This procedure drops a translation/s from the thesaurus
+  
+   ARGUMENTS
+     id1      --  phrase id 1
+     lang     --  language
+     trans    --  translation
+  
+   NOTES
+
+   RETURN
+*/
+procedure drop_tr(
+  id1   in number,
+  lang  in varchar2,
+  trans in varchar2
+);
+
+/*------------------------------ update_tr -----------------------------*/
+/*
+   NAME
+     update_tr -- update a translation
+  
+   DESCRIPTION
+     This procedure updates a translation
+  
+   ARGUMENTS
+     id1      --  phrase id 1
+     lang     --  language
+     trans    --  translation
+     ntrans   --  new translation
+  
+   NOTES
+
+   RETURN
+*/
+procedure update_tr(
+  id1    in number,
+  lang   in varchar2,
+  trans  in varchar2,
+  ntrans in varchar2
+);
+
+/*---------------------------- create_relation ------------------------*/
+/*
+   NAME
+     create_relation -- add a relation to a thesaurus
+  
+   DESCRIPTION
+     This procedure adds a relation to the thesaurus
+  
+   ARGUMENTS
+     id1      --  phrase id 1
+     rel      --  relationship type
+     id2      --  phrase id 2
+  
+   NOTES
+     opposite of create_phrase -- ID2 is the REL of ID1.
+
+   RETURN
+*/
+PROCEDURE create_relation (
+  id1    in number,
+  rel    in varchar2,
+  id2    in number
+);
+
+/*---------------------------- drop_relation ------------------------*/
+/*
+   NAME
+     drop_relation -- drop a relation from a thesaurus
+  
+   DESCRIPTION
+     This procedure drops a relation from the thesaurus
+  
+   ARGUMENTS
+     id1      --  phrase id 1
+     rel      --  relationship type
+     id2      --  phrase id 2
+  
+   NOTES
+
+   RETURN
+*/
+PROCEDURE drop_relation (
+  id1    in number,
+  rel    in varchar2,
+  id2    in number
+);
+
+end drithsc;
+/

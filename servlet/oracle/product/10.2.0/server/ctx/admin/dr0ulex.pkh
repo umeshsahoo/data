@@ -1,0 +1,25 @@
+Rem
+Rem $Header: dr0ulexer.pkh 21-dec-00.16:17:29 mfaisal Exp $
+Rem
+Rem  Copyright (c) Oracle Corporation 2000. All Rights Reserved.
+Rem
+Rem    NAME
+Rem      dr0ulexer.pkh - User-defined LEXER
+Rem
+Rem    DESCRIPTION
+Rem      User-defined lexer package
+Rem
+Rem    NOTES
+Rem      
+Rem
+Rem    MODIFIED   (MM/DD/YY)
+Rem    mfaisal     12/21/00 - Creation
+
+CREATE OR REPLACE PACKAGE ctx_ulexer AS
+
+  -- index-by table to specify offset of those characters in the query
+  -- word which are to be treated as wildcard characters
+  TYPE wildcard_tab IS TABLE OF NUMBER INDEX BY BINARY_INTEGER;
+
+END ctx_ulexer;
+/

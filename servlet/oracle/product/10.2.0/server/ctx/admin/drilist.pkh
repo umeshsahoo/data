@@ -1,0 +1,83 @@
+create or replace package drilist is
+
+
+  CMD_ADMIN_PING                 constant number := 0;
+  CMD_ADMIN_LOG                  constant number := 1;
+  CMD_ADMIN_MTS                  constant number := 2;
+  CMD_ADMIN_VERSION              constant number := 3;
+  CMD_ADMIN_EVENT                constant number := 4;
+  CMD_ADMIN_MESSAGE_PRINT        constant number := 5;
+  CMD_ADMIN_SET_STATE            constant number := 6;
+  CMD_ADMIN_GET_STATE            constant number := 7;
+  CMD_ADMIN_TRACE_CMD            constant number := 8;
+  CMD_ADMIN_ORAEVENT             constant number := 9;
+
+  CMD_INDEX_POPULATE             constant number := 10;
+  CMD_INDEX_RESUME               constant number := 11;
+  CMD_INDEX_SYNC                 constant number := 12;
+  CMD_INDEX_OPT_FAST             constant number := 13;
+  CMD_INDEX_OPT_FULL             constant number := 14;
+  CMD_INDEX_ADD_SW               constant number := 15;
+  CMD_INDEX_LEX_SW               constant number := 16;
+  CMD_INDEX_OPT_TOKEN            constant number := 17;
+  CMD_INDEX_CATSYNC              constant number := 18;
+  CMD_INDEX_SLAVEID              constant number := 19;
+  CMD_INDEX_SCAN_SQL             constant number := 20;
+  CMD_INDEX_MARK_FAIL            constant number := 21;
+  CMD_INDEX_SYNC_SQL             constant number := 22;
+  CMD_INDEX_RES_SQL              constant number := 23;
+  CMD_INDEX_OPT_FULL_PAR         constant number := 24;
+  CMD_INDEX_RTOK                 constant number := 25;
+  CMD_INDEX_OPT_TTYP             constant number := 26;
+  CMD_INDEX_OPT_TTYP_PAR         constant number := 27;
+  CMD_INDEX_CSYNC                constant number := 28;
+
+  CMD_DOC_HIGHLIGHT              constant number := 30;
+  CMD_DOC_MARKUP                 constant number := 31;
+  CMD_DOC_FILTER                 constant number := 32;
+  CMD_DOC_GIST                   constant number := 33;
+  CMD_DOC_THEMES                 constant number := 34;
+  CMD_DOC_TOKENS                 constant number := 35;
+  CMD_DOC_IFILTER                constant number := 36;
+  CMD_DOC_KWIC                   constant number := 37;
+
+  CMD_QUERY_COUNT                constant number := 40;
+  CMD_QUERY_TWO_STEP             constant number := 41;
+  CMD_QUERY_HFEEDBACK            constant number := 42;
+  CMD_QUERY_XPATHCHK             constant number := 43;
+  CMD_QUERY_FUNCTION             constant number := 44;
+  CMD_QUERY_BROWSE               constant number := 45;
+
+  CMD_INSO_SAFE_CALLOUT          constant number := 50;
+  CMD_NEST_TEST                  constant number := 51;
+  CMD_REPORT_OBJSIZE             constant number := 52;
+  CMD_REPORT_STATS               constant number := 53;
+  CMD_REPORT_TOKINFO             constant number := 54;
+
+  CMD_CLASSIFY_TRAIN             constant number := 60;
+  CMD_CLASSIFY_FVECTORS          constant number := 61;
+  CMD_CLASSIFY_FEATURES          constant number := 62;
+  CMD_CLUSTERING                 constant number := 65;
+  CMD_ADMIN_QUERY_LOG            constant number := 66;
+  CMD_REPORT_QUERY_LOG_SUMMARY   constant number := 67;
+  CMD_ORACON_RWRTCHK             constant number := 68;
+
+  MS_GENERIC                 constant number := 0;
+  MS_INDEX_BEG               constant number := 1;
+  MS_INDEX_END               constant number := 2;
+  MS_GENERIC_NONL            constant number := 3;
+
+  MS_ORAEVENT_SET            constant number := 0;
+  MS_ORAEVENT_GET            constant number := 1;
+
+  MS_TRC_ADD                 constant number := 0;
+  MS_TRC_REM                 constant number := 1;
+  MS_TRC_ZRO                 constant number := 2;
+  MS_TRC_GET                 constant number := 3;
+  MS_TRC_LOG                 constant number := 4;
+  MS_TRC_ALL                 constant number := 5;
+  MS_TRC_SET_TP              constant number := 6;
+  MS_TRC_SET_VAL             constant number := 7;
+
+end drilist;
+/

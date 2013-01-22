@@ -1,0 +1,14 @@
+# This is a sample agent init file that contains the HS parameters that are
+# needed for an ODBC Agent. 
+
+#
+# HS init parameters
+#
+HS_FDS_CONNECT_INFO = <odbc data_source_name>
+HS_FDS_TRACE_LEVEL = <trace_level>
+
+
+#
+# Environment variables required for the non-Oracle system
+#
+#set <envvar>=<value>

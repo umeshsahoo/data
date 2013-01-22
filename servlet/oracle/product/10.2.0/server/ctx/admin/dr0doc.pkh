@@ -1,0 +1,1212 @@
+Rem Copyright (c) 1998, 2004, Oracle. All rights reserved.  
+Rem
+Rem    NAME
+Rem      dr0doc.pkh - DOCument services
+Rem
+Rem    DESCRIPTION
+Rem
+Rem    RETURNS
+Rem 
+Rem    NOTES
+Rem
+Rem    MODIFIED   (MM/DD/YY)
+Rem     daliao     06/18/04  - kwic document service
+Rem     gkaminag   07/18/02  - security phase 2
+Rem     ehuang     02/01/02  - on demand doc services
+Rem     ehuang     02/21/01 -  add procedure ifilter
+Rem     jkud       02/01/00 -  add tokens proc
+Rem     jkud       11/11/99 -  Add numthemes parameter
+Rem     ehuang     04/15/99 -  add support for rowid input
+Rem     gkaminag   04/09/99 -  in-memory operations
+Rem     gkaminag   02/09/99 -  mistake in comments
+Rem     salpha     10/01/98 -  add boundary conditions for gist
+Rem     gkaminag   07/22/98 -  highlight navigation
+Rem     gkaminag   07/17/98 -  add plaintext highlighting
+Rem     gkaminag   07/13/98 -  remove unused functions
+Rem     gkaminag   07/02/98 -  change in highlight result table
+Rem     syang      06/15/98 -  remove reindex
+Rem     gkaminag   06/03/98 -  add html
+Rem     gkaminag   05/18/98 -  change defaults for markup
+Rem     gkaminag   04/08/98 -  query -> text_query
+Rem     gkaminag   03/27/98 -  add reindex
+Rem     ehuang     03/23/98 -  mv highlight from dr0query
+Rem     ehuang     03/20/98 -  mv pkencode from dr0query
+Rem     gkaminag   03/13/98 -  Creation 
+Rem
+
+CREATE OR REPLACE PACKAGE ctx_doc AUTHID current_user AS
+
+-- constants
+
+TYPE_ROWID       constant varchar2(20) := 'ROWID';
+TYPE_PRIMARY_KEY constant varchar2(20) := 'PRIMARY_KEY';
+UNLIMITED_THEMES constant number       := NULL;
+
+-- package variables
+
+pv_ctx_doc_key_type varchar2(500) := null;
+
+-- type declaration
+
+type theme_rec is record (
+  theme  varchar2(2000),
+  weight number
+);
+type theme_tab is table of theme_rec index by binary_integer;
+
+type token_rec is record (
+  token  varchar2(64),
+  offset number,
+  length number
+);
+type token_tab is table of token_rec index by binary_integer;
+
+type highlight_rec is record (
+  offset number,
+  length number
+);
+type highlight_tab is table of highlight_rec index by binary_integer;
+
+/*---------------------------- set_key_type -----------------------------*/
+/*
+   NAME
+     set_key_type - toggles CTX_DOC_KEY_TYPE 
+
+   DESCRIPTION
+     toggles system parameter CTX_DOC_KEY_TYPE between ROWID and
+     PRIMARY_KEY
+
+   ARGUMENT
+     key_type    -  value of CTX_DOC_KEY_TYPE
+*/
+PROCEDURE set_key_type(
+  key_type   in   varchar2
+);
+
+/*------------------------------- themes --------------------------------*/
+/*
+   NAME
+     themes - request the themes for a document
+  
+   DESCRIPTION
+     This procedure will generate the themes for a given document.
+     The themes will be written to the theme table specified.
+     The theme table must have the following columns:
+  
+       query_id        number         (the query_id)       
+       theme           varchar2(2000) (the theme)
+       weight          number         (the theme weight)
+  		
+   ARGUMENTS
+     index_name               - the name of the text index
+     textkey                  - the primary key of the document
+     restab                   - the name of the theme table
+     query_id                 - a query id
+     full_themes              - should the full themes be displayed?
+     num_themes               - maximum number of themes to return
+*/
+PROCEDURE themes (
+   index_name    in varchar2,
+   textkey       in varchar2,
+   restab        in varchar2,
+   query_id      in number    default 0,
+   full_themes   in boolean   default false,
+   num_themes    in number    default 50
+);
+
+/*------------------------------- themes --------------------------------*/
+/*
+   NAME
+     themes - request the themes for a document
+  
+   DESCRIPTION
+     This version of themes returns the results into a PL/SQL table
+     instead of a result table
+
+   NOTES
+     Existing contents of restab will be destroyed
+*/
+PROCEDURE themes (
+   index_name    in varchar2,
+   textkey       in varchar2,
+   restab        in out nocopy theme_tab,
+   full_themes   in boolean   default false,
+   num_themes    in number    default 50
+);
+
+/*------------------------------ policy_themes ------------------------------*/
+/*
+   NAME
+     policy_themes - request the themes for a document on demand
+
+   DESCRIPTION
+     This version of themes accepts a policy name and a single VARCHAR2
+     document.  Returns the results into a PL/SQL table.
+
+   NOTES
+     Existing contents of restab will be destroyed
+*/
+PROCEDURE policy_themes (
+   policy_name   in varchar2,
+   document      in varchar2,
+   restab        in out nocopy theme_tab,
+   full_themes   in boolean    default false,
+   num_themes    in number     default 50,
+   language      in varchar2   default NULL,
+   format        in varchar2   default NULL,
+   charset       in varchar2   default NULL
+);
+
+/*------------------------------ policy_themes ------------------------------*/
+/*
+   NAME
+     policy_themes - request the themes for a document on demand
+
+   DESCRIPTION
+     This version of themes accepts a policy name and a single CLOB
+     document. Returns the results into a PL/SQL table.
+
+   NOTES
+     Existing contents of restab will be destroyed
+*/
+PROCEDURE policy_themes (
+   policy_name   in varchar2,
+   document      in clob,
+   restab        in out nocopy theme_tab,
+   full_themes   in boolean   default false,
+   num_themes    in number    default 50,
+   language      in varchar2  default NULL,
+   format        in varchar2  default NULL,
+   charset       in varchar2  default NULL
+);
+
+/*------------------------------ policy_themes ------------------------------*/
+/*
+   NAME
+     policy_themes - request the themes for a document on demand	
+   
+   DESCRIPTION
+     This version of themes accepts a policy name and a single BLOB
+     document.  Returns the results into a PL/SQL table.
+
+   NOTES
+     Existing contents of restab will be destroyed
+*/
+PROCEDURE policy_themes (
+   policy_name   in varchar2,
+   document      in blob,
+   restab        in out nocopy theme_tab,
+   full_themes   in boolean   default false,
+   num_themes    in number    default 50,
+   language      in varchar2  default NULL,
+   format        in varchar2  default NULL,
+   charset       in varchar2  default NULL
+);
+
+/*------------------------------ policy_themes ------------------------------*/
+/*
+   NAME
+     policy_themes - request the themes for a document on demand
+
+   DESCRIPTION
+     This version of themes accepts a policy name and a single BFILE
+     document. Returns the results into a PL/SQL table.
+
+   NOTES
+     Existing contents of restab will be destroyed
+*/
+PROCEDURE policy_themes (
+   policy_name   in varchar2,
+   document      in bfile,
+   restab        in out nocopy theme_tab,
+   full_themes   in boolean   default false,
+   num_themes    in number    default 50,
+   language      in varchar2   default NULL,
+   format        in varchar2   default NULL,
+   charset       in varchar2   default NULL
+);
+
+/*------------------------------- tokens --------------------------------*/
+/*
+   NAME
+     tokens - request the text tokens for a document
+  
+   DESCRIPTION
+     This procedure will generate the tokens for a given document.
+     The tokens will be written to the token table specified.
+     The token table must have the following columns:
+  
+       query_id        number         (the query_id)       
+       token           varchar2(64)   (the token)
+       offset          number         (the token's character offset)
+       length          number         (the token's length)
+  		
+   ARGUMENTS
+     index_name               - the name of the text index
+     textkey                  - the primary key of the document
+     restab                   - the name of the theme table
+     query_id                 - a query id
+*/
+PROCEDURE tokens (
+   index_name    in varchar2,
+   textkey       in varchar2,
+   restab        in varchar2,
+   query_id      in number    default 0
+);
+
+/*------------------------------- tokens --------------------------------*/
+/*
+   NAME
+     tokens - request the text tokens for a document
+  
+   DESCRIPTION
+     This version of tokens returns the results into a PL/SQL table
+     instead of a result table
+
+   NOTES
+     Existing contents of restab will be destroyed
+*/
+PROCEDURE tokens (
+   index_name    in varchar2,
+   textkey       in varchar2,
+   restab        in out nocopy token_tab
+);
+
+/*------------------------------ policy_tokens ------------------------------*/
+/*
+   NAME
+     policy_tokens - request the text tokens for a document on demand
+
+   DESCRIPTION
+     This version of tokens accepts a policy name and a single VARCHAR2
+     document.  Returns the results into a PL/SQL table.
+
+   NOTES
+     Existing contents of restab will be destroyed
+*/
+PROCEDURE policy_tokens (
+   policy_name    in varchar2,
+   document       in varchar2,
+   restab         in out nocopy token_tab,
+   language       in varchar2   default NULL,
+   format         in varchar2   default NULL,
+   charset        in varchar2   default NULL
+);
+
+/*------------------------------ policy_tokens -------------------------------*/
+/*
+   NAME
+     policy_tokens - request the text tokens for a document on demand
+
+   DESCRIPTION
+     This version of tokens accepts a policy name and a single CLOB
+     document.  Returns the results into a PL/SQL table
+
+   NOTES
+     Existing contents of restab will be destroyed
+*/
+PROCEDURE policy_tokens (
+   policy_name    in varchar2,
+   document       in clob,
+   restab         in out nocopy token_tab,
+   language       in varchar2   default NULL,
+   format         in varchar2   default NULL,
+   charset        in varchar2   default NULL
+);
+
+/*------------------------------ policy_tokens ------------------------------*/
+/*
+   NAME
+     policy_tokens - request the text tokens for a document on demand
+
+   DESCRIPTION
+     This version of tokens accepts a policy name and a single BLOB
+     document.  Returns the results into a PL/SQL table
+
+   NOTES
+     Existing contents of restab will be destroyed
+*/
+PROCEDURE policy_tokens (
+   policy_name    in varchar2,
+   document       in blob,
+   restab         in out nocopy token_tab,
+   language       in varchar2   default NULL,
+   format         in varchar2   default NULL,
+   charset        in varchar2   default NULL
+);
+
+/*------------------------------ policy_tokens -----------------------------*/
+/*
+   NAME
+     policy_tokens - request the text tokens for a document on demand
+
+   DESCRIPTION
+     This version of tokens accepts a policy name and a single BFILE
+     document.  Returns the results into a PL/SQL table
+
+   NOTES
+     Existing contents of restab will be destroyed
+*/
+PROCEDURE policy_tokens (
+   policy_name    in varchar2,
+   document       in bfile,
+   restab         in out nocopy token_tab,
+   language       in varchar2   default NULL,
+   format         in varchar2   default NULL,
+   charset        in varchar2   default NULL
+);
+
+/*------------------------------- gist ----------------------------------*/
+/*
+   NAME
+     gist - request the gist for a document
+  
+   DESCRIPTION
+  
+     This procedure will generate gist(s) of a given document.
+     The gist(s) will be written to the gist table specified.
+     The gist table must have the following columns:
+
+       query_id   number       (the query id)
+       pov        varchar2(80) (gist point-of-view)
+       gist       clob         (gist)
+  
+   ARGUMENTS
+     index_name               - the name of the text index
+     textkey                  - the primary key of the document
+     restab                   - the name of the gist table
+     query_id                 - the query id
+     glevel                   - P or S
+     pov                      - point-of-view limit
+     numparagraphs            - total number of paragraphs in gist(>=0)
+     maxpercent               - maximum percent of document in gist(>=0,<=100) 
+     num_themes               - maximum number of themes to return
+*/
+PROCEDURE gist (
+  index_name     in varchar2,
+  textkey        in varchar2,
+  restab         in varchar2,
+  query_id       in number   default 0,
+  glevel         in varchar2 default 'P',
+  pov            in varchar2 default null,
+  numParagraphs  in number   default null,
+  maxPercent     in number   default null,
+  num_themes     in number   default 50
+);
+
+/*------------------------------- gist ----------------------------------*/
+/*
+   NAME
+     gist - request the gist for a document
+  
+   DESCRIPTION
+     This version of gist returns the result into a CLOB locator 
+     instead of a result table.
+
+   NOTES
+     Unlike result table gist, this version of gist returns only one
+     gist.  If pov is not supplied, the GENERIC gist is returned.
+     
+     If result is NULL on entry, a temporary lob is allocated and returned.
+     it is up to the calling procedure to deallocate this lob.
+
+     Any existing contents of the lob locator passed in are cleared.
+*/
+PROCEDURE gist (
+  index_name     in varchar2,
+  textkey        in varchar2,
+  restab         in out nocopy clob,
+  glevel         in varchar2 default 'P',
+  pov            in varchar2 default 'GENERIC',
+  numParagraphs  in number   default null,
+  maxPercent     in number   default null,
+  num_themes     in number   default 50
+);
+
+/*------------------------------ policy_gist --------------------------------*/
+/*
+   NAME
+     policy_gist - request the gist for a document on demand
+ 
+   DESCRIPTION
+     This version of tokens accepts a policy name and a single VARCHAR2
+     document. Returns the result into a CLOB locator.
+
+   NOTES
+     Unlike result table gist, this version of gist returns only one
+     gist.  If pov is not supplied, the GENERIC gist is returned.
+     
+     If result is NULL on entry, a temporary lob is allocated and returned.
+     it is up to the calling procedure to deallocate this lob.
+
+     Any existing contents of the lob locator passed in are cleared.
+*/
+PROCEDURE policy_gist (
+  policy_name    in varchar2,
+  document       in varchar2,
+  restab         in out nocopy clob,
+  glevel         in varchar2 default 'P',
+  pov            in varchar2 default 'GENERIC',
+  numParagraphs  in number   default null,
+  maxPercent     in number   default null,
+  num_themes     in number   default 50,
+  language       in varchar2 default NULL,
+  format         in varchar2 default NULL,
+  charset        in varchar2 default NULL
+);
+
+/*------------------------------ policy_gist --------------------------------*/
+/*
+   NAME
+     policy_gist - request the gist for a document on demand
+
+   DESCRIPTION
+     This version of tokens accepts a policy name and a single CLOB
+     document. Returns the result into a CLOB locator.
+
+   NOTES
+     Unlike result table gist, this version of gist returns only one
+     gist.  If pov is not supplied, the GENERIC gist is returned.
+     
+     If result is NULL on entry, a temporary lob is allocated and returned.
+     it is up to the calling procedure to deallocate this lob.
+
+     Any existing contents of the lob locator passed in are cleared.
+*/
+PROCEDURE policy_gist (
+  policy_name    in varchar2,
+  document       in clob,
+  restab         in out nocopy clob,
+  glevel         in varchar2 default 'P',
+  pov            in varchar2 default 'GENERIC',
+  numParagraphs  in number   default null,
+  maxPercent     in number   default null,
+  num_themes     in number   default 50,
+  language       in varchar2 default NULL,
+  format         in varchar2 default NULL,
+  charset        in varchar2 default NULL
+);
+
+/*------------------------------ policy_gist --------------------------------*/
+/*
+   NAME
+     policy_gist - request the gist for a document on demand
+
+   DESCRIPTION
+     This version of tokens accepts a policy name and a single BLOB
+     document. Returns the result into a CLOB locator.
+
+   NOTES
+     Unlike result table gist, this version of gist returns only one
+     gist.  If pov is not supplied, the GENERIC gist is returned.
+     
+     If result is NULL on entry, a temporary lob is allocated and returned.
+     it is up to the calling procedure to deallocate this lob.
+
+     Any existing contents of the lob locator passed in are cleared.
+*/
+PROCEDURE policy_gist (
+  policy_name    in varchar2,
+  document       in blob,
+  restab         in out nocopy clob,
+  glevel         in varchar2 default 'P',
+  pov            in varchar2 default 'GENERIC',
+  numParagraphs  in number   default null,
+  maxPercent     in number   default null,
+  num_themes     in number   default 50,
+  language      in varchar2   default NULL,
+  format        in varchar2   default NULL,
+  charset       in varchar2   default NULL
+);
+
+/*------------------------------ policy_gist --------------------------------*/
+/*
+   NAME
+     policy_gist - request the gist for a document on demand
+
+   DESCRIPTION
+     This version of tokens accepts a policy name and a single BFILE
+     document. Returns the result into a CLOB locator.
+
+   NOTES
+     Unlike result table gist, this version of gist returns only one
+     gist.  If pov is not supplied, the GENERIC gist is returned.
+     
+     If result is NULL on entry, a temporary lob is allocated and returned.
+     it is up to the calling procedure to deallocate this lob.
+
+     Any existing contents of the lob locator passed in are cleared.
+*/
+PROCEDURE policy_gist (
+  policy_name    in varchar2,
+  document       in bfile,
+  restab         in out nocopy clob,
+  glevel         in varchar2 default 'P',
+  pov            in varchar2 default 'GENERIC',
+  numParagraphs  in number   default null,
+  maxPercent     in number   default null,
+  num_themes     in number   default 50,
+  language       in varchar2 default NULL,
+  format         in varchar2 default NULL,
+  charset        in varchar2 default NULL
+);
+
+/*------------------------------- filter -------------------------------*/
+/*
+  NAME
+    filter - return filtered text
+
+  DESCRIPTION
+    Filter takes a document reference and returns a plaintext version
+    The filter result table should have the following columns:
+
+      query_id  number    (the query id)
+      document  clob      (plaintext document)
+
+  ARGUMENTS
+    index_name  -- name of the index
+    textkey     -- the document for which to produce highlights
+    restab      -- the filter result table
+    query_id    -- the query id
+    plaintext   -- set to TRUE if plaintext is desired
+*/
+PROCEDURE filter (
+  index_name     in varchar2,
+  textkey        in varchar2,
+  restab         in varchar2,
+  query_id       in number    default 0,
+  plaintext      in boolean   default FALSE
+);
+ 
+/*------------------------------- filter -------------------------------*/
+/*
+  NAME
+    filter - return filtered text
+
+  DESCRIPTION
+    This version of filter returns the result into a CLOB locator
+    instead of a result table.
+
+   NOTES
+     If result is NULL on entry, a temporary lob is allocated and returned.
+     it is up to the calling procedure to deallocate this lob.
+
+     Any existing contents of the lob locator passed in are cleared.
+*/
+PROCEDURE filter (
+  index_name     in varchar2,
+  textkey        in varchar2,
+  restab         in out nocopy clob,
+  plaintext      in boolean   default FALSE
+);
+
+/*----------------------------- policy_filter ------------------------------*/
+/*
+  NAME
+    policy_filter - return filtered text on demand
+ 
+  DESCRIPTION
+    This version of filter accepts a policy name and a single VARCHAR2
+    document.  Returns the result into a CLOB locator.
+
+  NOTES
+    If result is NULL on entry, a temporary lob is allocated and returned.
+    it is up to the calling procedure to deallocate this lob.
+
+    Any existing contents of the lob locator passed in are cleared.
+*/
+PROCEDURE policy_filter (
+  policy_name    in varchar2,
+  document       in clob,
+  restab         in out nocopy clob,
+  plaintext      in boolean   default FALSE,
+  language       in varchar2  default NULL,
+  format         in varchar2  default NULL,
+  charset        in varchar2  default NULL
+);
+
+/*----------------------------- policy_filter ------------------------------*/
+/*
+  NAME
+    policy_filter - return filtered text on demand
+ 
+  DESCRIPTION
+    This version of filter accepts a policy name and a single CLOB
+    document.  Returns the result into a CLOB locator.
+ 
+  NOTES
+    If result is NULL on entry, a temporary lob is allocated and returned.
+    it is up to the calling procedure to deallocate this lob.
+
+    Any existing contents of the lob locator passed in are cleared.
+*/
+PROCEDURE policy_filter (
+  policy_name    in varchar2,
+  document       in blob,
+  restab         in out nocopy clob,
+  plaintext      in boolean   default FALSE,
+  language       in varchar2  default NULL,
+  format         in varchar2  default NULL,
+  charset        in varchar2  default NULL
+);
+
+/*----------------------------- policy_filter ------------------------------*/
+/*
+  NAME
+    policy_filter - return filtered text on demand
+ 
+  DESCRIPTION
+    This version of filter accepts a policy name and a single BLOB
+    document.  Returns the result into a CLOB locator.
+
+  NOTES
+    If result is NULL on entry, a temporary lob is allocated and returned.
+    it is up to the calling procedure to deallocate this lob.
+
+    Any existing contents of the lob locator passed in are cleared.
+*/
+PROCEDURE policy_filter (
+  policy_name    in varchar2,
+  document       in bfile,
+  restab         in out nocopy clob,
+  plaintext      in boolean   default FALSE,
+  language       in varchar2  default NULL,
+  format         in varchar2  default NULL,
+  charset        in varchar2  default NULL
+);
+
+/*----------------------------- policy_filter ------------------------------*/
+/*
+  NAME
+    policy_filter - return filtered text on demand
+ 
+  DESCRIPTION
+    This version of filter accepts a policy name and a single BFILE
+    document. Returns the result into a CLOB locator.
+
+  NOTES
+    If result is NULL on entry, a temporary lob is allocated and returned.
+    it is up to the calling procedure to deallocate this lob.
+
+    Any existing contents of the lob locator passed in are cleared.
+*/
+PROCEDURE policy_filter (
+  policy_name    in varchar2,
+  document       in varchar2,
+  restab         in out nocopy clob,
+  plaintext      in boolean   default FALSE,
+  language       in varchar2  default NULL,
+  format         in varchar2  default NULL,
+  charset        in varchar2  default NULL
+);
+
+/*------------------------------- highlight ----------------------------*/
+/*
+  NAME
+    highlight - return highlight information
+
+  DESCRIPTION
+    Highlight takes a query and a document, and returns highlight information
+    The result table should have the following columns:
+
+      query_id  number     (the query id)
+      offset    number     (character offset to highlight start)
+      length    number     (character length of highlight)
+
+  ARGUMENTS
+    index_name  -- name of the index
+    textkey     -- the document for which to produce highlights
+    text_query  -- the query 
+    restab      -- the highlight result table
+    query_id    -- a query id
+    plaintext   -- set to TRUE if plaintext offsets are desired
+*/
+PROCEDURE highlight (
+  index_name     in varchar2,
+  textkey        in varchar2,
+  text_query     in varchar2,
+  restab         in varchar2,
+  query_id       in number    default 0,
+  plaintext      in boolean   default FALSE
+);
+
+/*------------------------------- highlight ----------------------------*/
+/*
+  NAME
+    highlight - return highlight information
+
+  DESCRIPTION
+    This version of filter returns the results into a PL/SQL table
+    instead of a result table.
+
+  NOTES
+     Existing contents of the table are destroyed
+*/
+PROCEDURE highlight (
+  index_name     in varchar2,
+  textkey        in varchar2,
+  text_query     in varchar2,
+  restab         in out nocopy highlight_tab,
+  plaintext      in boolean   default FALSE
+);
+
+/*------------------------------ policy_highlight --------------------------*/
+/*
+  NAME
+    policy_highlight - return highlight information
+
+  DESCRIPTION
+    This version of highlight accepts a policy name and a single VARCHAR2
+    document.  Returns the restuls into a PL/SQL table.
+   
+  NOTES
+    Existing contents of the table are destroyed
+    
+*/
+PROCEDURE policy_highlight (
+  policy_name    in varchar2,
+  document       in varchar2,
+  text_query     in varchar2,
+  restab         in out nocopy highlight_tab,
+  plaintext      in boolean   default FALSE,
+  language       in varchar2  default NULL,
+  format         in varchar2  default NULL,
+  charset        in varchar2  default NULL
+);
+
+/*------------------------------ policy_highlight --------------------------*/
+/*
+  NAME
+    policy_highlight - return highlight information
+
+  DESCRIPTION
+    This version of highlight accepts a policy name and a single CLOB
+    document.  Returns the results into a PL/SQL table.
+   
+  NOTES
+    Existing contents of the table are destroyed
+*/
+PROCEDURE policy_highlight (
+  policy_name    in varchar2,
+  document       in clob,
+  text_query     in varchar2,
+  restab         in out nocopy highlight_tab,
+  plaintext      in boolean   default FALSE,
+  language       in varchar2  default NULL,
+  format         in varchar2  default NULL,
+  charset        in varchar2  default NULL
+);
+
+/*------------------------------ policy_highlight --------------------------*/
+/*
+  NAME
+    policy_highlight - return highlight information
+
+  DESCRIPTION
+    This version of highlight accepts a policy name and a single BLOB
+    document.  Returns the restuls into a PL/SQL table.
+   
+  NOTES
+    Existing contents of the table are destroyed
+*/
+PROCEDURE policy_highlight (
+  policy_name    in varchar2,
+  document       in blob,
+  text_query     in varchar2,
+  restab         in out nocopy highlight_tab,
+  plaintext      in boolean   default FALSE,
+  language       in varchar2  default NULL,
+  format         in varchar2  default NULL,
+  charset        in varchar2  default NULL
+);
+
+/*------------------------------ policy_highlight --------------------------*/
+/*
+  NAME
+    policy_highlight- return highlight information
+
+  DESCRIPTION
+    This version of highlight accepts a policy name and a single BFILE
+    document.  Returns the restuls into a PL/SQL table.
+
+  NOTES
+    Existing contents of the table are destroyed
+*/
+PROCEDURE policy_highlight (
+  policy_name    in varchar2,
+  document       in bfile,
+  text_query     in varchar2,
+  restab         in out nocopy highlight_tab,
+  plaintext      in boolean   default FALSE,
+  language       in varchar2  default NULL,  
+  format         in varchar2  default NULL,
+  charset        in varchar2  default NULL
+);
+
+/*------------------------------- markup -------------------------------*/
+/*
+  NAME
+    markup - return marked-up document
+
+  DESCRIPTION
+    Markup takes a document reference and a query, and returns a marked-up
+    plain text version of the document
+    The result table should have the following columns:
+
+      query_id number    (the query id)
+      document clob      (marked-up document)
+
+  ARGUMENTS
+    index_name  -- name of the index
+    textkey     -- the document for which to produce highlights
+    text_query  -- the query 
+    restab      -- the highlight result table
+    query_id    -- a query id
+    plaintext   -- set to TRUE if plaintext markup is required
+    tagset      -- name of tagset
+                     TEXT_DEFAULT
+                     HTML_DEFAULT
+                     HTML_NAVIGATE
+    starttag    -- the start mark-up tag
+    endtag      -- the end mark-up tag
+    prevtag     -- the navigate to previous highlight mark-up tag
+    nexttag     -- the navigate to next highlight mark-up tag
+*/
+PROCEDURE markup (
+  index_name     in varchar2,
+  textkey        in varchar2,
+  text_query     in varchar2,
+  restab         in varchar2,
+  query_id       in number    default 0, 
+  plaintext      in boolean   default FALSE,
+  tagset         in varchar2  default 'TEXT_DEFAULT',
+  starttag       in varchar2  default null,
+  endtag         in varchar2  default null,
+  prevtag        in varchar2  default null,
+  nexttag        in varchar2  default null
+);
+
+/*------------------------------- markup -------------------------------*/
+/*
+  NAME
+    markup - return marked-up document
+
+  DESCRIPTION
+    This version of markup returns the result into a CLOB locator
+    instead of a result table.
+
+   NOTES
+     If result is NULL on entry, a temporary lob is allocated and returned.
+     it is up to the calling procedure to deallocate this lob.
+
+     Any existing contents of the lob locator passed in are cleared.
+*/
+PROCEDURE markup (
+  index_name     in varchar2,
+  textkey        in varchar2,
+  text_query     in varchar2,
+  restab         in out nocopy clob,
+  plaintext      in boolean   default FALSE,
+  tagset         in varchar2  default 'TEXT_DEFAULT',
+  starttag       in varchar2  default null,
+  endtag         in varchar2  default null,
+  prevtag        in varchar2  default null,
+  nexttag        in varchar2  default null
+);
+
+/*------------------------------- policy_markup -----------------------------*/
+/*
+  NAME
+    policy_markup - return marked-up document on demand
+
+  DESCRIPTION
+    This version of markup accepts a policy name and a single VARCHAR2
+    document.  Returns the result into a CLOB locator.
+
+  NOTES
+    If result is NULL on entry, a temporary lob is allocated and returned.
+    it is up to the calling procedure to deallocate this lob.
+
+    Any existing contents of the lob locator passed in are cleared.
+*/
+PROCEDURE policy_markup (
+  policy_name     in varchar2,
+  document       in varchar2,
+  text_query     in varchar2,
+  restab         in out nocopy clob,
+  plaintext      in boolean   default FALSE,
+  tagset         in varchar2  default 'TEXT_DEFAULT',
+  starttag       in varchar2  default null,
+  endtag         in varchar2  default null,
+  prevtag        in varchar2  default null,
+  nexttag        in varchar2  default null,
+  language       in varchar2  default NULL,
+  format         in varchar2  default NULL,
+  charset        in varchar2  default NULL
+);
+
+/*------------------------------- policy_markup -----------------------------*/
+/*
+  NAME
+    policy_markup - return marked-up document on demand
+
+  DESCRIPTION
+    This version of markup accepts a policy name and a single CLOB
+    document.  Returns the result into a CLOB locator.
+
+  NOTES
+    If result is NULL on entry, a temporary lob is allocated and returned.
+    it is up to the calling procedure to deallocate this lob.
+
+    Any existing contents of the lob locator passed in are cleared.
+*/
+PROCEDURE policy_markup (
+  policy_name     in varchar2,
+  document       in clob,
+  text_query     in varchar2,
+  restab         in out nocopy clob,
+  plaintext      in boolean   default FALSE,
+  tagset         in varchar2  default 'TEXT_DEFAULT',
+  starttag       in varchar2  default null,
+  endtag         in varchar2  default null,
+  prevtag        in varchar2  default null,
+  nexttag        in varchar2  default null,
+  language       in varchar2  default NULL,
+  format         in varchar2  default NULL,
+  charset        in varchar2  default NULL
+);
+
+/*------------------------------- policy_markup -----------------------------*/
+/*
+  NAME
+    policy_markup - return marked-up document on demand
+
+  DESCRIPTION
+    This version of markup accepts a policy name and a single BLOB
+    document.  Returns the result into a CLOB locator.
+
+  NOTES
+    If result is NULL on entry, a temporary lob is allocated and returned.
+    it is up to the calling procedure to deallocate this lob.
+
+    Any existing contents of the lob locator passed in are cleared.
+*/
+PROCEDURE policy_markup (
+  policy_name     in varchar2,
+  document       in blob,
+  text_query     in varchar2,
+  restab         in out nocopy clob,
+  plaintext      in boolean   default FALSE,
+  tagset         in varchar2  default 'TEXT_DEFAULT',
+  starttag       in varchar2  default null,
+  endtag         in varchar2  default null,
+  prevtag        in varchar2  default null,
+  nexttag        in varchar2  default null,
+  language       in varchar2  default NULL,
+  format         in varchar2  default NULL,
+  charset        in varchar2  default NULL
+);
+
+/*------------------------------- policy_markup ----------------------------*/
+/*
+  NAME
+    policy_markup - return marked-up document on demand
+
+  DESCRIPTION
+    This version of markup accepts a policy name and a single BFILE
+    document.  Returns the result into a CLOB locator.
+
+  NOTES
+    If result is NULL on entry, a temporary lob is allocated and returned.
+    it is up to the calling procedure to deallocate this lob.
+
+    Any existing contents of the lob locator passed in are cleared.
+*/
+PROCEDURE policy_markup (
+  policy_name     in varchar2,
+  document       in bfile,
+  text_query     in varchar2,
+  restab         in out nocopy clob,
+  plaintext      in boolean   default FALSE,
+  tagset         in varchar2  default 'TEXT_DEFAULT',
+  starttag       in varchar2  default null,
+  endtag         in varchar2  default null,
+  prevtag        in varchar2  default null,
+  nexttag        in varchar2  default null,
+  language       in varchar2  default NULL,
+  format         in varchar2  default NULL,
+  charset        in varchar2  default NULL
+);
+
+/*----------------------------- snippet --------- ----------------------*/
+/* NAME
+     snippet - return snippet (or kwic or concordance) for a given document
+ 
+  DESCRIPTION
+    This version of snippet accepts a index name and a key to specify
+    a document.  Returns the snippet result.
+
+  NOTES
+*/
+function snippet (
+  index_name		IN  VARCHAR2,  
+  textkey  		IN  VARCHAR2,  
+  text_query  		IN  VARCHAR2,  
+  starttag  		IN  VARCHAR2  default '<b>',  
+  endtag  		IN  VARCHAR2  default '</b>',  
+  entity_translation  	IN  BOOLEAN   default TRUE,  
+  separator  		IN  VARCHAR2  default '<b>...</b>'  
+)  return varchar2;  
+
+
+/*----------------------------- policy_snippet ----------------------*/
+/* NAME
+     policy_snippet - return snippet (kwic or concordaace) for a given document
+ 
+  DESCRIPTION
+    This version of snippet accepts a policy name and a single varchar2
+    document.  Returns the snippet result.
+
+  NOTES
+*/
+function policy_snippet (
+  policy_name		IN  VARCHAR2,  
+  document  		IN  VARCHAR2,  
+  text_query  		IN  VARCHAR2,  
+  language  		IN  VARCHAR2  default NULL,  
+  format  		IN  VARCHAR2  default NULL,  
+  charset  		IN  VARCHAR2  default NULL,  
+  starttag  		IN  VARCHAR2  default '<b>',  
+  endtag  		IN  VARCHAR2  default '</b>',  
+  entity_translation  	IN  BOOLEAN   default TRUE,  
+  separator  		IN  VARCHAR2  default '<b>...</b>'  
+)  return varchar2;  
+
+/*----------------------------- policy_snippet ----------------------*/
+/* NAME
+     policy_snippet - return snippet (kwic or concordaace) for a given document
+ 
+  DESCRIPTION
+    This version of snippet accepts a policy name and a single clob
+    document.  Returns the snippet result.
+
+  NOTES
+*/
+function policy_snippet (
+  policy_name		IN  VARCHAR2,  
+  document  		IN  CLOB,  
+  text_query  		IN  VARCHAR2,  
+  language  		IN  VARCHAR2  default NULL,  
+  format  		IN  VARCHAR2  default NULL,  
+  charset  		IN  VARCHAR2  default NULL,  
+  starttag  		IN  VARCHAR2  default '<b>',  
+  endtag  		IN  VARCHAR2  default '</b>',  
+  entity_translation  	IN  BOOLEAN   default TRUE,  
+  separator  		IN  VARCHAR2  default '<b>...</b>'  
+)  return varchar2;  
+
+/*----------------------------- policy_snippet ----------------------*/
+/* NAME
+     policy_snippet - return snippet (kwic or concordaace) for a given document
+ 
+  DESCRIPTION
+    This version of snippet accepts a policy name and a single BLOB 
+    document.  Returns the snippet result.
+
+  NOTES
+*/
+function policy_snippet (
+  policy_name		IN  VARCHAR2,  
+  document  		IN  BLOB,  
+  text_query  		IN  VARCHAR2,  
+  language  		IN  VARCHAR2  default NULL,  
+  format  		IN  VARCHAR2  default NULL,  
+  charset  		IN  VARCHAR2  default NULL,  
+  starttag  		IN  VARCHAR2  default '<b>',  
+  endtag  		IN  VARCHAR2  default '</b>',  
+  entity_translation  	IN  BOOLEAN   default TRUE,  
+  separator  		IN  VARCHAR2  default '<b>...</b>'  
+)  return varchar2;  
+
+/*----------------------------- policy_snippet ----------------------*/
+/* NAME
+     policy_snippet - return snippet (kwic or concordaace) for a given document
+ 
+  DESCRIPTION
+    This version of snippet accepts a policy name and a single BLOB 
+    document.  Returns the snippet result.
+
+  NOTES
+*/
+function policy_snippet (
+  policy_name		IN  VARCHAR2,  
+  document  		IN  BFILE,  
+  text_query  		IN  VARCHAR2,  
+  language  		IN  VARCHAR2  default NULL,  
+  format  		IN  VARCHAR2  default NULL,  
+  charset  		IN  VARCHAR2  default NULL,  
+  starttag  		IN  VARCHAR2  default '<b>',  
+  endtag  		IN  VARCHAR2  default '</b>',  
+  entity_translation  	IN  BOOLEAN   default TRUE,  
+  separator  		IN  VARCHAR2  default '<b>...</b>'  
+)  return varchar2;  
+
+/*----------------------------- pkencode --------------------------------*/
+/*
+  NAME
+    PKENCODE(pk1,pk2,pk3,pk4,pk5,pk6,pk7,pk8,pk9,pk10,pk11,pk12,pk13,
+             pk14,pk15,pk16) 
+  DESCRIPTION
+    encoding a list of pk strings into one; the resulting string
+    has the ',' and '\' escapped by an extra '\'.
+    comma ',' is used as delimiter between pk's.
+    it is used in composite textkeys
+    e.g., ('p,1','p\2','p3') => 'p\,1,p\\2,p3'
+   
+  ARGUMENTS
+    pk1-pk16  - textkey list
+
+  RETURN
+    encoded pkstring
+*/
+FUNCTION pkencode(
+  pk1  IN varchar2,              pk2  IN varchar2 default NULL,
+  pk3  IN varchar2 default NULL, pk4  IN varchar2 default NULL,
+  pk5  IN varchar2 default NULL, pk6  IN varchar2 default NULL,
+  pk7  IN varchar2 default NULL, pk8  IN varchar2 default NULL,
+  pk9  IN varchar2 default NULL, pk10 IN varchar2 default NULL,
+  pk11 IN varchar2 default NULL, pk12 IN varchar2 default NULL,
+  pk13 IN varchar2 default NULL, pk14 IN varchar2 default NULL,
+  pk15 IN varchar2 default NULL, pk16 IN varchar2 default NULL
+   )
+return varchar2;
+PRAGMA RESTRICT_REFERENCES(pkencode, WNDS, WNPS, RNDS, RNPS);
+
+/*----------------------------- ifilter ----------------------------------*/
+/*
+  NAME
+    ifilter
+ 
+  DESCRIPTION
+    Takes binary data(BLOB), filters the data through INSO and writes the
+    text version to a CLOB
+   
+  ARGUMENTS
+    data    (IN)     BLOB
+    TEXT    (IN OUT) CLOB
+
+  NOTES
+    text is APPENDed to the CLOB -- so existing contents are not
+    disturbed.  It is the client's responsibility to ensure that
+    the CLOB is trucated before the ifilter call if the existing 
+    content is not needed.
+
+  RETURN
+*/
+PROCEDURE ifilter(
+  data   IN            blob,
+  text   IN OUT nocopy clob
+);
+
+END ctx_doc;
+/

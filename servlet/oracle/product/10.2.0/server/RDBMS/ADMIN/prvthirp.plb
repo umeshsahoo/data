@@ -1,0 +1,35 @@
+drop synonym dbms_internal_repcat
+/
+CREATE OR REPLACE PACKAGE dbms_internal_repcat wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+9
+667 1de
+9p22Vtyk6hSbJAJ4DDT8zvGvitAwg2ONr0jWfHRAv7leXbTyPcva4oOvFEDJNlsxa1yuNLW6
+VlCnqDagZ0YvWuSq+c9h6b17B3SNoZ4mYkSR4eqCp6us4TE+KjKNiirsGMxC34UybAiLtw93
+NTP58oVRgwGhVc274k8fcBA5+fGG3NdkBwVgnLjVCPMB1m2E/EH9nNvTpTvpp6idibplKwui
+fgYt5Q5NxdNdailPfeEa1/lyXQzK0SWBS2IlgWd5hiH0PjtaWx4+ycA8Z90QYGmP3bAfk/C5
+5XJNTnuE8qSRpE/bEgdn/PiAY482F5V5qejmZahBs3sMvnfTD0d7eSybEmv3McdMWjxhOAV2
+pIaGX2Y/f1FXokQLTXU56blc9jSY98pSBBdpjO3bbyh0kpOiDExVG7BqVDHJfBxnQJKcVYOl
+VGwnQPbFKfhbh5QwTAbEZu9Ysyz6KYYoAlnySw==
+
+/
+CREATE OR REPLACE PUBLIC SYNONYM dbms_internal_repcat for dbms_internal_repcat
+/ 
+GRANT EXECUTE ON dbms_internal_repcat TO  execute_catalog_role
+/

@@ -1,0 +1,74 @@
+SQL> connect "SYS"/"&&sysPassword" as SYSDBA
+Connected.
+SQL> set echo on
+SQL> //create or replace directory DB_BACKUPS as 'C:\oraclexe\app\oracle\flash_recovery_area';
+SP2-0103: Nothing in SQL buffer to run.
+SQL> begin
+  2  	dbms_xdb.sethttpport('8081');
+  3  	dbms_xdb.setftpport('0');
+  4  end;
+  5  /
+
+PL/SQL procedure successfully completed.
+
+SQL> create spfile='C:\oraclexe\app\oracle\product\10.2.0\server\dbs/spfileXE.ora' FROM pfile='C:\oraclexe\app\oracle\product\10.2.0\server\config\scripts\init.ora';
+
+File created.
+
+SQL> shutdown immediate;
+Database closed.
+Database dismounted.
+ORACLE instance shut down.
+SQL> connect "SYS"/"&&sysPassword" as SYSDBA
+Connected to an idle instance.
+SQL> startup ;
+ORACLE instance started.
+
+Total System Global Area  805306368 bytes                                       
+Fixed Size                  1289996 bytes                                       
+Variable Size             209715444 bytes                                       
+Database Buffers          591396864 bytes                                       
+Redo Buffers                2904064 bytes                                       
+Database mounted.
+Database opened.
+SQL> select 'utl_recomp_begin: ' || to_char(sysdate, 'HH:MI:SS') from dual;
+
+'UTL_RECOMP_BEGIN:'||TO_CH                                                      
+--------------------------                                                      
+utl_recomp_begin: 11:54:27                                                      
+
+SQL> execute utl_recomp.recomp_serial();
+
+PL/SQL procedure successfully completed.
+
+SQL> select 'utl_recomp_end: ' || to_char(sysdate, 'HH:MI:SS') from dual;
+
+'UTL_RECOMP_END:'||TO_CH                                                        
+------------------------                                                        
+utl_recomp_end: 11:54:31                                                        
+
+SQL> alter user hr password expire account lock;
+
+User altered.
+
+SQL> alter user ctxsys password expire account lock;
+
+User altered.
+
+SQL> alter user outln password expire account lock;
+
+User altered.
+
+SQL> alter user MDSYS password expire;
+
+User altered.
+
+SQL> alter user FLOWS_FILES password expire;
+
+User altered.
+
+SQL> alter user FLOWS_020100 password expire;
+
+User altered.
+
+SQL> spool off;

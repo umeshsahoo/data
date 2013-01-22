@@ -1,0 +1,74 @@
+Rem  Copyright (c) 1998, 2000 by Oracle Corporation 
+Rem    NAME
+Rem      driexp.pkh
+Rem    DESCRIPTION
+Rem      export utility functions
+Rem    RETURNS
+Rem 
+Rem    NOTES
+Rem 
+Rem    MODIFIED   (MM/DD/YY)
+Rem     yucheng    12/28/00 -  get_meta_data interface fix
+Rem     yucheng    12/20/00 -  transport support
+Rem     ehuang     11/25/98 -  add new block
+Rem     ehuang     05/13/98 -  fix input truncate error
+Rem     ehuang     05/07/98 -  add get_meta_data
+Rem     ehuang     05/07/98 -  creation
+
+create or replace package driexp as
+ 
+/*-----------------------  get_meta_data  ---------------------------*/
+/*
+  NAME
+    get_meta_data
+  DESCRIPTION
+    see /vobs/rdbms/src/client/tools/exp/prvtpexp.sql and
+    and /vobs/doc/release/rdbms/8.1/function_spec/expimp_extindex_fs.doc
+ 
+    called during export time.
+ 
+    construct statements to rebuild index meta-data.
+ 
+    This procedure is called repeatedly from odcigetmetadata returning
+    no more than varchar2(4000) at a time. 
+ 
+    Constructed statements to regenerate meta-data will be like this:
+       ---------------------------------------------------------
+       driimp.create_index(arguments here);
+ 
+       driimp.set_object(cla_name1, obj_name1, attribute_count1);
+       driimp.set_value(att_name1, att_value1);
+       driimp.set_value(att_name2, att_value2);
+       ...etc
+ 
+       driimp.set_object(cla_name2, obj_name2, attribute_count2);
+       driimp.set_value(att_name1, att_value1);
+       driimp.set_value(att_name2, att_value2);
+       ...etc
+      
+       ...etc
+ 
+       commit;
+       ----------------------------------------------------------
+    because cla_id, obj_id and att_id can differ across version
+    cla_name, obj_name and oat_name are being passed instead.
+  ARGUMENTS
+    see /vobs/rdbms/src/client/tools/exp/prvtpexp.sql and
+    and /vobs/doc/release/rdbms/8.1/function_spec/expimp_extindex_fs.doc
+  NOTES
+ 
+  EXCEPTIONS
+ 
+  RETURNS
+*/
+function get_meta_data(
+  p_idx_owner in     varchar2,
+  p_idx_name  in     varchar2,
+  p_new_block in out PLS_INTEGER,
+  IndexInfoFlags in number default NULL
+)
+return varchar2;
+
+end driexp;
+/
+

@@ -1,0 +1,29 @@
+CREATE OR REPLACE PACKAGE dbms_propagation_internal wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+9
+62b 1d6
+ZIM3oWri3v56ONed4ETLHB3H4ycwg2ONLsDWfHQCmIuOo2GCVSHZZUznumk570n5OBvVuapt
+e1nmeeCe3jQ2ACkpt3yAjqTfNsL8zTAhkuOyRStOtMLvak2mefu4e24GxKUSRskeyKTDYoyt
+rkVAdM8/r4CTolvKFC8U7agvQFDMbgiUDlPJX0x8M/UQaGV0Edt47Gr4YncnIDbwSa5BZq6+
+aaE8RAdePBY/1cMr5UNIiCP0JrPVW4qN7ALhQmZ4fdEvzutKCBhgDNG5uOqy6JnsN9QhakW4
+i3syAHvt3ZSJjTwYyKhcvI067mueE/dHSAvAKPNaiJHzBPwyNqbCO2iJKsUMutIzH+0MS4x9
+l6MU6Qu0vXmIdRtLLM56mxeXfTG68ccf30DEa5oZm0nsMZrUkPAAOdi6BM6x/Dx7aHutrohA
+rrIkaNjUALu/sFvgvvksFg8/psrC4BQ=
+
+/

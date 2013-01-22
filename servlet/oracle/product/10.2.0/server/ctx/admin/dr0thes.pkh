@@ -1,0 +1,849 @@
+rem
+rem  Copyright (c) 1995, 1996, 1997, 1998, 1999 by Oracle Corporation
+rem    NAME
+rem      dr0thes.pkh - Spec for ConText Option external thesaurus package
+rem    DESCRIPTION
+rem      This contains the interface to the external thesaurus procedures
+rem
+rem    RETURNS
+rem
+rem    NOTES
+rem
+rem    MODIFIED   (MM/DD/YY)
+rem       ehuang   03/30/00 - add has_relation
+rem       ehuang   12/01/99 - add translation calls
+rem       ehuang   04/21/99 - add maintenance api
+rem       gkaminag 04/14/99 - pl/sql table thesaurus expansion
+rem       ehuang   08/05/98 - add TR, TRSYN
+rem       gkaminag 07/13/98 - remove unused functions
+rem       gkaminag 05/22/97 - procedure style
+rem       gkaminag 03/17/97 - add output style
+rem       gkaminag 03/11/97 - case-sensitive, bti/nti
+rem       yucheng  12/10/96 - creation
+
+CREATE OR REPLACE PACKAGE ctx_thes AS
+
+type exp_rec is record (
+  xrel    varchar2(12),
+  xlevel  number,
+  xphrase varchar2(256)
+);
+type exp_tab is table of exp_rec index by binary_integer;
+
+-- public constants
+
+OP_RENAME          constant  varchar2(6) := 'RENAME';
+OP_TRUNCATE        constant  varchar2(8) := 'TRUNCATE';
+OP_PT              constant  varchar2(2) := 'PT';
+OP_SN              constant  varchar2(2) := 'SN';
+
+/*========================================================================*/
+/*                     Thesaurus Maintenance Functions                    */
+/*========================================================================*/  
+
+/*--------------------------- create_thesaurus ---------------------------*/
+/*
+   NAME
+     create_thesaurus - create a new thesaurus
+
+   DESCRIPTION
+     This procedure creates a new thesaurus with the indicated name
+
+   ARGUMENTS
+     name    -- the new thesaurus name
+     casesens -- case-sensitive
+   NOTES
+     error if the thesaurus already exists
+     Only ctxsys or user with ctxapp role can use this
+     
+   RETURN
+*/
+procedure create_thesaurus(
+  name in varchar2
+, casesens in boolean default false
+);
+
+/*--------------------------- drop_thesaurus ---------------------------*/
+/*
+   NAME
+     drop_thesaurus - drop a thesaurus
+
+   DESCRIPTION
+     This procedure drops an existing thesaurus with the indicated name
+     
+   ARGUMENTS
+     name    -- the thesaurus name
+
+   NOTES
+     error if the thesaurus already exists
+     Only ctxsys or thesaurus owner should be able to drop a thesaurus
+
+   RETURN
+*/
+procedure drop_thesaurus(name in varchar2);
+
+/*--------------------------- alter_thesaurus ---------------------------*/
+/* NAME
+     alter_thesaurus -- alter an existing thesaurus
+
+   DESCRIPTION
+     This procedure rename or truncate a thesaurus. 
+
+   ARGUMENTS
+     tname    --  thesaurus name
+     op       --  alter operation, one of 'RENAME' or 'TRUNCATE'
+     operand  --  argument to the alter operation
+                  RENAME        new thesaurus name
+                  TRUNCATE      null
+   NOTES
+     Only thesaurus owner and ctxsys are allowed to invoke this 
+     function on a given thesaurus    
+
+   RETURN
+
+*/
+procedure alter_thesaurus(tname    in   varchar2,
+                          op       in   varchar2,
+                          operand  in   varchar2 default null);
+
+/*--------------------------- create_phrase -----------------------------*/
+/*
+   NAME
+     create_phrase -- add a phrase to a thesaurus
+
+   DESCRIPTION
+     This procedure adds a phrase to the thesaurus
+
+   ARGUMENTS
+     tname    --  thesaurus name 
+     phrase   --  phrase to add
+     rel      --  DEPRECATED
+     relname  --  DEPRECATED
+
+   NOTES
+     no error if the information already exists.
+     Only ctxsys or user with ctxapp role can use this
+
+     REL and RELNAME arguments are deprecated -- use create_relation
+     instead.
+     
+   RETURN
+*/
+procedure create_phrase(tname      in varchar2, 
+                       phrase     in varchar2,
+	               rel        in varchar2 default null,
+                       relname    in varchar2 default null);
+
+/*--------------------------- drop_phrase -----------------------------*/
+/*
+   NAME
+     drop_phrase -- drop a phrase from a thesaurus
+
+   DESCRIPTION
+     This procedure drops a phrase from the thesaurus
+
+   ARGUMENTS
+     tname    --  thesaurus name 
+     phrase   --  phrase to drop
+
+   NOTES
+     BT* / NT* relations are patched around the dropped phrase
+     
+   RETURN
+*/
+procedure drop_phrase(tname      in varchar2, 
+                      phrase     in varchar2);
+
+/*--------------------------- alter_phrase -----------------------------*/
+/*
+   NAME
+     alter_phrase -- alter an existing phrase in a thesaurus
+
+   DESCRIPTION
+     This procedure alters a phrase in a thesaurus.
+
+   ARGUMENTS
+     tname    --  thesaurus name 
+     phrase   --  phrase to alter
+     op       --  alter operation. should be one of 'RENAME', 'PT' ,'SN'
+     operand  --  argument to the alter operation      
+                  PT          null
+                  RENAME      new phrase name
+                  SN          new scope note
+
+   NOTES
+     Only ctxsys or thesaurus owner can alter a phrase
+     
+   RETURN
+*/
+procedure alter_phrase(tname      in varchar2, 
+                       phrase     in varchar2,
+                       op         in varchar2,
+                       operand    in varchar2 default null);
+
+/*--------------------------- create_relation -----------------------------*/
+/*
+   NAME
+     create_relation -- create a relation
+
+   DESCRIPTION
+     This procedure creates a relation between two phrases
+
+   ARGUMENTS
+     tname     --  thesaurus name 
+     phrase    --  the filing phrase 
+     rel       --  relation to create
+     relphrase --  the related phrase 
+
+   NOTES
+     Only ctxsys or thesaurus owner can create a relation
+
+     if either phrase or relphrase do not exist, they are created
+     as part of this call.
+
+     phrase is the filing phrase and relphrase is the related phrase,
+     so a thesaurus like this:
+ 
+     A
+      BT B
+ 
+     would be translated as 
+
+     create_phrase('THES', 'A');
+     create_phrase('THES', 'B');
+     create_relation('THES','A','BT','B');
+
+   RETURN
+*/
+procedure create_relation(tname     in    varchar2,
+                          phrase    in    varchar2,
+                          rel       in    varchar2,
+                          relphrase in    varchar2);
+
+/*--------------------------- drop_relation -----------------------------*/
+/*
+   NAME
+     drop_relation -- drop a relation
+
+   DESCRIPTION
+     This procedure drops a relation between two phrases
+
+   ARGUMENTS
+     tname     --  thesaurus name 
+     phrase    --  the filing phrase 
+     rel       --  relation to drop
+     relphrase --  the related phrase 
+
+   NOTES
+     Only ctxsys or thesaurus owner can drop a relation
+     phrase is the filing phrase and relphrase is the related phrase,
+     so a relation like this:
+ 
+     A
+      BT B
+ 
+     would be dropped as 
+
+     drop_relation('THES','A','BT','B');
+
+     this is symmetric with create_relation
+
+   RETURN
+*/
+procedure drop_relation(tname     in    varchar2,
+                        phrase    in    varchar2,
+                        rel       in    varchar2,
+                        relphrase in    varchar2 default null);
+
+/*-------------------------- create_translation -----------------------------*/
+/*
+   NAME
+     create_translation -- create a translation
+
+   DESCRIPTION
+     This procedure creates a new translation for a phrase
+
+   ARGUMENTS
+     tname       --  thesaurus name 
+     phrase      --  phrase in the thesaurus to which to add a translation
+     language    --  language of the translation
+     translation -- translated term
+
+   NOTES
+     Only ctxsys or thesaurus owner can create a relation.
+  
+     Phrase must already exist in the thesarus, or an error is raised.
+
+     If a translation for this phrase for this language already exists,
+     this new translation is added without removing that original
+     translation, so long as that original translation is not the same.
+
+   RETURN
+*/
+procedure create_translation(tname       in    varchar2,
+                             phrase      in    varchar2,
+                             language    in    varchar2,
+                             translation in    varchar2);
+
+/*-------------------------- drop_translation -----------------------------*/
+/*
+   NAME
+     drop_translation -- drop a translation
+
+   DESCRIPTION
+     This procedure drops one or more translations for a phrase
+
+   ARGUMENTS
+     tname       --  thesaurus name 
+     phrase      --  phrase in the thesaurus to which to add a translation
+     language    --  language of the translation
+     translation -- translated term
+
+   NOTES
+     Only ctxsys or thesaurus owner can drop a relation.
+  
+     Phrase must already exist in the thesarus, or an error is raised.
+
+     Language is optional. If not specified, translation must also be
+     not specified, and all translations in all languages for the 
+     phrase are removed. An error is raised if the phrase has no 
+     translation.
+
+   RETURN
+*/
+procedure drop_translation(tname       in    varchar2,
+                           phrase      in    varchar2,
+                           language    in    varchar2 default null,
+                           translation in    varchar2 default null);
+
+/*-------------------------- update_translation -----------------------------*/
+/*
+   NAME
+     update_translation -- update a translation
+
+   DESCRIPTION
+     This procedure updates an existing translation
+
+   ARGUMENTS
+     tname       --  thesaurus name 
+     phrase      --  phrase in the thesaurus to which to add a translation
+     language    --  language of the translation
+     translation -- translated term
+     new_translation -- new form of translated term
+
+   NOTES
+     Only ctxsys or thesaurus owner can update a relation.
+  
+     Phrase must already exist in the thesarus, or an error is raised.
+
+     Translation can be passed in as NULL if there is only on translation
+     for the specified language for this error.  An error will be raised
+     if there is more than one translation for the term in the specified
+     language
+
+     The translation must already exist, or an error is raised.
+
+   RETURN
+*/
+procedure update_translation(tname       in     varchar2,
+                             phrase      in     varchar2,
+                             language    in     varchar2, 
+                             translation in     varchar2,
+                             new_translation in varchar2);
+
+/*========================================================================*/
+/*                            Expansion Functions                         */
+/*========================================================================*/  
+
+/*---------------------------- output_style --------------------------------*/
+/*
+   NAME
+     output_style
+
+   DESCRIPTION
+     set the output style for the expansion functions
+
+   ARGUMENTS
+     showlevel   -- show level in bt/nt expansions
+     showqualify -- show phrase qualifiers
+     showpt      -- show preferred terms with *
+     showid      -- show phrase ids
+
+   NOTES
+     level is a number then a colon at the start of the phrase
+     pt is an asterisk then a colon at the start of the phrase
+     id is a colon, then the id at the end of the phrase
+     qualify is in parens after a space at the end of the phrase
+        but before id
+   
+   example:
+
+     preferred term
+     |
+     |   phrase
+     |   | 
+     |   |      qualifier
+     |   |      |
+     |   |      |      phraseid
+     |   |      |      |
+     V   V      V      V
+    {*:TURKEY (BIRD):1234}
+
+   RETURN
+*/
+PROCEDURE output_style (
+  showlevel   in boolean default false
+, showqualify in boolean default false
+, showpt      in boolean default false
+, showid      in boolean default false
+);
+
+/*-------------------------------- syn ------------------------------------*/
+/*
+   NAME
+     syn  -- find synonyms of a term
+
+   DESCRIPTION
+     This procedure finds all synonyms of a term, and returns a string
+     like this:  {syn1},{syn2},{syn3} ...
+
+   ARGUMENTS
+     restab   --  result table (for pl/sql table version)
+     phrase   --  phrase
+     tname    --  thesaurus name (if not specified, system default thes used)
+
+   RETURN
+     see description
+*/
+function syn(phrase in varchar2, 
+             tname in varchar2 default 'DEFAULT') return varchar2;
+
+procedure syn(restab in out NOCOPY exp_tab,
+              phrase in varchar2, 
+              tname in varchar2 default 'DEFAULT');
+
+/*-------------------------------- pt  ------------------------------------*/
+/*
+   NAME
+     pt  -- find preferred term
+
+   ARGUMENTS
+     restab   --  result table (for pl/sql table version)
+     phrase   --  phrase
+     tname    --  thesaurus name (if not specified, system default  used)
+   RETURN
+     expansion
+
+*/
+function pt(phrase in varchar2,
+             tname in varchar2 default 'DEFAULT') return varchar2;
+
+procedure pt(restab in out NOCOPY exp_tab,
+             phrase in varchar2, 
+             tname in varchar2 default 'DEFAULT');
+
+/*-------------------------------- tt  ------------------------------------*/
+/*
+   NAME
+     tt  -- find top term
+
+   ARGUMENTS
+     restab   --  result table (for pl/sql table version)
+     phrase   --  phrase
+     tname    --  thesaurus name (if not specified, system default  used)
+   RETURN
+     expansion
+
+*/
+function tt(phrase in varchar2,
+             tname in varchar2 default 'DEFAULT') return varchar2;
+
+procedure tt(restab in out NOCOPY exp_tab,
+             phrase in varchar2, 
+             tname in varchar2 default 'DEFAULT');
+
+/*-------------------------------- rt  ------------------------------------*/
+/*
+   NAME
+     rt  -- find related term
+
+   ARGUMENTS
+     restab   --  result table (for pl/sql table version)
+     phrase   --  phrase
+     tname    --  thesaurus name (if not specified, system default  used)
+   RETURN
+     expansion
+
+*/
+function rt(phrase in varchar2,
+	     tname in varchar2 default 'DEFAULT') return varchar2;
+
+procedure rt(restab in out NOCOPY exp_tab,
+             phrase in varchar2, 
+             tname in varchar2 default 'DEFAULT');
+
+/*-------------------------------- bt  ------------------------------------*/
+/*
+   NAME
+     bt -- find broader terms of a phrase
+
+   DESCRIPTION
+     This procedure finds all broader terms of a term, and returns a string
+     like this:  {bt1},{bt2},{bt3} ...
+
+   ARGUMENTS
+     restab   --  result table (for pl/sql table version)
+     phrase   --  phrase
+     lvl      --  how many levels up (i.e. 2 means get the broader terms of
+                     the broader terms of the phrase)
+     tname    --  thesaurus name (if not specified, system default thes used)
+
+   NOTES
+   RETURN
+     see description
+*/
+function bt( phrase in varchar2,
+            lvl    in number default 1,
+            tname  in varchar2 default 'DEFAULT') return varchar2;
+
+procedure bt(restab in out NOCOPY exp_tab,
+             phrase in varchar2, 
+             lvl    in number default 1,
+             tname  in varchar2 default 'DEFAULT');
+
+/*-------------------------------- btp ------------------------------------*/
+/*
+   NAME
+     btp -- find broader terms (partative) of a phrase
+
+   DESCRIPTION
+     This procedure finds all broader terms of a term, and returns a string
+     like this:  {bt1},{bt2},{bt3} ...
+
+   ARGUMENTS
+     restab   --  result table (for pl/sql table version)
+     phrase   --  phrase
+     lvl      --  how many levels up (i.e. 2 means get the broader terms of
+                     the broader terms of the phrase)
+     tname    --  thesaurus name (if not specified, system default thes used)
+
+   NOTES
+   RETURN
+     see description
+*/
+function btp( phrase in varchar2,
+            lvl    in number default 1,
+            tname  in varchar2 default 'DEFAULT') return varchar2;
+
+procedure btp(restab in out NOCOPY exp_tab,
+              phrase in varchar2, 
+              lvl    in number default 1,
+              tname  in varchar2 default 'DEFAULT');
+
+/*-------------------------------- bti ------------------------------------*/
+/*
+   NAME
+     bti -- find broader terms (instance) of a phrase
+
+   DESCRIPTION
+     This procedure finds all broader terms of a term, and returns a string
+     like this:  {bt1},{bt2},{bt3} ...
+
+   ARGUMENTS
+     restab   --  result table (for pl/sql table version)
+     phrase   --  phrase
+     lvl      --  how many levels up (i.e. 2 means get the broader terms of
+                     the broader terms of the phrase)
+     tname    --  thesaurus name (if not specified, system default thes used)
+
+   NOTES
+   RETURN
+     see description
+*/
+function bti( phrase in varchar2,
+            lvl    in number default 1,
+            tname  in varchar2 default 'DEFAULT') return varchar2;
+
+procedure bti(restab in out NOCOPY exp_tab,
+              phrase in varchar2, 
+              lvl    in number default 1,
+              tname  in varchar2 default 'DEFAULT');
+
+/*-------------------------------- btg ------------------------------------*/
+/*
+   NAME
+     btg -- find broader terms (generic) of a phrase
+
+   DESCRIPTION
+     This procedure finds all broader terms of a term, and returns a string
+     like this:  {bt1},{bt2},{bt3} ...
+
+   ARGUMENTS
+     restab   --  result table (for pl/sql table version)
+     phrase   --  phrase
+     lvl      --  how many levels up (i.e. 2 means get the broader terms of
+                     the broader terms of the phrase)
+     tname    --  thesaurus name (if not specified, system default thes used)
+
+   NOTES
+   RETURN
+     see description
+*/
+function btg( phrase in varchar2,
+            lvl    in number default 1,
+            tname  in varchar2 default 'DEFAULT') return varchar2;
+
+procedure btg(restab in out NOCOPY exp_tab,
+              phrase in varchar2, 
+              lvl    in number default 1,
+              tname  in varchar2 default 'DEFAULT');
+
+/*-------------------------------- nt  ------------------------------------*/
+/*
+   NAME
+     nt -- find narrower terms of a phrase
+
+   DESCRIPTION
+     This procedure finds all narrower terms of a term, and returns a string
+     like this:  {nt1},{nt2},{nt3} ...
+
+   ARGUMENTS
+     restab   --  result table (for pl/sql table version)
+     phrase   --  phrase
+     lvl      --  how many levels down (i.e. 2 means get the narrower terms of
+                     the narrower terms of the phrase)
+     tname    --  thesaurus name (if not specified, system default thes used)
+
+   NOTES
+   RETURN
+     see description
+*/
+function nt(phrase in varchar2,
+            lvl    in number default 1,
+            tname  in varchar2 default 'DEFAULT') return varchar2;
+
+procedure nt(restab in out NOCOPY exp_tab,
+             phrase in varchar2, 
+             lvl    in number default 1,
+             tname  in varchar2 default 'DEFAULT');
+
+/*-------------------------------- ntp ------------------------------------*/
+/*
+   NAME
+     ntp -- find narrower terms (partative)  of a phrase
+
+   DESCRIPTION
+     This procedure finds all narrower terms of a term, and returns a string
+     like this:  {nt1},{nt2},{nt3} ...
+
+   ARGUMENTS
+     restab   --  result table (for pl/sql table version)
+     phrase   --  phrase
+     lvl      --  how many levels down (i.e. 2 means get the narrower terms of
+                     the narrower terms of the phrase)
+     tname    --  thesaurus name (if not specified, system default thes used)
+
+   NOTES
+   RETURN
+     see description
+*/
+function ntp(phrase in varchar2,
+            lvl    in number default 1,
+            tname  in varchar2 default 'DEFAULT') return varchar2;
+
+procedure ntp(restab in out NOCOPY exp_tab,
+              phrase in varchar2, 
+              lvl    in number default 1,
+              tname  in varchar2 default 'DEFAULT');
+
+/*-------------------------------- nti ------------------------------------*/
+/*
+   NAME
+     nti -- find narrower terms (instance)  of a phrase
+
+   DESCRIPTION
+     This procedure finds all narrower terms of a term, and returns a string
+     like this:  {nt1},{nt2},{nt3} ...
+
+   ARGUMENTS
+     restab   --  result table (for pl/sql table version)
+     phrase   --  phrase
+     lvl      --  how many levels down (i.e. 2 means get the narrower terms of
+                     the narrower terms of the phrase)
+     tname    --  thesaurus name (if not specified, system default thes used)
+
+   NOTES
+   RETURN
+     see description
+*/
+function nti(phrase in varchar2,
+            lvl    in number default 1,
+            tname  in varchar2 default 'DEFAULT') return varchar2;
+
+procedure nti(restab in out NOCOPY exp_tab,
+              phrase in varchar2, 
+              lvl    in number default 1,
+              tname  in varchar2 default 'DEFAULT');
+
+/*-------------------------------- ntg ------------------------------------*/
+/*
+   NAME
+     ntg -- find narrower terms (generic)  of a phrase
+
+   DESCRIPTION
+     This procedure finds all narrower terms of a term, and returns a string
+     like this:  {nt1},{nt2},{nt3} ...
+
+   ARGUMENTS
+     restab   --  result table (for pl/sql table version)
+     phrase   --  phrase
+     lvl      --  how many levels down (i.e. 2 means get the narrower terms of
+                     the narrower terms of the phrase)
+     tname    --  thesaurus name (if not specified, system default thes used)
+
+   NOTES
+   RETURN
+     see description
+*/
+function ntg(phrase in varchar2,
+            lvl    in number default 1,
+            tname  in varchar2 default 'DEFAULT') return varchar2;
+
+procedure ntg(restab in out NOCOPY exp_tab,
+              phrase in varchar2, 
+              lvl    in number default 1,
+              tname  in varchar2 default 'DEFAULT');
+
+/*-------------------------------- tr  ------------------------------------*/
+/*
+   NAME
+     TR -- find foreign language equivalent
+
+   DESCRIPTION
+     This procedure finds all foreign terms of a term, and returns a string
+     like this:  {ft1},{ft2},{ft3} ...
+
+   ARGUMENTS
+     restab   --  result table (for pl/sql table version)
+     phrase   --  phrase
+     lang     --  language
+     tname    --  thesaurus name (if not specified, system default thes used)
+
+   NOTES
+   RETURN
+     see description
+*/
+function tr(phrase in varchar2,
+            lang   in varchar2 default null,
+            tname  in varchar2 default 'DEFAULT') return varchar2;
+
+procedure tr(restab in out NOCOPY exp_tab,
+             phrase in varchar2,
+             lang   in varchar2 default null,
+             tname  in varchar2 default 'DEFAULT');
+
+/*-------------------------------- trsyn ----------------------------------*/
+/*
+   NAME
+     TRSYN -- find foreign language equivalent plus its synonyms and their
+           foreign language equivalent
+
+   DESCRIPTION
+     This procedure finds all foreign terms of a term and its synonyms and
+     foreign terms of its synonyms
+     synonym, and returns a string
+     like this:  {ft1},{ft2},{ft3} ...
+
+   ARGUMENTS
+     restab   --  result table (for pl/sql table version)
+     phrase   --  phrase
+     lang     --  language
+     tname    --  thesaurus name (if not specified, system default thes used)
+
+   NOTES
+   RETURN
+     see description
+*/
+function trsyn(phrase in varchar2,
+              lang   in varchar2 default null,
+              tname  in varchar2 default 'DEFAULT') return varchar2;
+
+procedure trsyn(restab in out NOCOPY exp_tab,
+                phrase in varchar2,
+                lang   in varchar2 default null,
+                tname  in varchar2 default 'DEFAULT');
+
+/*---------------------------------- sn -----------------------------------*/
+/*
+   NAME
+     SN -- get scope note of phrase
+
+   DESCRIPTION
+     This procedure finds the scope note of the phrase
+
+   ARGUMENTS
+     phrase   --  phrase
+     tname    --  thesaurus name (if not specified, system default thes used)
+
+   NOTES
+   RETURN
+     see description
+*/
+function sn(phrase in varchar2,
+            tname  in varchar2 default 'DEFAULT') return varchar2;
+
+/*-------------------------------- thes_tt ---------------------------------*/
+/*
+   NAME
+     THES_TT -- get thesaurus top terms
+
+   DESCRIPTION
+     This procedure finds the top terms of a thesaurus.  A top term is defined
+     as any term which has a narrower term but has no broader terms.  This
+     differs from TT in that TT takes in a phrase and finds the top term for
+     that phrase, but THES_TT searches the whole thesaurus and finds all 
+     top terms.
+
+   ARGUMENTS
+     restab   --  result table
+     phrase   --  phrase
+     tname    --  thesaurus name (if not specified, system default thes used)
+
+   NOTES
+     Since this function searches the whole thesaurus, it can take some
+     time on large thesauri.  It is not recommend to call this often
+     for such thesauri.  Instead, the application should call this once,
+     store the results in a seperate table, and use those stored results 
+     instead.
+*/
+procedure thes_tt(restab in out NOCOPY exp_tab,
+                  tname  in varchar2 default 'DEFAULT');
+
+/*-------------------------- has_relation ----------------------------------*/
+/*
+   NAME
+     HAS_RELATION - check to see if a phrase has a relation
+
+   DESCRIPTION
+     Check to see if a phrase has a relation.  Valid relations
+     are 'SYN','SN','TR','RT','BT','BTG','BTP','BTI','NT', 'NTG','NTP',
+     'NTI', or 'ANY'(meaning any of the above).
+ 
+   ARGUMENTS
+     phrase  -- phrase
+     rel     -- a list of relations separated by commas
+     tname   -- thesaurus name
+
+   NOTES
+   RETURN
+     TRUE or FALSE
+*/
+function has_relation(
+  phrase   in   varchar2,
+  rel      in   varchar2,
+  tname    in   varchar2 default 'DEFAULT'
+) return boolean;
+
+end ctx_thes;
+/
+
