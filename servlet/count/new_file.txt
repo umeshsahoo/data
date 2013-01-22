@@ -4,6 +4,6 @@ This is a new file2
 
 This is a new file3
 
-New line added
+New line added 2
 
 
