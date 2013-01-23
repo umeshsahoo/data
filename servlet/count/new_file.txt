@@ -10,3 +10,5 @@ new line12
 
 
 added 18:41
+
+added in count dir
