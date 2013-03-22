@@ -5,6 +5,7 @@ This is a new file2
 This is a new file3
 
 New line added 2
+ff
 
 new line12
 dd
